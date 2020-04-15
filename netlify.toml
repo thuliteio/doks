@@ -4,10 +4,10 @@
   functions = "functions/"
 
 [build.environment]
-  HUGO_VERSION = "0.68.3"
+  HUGO_VERSION = "0.69.0"
   NODE_VERSION = "13.11.0"
   NPM_VERSION = "6.13.7"
-  YARN_VERSION = "1.22.0"
+  YARN_VERSION = "1.22.4"
 
 [context.deploy-preview]
   command = "yarn build:preview"

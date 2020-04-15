@@ -1,3 +1,6 @@
+# Redirect default Netlify subdomain to primary domain
+https://doks.netlify.com/* https://doks.gethyas.com/:splat 301!
+
 # redirects for Netlify - https://www.netlify.com/docs/redirects/
 {{- range $p := .Site.Pages -}}
 {{- range .Aliases }}

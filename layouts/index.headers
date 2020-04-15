@@ -2,7 +2,7 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   X-Content-Type-Options: nosniff
   X-XSS-Protection: 1; mode=block
-  Content-Security-Policy: default-src 'self'; img-src 'self' data:; object-src 'none'
+  Content-Security-Policy:  default-src 'none'; img-src https://doks.netlify.com/; script-src https://doks.netlify.com/; style-src https://doks.netlify.com/
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin
   Feature-Policy: geolocation 'self'

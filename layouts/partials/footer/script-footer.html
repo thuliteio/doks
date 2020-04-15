@@ -1,0 +1,13 @@
+{{ $lazysizes := resources.Get "js/vendor/lazysizes/lazysizes.min.js" -}}
+{{ if eq (hugo.Environment) "development" -}}
+  {{ $alpinejs := resources.Get "js/vendor/alpinejs/alpine.js" -}}
+  {{ $app := resources.Get "js/app.js" -}}
+  {{ $js := slice $alpinejs $lazysizes $app | resources.Concat "main.js" -}}
+  <script src="{{ $js.Permalink }}" defer></script>
+{{ else -}}
+  {{ $alpinejs := resources.Get "js/vendor/alpinejs/alpine.js" | minify -}}
+  {{ $app := resources.Get "js/app.js" | minify -}}
+  {{ $js := slice $alpinejs $lazysizes $app | resources.Concat "main.js" -}}
+  {{ $secureJS := $js | resources.Fingerprint "sha512" -}}
+  <script src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" crossorigin="anonymous" defer></script>
+{{ end -}}

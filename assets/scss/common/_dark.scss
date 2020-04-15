@@ -1,0 +1,196 @@
+/** Theme variables */
+
+$body-bg-dark: lighten($black, 10%);
+$body-color-dark: darken($white, 15%);
+$link-color-dark: lighten($primary, 20%);
+$body-overlay-dark: lighten($black, 15%);
+$border-dark: lighten($black, 20%);
+
+/** Theme styles */
+
+body.dark {
+  background: $body-bg-dark;
+  color: $body-color-dark;
+}
+
+body.dark a {
+  color: $link-color-dark;
+}
+
+body.dark .btn-primary {
+  color: $body-color-dark;
+}
+
+body.dark .navbar {
+  background: $body-bg-dark;
+  opacity: 0.975;
+  border-bottom: 1px solid $border-dark;
+}
+
+body.dark.home .navbar {
+  border-bottom: 0;
+}
+
+body.dark .navbar-light .navbar-brand {
+  color: $navbar-dark-brand-color;
+}
+
+body.dark .navbar-light .navbar-brand:hover,
+body.dark .navbar-light .navbar-brand:focus {
+  color: $navbar-dark-brand-hover-color;
+}
+
+body.dark .navbar-light .navbar-nav .nav-link {
+  color: $navbar-dark-color;
+}
+
+body.dark .navbar-light .navbar-nav .nav-link:hover,
+body.dark .navbar-light .navbar-nav .nav-link:focus {
+  color: $navbar-dark-hover-color;
+}
+
+body.dark .navbar-light .navbar-nav .nav-link.disabled {
+  color: $navbar-dark-disabled-color;
+}
+
+body.dark .navbar-light .navbar-nav .show > .nav-link,
+body.dark .navbar-light .navbar-nav .active > .nav-link,
+body.dark .navbar-light .navbar-nav .nav-link.show,
+body.dark .navbar-light .navbar-nav .nav-link.active {
+  color: $navbar-dark-active-color;
+}
+
+body.dark .navbar-light .navbar-text {
+  color: $navbar-dark-color;
+}
+
+body.dark .page-links a {
+  color: $body-color-dark;
+}
+
+body.dark .docs-link:hover,
+body.dark .docs-link.active,
+body.dark .page-links a:hover {
+  text-decoration: none;
+  color: $link-color-dark;
+}
+
+body.dark .navbar-light .navbar-text a {
+  color: $navbar-dark-active-color;
+}
+
+body.dark .navbar-light .navbar-text a:hover,
+body.dark .navbar-light .navbar-text a:focus {
+  color: $navbar-dark-active-color;
+}
+
+body.dark .navbar .btn-link {
+  color: $navbar-dark-color;
+}
+
+body.dark .navbar .btn-link:hover {
+  color: $navbar-dark-hover-color;
+}
+
+body.dark .navbar .btn-link:active {
+  color: $navbar-dark-active-color;
+}
+
+body.dark .form-control.is-search {
+  background: $body-overlay-dark;
+}
+
+body.dark .border-top {
+  border-top: 1px solid $border-dark !important;
+}
+
+@include media-breakpoint-up(lg) {
+  body.dark .docs-sidebar {
+    order: 0;
+    border-right: 1px solid $border-dark;
+  }
+}
+
+body.dark .docs-navigation {
+  border-top: 1px solid $border-dark;
+}
+
+body.dark ::selection {
+  background: lighten($primary, 25%);
+}
+
+body.dark pre {
+  background: $body-overlay-dark;
+  color: $body-color-dark;
+}
+
+body.dark code {
+  background: $body-overlay-dark;
+  color: $body-color-dark;
+}
+
+body.dark blockquote {
+  border-left: 3px solid lighten($black, 30%);
+}
+
+body.dark .footer {
+  border-top: 1px solid $border-dark;
+}
+
+body.dark .docs-links,
+body.dark .docs-toc {
+  scrollbar-width: thin;
+  scrollbar-color: $body-bg-dark $body-bg-dark;
+}
+
+body.dark .docs-links::-webkit-scrollbar,
+body.dark .docs-toc::-webkit-scrollbar {
+  width: 5px;
+}
+
+body.dark .docs-links::-webkit-scrollbar-track,
+body.dark .docs-toc::-webkit-scrollbar-track {
+  background: $body-bg-dark;
+}
+
+body.dark .docs-links::-webkit-scrollbar-thumb,
+body.dark .docs-toc::-webkit-scrollbar-thumb {
+  background: $body-bg-dark;
+}
+
+body.dark .docs-links:hover,
+body.dark .docs-toc:hover {
+  scrollbar-width: thin;
+  scrollbar-color: $border-dark $body-bg-dark;
+}
+
+body.dark .docs-links:hover::-webkit-scrollbar-thumb,
+body.dark .docs-toc:hover::-webkit-scrollbar-thumb {
+  background: $border-dark;
+}
+
+body.dark .docs-links::-webkit-scrollbar-thumb:hover,
+body.dark .docs-toc::-webkit-scrollbar-thumb:hover {
+  background: $border-dark;
+}
+
+body.dark .docs-links h3:not(:first-child) {
+  border-top: 1px solid $border-dark;
+}
+
+body.dark a.docs-link {
+  color: $body-color-dark;
+}
+
+body.dark .page-links li:not(:first-child) {
+  border-top: 1px dashed $border-dark;
+}
+
+body.dark .card {
+  background: $body-bg-dark;
+  border: 1px solid $border-dark;
+}
+
+body.dark .card.bg-light {
+  background: $body-overlay-dark !important;
+}

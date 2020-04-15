@@ -1,0 +1,63 @@
+.img svg,
+.img img {
+  margin: 0;
+  width: 100%;
+  height: auto;
+}
+
+.img {
+  position: relative;
+}
+
+.img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+figure {
+  margin: 2rem 0;
+}
+
+.figure-caption {
+  margin: 0.25rem 0 0.75rem;
+}
+
+figure.wide {
+  margin: 2rem -1.5rem;
+}
+
+figure.wide .figure-caption {
+  margin: 0.25rem 1.5rem 0.75rem;
+}
+
+@include media-breakpoint-up(md) {
+  figure.wide {
+    margin: 2rem -3rem;
+  }
+
+  figure.wide .figure-caption {
+    margin: 0.25rem 3rem 0.75rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  figure.wide {
+    margin: 2rem -5rem;
+  }
+
+  figure.wide .figure-caption {
+    margin: 0.25rem 5rem 0.75rem;
+  }
+}
+
+.blur-up {
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  transition: filter 300ms, -webkit-filter 300ms;
+}
+
+.blur-up.lazyloaded {
+  -webkit-filter: blur(0);
+  filter: blur(0);
+}

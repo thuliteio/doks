@@ -1,0 +1,40 @@
+{{ if and (eq .Kind "section" "taxonomy" "taxonomyTerm") (ne .Section "blog" ) -}}
+<meta name="robots" content="noindex, noarchive">
+{{ else -}}
+  {{ with .Params.robots -}}
+    <meta name="robots" content="{{ . }}">
+  {{ else -}}
+    <meta name="robots" content="index, follow">
+  {{ end -}}
+{{ end -}}
+
+{{ if .IsHome -}}
+  <title>{{ .Site.Params.title }} {{ .Site.Params.titleSeparator }} {{ .Site.Params.titleAddition }}</title>
+{{ else -}}
+  <title>{{ .Title }} {{ .Site.Params.titleSeparator }} {{ .Site.Params.title }}</title>
+{{ end -}}
+
+{{ with .Description -}}
+  <meta name="description" content="{{ . }}">
+{{ else -}}
+  <meta name="description" content="{{ .Site.Params.description }}">
+{{ end -}}
+
+{{ with .Params.canonical -}}
+  <link rel="canonical" href="{{ . }}">
+{{ else -}}
+  <link rel="canonical" href="{{ .Permalink }}">
+{{ end -}}
+
+{{ template "_internal/twitter_cards.html" . -}}
+<meta name="twitter:site" content="{{ .Site.Params.twitterSite }}">
+<meta name="twitter:creator" content="{{ .Site.Params.twitterCreator }}">
+
+{{ template "_internal/opengraph.html" . -}}
+<meta property="og:locale" content="{{ .Site.Params.ogLocale }}">
+
+{{ range .AlternativeOutputFormats -}}
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+{{ end -}}
+
+{{ block "head/structured-data" . }}{{ partial "head/structured-data.html" . }}{{ end }}

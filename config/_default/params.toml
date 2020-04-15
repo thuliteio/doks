@@ -1,0 +1,27 @@
+title = "Doks"
+titleSeparator = "-"
+titleAddition = "Hugo Documentation Theme"
+description = "Hugo boilerplate helping you build fast, robust, and flexible websites."
+images = ["image-hyas.jpg"]
+twitterSite = "@henkverlinde"
+twitterCreator = "@henkverlinde"
+ogLocale = "en_US"
+schemaType = "Organization"
+schemaLogo = "logo-hyas.png"
+schemaTwitter = "https://twitter.com/henkverlinde"
+schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
+schemaSection = "news"
+siteLinksSearchBox = false
+
+themeColor = "#fff"
+
+# googleAnalytics = "UA-99999999-1"
+
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 700, 500]
+portraitPhotoWidths = [1500, 1000, 750]
+lqipWidth = "20x"
+
+footer = "© 2020 Henk Verlinde - MIT License"
+version = "v0.1.0"

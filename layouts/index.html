@@ -1,0 +1,15 @@
+{{ define "main" }}
+<section class="section container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-lg-11 text-center">
+      <h1 class="mt-0">{{ .Title }}</h1>
+      <p class="lead">{{ .Params.Lead | safeHTML }}</p>
+      <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.BaseURL }}docs/prologue/introduction/" role="button">Get started</a>
+      <p><a class="text-muted" href="https://github.com/h-enk" target="_blank" rel="noreferrer noopener"><small>{{ .Site.Params.version }}</small></a></p>
+    </div>
+  </div>
+</section>
+<section class="section container-fluid border-top">
+  {{- .Content -}}
+</section>
+{{ end }}

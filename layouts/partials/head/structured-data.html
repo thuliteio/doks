@@ -1,0 +1,105 @@
+{{ if .IsHome -}}
+  {{ if eq .Site.Params.schemaType "Organization" -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Params.title }}",
+      "logo": "{{ .Site.BaseURL }}{{ .Site.Params.schemaLogo }}",
+      "sameAs": [
+        "{{ .Site.Params.schemaTwitter | safeURL }}",
+        "{{ .Site.Params.schemaLinkedIn | safeURL }}"
+      ]
+    }
+    </script>
+  {{ end -}}
+  {{ if eq .Site.Params.schemaType "Person" -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "url": "{{ .Site.BaseURL }}",
+      "name": "{{ .Site.Params.title }}",
+      "sameAs": [
+        "{{ .Site.Params.schemaTwitter | safeURL }}",
+        "{{ .Site.Params.schemaLinkedIn | safeURL }}"
+      ]
+    }
+    </script>
+  {{ end -}}
+  {{ if .Site.Params.siteLinksSearchBox -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "{{ .Site.BaseURL }}",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ .Site.BaseURL }}?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+  {{ end -}}
+{{ end -}}
+{{ if .IsPage -}}
+  {{ if eq .Section .Site.Params.schemaSection -}}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ .Permalink }}"
+      },
+      "headline": "{{ .Title }}",
+      "image": {{ apply .Params.images "absURL" "." }},
+      "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05CET" }}",
+      "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05CET" }}",
+      "author": {
+        "@type": "{{ .Site.Params.schemaType }}",
+        "name": "{{ .Site.Params.title }}"
+      },
+      "publisher": {
+        "@type": "{{ .Site.Params.schemaType }}",
+        "name": "{{ .Site.Params.title }}",
+        {{ if eq .Site.Params.schemaType "Organization" -}}
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ .Site.BaseURL }}{{ .Site.Params.schemaLogo }}"
+        }
+        {{ end -}}
+      },
+      "description": "{{ .Description }}"
+    }
+    </script>
+  {{ end -}}
+{{ end -}}
+
+{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
+{{ $.Scratch.Add "path" .Site.BaseURL -}}
+
+{{ $.Scratch.Add "breadcrumb" (slice (dict "url" .Site.BaseURL "name" "home" "position" 1 )) -}}
+{{ range $index, $element := split $url "/" -}}
+  {{ $.Scratch.Add "path" $element -}}
+  {{ $.Scratch.Add "path" "/" -}}
+    {{ if ne $element "" -}}
+      {{ $.Scratch.Add "breadcrumb" (slice (dict "url" ($.Scratch.Get "path") "name" . "position" (add $index 2))) -}}
+    {{ end -}}
+{{ end -}}
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{{ range $.Scratch.Get "breadcrumb" }}{{ if ne .position 1 }},{{ end }}{
+        "@type": "ListItem",
+        "position": {{ .position }},
+        "item": {
+          "@id": "{{ .url }}",
+          "name": "{{ .name }}"
+        }
+    }{{ end }}]
+}
+</script>

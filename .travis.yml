@@ -4,6 +4,7 @@ sudo: required
 language: node_js
 node_js:
   - "lts/*"
+  - "13"
 
 install:
   - wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb"
@@ -19,4 +20,4 @@ script:
 env:
   global:
     - PRODUCTION=true
-    - HUGO_RELEASE=0.60.1
+    - HUGO_RELEASE=0.69.0

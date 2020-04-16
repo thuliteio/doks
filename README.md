@@ -23,7 +23,7 @@ Make sure all dependencies have been installed:
 - npm >= 6.13.7
 - Yarn >= 1.22.4 (recommended)
 
-## Getting started
+## Get started
 
 Create a new Doks project:
 

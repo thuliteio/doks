@@ -61,9 +61,6 @@ notAlternative = true
     source = "static"
     target = "static"
   [[module.mounts]]
-    source = "node_modules/alpinejs/dist"
-    target = "assets/js/vendor/alpinejs"
-  [[module.mounts]]
     source = "node_modules/lazysizes"
     target = "assets/js/vendor/lazysizes"
   [[module.mounts]]

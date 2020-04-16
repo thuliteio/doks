@@ -5,7 +5,7 @@
       <h1 class="mt-0">{{ .Title }}</h1>
       <p class="lead">{{ .Params.Lead | safeHTML }}</p>
       <a class="btn btn-primary btn-lg px-4 mb-2" href="{{ .Site.BaseURL }}docs/prologue/introduction/" role="button">Get started</a>
-      <p><a class="text-muted" href="https://github.com/h-enk" target="_blank" rel="noreferrer noopener"><small>{{ .Site.Params.version }}</small></a></p>
+      <p><a class="btn btn-link btn-sm" href="https://github.com/h-enk" target="_blank" rel="noreferrer noopener" role="button">{{ .Site.Params.version }}</a></p>
     </div>
   </div>
 </section>

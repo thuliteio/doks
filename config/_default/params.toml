@@ -1,13 +1,13 @@
 title = "Doks"
 titleSeparator = "-"
-titleAddition = "Hugo Documentation Theme"
-description = "Hugo boilerplate helping you build fast, robust, and flexible websites."
-images = ["image-hyas.jpg"]
+titleAddition = "Hugo Documentation Starter"
+description = "Hugo starter helping you build kick-ass documentation websites."
+images = ["image-doks.png"]
 twitterSite = "@henkverlinde"
 twitterCreator = "@henkverlinde"
 ogLocale = "en_US"
 schemaType = "Organization"
-schemaLogo = "logo-hyas.png"
+schemaLogo = "logo-doks.png"
 schemaTwitter = "https://twitter.com/henkverlinde"
 schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
 schemaSection = "news"

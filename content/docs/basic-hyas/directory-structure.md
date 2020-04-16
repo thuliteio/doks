@@ -4,7 +4,7 @@ description: "The Hyas directory structure explained."
 lead: "The Hyas directory structure follows and extends the Hugo directory structure. So you can easily locate stuff."
 date: 2020-01-07T16:02:42+01:00
 draft: false
-images: ["image-hyas.jpg"]
+images: [image-doks.png]
 menu: 
   docs:
     parent: "basic-hyas"

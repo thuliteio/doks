@@ -4,7 +4,7 @@ description: "Hugo boilerplate helping you build fast, robust, and flexible webs
 lead: "Hugo boilerplate helping you build fast, robust, and flexible websites."
 date: 2020-01-07T16:23:23+01:00
 draft: false
-images: ["image-hyas.jpg"]
+images: [image-doks.png]
 menu: 
   docs:
     parent: "prologue"

@@ -4,7 +4,7 @@ description: ""
 lead: ""
 date: {{ .Date }}
 draft: true
-images: [""]
+images: {{ .Site.Params.images }}
 menu: 
   docs:
     parent: ""

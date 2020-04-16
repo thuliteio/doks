@@ -1,10 +1,10 @@
 ---
 title : "Doks"
-description: "Hugo boilerplate helping you build fast, flexible, and search ready websites."
+description: "Hugo starter helping you build kick-ass documentation websites."
 date: 2019-12-02T13:47:16+01:00
 draft: false
-images: ["image-hyas.jpg"]
-lead: "Hugo documentation theme build on Hyas."
+images: [image-doks.png]
+lead: "Hugo starter helping you build kick-ass documentation websites."
 ---
 
 <div class="row justify-content-center">

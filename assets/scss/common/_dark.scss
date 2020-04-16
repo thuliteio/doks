@@ -88,6 +88,14 @@ body.dark .navbar .btn-link {
   color: $navbar-dark-color;
 }
 
+body.dark .content .btn-link {
+  color: $link-color-dark;
+}
+
+body.dark .content .btn-link:hover {
+  color: $link-color-dark;
+}
+
 body.dark .navbar .btn-link:hover {
   color: $navbar-dark-hover-color;
 }
@@ -199,7 +207,7 @@ body.dark .navbar .menu-icon .navicon {
   background: $navbar-dark-color;
 }
 
-body.dark .navbar .menu-icon .navicon:before,
-body.dark .navbar .menu-icon .navicon:after {
+body.dark .navbar .menu-icon .navicon::before,
+body.dark .navbar .menu-icon .navicon::after {
   background: $navbar-dark-color;
 }

@@ -194,3 +194,12 @@ body.dark .card {
 body.dark .card.bg-light {
   background: $body-overlay-dark !important;
 }
+
+body.dark .navbar .menu-icon .navicon {
+  background: $navbar-dark-color;
+}
+
+body.dark .navbar .menu-icon .navicon:before,
+body.dark .navbar .menu-icon .navicon:after {
+  background: $navbar-dark-color;
+}

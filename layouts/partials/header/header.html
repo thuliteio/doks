@@ -1,6 +1,10 @@
 <!-- <div class="header-bar fixed-top"></div> -->
-<header x-data="{ open: false }" class="navbar fixed-top navbar-expand-md navbar-light">
+<header class="navbar fixed-top navbar-expand-md navbar-light">
   <div class="container">
+
+    <input class="menu-btn order-3" type="checkbox" id="menu-btn">
+    <label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+    
     <a class="navbar-brand order-0 mr-auto" href="{{ .Site.BaseURL }}">{{ .Site.Params.Title }}</a>
     <button id="mode" class="btn btn-link order-1 order-md-4" type="button" aria-label="Toggle mode">
       <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
@@ -13,11 +17,16 @@
         </li>
       {{ end -}}
     </ul>
-    <button @click="open = true" id="navigation" class="btn btn-link order-3 d-md-none" type="button" aria-expanded="false" aria-label="Toggle navigation">
-      <svg x-bind:class="{ 'd-none': open }" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      <svg class="d-none" x-bind:class="{ 'd-block': open }" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+
+
+
+    <!--
+    <button id="navigation" class="btn btn-link order-3 d-md-none" type="button" aria-expanded="false" aria-label="Toggle navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
     </button>
-    <div x-show="open" @click.away="open = false" x-bind:class="{ 'd-block': open }" class="navbar-collapse order-4 order-md-1">
+    -->
+    <div class="collapse navbar-collapse order-4 order-md-1">
       <ul class="navbar-nav main-nav mr-auto order-5 order-md-2">
         {{- $current := . -}}
         {{ range .Site.Menus.main -}}

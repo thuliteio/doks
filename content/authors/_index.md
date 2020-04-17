@@ -1,7 +1,7 @@
 ---
 title: "Authors"
-description: ""
-date: 2020-03-23T11:01:55+01:00
+description: "The Doks Blog authors."
+date: 2020-04-17T08:50:29+00:00
 draft: false
 images: [image-doks.png]
 ---

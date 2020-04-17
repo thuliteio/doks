@@ -1,10 +1,10 @@
 ---
 title : "Doks"
-description: "Hugo starter helping you build kick-ass documentation websites."
-date: 2019-12-02T13:47:16+01:00
+description: "Hugo starter helping you build modern documentation websites."
+date: 2020-04-17T08:47:36+00:00
 draft: false
 images: [image-doks.png]
-lead: "Hugo starter helping you build kick-ass documentation websites."
+lead: "Hugo starter helping you build modern documentation websites."
 ---
 
 <div class="row justify-content-center">

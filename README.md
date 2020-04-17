@@ -3,25 +3,27 @@
 [![Build Status](https://img.shields.io/travis/h-enk/doks.svg?style=flat-square)](https://travis-ci.org/github/h-enk/doks)
 [![Netlify](https://img.shields.io/netlify/33fb6ec8-d314-4695-bbb6-2b3c1b665cbf?style=flat-square)](https://doks.netlify.app/)
 
-Hugo starter helping you build kick-ass documentation websites.
+Doks is a Hugo starter helping you build modern documentation websites.
 
-## What you get
+## Features
 - Lightweight code base
-- 100/A+ scores Google Lighthouse and [Mozilla Observatory](https://observatory.mozilla.org/)
+- 100 scores Google Lighthouse
+- A+ scores [Mozilla Observatory](https://observatory.mozilla.org/)
 - [Algolia DocSearch](https://docsearch.algolia.com/) support
 - Dark/Light toggle
 - Blog ready
 - Easily make it your own
 - All in [Hyas](https://github.com/h-enk/hyas)
 
+See a working example at [doks.netlify.app](https://doks.netlify.app/)
+
 ## Requirements
 
 Make sure all dependencies have been installed:
 
-- Hugo >= 0.69.0/extended
-- Node.js >= 13.11.0
-- npm >= 6.13.7
-- Yarn >= 1.22.4 (recommended)
+- [Hugo](https://gohugo.io/) >= 0.69.0/extended
+- [Node.js](https://nodejs.org/) >= 13.11.0
+- [Yarn](https://yarnpkg.com/) >= 1.22.4 (recommended)
 
 ## Get started
 
@@ -52,5 +54,6 @@ $ yarn start
 - `yarn build` - Build production theme
 
 ## Documentation
+- [Hugo](https://gohugo.io/documentation/)
 - [Hyas](https://gethyas.com/)
-- [Doks](https://doks.netlify.app/)
+- [Doks](https://getdoks.org/)

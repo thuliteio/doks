@@ -1,8 +1,8 @@
 ---
 title : "Docs"
-description: "Hugo boilerplate helping you build fast, robust, and flexible websites."
-lead: "Hugo boilerplate helping you build fast, robust, and flexible websites."
-date: 2019-12-02T13:47:16+01:00
+description: "Docs Doks."
+lead: ""
+date: 2020-04-17T08:48:23+00:00
 draft: false
 images: [image-doks.png]
 ---

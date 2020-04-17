@@ -1,7 +1,7 @@
 ---
 title: "Blog"
-description: ""
-date: 2019-12-02T13:47:16+01:00
+description: "The Doks Blog."
+date: 2020-04-17T08:49:55+00:00
 draft: false
 images: [image-doks.png]
 ---

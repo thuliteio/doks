@@ -8,11 +8,11 @@
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			{{ partial "sidebar/docs-toc.html" . }}
 		</nav>
-		<main class="docs-content col-lg-11 col-xl-9" role="main">
-				<h1>{{ .Title }}</h1>
-				<p class="lead">{{ .Params.lead | safeHTML }}</p>
-				{{ partial "main/headline-hash.html" .Content }}
-				{{ partial "main/docs-navigation.html" . }}
+		<main class="docs-content col-lg-11 col-xl-9">
+			<h1>{{ .Title }}</h1>
+			<p class="lead">{{ .Params.lead | safeHTML }}</p>
+			{{ partial "main/headline-hash.html" .Content }}
+			{{ partial "main/docs-navigation.html" . }}
 		</main>
 	</div>
 {{ end }}

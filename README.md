@@ -1,7 +1,7 @@
 # Doks
 [![GitHub release](https://img.shields.io/github/release/h-enk/doks.svg?style=flat-square)](https://github.com/h-enk/doks/releases)
-[![Build Status](https://img.shields.io/travis/h-enk/doks.svg?style=flat-square)](https://travis-ci.org/github/h-enk/doks)
-[![Netlify](https://img.shields.io/netlify/33fb6ec8-d314-4695-bbb6-2b3c1b665cbf?style=flat-square)](https://doks.netlify.app/)
+[![Build Status](https://img.shields.io/travis/h-enk/doks.svg?style=flat-square)](https://travis-ci.com/github/h-enk/doks)
+[![Netlify](https://img.shields.io/netlify/8a1009d5-88ac-413e-96ef-3f928674a083?style=flat-square)](https://doks.netlify.app/)
 
 Doks is a Hugo starter helping you build modern documentation websites.
 

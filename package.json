@@ -30,7 +30,7 @@
     "stylelint-config-standard": "^20.0"
   },
   "dependencies": {
-    "bootstrap": "^4.4",
+    "bootstrap": "^4.5",
     "lazysizes": "^5.2"
   }
 }

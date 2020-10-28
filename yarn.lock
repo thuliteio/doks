@@ -2665,10 +2665,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-ga-lite@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/ga-lite/-/ga-lite-2.0.5.tgz#f0528dfb27feee4ac10b2f770f0a1a88075652f8"
-  integrity sha512-dpf7m9VwuvybwvhvpqtBxe/UvN4Vy1Ih6h2YSgL+SyOX62icHzscLNC21jYwUkzXB7aV/q57ZQfOaLAFVNurhQ==
+ga-lite@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/ga-lite/-/ga-lite-2.1.0.tgz#ce92abfbc54bdf541257055ddbc8ed7461e3cd05"
+  integrity sha512-GR9on+Nm7QuNzJU71VqHpGlYvGQfDq5l6Za8IYq8QnnmPWf8f3AVHkmtaRMLamCdHxTbu2gsSAP9srOqW3MuNQ==
 
 gensync@^1.0.0-beta.1:
   version "1.0.0-beta.1"

@@ -26,7 +26,7 @@
     "postcss-cli": "^7.1",
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",
-    "stylelint": "^13.2",
+    "stylelint": "^13.7",
     "stylelint-config-standard": "^20.0"
   },
   "dependencies": {

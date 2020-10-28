@@ -22,7 +22,7 @@
     "autoprefixer": "^9.8",
     "eslint": "^7.12",
     "ga-lite": "^2.0.5",
-    "netlify-lambda": "^1.6",
+    "netlify-lambda": "^2.0",
     "postcss-cli": "^7.1",
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",

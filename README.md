@@ -4,7 +4,7 @@
 [![Build Status](https://img.shields.io/travis/h-enk/doks.svg?style=flat-square)](https://travis-ci.com/h-enk/doks)
 [![Netlify](https://img.shields.io/netlify/895a161c-86be-48a2-8c57-a8c5d68cd1a4?style=flat-square)](https://doks.netlify.com/)
 
-Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default. 
+Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.
 
 ## Why Doks?
 

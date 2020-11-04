@@ -3,9 +3,9 @@
   functions = "functions"
 
 [build.environment]
-  HUGO_VERSION = "0.75.1"
-  NODE_VERSION = "14.12.0"
-  NPM_VERSION = "6.14.8"
+  HUGO_VERSION = "0.78.0"
+  NODE_VERSION = "15.0.1"
+  NPM_VERSION = "7.0.5"
   YARN_VERSION = "1.22.5"
 
 [context.production]

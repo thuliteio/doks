@@ -1,7 +1,8 @@
-.authors .content,
+.contributors .content,
 .blog .content,
 .page .content,
-.error404 .content {
+.error404 .content,
+.docs.list .content {
   padding-top: 1rem;
   padding-bottom: 3rem;
 }
@@ -48,12 +49,24 @@ h6,
   padding-bottom: 5rem;
 }
 
+.section-md {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section-sm {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/*
 .section svg {
   display: inline-block;
   width: 2rem;
   height: 2rem;
   vertical-align: text-top;
 }
+*/
 
 body {
   padding-top: 3.5625rem;
@@ -128,7 +141,7 @@ body {
 
 .docs-navigation {
   border-top: 1px solid $gray-200;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 0;
   padding-top: 2rem;
 }
@@ -139,7 +152,7 @@ body {
 
 @include media-breakpoint-up(lg) {
   .docs-navigation {
-    margin-bottom: 5rem;
+    margin-bottom: -1rem;
   }
 
   .docs-navigation a {
@@ -153,5 +166,33 @@ body {
 }
 
 ::selection {
-  background: lighten($primary, 45%);
+  background: lighten($primary, 55%);
+}
+
+.bg-dots {
+  background-image: radial-gradient($gray-300 15%, transparent 15%);
+  background-position: 0 0;
+  background-size: 1rem 1rem;
+  -webkit-mask: linear-gradient(to top, #fff, transparent);
+  mask: linear-gradient(to top, #fff, transparent);
+  width: 100%;
+  height: 9rem;
+  margin-top: -10rem;
+  z-index: -1;
+}
+
+.bg-dots-lg {
+  margin-top: -12rem;
+}
+
+// https://fossheim.io/writing/posts/css-text-gradient/
+.gradient-text {
+  background-color: $primary;
+  background-image: linear-gradient(90deg, $primary, $blue-300 50%, $pink-500);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }

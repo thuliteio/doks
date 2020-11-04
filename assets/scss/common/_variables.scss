@@ -1,16 +1,4 @@
-/*
-$theme-colors: (
-  primary: #3c48d5
-);
-*/
-
-$yellow: #ffe000;
-$black: #1d2d35;
-$white: #fff;
-$beige: #fbf7f0;
-$red: #e55235;
-$purple: #5d2f86;
-$brown: #aa9c84;
+// Color system
 
 $white:    #fff;
 $gray-100: #f8f9fa;
@@ -24,8 +12,17 @@ $gray-800: #343a40;
 $gray-900: #212529;
 $black:    #000;
 
-$primary: lighten($purple, 10%);
-$secondary: $gray-200;
+$yellow:   #ffe000;
+$black:    #1d2d35;
+$beige:    #fbf7f0;
+$red:      #e55235;
+$purple:   #5d2f86;
+$brown:    #aa9c84;
+
+$blue-300: #8ed6fb;
+$pink-500: #d32e9d;
+
+$primary: $purple;
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
@@ -42,7 +39,7 @@ $enable-responsive-font-sizes: true;
 // Settings for the `<body>` element.
 
 $body-bg:                   $white;
-$body-color:                lighten($black, 10%);
+$body-color:                $black;
 
 // Grid containers
 //
@@ -64,6 +61,12 @@ $container-max-widths: (
 $grid-columns:                16;
 $grid-gutter-width:           48px;
 $grid-row-columns:            6;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+$border-color:                $gray-200;
 
 // Typography
 //
@@ -100,3 +103,26 @@ $navbar-padding-y:                  $spacer / 2;
 $navbar-padding-x:                  0;
 
 $navbar-nav-link-padding-x:         0.5rem;
+
+$navbar-light-color:                $black;
+$navbar-light-hover-color:          $primary;
+$navbar-light-active-color:         $primary;
+
+// Cards
+
+$card-border-color:                 $gray-200;
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-padding-y:                   1rem;
+$alert-padding-x:                   1.5rem;
+$alert-margin-bottom:               0;
+$alert-border-radius:               0;
+$alert-link-font-weight:            $headings-font-weight;
+$alert-border-width:                0;
+
+$alert-bg-level:                    0;
+$alert-border-level:                0;
+$alert-color-level:                 0;

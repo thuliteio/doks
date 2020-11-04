@@ -6,7 +6,7 @@
         <h1>{{ .Title }}</h1>
         {{ partial "main/blog-meta.html" . }}
       </div>
-      <p class="lead">{{ .Params.lead }}</p>
+      <p class="lead">{{ .Params.lead | safeHTML }}</p>
       {{ .Content }}
     </article>
   </div>

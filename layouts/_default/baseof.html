@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="{{ .Site.LanguageCode | default "en" }}">
-  {{ block "head" . }}{{ partial "head/head.html" . }}{{ end }}
+  {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}
   {{ else if eq .Kind "404" -}}
@@ -13,15 +13,18 @@
     {{ .Scratch.Add "class" " list" -}}
   {{ end -}}
   <body class="{{ .Scratch.Get "class" }}">
-    {{ block "header" . }}{{ partial "header/header.html" . }}{{ end }}
+    {{ partial "header/header.html" . }}
     <div class="wrap container" role="document">
       <div class="content">
         {{ block "main" . }}{{ end }}
       </div>
     </div>
-    {{ if ne .Section "docs" }}
-      {{ block "footer" . }}{{ partial "footer/footer.html" . }}{{ end }}
+    {{ block "sidebar-prefooter" . }}{{ end }}
+    {{ block "sidebar-footer" . }}{{ end }}
+    {{ partial "footer/footer.html" . }}
+    {{ if and .IsHome .Site.Params.alert }}
+      {{ partial "footer/alert.html" . }}
     {{ end }}
-    {{ block "script-footer" . }}{{ partial "footer/script-footer.html" . }}{{ end }}
+    {{ partial "footer/script-footer.html" . }}
   </body>
 </html>

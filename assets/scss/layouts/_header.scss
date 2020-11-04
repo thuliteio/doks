@@ -10,6 +10,16 @@
   margin-left: 1rem;
 }
 
+.navbar-brand {
+  font-weight: $headings-font-weight;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:active {
+  color: $body-color;
+}
+
 @include media-breakpoint-up(md) {
   .navbar-brand {
     font-size: $font-size-xl;
@@ -55,12 +65,11 @@
 .navbar {
   background-color: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid $gray-200;
-
-  /* margin-top: 3px; */
+  margin-top: 4px;
 }
 
 .header-bar {
-  border-top: 3px solid;
+  border-top: 4px solid;
   border-image-source: linear-gradient(90deg, $primary, #8ed6fb 50%, #d32e9d);
   border-image-slice: 1;
 }
@@ -90,8 +99,20 @@
 
   .navbar-form {
     margin-top: 0;
-    margin-left: 1.5rem;
+    margin-left: 9rem;
     margin-right: 1.5rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .navbar-form {
+    margin-left: 18rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .navbar-form {
+    margin-left: 36rem;
   }
 }
 
@@ -104,6 +125,44 @@
   background-position: right calc(0.375em + 0.1875rem) center;
   background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
+
+/*! purgecss start ignore */
+.algolia-autocomplete {
+  display: flex !important;
+}
+
+.algolia-autocomplete .ds-dropdown-menu {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+@include media-breakpoint-down(sm) {
+  .algolia-autocomplete .ds-dropdown-menu {
+    max-width: 512px !important;
+    min-width: 312px !important;
+    width: auto !important;
+  }
+
+  .algolia-autocomplete .algolia-docsearch-suggestion .algolia-docsearch-suggestion--subcategory-column::after {
+    content: "|";
+    margin-right: 0.25rem;
+  }
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--title {
+  margin-bottom: 0;
+}
+
+.algolia-autocomplete .algolia-docsearch-suggestion--highlight {
+  padding: 0 0.05em;
+}
+
+.algolia-autocomplete .algolia-docsearch-footer {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*! purgecss end ignore */
 
 /*
  * Source: https://medium.com/creative-technology-concepts-code/responsive-mobile-dropdown-navigation-using-css-only-7218e4498a99

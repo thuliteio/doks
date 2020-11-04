@@ -1,27 +1,38 @@
 title = "Doks"
 titleSeparator = "-"
-titleAddition = "Modern Hugo Documentation Starter"
-description = "Hugo starter helping you build modern documentation websites."
-images = ["image-doks.png"]
-twitterSite = "@henkverlinde"
-twitterCreator = "@henkverlinde"
+titleAddition = "Modern Documentation Theme"
+description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+
+images = ["hyas.png"]
+
+twitterSite = "henkverlinde"
+twitterCreator = "henkverlinde"
+facebookAuthor = "verlinde.henk"
+facebookPublisher = "verlinde.henk"
 ogLocale = "en_US"
+
 schemaType = "Organization"
-schemaLogo = "logo-doks.png"
-schemaTwitter = "https://twitter.com/getdoks"
+schemaLogo = "logo-hyas.png"
+schemaTwitter = "https://twitter.com/henkverlinde"
 schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaSection = "news"
+schemaGitHub = "https://github.com/h-enk"
+schemaSection = "blog"
+
 siteLinksSearchBox = false
 
 themeColor = "#fff"
 
-# googleAnalytics = "UA-99999999-1"
-
 quality = 85
 bgColor = "#fff"
-landscapePhotoWidths = [900, 700, 500]
-portraitPhotoWidths = [1500, 1000, 750]
+landscapePhotoWidths = [1000, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
-footer = "© 2020 Henk Verlinde - MIT License"
-version = "v0.1.0"
+footer = "An open source project by <a href=\"https://twitter.com/henkverlinde\">@HenkVerlinde</a>"
+
+alert = false
+alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+
+hyasVersion = "v0.2.0"
+
+docsRepo = "https://github.com/h-enk/doks"

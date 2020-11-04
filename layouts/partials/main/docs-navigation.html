@@ -4,7 +4,7 @@
 	{{ $pages := where site.RegularPages "Section" .Section -}}
 	{{ with $pages.Next . -}}
 		<a href="{{ .Permalink }}">
-			<div class="card my-3">
+			<div class="card my-1">
 				<div class="card-body py-2">
 					&larr; {{ .Title }}
 				</div>
@@ -13,7 +13,7 @@
 	{{ end -}}
 	{{ with $pages.Prev . -}}
 		<a class="ml-auto" href="{{ .Permalink }}">
-			<div class="card my-3">
+			<div class="card my-1">
 				<div class="card-body py-2">
 					{{ .Title }} &rarr;
 				</div>

@@ -1,10 +1,12 @@
-{{ if and (eq .Kind "section" "taxonomy" "taxonomyTerm") (ne .Section "blog" ) -}}
-<meta name="robots" content="noindex, noarchive">
+{{ if eq .Kind "404" -}}
+  <meta name="robots" content="noindex, follow">
 {{ else -}}
   {{ with .Params.robots -}}
-    <meta name="robots" content="{{ . }}">
+  <meta name="robots" content="{{ . }}">
   {{ else -}}
-    <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   {{ end -}}
 {{ end -}}
 
@@ -20,21 +22,29 @@
   <meta name="description" content="{{ .Site.Params.description }}">
 {{ end -}}
 
-{{ with .Params.canonical -}}
-  <link rel="canonical" href="{{ . }}">
-{{ else -}}
+{{ if $.Scratch.Get "paginator" }}
+  <link rel="canonical" href="{{ .Paginator.URL | absURL }}">
+  {{ if .Paginator.HasPrev -}}
+    <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}">
+  {{ end -}}
+  {{ if .Paginator.HasNext -}}
+    <link rel="next" href="{{ .Paginator.Next.URL | absURL }}">
+  {{ end -}}
+{{ else  -}}
   <link rel="canonical" href="{{ .Permalink }}">
 {{ end -}}
 
-{{ template "_internal/twitter_cards.html" . -}}
-<meta name="twitter:site" content="{{ .Site.Params.twitterSite }}">
-<meta name="twitter:creator" content="{{ .Site.Params.twitterCreator }}">
+{{ partial "head/twitter_cards.html" . }}
+<meta name="twitter:site" content="@{{ .Site.Params.twitterSite }}">
+<meta name="twitter:creator" content="@{{ .Site.Params.twitterCreator }}">
 
-{{ template "_internal/opengraph.html" . -}}
+{{ partial "head/opengraph.html" . }}
+<meta property="article:publisher" content="https://www.facebook.com/{{ .Site.Params.facebookPublisher }}">
+<meta property="article:author" content="https://www.facebook.com/{{ .Site.Params.facebookAuthor }}">
 <meta property="og:locale" content="{{ .Site.Params.ogLocale }}">
 
 {{ range .AlternativeOutputFormats -}}
   <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
 {{ end -}}
 
-{{ block "head/structured-data" . }}{{ partial "head/structured-data.html" . }}{{ end }}
+{{ partial "head/structured-data.html" . }}

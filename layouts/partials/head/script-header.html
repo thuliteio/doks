@@ -1,11 +1,1 @@
-{{ if isset .Site.Params "googleanalytics" -}}
-<script>
-(function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
-;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
-;c.parentNode.insertBefore(a,c)
-})(window,document,"galite","script","{{ .Site.BaseURL }}js/vendor/ga-lite/ga-lite.min.js");
-
-galite('create', '{{ $.Site.Params.googleAnalytics }}', 'auto');
-galite('send', 'pageview');
-</script>
-{{ end -}}
+<script async defer data-domain="gethyas.com" src="https://stats.gethyas.com/js/index.js"></script>

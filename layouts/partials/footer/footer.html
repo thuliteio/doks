@@ -2,7 +2,12 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-16 text-center">
-        <p>{{ .Site.Params.footer | safeHTML }}</p>
+        <ul class="list-inline">
+          <!-- <li class="list-inline-item">{{ .Site.Params.footer | safeHTML }}</li> -->
+          <!-- <li class="list-inline-item"><a href="{{ "privacy-policy" | absURL }}">Privacy</a></li> -->
+          <li class="list-inline-item">This site is powered by <a href="https://gohugo.io/">Hugo</a> and the <a href="https://getdoks.org/">Doks</a> theme</li>
+          <!-- <li class="list-inline-item"><a href="https://gethyas.com/">This site is powered by Hyas</a></li> -->
+        </ul>
       </div>
     </div>
   </div>

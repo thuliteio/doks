@@ -1,36 +1,42 @@
 {
   "name": "doks",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "browserslist": [
     "defaults"
   ],
   "scripts": {
-    "start": "hugo server",
-    "build": "hugo --minify && npm run build:functions",
+    "start": "hugo server --disableFastRender",
+    "build": "hugo --gc --minify && npm run build:functions",
     "build:functions": "netlify-lambda build assets/lambda",
     "build:preview": "npm run build -D -F",
     "server": "hugo server",
     "clean": "rimraf public resources functions",
-    "lint": "npm run -s lint:scripts && npm run -s lint:styles",
+    "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown",
     "lint:scripts": "eslint assets/js assets/lambda config",
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
+    "lint:markdown": "markdownlint *.md content/**/*.md",
     "test": "npm run -s lint"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^1.3",
-    "autoprefixer": "^9.8",
-    "eslint": "^7.12",
-    "ga-lite": "^2.0.5",
-    "netlify-lambda": "^1.6",
-    "postcss-cli": "^7.1",
+    "@babel/cli": "^7.11",
+    "@babel/core": "^7.11",
+    "@babel/preset-env": "^7.12",
+    "@fullhuman/postcss-purgecss": "^3.0",
+    "autoprefixer": "^10.0",
+    "bootstrap": "^4.5",
+    "eslint": "^7.10",
+    "flexsearch": "^0.6.32",
+    "instant.page": "^5.1",
+    "lazysizes": "^5.2",
+    "markdownlint-cli": "^0.24",
+    "netlify-lambda": "^2.0",
+    "postcss": "^8.1",
+    "postcss-cli": "^8.1",
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",
-    "stylelint": "^13.2",
+    "stylelint": "^13.7",
     "stylelint-config-standard": "^20.0"
   },
-  "dependencies": {
-    "bootstrap": "^4.5",
-    "lazysizes": "^5.2"
-  }
+  "dependencies": {}
 }

@@ -8,15 +8,13 @@
   margin-bottom: 0;
 }
 
-.footer p,
-.footer li a {
+.footer li {
   font-size: $font-size-sm;
   margin-bottom: 0;
 }
 
 @include media-breakpoint-up(md) {
-  .footer p,
-  .footer li a {
+  .footer li {
     font-size: $font-size-base;
   }
 }

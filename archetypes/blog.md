@@ -3,9 +3,11 @@ title: "{{ replace .Name "-" " " | title }}"
 description: ""
 lead: ""
 date: {{ .Date }}
+lastmod: {{ .Date }}
 draft: true
-images: {{ .Site.Params.images }}
-authors: [""]
+weight: 50
+images: ["{{ .Name | urlize }}.jpg"]
+contributors: ["Henk Verlinde"]
 ---
 
-{{< img src="" alt="" caption="" class="wide" >}}
+{{< img src="{{ .Name | urlize }}.jpg" alt="{{ replace .Name "-" " " | title }}" caption="{{ replace .Name "-" " " | title }}" class="wide" >}}

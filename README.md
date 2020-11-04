@@ -27,7 +27,7 @@ Six reasons why you should use Doks:
 Make sure all dependencies have been installed:
 
 - [Hugo](https://gohugo.io/) >= 0.75.0/extended
-- [Node.js](https://nodejs.org/) >= 14.15.0 (needed to install npm packages and run scripts)
+- [Node.js](https://nodejs.org/) >= 14.15.0 (needed to install npm packages and run commands)
 
 ## Get started
 
@@ -37,7 +37,7 @@ Create a new Doks project:
 git clone https://github.com/h-enk/doks.git my-doks-site
 ```
 
-Install dependencies:
+Install npm packages:
 
 ```bash
 # @ my-doks-site/

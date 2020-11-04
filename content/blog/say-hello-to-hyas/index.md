@@ -4,7 +4,7 @@ description: "Introducing Hyas, a Hugo starter helping you build modern websites
 lead: "Introducing Hyas, a Hugo starter helping you build modern websites that are secure, fast, and SEO-ready — by default."
 date: 2020-10-06T08:50:12+00:00
 lastmod: 2020-10-06T08:50:12+00:00
-draft: false
+draft: true
 weight: 50
 images: ["say-hello-to-hyas.png", "google-lighthouse-scores-hyas.png", "mozilla-observatory-scores-hyas.png"]
 contributors: ["Henk Verlinde"]

@@ -27,7 +27,7 @@ Six reasons why you should use Doks:
 Make sure all dependencies have been installed:
 
 - [Hugo](https://gohugo.io/) >= 0.75.0/extended
-- [Node.js](https://nodejs.org/) >= 14.15.0 (needed to install npm packages and run scripts
+- [Node.js](https://nodejs.org/) >= 14.15.0 (needed to install npm packages and run scripts)
 
 ## Get started
 
@@ -44,7 +44,7 @@ Install dependencies:
 $ npm install
 ```
 
-Build development theme with live reloading and injection:
+Start local development server:
 
 ```bash
 # @ my-doks-site/
@@ -56,7 +56,7 @@ $ npm run start
 - `npm run lint:styles` - Check Sass for errors
 - `npm run lint:scripts` - Check JavaScript for errors
 - `npm run clean` - Delete temporary directories
-- `npm run build` - Build production theme
+- `npm run build` - Build production website
 
 ## Quick start
 

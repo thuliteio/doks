@@ -3,7 +3,7 @@ titleSeparator = "-"
 titleAddition = "Modern Documentation Theme"
 description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
 
-images = ["hyas.png"]
+images = ["doks.png"]
 
 twitterSite = "henkverlinde"
 twitterCreator = "henkverlinde"
@@ -12,7 +12,7 @@ facebookPublisher = "verlinde.henk"
 ogLocale = "en_US"
 
 schemaType = "Organization"
-schemaLogo = "logo-hyas.png"
+schemaLogo = "logo-doks.png"
 schemaTwitter = "https://twitter.com/henkverlinde"
 schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
 schemaGitHub = "https://github.com/h-enk"

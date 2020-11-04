@@ -32,7 +32,7 @@
     "markdownlint-cli": "^0.24",
     "netlify-lambda": "^2.0",
     "postcss": "^8.1",
-    "postcss-cli": "^8.1",
+    "postcss-cli": "^8.2",
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",
     "stylelint": "^13.7",

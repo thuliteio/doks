@@ -16,6 +16,7 @@
     "lint:scripts": "eslint assets/js assets/lambda config",
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
     "lint:markdown": "markdownlint *.md content/**/*.md",
+    "release": "standard-version",
     "test": "npm run -s lint"
   },
   "devDependencies": {
@@ -35,6 +36,7 @@
     "postcss-cli": "^8.2",
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",
+    "standard-version": "^9.0.0",
     "stylelint": "^13.7",
     "stylelint-config-standard": "^20.0"
   },

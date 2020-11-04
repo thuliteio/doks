@@ -41,7 +41,7 @@ Install dependencies:
 
 ```bash
 # @ my-doks-site/
-$ npm run install
+$ npm install
 ```
 
 Build development theme with live reloading and injection:

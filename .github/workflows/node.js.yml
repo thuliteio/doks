@@ -1,0 +1,51 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+
+    # runs-on: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: [ubuntu-latest]
+
+    strategy:
+      matrix:
+        node-version: [14.x, 15.x]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install Hugo
+      run: wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb"
+      run: sudo dpkg -i hugo*.deb
+      run: npm ci
+      env:
+        PRODUCTION: true
+        HUGO_RELEASE: 0.78.0
+    
+    - name: Check install Hugo
+      run: hugo version
+
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Check for linting errors
+      run: npm test
+    
+    - name: Delete temporary directories
+      run: npm run clean
+    
+    - name: Build production website
+      run: npm run build

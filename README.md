@@ -1,7 +1,9 @@
 # Doks
 
 [![GitHub release](https://img.shields.io/github/release/h-enk/doks.svg?style=flat-square)](https://github.com/h-enk/doks/releases)
-[![Build Status](https://img.shields.io/travis/h-enk/doks.svg?style=flat-square)](https://travis-ci.com/h-enk/doks)
+
+[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/h-enk/doks/CI/master?style=flat-square)](https://github.com/h-enk/doks/actions?query=workflow%3A%22Node.js+CI%22)
+
 [![Netlify](https://img.shields.io/netlify/895a161c-86be-48a2-8c57-a8c5d68cd1a4?style=flat-square)](https://doks.netlify.com/)
 
 Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.

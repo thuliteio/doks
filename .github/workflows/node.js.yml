@@ -28,13 +28,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Install Hugo
-      run: 
-        wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb"
-        dpkg -i hugo*.deb
-        npm ci
-      env:
-        PRODUCTION: true
-        HUGO_RELEASE: 0.78.0
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
     
     - name: Check install Hugo
       run: hugo version

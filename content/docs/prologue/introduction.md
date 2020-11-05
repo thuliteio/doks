@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-description: "Introduction Hyas."
-lead: "Hyas is a Hugo starter helping you build modern websites that are secure, fast, and SEO-ready — by default."
+description: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+lead: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
 date: 2020-10-06T08:48:57+00:00
 lastmod: 2020-10-06T08:48:57+00:00
 draft: false
@@ -13,13 +13,13 @@ weight: 010
 toc: true
 ---
 
-## Why Hyas?
+## Why Doks?
 
-Six reasons why you should use Hyas:
+Six reasons why you should use Doks:
 
-1. __Security aware__. Get A+ scores on [Mozilla Observatory](https://observatory.mozilla.org/analyze/hyas.netlify.app) out of the box. Easily change the default Security Headers to suit your needs.
+1. __Security aware__. Get A+ scores on [Mozilla Observatory](https://observatory.mozilla.org/analyze/doks.netlify.app) out of the box. Easily change the default Security Headers to suit your needs.
 
-2. __Fast by default__. Get 100 scores on [Google Lighthouse](https://googlechrome.github.io/lighthouse/viewer/?gist=8b7aec005ae7b9e128ad5c4e2f125fea) by default. Hyas removes unused css, prefetches links, and lazy loads images.
+2. __Fast by default__. Get 100 scores on [Google Lighthouse](https://googlechrome.github.io/lighthouse/viewer/?gist=8b7aec005ae7b9e128ad5c4e2f125fea) by default. Doks removes unused css, prefetches links, and lazy loads images.
 
 3. __SEO-ready__. Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.
 
@@ -29,76 +29,59 @@ Six reasons why you should use Hyas:
 
 6. __Netlify-ready__. Deploy to Netlify with sensible defaults. Easily use Netlify Functions, Netlify Redirects, and Netlify Headers.
 
-## Prerequisites
+## Requirements
 
 Make sure all dependencies have been installed:
 
-- [Hugo](https://gohugo.io/) >= 0.75.1/extended
-- [Node.js](https://nodejs.org/) >= 14.12.0
-- [Yarn](https://yarnpkg.com/) >= 1.22.5 (recommended)
-
-{{< alert icon="💡" text="npm (comes with Node.js) and Yarn are both Node.js package managers. <a href=\"https://classic.yarnpkg.com/en/\">Yarn</a> is faster, more reliable, and more secure than npm." >}}
+- [Hugo](https://gohugo.io/) >= 0.75.0/extended
+- [Node.js](https://nodejs.org/) >= 14.15.0 (needed to install npm packages and run commands)
 
 ## Get started
 
-Three ways to get started.
-
-### Hyas CLI
-
-Install the Hyas CLI globally:
+Create a new Doks project:
 
 ```bash
-yarn add global @hyas/cli
+git clone https://github.com/h-enk/doks.git my-doks-site
 ```
 
-Create a new Hyas project:
+Install npm packages:
 
 ```bash
-hyas create [dir]
-```
-
-#### npx
-
-Or use [npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner):
-
-```bash
-npx @hyas/cli create my-hyas-site
-```
-
-See also: [Hyas CLI]({{< ref "hyas-cli" >}}).
-
-### Repository clone
-
-Create a new Hyas project:
-
-```bash
-git clone git@github.com:h-enk/hyas.git my-hyas-site
-```
-
-Install dependencies:
-
-```bash
-yarn install
+# @ my-doks-site/
+$ npm install
 ```
 
 Start local development server:
 
 ```bash
-yarn start
+# @ my-doks-site/
+$ npm run start
 ```
 
-See also: [commands]({{< ref "commands" >}}).
+### Other commands
 
-### Netlify deploy
+- `npm run lint:styles` - Check Sass for errors
+- `npm run lint:scripts` - Check JavaScript for errors
+- `npm run clean` - Delete temporary directories
+- `npm run build` - Build production website
 
-Get your Hyas site in 1 min.
+## Quick start
 
-<a class="btn btn-primary btn-sm px-3" href="https://app.netlify.com/start/deploy?repository=https://github.com/h-enk/hyas" role="button">Deploy to Netlify</a>
+Get your Doks site in 1 min.
 
-<!--
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/h-enk/hyas "Deploy to Netlify")
--->
+<a class="btn btn-primary btn-sm px-3" href="https://app.netlify.com/start/deploy?repository=https://github.com/h-enk/doks" role="button">Deploy to Netlify</a>
 
 ## Example site
 
-👉 [hyas.netlify.app](https://hyas.netlify.app/)
+👉 [doks.netlify.app](https://doks.netlify.app/)
+
+## Documentation
+
+- [Netlify](https://docs.netlify.com/)
+- [Hugo](https://gohugo.io/documentation/)
+- [Doks](https://getdoks.org/)
+
+## Communities
+
+- [Netlify Community](https://community.netlify.com/)
+- [Hugo Forums](https://discourse.gohugo.io/)

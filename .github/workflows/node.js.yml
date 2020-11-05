@@ -30,7 +30,7 @@ jobs:
     - name: Install Hugo
       run: 
         wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb"
-        sudo dpkg -i hugo*.deb
+        dpkg -i hugo*.deb
         npm ci
       env:
         PRODUCTION: true

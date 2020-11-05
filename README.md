@@ -40,23 +40,18 @@ git clone https://github.com/h-enk/doks.git my-doks-site
 Install npm packages:
 
 ```bash
-# @ my-doks-site/
-$ npm install
+npm install
 ```
 
 Start local development server:
 
 ```bash
-# @ my-doks-site/
-$ npm run start
+npm run start
 ```
 
 ### Other commands
 
-- `npm run lint:styles` - Check Sass for errors
-- `npm run lint:scripts` - Check JavaScript for errors
-- `npm run clean` - Delete temporary directories
-- `npm run build` - Build production website
+Doks comes with [commands for most used tasks](https://getdoks.org/docs/prologue/commands/).
 
 ## Quick start
 

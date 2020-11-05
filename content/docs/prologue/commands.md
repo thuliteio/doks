@@ -1,7 +1,7 @@
 ---
 title: "Commands"
-description: "Repository commands."
-lead: "Repository commands."
+description: "Doks comes with commands for most used tasks."
+lead: "Doks comes with commands for most used tasks."
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
@@ -13,48 +13,14 @@ weight: 030
 toc: true
 ---
 
+{{< alert icon="💡" text="You can change the commands in the scripts section of `./package.json`." >}}
+
 ## start
 
 Start local development server:
 
 ```bash
-yarn start
-```
-
-## build
-
-Build production website:
-
-```bash
-yarn build
-```
-
-### :functions
-
-```bash
-yarn build:functions
-```
-
-### :preview
-
-```bash
-yarn build:preview
-```
-
-## server
-
-Start local development server:
-
-```bash
-yarn server
-```
-
-## clean
-
-Delete temporary directories:
-
-```bash
-yarn clean
+npm run start
 ```
 
 ## lint
@@ -62,31 +28,61 @@ yarn clean
 Check scripts, styles, and markdown for errors:
 
 ```bash
-yarn lint
+npm run lint
 ```
 
-### :scripts
+### scripts
+
+Check scripts for errors:
 
 ```bash
-yarn lint:scripts [--fix]
+npm run lint:scripts [--fix]
 ```
 
-### :styles
+### styles
+
+Check styles for errors:
 
 ```bash
-yarn lint:styles [--fix]
+npm run lint:styles [--fix]
 ```
 
-### :markdown
+### markdown
+
+Check markdown for errors:
 
 ```bash
-yarn lint:markdown [--fix]
+npm run lint:markdown [--fix]
 ```
 
-## test
+## clean
 
-Check scripts, styles, and markdown for errors:
+Delete temporary directories:
 
 ```bash
-yarn test
+npm run clean
+```
+
+## build
+
+Build production website:
+
+```bash
+npm run build
+```
+
+### functions
+
+Build Lambda functions:
+
+```bash
+npm run build:functions
+```
+
+### preview
+
+Build production website including draft and future content:
+
+```bash
+npm run build:preview
 ```

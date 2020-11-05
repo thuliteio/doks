@@ -6,11 +6,10 @@
     "defaults"
   ],
   "scripts": {
-    "start": "hugo server --disableFastRender",
+    "start": "hugo server",
     "build": "hugo --gc --minify && npm run build:functions",
     "build:functions": "netlify-lambda build assets/lambda",
     "build:preview": "npm run build -D -F",
-    "server": "hugo server",
     "clean": "rimraf public resources functions",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown",
     "lint:scripts": "eslint assets/js assets/lambda config",

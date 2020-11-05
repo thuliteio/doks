@@ -13,15 +13,6 @@ weight: 410
 toc: true
 ---
 
-## What's with the name?
-
-Hyas used [Atlas](https://github.com/indigotree/atlas) 🙏 as a starting point. In Greek mythology,
-[Hyas](https://www.greekmythology.com/Other_Gods/Minor_Gods/Hyas/hyas.html) was the son of the Titan Atlas and the Oceanid Aethra.
-
-## Can I get support?
-
-Visit [Hugo Discourse](https://discourse.gohugo.io/) and use the search. If that does not help, start a new topic and ask your question.
-
 ## Keyboard shortcuts for search?
 
 - focus: `/`

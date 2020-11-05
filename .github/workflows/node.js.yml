@@ -28,9 +28,10 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Install Hugo
-      run: wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb"
-      run: sudo dpkg -i hugo*.deb
-      run: npm ci
+      run: 
+        wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_RELEASE}/hugo_extended_${HUGO_RELEASE}_Linux-64bit.deb"
+        sudo dpkg -i hugo*.deb
+        npm ci
       env:
         PRODUCTION: true
         HUGO_RELEASE: 0.78.0

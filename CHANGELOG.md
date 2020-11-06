@@ -1,25 +1,43 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## 0.1.0 (2020-11-06)
 
-## [Unreleased]
 
-## [0.1.1] - 2020-09-29
+### Features
 
-### Added
+* add flexsearch ([97d8e2c](https://github.com/h-enk/doks/commit/97d8e2c0e2568f9f9f653dcc243d06aa25482e70))
+* add standard-version ([6d83ec3](https://github.com/h-enk/doks/commit/6d83ec308e0a9c4db5aa8d2f2c8309ad09673605))
+* update static assets ([1b16e6b](https://github.com/h-enk/doks/commit/1b16e6bb3d87888b51eff2a8ce7d482cc1a5daf6))
 
-- Base documentation
 
-## [0.1.0] - 2020-07-10
+### Bug Fixes
 
-### Added
+* update badges ([90cea78](https://github.com/h-enk/doks/commit/90cea786c1aec4cc7004fdf9571ad05a739aa96c))
+* update file path ([73004c3](https://github.com/h-enk/doks/commit/73004c3f8eaee87957ab53bb1f27716acde7a361))
 
-- [Feather](https://github.com/feathericons/feather), Copyright (c) 2013-2017 Cole Bemis, [MIT License](https://github.com/feathericons/feather/blob/master/LICENSE)
-- [Hyas](https://github.com/h-enk/hyas), Copyright (c) 2020 Henk Verlinde, [MIT License](https://github.com/h-enk/hyas/blob/master/LICENSE)
 
-[Unreleased]: https://github.com/h-enk/gethyas.com/compare/v0.1.1...HEAD
-[0.1.1]: https://github.com/h-enk/gethyas.com/releases/tag/v0.1.1
-[0.1.0]: https://github.com/h-enk/gethyas.com/releases/tag/v0.1.0
+### Documentation
+
+* update ci badge ([7c4373a](https://github.com/h-enk/doks/commit/7c4373a3a9a29f35f858f27ad4b67ad0379a3da0))
+* update content ([c6ea4f3](https://github.com/h-enk/doks/commit/c6ea4f3ae54e1c7b890dffb2243c0a81eb96b295))
+* update content ([c8c403d](https://github.com/h-enk/doks/commit/c8c403dbf9963eeef3c7dca7f6334929bbc5383b))
+* update gist id ([81d7b1a](https://github.com/h-enk/doks/commit/81d7b1a5df91f238378723018a84d0dd4cd12dd5))
+* update README ([a1d2e80](https://github.com/h-enk/doks/commit/a1d2e8091a0a2051fdbb3384ad797d8cd5251ce6))
+* update README ([a9aa6ab](https://github.com/h-enk/doks/commit/a9aa6ab1af1ef5c8619dd3d7c64d96d5a21d956c))
+* update README ([d0bcf8d](https://github.com/h-enk/doks/commit/d0bcf8d69dfd2d28d9f603945efc37a64b8b529b))
+* update README ([f6dcccc](https://github.com/h-enk/doks/commit/f6dcccc458a1a4c5cac655976a665fb66b1f7b7a))
+* update README ([eb4e714](https://github.com/h-enk/doks/commit/eb4e714f4f1fd97117a9fc155df6b6e4be55c0ed))
+
+
+### Dependencies
+
+* bump postcss ([12411c3](https://github.com/h-enk/doks/commit/12411c38a98fb362ff348e5c151fcb7813e8691e))
+* bump postcss-cli ([88b49b5](https://github.com/h-enk/doks/commit/88b49b552849ab807f17ff9bfacfc847d9c2dbd2))
+* bump versions ([53cf8ba](https://github.com/h-enk/doks/commit/53cf8ba6e260687c4fc5eea0774a7d0e6aa559f8))
+* update for dependabot PR's ([bad7deb](https://github.com/h-enk/doks/commit/bad7debffa8d8e6b442edf6e51f07f915fdfdd83))
+
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.

@@ -38,6 +38,3 @@ All notable changes to this project will be documented in this file. See [standa
 * bump versions ([53cf8ba](https://github.com/h-enk/doks/commit/53cf8ba6e260687c4fc5eea0774a7d0e6aa559f8))
 * update for dependabot PR's ([bad7deb](https://github.com/h-enk/doks/commit/bad7debffa8d8e6b442edf6e51f07f915fdfdd83))
 
-# Changelog
-
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.

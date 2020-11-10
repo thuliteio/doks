@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.1](https://github.com/h-enk/doks/compare/v0.1.0...v0.1.1) (2020-11-10)
+
+
+### Documentation
+
+* update content ([c4c83eb](https://github.com/h-enk/doks/commit/c4c83eb9b68674553c6a7e988249a808d75250b4))
+* update reasons ([1cec423](https://github.com/h-enk/doks/commit/1cec4237b395ff306b765d47b29b8410c2884921))
+
+
+### Dependencies
+
+* bump eslint ([d794dab](https://github.com/h-enk/doks/commit/d794dabbe389b0f616ccfca564607f9be4670e0c))
+* reinstall ([6705f4b](https://github.com/h-enk/doks/commit/6705f4bbc4da4cd967e7165ab3681137014633bb))
+
 ## 0.1.0 (2020-11-06)
 
 
@@ -37,4 +51,3 @@ All notable changes to this project will be documented in this file. See [standa
 * bump postcss-cli ([88b49b5](https://github.com/h-enk/doks/commit/88b49b552849ab807f17ff9bfacfc847d9c2dbd2))
 * bump versions ([53cf8ba](https://github.com/h-enk/doks/commit/53cf8ba6e260687c4fc5eea0774a7d0e6aa559f8))
 * update for dependabot PR's ([bad7deb](https://github.com/h-enk/doks/commit/bad7debffa8d8e6b442edf6e51f07f915fdfdd83))
-

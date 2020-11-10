@@ -28,7 +28,7 @@ landscapePhotoWidths = [1000, 800, 700, 600, 500]
 portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
-footer = "An open source project by <a href=\"https://twitter.com/henkverlinde\">@HenkVerlinde</a>"
+footer = "This site is powered by <a href=\"https://gohugo.io/\">Hugo</a> and the <a href=\"https://getdoks.org/\">Doks</a> theme."
 
 alert = false
 alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"

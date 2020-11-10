@@ -15,7 +15,7 @@ toc: true
 
 ## Why Doks?
 
-Six reasons why you should use Doks:
+Nine reasons why you should use Doks:
 
 1. __Security aware__. Get A+ scores on [Mozilla Observatory](https://observatory.mozilla.org/analyze/doks.netlify.app) out of the box. Easily change the default Security Headers to suit your needs.
 
@@ -28,6 +28,12 @@ Six reasons why you should use Doks:
 5. __Bootstrap framework__. Build robust, flexible, and intuitive websites with Bootstrap. Or use any other front-end framework if you prefer.
 
 6. __Netlify-ready__. Deploy to Netlify with sensible defaults. Easily use Netlify Functions, Netlify Redirects, and Netlify Headers.
+
+7. __Full text search__. Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.
+
+8. __Page layouts__. Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.
+
+9. __Dark mode__. Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.
 
 ## Requirements
 

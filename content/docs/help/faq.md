@@ -1,7 +1,7 @@
 ---
 title: "FAQ"
-description: "FAQ Doks."
-lead: ""
+description: "Answers to frequently asked questions."
+lead: "Answers to frequently asked questions."
 date: 2020-10-06T08:49:31+00:00
 lastmod: 2020-10-06T08:49:31+00:00
 draft: false
@@ -9,9 +9,17 @@ images: []
 menu: 
   docs:
     parent: "help"
-weight: 410
+weight: 540
 toc: true
 ---
+
+## Hyas?
+
+Doks is a [Hyas theme](https://gethyas.com/themes/) build by the creator of Hyas.
+
+## Footer notice?
+
+Please keep it in place.
 
 ## Keyboard shortcuts for search?
 
@@ -19,3 +27,17 @@ toc: true
 - select: `↓` and `↑`
 - open: `Enter`
 - close: `Esc`
+
+## Can I get support?
+
+Create a topic:
+
+- [Netlify Community](https://community.netlify.com/)
+- [Hugo Forums](https://discourse.gohugo.io/)
+
+## Contact the creator?
+
+Send `h-enk` a message:
+
+- [Netlify Community](https://community.netlify.com/)
+- [Hugo Forums](https://discourse.gohugo.io/)

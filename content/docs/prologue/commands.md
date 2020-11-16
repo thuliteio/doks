@@ -36,7 +36,7 @@ npm run lint
 Check scripts for errors:
 
 ```bash
-npm run lint:scripts [--fix]
+npm run lint:scripts [-- --fix]
 ```
 
 ### styles
@@ -44,7 +44,7 @@ npm run lint:scripts [--fix]
 Check styles for errors:
 
 ```bash
-npm run lint:styles [--fix]
+npm run lint:styles [-- --fix]
 ```
 
 ### markdown
@@ -52,7 +52,7 @@ npm run lint:styles [--fix]
 Check markdown for errors:
 
 ```bash
-npm run lint:markdown [--fix]
+npm run lint:markdown [-- --fix]
 ```
 
 ## clean

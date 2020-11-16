@@ -99,20 +99,20 @@
 
   .navbar-form {
     margin-top: 0;
-    margin-left: 9rem;
+    margin-left: 6rem;
     margin-right: 1.5rem;
   }
 }
 
 @include media-breakpoint-up(lg) {
   .navbar-form {
-    margin-left: 18rem;
+    margin-left: 15rem;
   }
 }
 
 @include media-breakpoint-up(xl) {
   .navbar-form {
-    margin-left: 36rem;
+    margin-left: 30rem;
   }
 }
 

@@ -44,6 +44,11 @@ h6,
   }
 }
 
+.home h1 {
+  /* font-size: calc(1.375rem + 1.5vw); */
+  font-size: calc(1.875rem + 1.5vw);
+}
+
 .section {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -179,6 +184,10 @@ body {
   height: 9rem;
   margin-top: -10rem;
   z-index: -1;
+}
+
+.bg-dots-md {
+  margin-top: -11rem;
 }
 
 .bg-dots-lg {

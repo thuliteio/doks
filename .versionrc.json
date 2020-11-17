@@ -12,7 +12,7 @@
   ],
   "bumpFiles": [
     {
-      "filename": "data/.doks.json",
+      "filename": "data/doks.json",
       "type": "json"
     }
   ]

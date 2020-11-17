@@ -33,7 +33,4 @@ footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\
 alert = false
 alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
 
-hyasVersion = "v1.2.8"
-doksVersion = "v0.1.1"
-
 docsRepo = "https://github.com/h-enk/doks"

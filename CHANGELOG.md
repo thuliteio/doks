@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/h-enk/doks/compare/v0.1.2...v0.1.3) (2020-11-17)
+
+
+### Dependencies
+
+* add doks version file ([f8dcfbe](https://github.com/h-enk/doks/commit/f8dcfbeebfda5fef533b9b7bc2463fa0dfafd5fa))
+* update doks version file ([d326669](https://github.com/h-enk/doks/commit/d326669c1d170cd5a76df1faafea472f3132fdf5))
+
 ### [0.1.2](https://github.com/h-enk/doks/compare/v0.1.1...v0.1.2) (2020-11-17)
 
 

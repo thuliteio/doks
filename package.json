@@ -19,13 +19,13 @@
     "test": "npm run -s lint"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11",
-    "@babel/core": "^7.11",
+    "@babel/cli": "^7.12",
+    "@babel/core": "^7.12",
     "@babel/preset-env": "^7.12",
     "@fullhuman/postcss-purgecss": "^3.0",
     "autoprefixer": "^10.0",
     "bootstrap": "^4.5",
-    "eslint": "^7.13",
+    "eslint": "^7.14",
     "flexsearch": "^0.6.32",
     "instant.page": "^5.1",
     "lazysizes": "^5.2",

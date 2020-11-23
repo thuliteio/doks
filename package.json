@@ -19,7 +19,7 @@
     "test": "npm run -s lint"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11",
+    "@babel/cli": "^7.12",
     "@babel/core": "^7.11",
     "@babel/preset-env": "^7.12",
     "@fullhuman/postcss-purgecss": "^3.0",

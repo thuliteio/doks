@@ -88,3 +88,6 @@ rel  = "sitemap"
   [[module.mounts]]
     source = "node_modules/flexsearch"
     target = "assets/js/vendor/flexsearch"
+  [[module.mounts]]
+    source = "node_modules/clipboard"
+    target = "assets/js/vendor/clipboard"

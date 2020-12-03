@@ -9,7 +9,7 @@ images: []
 menu: 
   docs:
     parent: "help"
-weight: 540
+weight: 630
 toc: true
 ---
 
@@ -27,6 +27,11 @@ Please keep it in place.
 - select: `↓` and `↑`
 - open: `Enter`
 - close: `Esc`
+
+## Other documentation?
+
+- [Netlify](https://docs.netlify.com/)
+- [Hugo](https://gohugo.io/documentation/)
 
 ## Can I get support?
 

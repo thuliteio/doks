@@ -6,7 +6,6 @@
   HUGO_VERSION = "0.78.0"
   NODE_VERSION = "15.0.1"
   NPM_VERSION = "7.0.5"
-  YARN_VERSION = "1.22.5"
 
 [context.production]
   command = "hugo -b $URL --gc --minify && npm run build:functions"

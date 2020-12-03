@@ -2,7 +2,9 @@
 .blog .content,
 .page .content,
 .error404 .content,
-.docs.list .content {
+.docs.list .content,
+.tutorial.list .content,
+.showcase.list .content {
   padding-top: 1rem;
   padding-bottom: 3rem;
 }
@@ -112,14 +114,15 @@ body {
   @supports ((position: -webkit-sticky) or (position: sticky)) {
     .docs-links {
       max-height: calc(100vh - 4rem);
-      overflow-y: auto;
+      overflow-y: scroll;
     }
   }
 }
 
 @include media-breakpoint-up(lg) {
   .docs-links {
-    display: block !important;
+    display: block;
+    width: auto;
     margin-right: -1.5rem;
     padding-bottom: 4rem;
   }

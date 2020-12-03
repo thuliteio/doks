@@ -279,3 +279,7 @@ body.dark .alert-primary {
   background: $link-color-dark;
   color: $body-bg-dark;
 }
+
+body.dark .figure-caption {
+  color: $body-color-dark;
+}

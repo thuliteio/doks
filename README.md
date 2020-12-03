@@ -32,32 +32,34 @@ Nine reasons why you should use Doks:
 
 Make sure all dependencies have been installed:
 
-- [Hugo](https://gohugo.io/) >= 0.75.0/extended
+- [Hugo](https://gohugo.io/getting-started/installing/) >= 0.75.0/extended (needed for SCSS processing support)
 - [Node.js](https://nodejs.org/) >= 14.15.0 (needed to install npm packages and run commands)
 
 ## Get started
 
-Create a new Doks project:
+Have your Doks site in three steps:
+
+### 1. Create a new Doks project:
 
 ```bash
 git clone https://github.com/h-enk/doks.git my-doks-site
 ```
 
-Install npm packages:
+### 2. Install npm packages:
 
 ```bash
 npm install
 ```
 
-Start local development server:
+### 3. Start local development server:
 
 ```bash
 npm run start
 ```
 
-### Other commands
+## Other commands
 
-Doks comes with [commands for most used tasks](https://getdoks.org/docs/prologue/commands/).
+Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for common tasks.
 
 ## Quick start
 
@@ -67,7 +69,7 @@ Get your Doks site in 1 min.
 
 ## Example site
 
-👉 [doks.netlify.app](https://doks.netlify.app/)
+- [doks.netlify.app](https://doks.netlify.app/)
 
 ## Documentation
 

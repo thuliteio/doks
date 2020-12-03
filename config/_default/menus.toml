@@ -6,7 +6,7 @@
 
 [[docs]]
   name = "Help"
-  weight = 50
+  weight = 60
   identifier = "help"
   url = "/docs/help/"
 

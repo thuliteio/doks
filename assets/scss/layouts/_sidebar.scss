@@ -91,3 +91,20 @@ a.docs-link {
   text-decoration: none;
   color: $link-color;
 }
+
+.docs-links h3.sidebar-link,
+.page-links h3.sidebar-link {
+  text-transform: none;
+  font-size: $font-size-md;
+  font-weight: normal;
+}
+
+.docs-links h3.sidebar-link a,
+.page-links h3.sidebar-link a {
+  color: $body-color;
+}
+
+.docs-links h3.sidebar-link a:hover,
+.page-links h3.sidebar-link a:hover {
+  text-decoration: underline;
+}

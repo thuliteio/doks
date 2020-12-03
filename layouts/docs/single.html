@@ -5,14 +5,22 @@
 				{{ partial "sidebar/docs-menu.html" . }}
 			</nav>        
 		</div>
+		{{ if ne .Params.toc false -}}
 		<nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
 			{{ partial "sidebar/docs-toc.html" . }}
 		</nav>
+		{{ end -}}
+		{{ if .Params.toc -}}
 		<main class="docs-content col-lg-11 col-xl-9">
+		{{ else -}}
+		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
+		{{ end -}}
 			<h1>{{ .Title }}</h1>
 			<p class="lead">{{ .Params.lead | safeHTML }}</p>
 			{{ partial "main/headline-hash.html" .Content }}
-			{{ partial "main/edit-page.html" . }}
+			{{ if .Site.Params.editPage -}}
+				{{ partial "main/edit-page.html" . }}
+			{{ end -}}
 			{{ partial "main/docs-navigation.html" . }}
 		</main>
 	</div>

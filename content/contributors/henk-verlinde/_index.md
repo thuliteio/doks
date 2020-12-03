@@ -7,6 +7,6 @@ draft: false
 images: []
 ---
 
-Creator of [Hyas](https://github.com/h-enk/hyas).
+Creator of Hyas.
 
 [@HenkVerlinde](https://twitter.com/henkverlinde)

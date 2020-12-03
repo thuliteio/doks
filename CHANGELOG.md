@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/h-enk/doks/compare/v0.1.3...v0.1.4) (2020-12-03)
+
+
+### Documentation
+
+* update content ([63ca41e](https://github.com/h-enk/doks/commit/63ca41e1076375eb99aad5ca6d77d95516b6f349))
+
+
+### Dependencies
+
+* bump versions ([c254be6](https://github.com/h-enk/doks/commit/c254be61754071600665858d6a7d2e2fbc105af3))
+* bump versions to latest ([831442c](https://github.com/h-enk/doks/commit/831442c1a6f3372b2930681ca9c937d123b5f6a3))
+* bump versions to latest ([0377b0d](https://github.com/h-enk/doks/commit/0377b0de75a3cc8027bd255961f6d0c184d82575))
+* bump versions to latest ([358bad6](https://github.com/h-enk/doks/commit/358bad680156937886f2957b6c6fcdbcdd97782e))
+* bump versions to latest ([7ce56d0](https://github.com/h-enk/doks/commit/7ce56d0a362c5099c0a6c50f6ad0f1c7ba969218))
+
 ### [0.1.3](https://github.com/h-enk/doks/compare/v0.1.2...v0.1.3) (2020-11-17)
 
 

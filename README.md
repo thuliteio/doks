@@ -39,19 +39,19 @@ Make sure all dependencies have been installed:
 
 Have your Doks site in three steps:
 
-### 1. Create a new Doks project:
+### 1. Create new Doks project
 
 ```bash
 git clone https://github.com/h-enk/doks.git my-doks-site
 ```
 
-### 2. Install npm packages:
+### 2. Install npm packages
 
 ```bash
 npm install
 ```
 
-### 3. Start local development server:
+### 3. Start local development server
 
 ```bash
 npm run start

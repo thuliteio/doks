@@ -7,5 +7,3 @@ lastmod: 2020-10-06T08:47:36+00:00
 draft: false
 images: []
 ---
-
-Like Doks? [Star on GitHub](https://github.com/h-enk/doks/stargazers)! ⭐️🙏

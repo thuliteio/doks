@@ -37,7 +37,7 @@ Make sure all dependencies have been installed:
 
 ## Get started
 
-Have your Doks site in three steps:
+Have your local Doks site in three steps:
 
 ### 1. Create new Doks project
 

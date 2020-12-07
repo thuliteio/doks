@@ -12,6 +12,12 @@ Doks is a Hugo theme helping you build modern documentation websites that are se
 
 - [doks.netlify.app](https://doks.netlify.app/)
 
+## Quick start
+
+Get your Doks site in 1 min.
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/h-enk/doks)
+
 ## Why Doks?
 
 Nine reasons why you should use Doks:
@@ -66,12 +72,6 @@ npm run start
 ## Other commands
 
 Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for common tasks.
-
-## Quick start
-
-Get your Doks site in 1 min.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/h-enk/doks)
 
 ## Documentation
 

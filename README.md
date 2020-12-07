@@ -1,5 +1,3 @@
-![alt text](https://raw.githubusercontent.com/h-enk/doks/master/images/tn.png "Logo Title Text 1")
-
 # Doks
 
 [![GitHub release](https://img.shields.io/github/release/h-enk/doks.svg?style=flat-square)](https://github.com/h-enk/doks/releases)
@@ -7,6 +5,8 @@
 [![Netlify](https://img.shields.io/netlify/895a161c-86be-48a2-8c57-a8c5d68cd1a4?style=flat-square)](https://doks.netlify.com/)
 
 Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.
+
+![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/h-enk/doks/master/images/tn.png)
 
 ## Demo
 

@@ -30,7 +30,7 @@
     "eslint": "^7.16",
     "flexsearch": "^0.6.32",
     "instant.page": "^5.1",
-    "lazysizes": "^5.2",
+    "lazysizes": "^5.3",
     "markdownlint-cli": "^0.26",
     "netlify-lambda": "^2.0",
     "postcss": "^8.2",

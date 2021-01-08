@@ -11,7 +11,7 @@ rssLimit = 10
 # add redirects/headers
 [outputs]
 home = ["HTML", "RSS", "REDIRECTS", "HEADERS"]
-section = ["HTML", "SITEMAP"]
+section = ["HTML", "RSS", "SITEMAP"]
 
 # remove .{ext} from text/netlify
 [mediaTypes."text/netlify"]

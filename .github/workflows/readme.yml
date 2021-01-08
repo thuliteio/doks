@@ -14,5 +14,5 @@ jobs:
     steps:
       - uses: JasonEtco/rss-to-readme@v1
         with:
-          feed-url: https://henkverlinde.com/blog/index.xml
+          feed-url: https://getdoks.org/blog/index.xml
           readme-section: feed

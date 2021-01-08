@@ -84,3 +84,7 @@ Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for comm
 - [Netlify Community](https://community.netlify.com/)
 - [Hugo Forums](https://discourse.gohugo.io/)
 - [Doks Discussions](https://github.com/h-enk/doks/discussions)
+
+## Blog
+<!--START_SECTION:feed-->
+<!--END_SECTION:feed-->

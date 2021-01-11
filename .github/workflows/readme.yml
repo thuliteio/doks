@@ -2,8 +2,7 @@ name: Readme
 
 on:
   schedule:
-    # Once a day at 10 PM
-    - cron: 0 22 * * *
+    - cron: 0 0 * * *
   push:
     branches:
       - master

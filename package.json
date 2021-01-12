@@ -1,13 +1,19 @@
 {
   "name": "doks",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "private": true,
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
   "browserslist": [
     "defaults"
   ],
   "scripts": {
     "init": "rimraf .git && git init -b main",
-    "start": "hugo server",
+    "create": "hugo new",
+    "prestart": "npm run clean",
+    "start": "hugo server --disableFastRender",
+    "prebuild": "npm run clean",
     "build": "hugo --gc --minify && npm run build:functions",
     "build:functions": "netlify-lambda build assets/lambda",
     "build:preview": "npm run build -D -F",
@@ -17,7 +23,9 @@
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "release": "standard-version",
-    "test": "npm run -s lint"
+    "server": "hugo server",
+    "test": "npm run -s lint",
+    "env": "env"
   },
   "devDependencies": {
     "@babel/cli": "^7.12",
@@ -26,9 +34,10 @@
     "@fullhuman/postcss-purgecss": "^3.1",
     "autoprefixer": "^10.2",
     "bootstrap": "^4.5",
-    "clipboard": "^2.0.6",
+    "clipboard": "^2.0",
     "eslint": "^7.17",
-    "flexsearch": "^0.6.32",
+    "flexsearch": "^0.6",
+    "hugo-bin": "^0.68.0",
     "instant.page": "^5.1",
     "lazysizes": "^5.3",
     "markdownlint-cli": "^0.26",

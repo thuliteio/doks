@@ -12,6 +12,14 @@
   ],
   "bumpFiles": [
     {
+      "filename": "package.json",
+      "type": "json"
+    },
+    {
+      "filename": "package-lock.json",
+      "type": "json"
+    },
+    {
       "filename": "data/doks.json",
       "type": "json"
     }

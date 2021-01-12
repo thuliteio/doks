@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/h-enk/doks/compare/v0.1.4...v0.1.5) (2021-01-12)
+
+
+### Features
+
+* add hugo extended as a dependency ([258224c](https://github.com/h-enk/doks/commit/258224c7880911c709f80e478cacf265fafbbb5c))
+* add hugothemes reqs ([b3afb4b](https://github.com/h-enk/doks/commit/b3afb4b4055f5cfe5a28d355ac26f577fc442392))
+* remove exampleSite ([70db6bc](https://github.com/h-enk/doks/commit/70db6bca005c2e2f82e3ac64d9150c4d87889758))
+
+
+### Documentation
+
+* update code of conduct ([411123b](https://github.com/h-enk/doks/commit/411123b207cfe0715c31455f9e5cbcfd9a2d93cc))
+* update frontpage ([f2f4937](https://github.com/h-enk/doks/commit/f2f49370a1ecd7d312de1b348e08e26d0a327121))
+* update homepage ([4e65d01](https://github.com/h-enk/doks/commit/4e65d012c5887ff8db9650006d8c6f2303d1b338))
+* update readme ([7283eb9](https://github.com/h-enk/doks/commit/7283eb997da055892d95015f1411b8528f9b2298))
+* update readme ([9dc2f0e](https://github.com/h-enk/doks/commit/9dc2f0ebfe75f968f77290d911e3be035b34e954))
+* update readme ([3ed1ad6](https://github.com/h-enk/doks/commit/3ed1ad6376959a678ceac990310dd51d2f2864f8))
+* update readme ([6a35faf](https://github.com/h-enk/doks/commit/6a35fafe485d82f4a327b8b4ed10a703eac4af1b))
+* update readme ([40dd5e4](https://github.com/h-enk/doks/commit/40dd5e4eea340f2fae24484bb86325f4410378ff))
+* update readme ([7b75c47](https://github.com/h-enk/doks/commit/7b75c47c9e0e5953b781ce4f784a3083361970fb))
+* update readme ([2d33818](https://github.com/h-enk/doks/commit/2d3381885ab6578ed44720e8f99033429034ba2a))
+* update readme ([632623f](https://github.com/h-enk/doks/commit/632623f29401f38e0a853508346a94267372dfa1))
+* update readme for docs discussions ([fb9e340](https://github.com/h-enk/doks/commit/fb9e340f6e48293ed2d32a73754ae081f41a0fc9))
+* update showcase link ([74724eb](https://github.com/h-enk/doks/commit/74724eb4c53d15475492b2b7c103b3056260fd28))
+
+
+### Dependencies
+
+* bump to latest versions ([83f4163](https://github.com/h-enk/doks/commit/83f41636f71e547f4928597bdf67128fe954f83e))
+* bump to latest versions ([372d9cb](https://github.com/h-enk/doks/commit/372d9cb64d4d68b6e95b252112e27ff9123b456c))
+* bump versions to latest ([6184067](https://github.com/h-enk/doks/commit/6184067621a33cf0e53a4ae9fab269a91a11b730))
+* bump versions to latest ([940f30d](https://github.com/h-enk/doks/commit/940f30dcebfde1a4a8900118fdf84f57410ed63a))
+* bump versions to latest ([751d6c6](https://github.com/h-enk/doks/commit/751d6c68caa1811be92eaae378e16413f09eb12e))
+* bump versions to latest ([b66c0a6](https://github.com/h-enk/doks/commit/b66c0a6221cddbaf997c032222276185cc910d9d))
+* bump versions to latest ([1d7e3b8](https://github.com/h-enk/doks/commit/1d7e3b873b537e498ef4ef5ce5548b252a62c4bc))
+* bump versions to latest ([0aa2e0f](https://github.com/h-enk/doks/commit/0aa2e0f7e07e930ba507f8652e0d6375c562def7))
+* bump versions to latest ([ce5c733](https://github.com/h-enk/doks/commit/ce5c7336f95c3d6e6be4c7b3fb7db3812b7ac4ac))
+* bump versions to latest ([cc62487](https://github.com/h-enk/doks/commit/cc6248722a91f163359ce42e83f06e0ae5277ef7))
+
 ### [0.1.4](https://github.com/h-enk/doks/compare/v0.1.3...v0.1.4) (2020-12-03)
 
 

@@ -6,7 +6,7 @@ date: 2020-11-16T13:59:39+01:00
 lastmod: 2020-11-16T13:59:39+01:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "prologue"
 weight: 110
@@ -15,12 +15,7 @@ toc: true
 
 ## Requirements
 
-{{< alert icon="👉" text="Node.js is needed to install npm packages and run commands." >}}
-
-Make sure all dependencies have been installed:
-
-- [Hugo](https://gohugo.io/getting-started/installing/) >= 0.75.0/extended
-- [Node.js](https://nodejs.org/) >= 14.15.0
+Doks is a [npm](https://www.npmjs.com/) project. Installing npm is pretty simple: download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform. The Long Term Support (LTS) release is recommended for most users, the Current release contains the latest features.
 
 ## Start a new Doks project
 

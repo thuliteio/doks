@@ -42,10 +42,7 @@ Nine reasons why you should use Doks:
 
 ## Requirements
 
-Make sure all dependencies have been installed:
-
-- [Hugo](https://gohugo.io/getting-started/installing/) >= 0.75.0/extended (needed for SCSS processing support)
-- [Node.js](https://nodejs.org/) >= 14.15.0 (needed to install npm packages and run commands)
+Doks is a [npm](https://www.npmjs.com/) project. Installing npm is pretty simple: download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform. The Long Term Support (LTS) release is recommended for most users, the Current release contains the latest features.
 
 ## Get started
 

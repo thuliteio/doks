@@ -15,7 +15,9 @@ toc: true
 
 ## Requirements
 
-Doks is a [npm](https://www.npmjs.com/) project. Installing npm is pretty simple: download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform. The Long Term Support (LTS) release is recommended for most users, the Current release contains the latest features.
+Make sure all dependencies have been installed:
+
+- [Node.js](https://nodejs.org/) >= 14.x
 
 ## Start a new Doks project
 

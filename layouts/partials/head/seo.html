@@ -30,7 +30,7 @@
   {{ if .Paginator.HasNext -}}
     <link rel="next" href="{{ .Paginator.Next.URL | absURL }}">
   {{ end -}}
-{{ else  -}}
+{{ else -}}
   <link rel="canonical" href="{{ .Permalink }}">
 {{ end -}}
 

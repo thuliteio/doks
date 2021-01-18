@@ -13,9 +13,7 @@ weight: 110
 toc: true
 ---
 
-## Requirements
-
-Make sure all dependencies have been installed:
+## Requirement
 
 - [Node.js](https://nodejs.org/) >= 14.x
 

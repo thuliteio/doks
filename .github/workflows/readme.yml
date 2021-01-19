@@ -2,7 +2,7 @@ name: Readme
 
 on:
   schedule:
-    - cron: 0 22 * * *
+    - cron: 0 18 * * *
   push:
     branches:
       - master

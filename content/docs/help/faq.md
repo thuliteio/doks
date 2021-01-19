@@ -6,7 +6,7 @@ date: 2020-10-06T08:49:31+00:00
 lastmod: 2020-10-06T08:49:31+00:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "help"
 weight: 630
@@ -15,7 +15,11 @@ toc: true
 
 ## Hyas?
 
-Doks is a [Hyas theme](https://gethyas.com/themes/) build by the creator of Hyas.
+Doks is a [Hyas theme](https://gethyas.com/themes/doks/) build by the creator of Hyas.
+
+## Node.js?
+
+[Node.js](https://nodejs.org/) is used to manage dependencies and provide additional build scripts.
 
 ## Footer notice?
 

@@ -40,7 +40,7 @@ Nine reasons why you should use Doks:
 
 9. __Dark mode__. Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.
 
-## Requirement
+## Requirements
 
 - [Node.js](https://nodejs.org/) >= 14.x
 

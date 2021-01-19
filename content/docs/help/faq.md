@@ -19,7 +19,7 @@ Doks is a [Hyas theme](https://gethyas.com/themes/doks/) build by the creator of
 
 ## Node.js?
 
-[Node.js](https://nodejs.org/) is used to manage dependencies and provide additional build scripts.
+[Node.js](https://nodejs.org/) is used to [manage dependencies]({{< ref "how-to-update" >}}) and [provide custom build scripts]({{< ref "commands" >}}).
 
 ## Footer notice?
 

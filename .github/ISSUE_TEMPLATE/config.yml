@@ -1,4 +1,4 @@
 contact_links:
-  - name: Doks Discussions
-    url: https://github.com/h-enk/doks/discussions
-    about: Is this a personal support request? Find help on our support forum.
+  - name: Question 🙋
+    url: https://github.com/h-enk/doks/discussions/categories/q-a
+    about: Ask your question in Doks Discussions

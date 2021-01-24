@@ -1,10 +1,35 @@
-# Doks
+<p align="center">
+  <a href="https://getdoks.org/">
+    <img alt="Doks" src="https://doks.netlify.app/doks.svg" width="60" />
+  </a>
+</p>
 
-[![GitHub release](https://img.shields.io/github/release/h-enk/doks.svg?style=flat-square)](https://github.com/h-enk/doks/releases)
-[![GitHub Workflow CI Status (master)](https://img.shields.io/github/workflow/status/h-enk/doks/CI/master?style=flat-square)](https://github.com/h-enk/doks/actions?query=workflow%3ACI)
-[![Netlify](https://img.shields.io/netlify/895a161c-86be-48a2-8c57-a8c5d68cd1a4?style=flat-square)](https://doks.netlify.com/)
+<h1 align="center">
+  Doks
+</h1>
 
-Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.
+<h3 align="center">
+  Modern documentation theme
+</h3>
+
+<p align="center">
+  Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default.
+</p>
+
+<p align="center">
+  <a href="https://github.com/h-enk/doks/blob/master/LICENSE">
+    <img alt="GitHub" src="https://img.shields.io/github/license/h-enk/doks?style=flat-square">
+  </a>
+  <a href="https://github.com/h-enk/doks/releases">
+    <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/h-enk/doks?include_prereleases&style=flat-square">
+  </a>
+  <a href="https://github.com/h-enk/doks/actions?query=workflow%3A%22Hyas+CI%22">
+    <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/h-enk/doks/Hyas%20CI/master?style=flat-square">
+  </a>
+  <a href="https://app.netlify.com/sites/doks/deploys">
+    <img alt="Netlify" src="https://img.shields.io/netlify/895a161c-86be-48a2-8c57-a8c5d68cd1a4?style=flat-square">
+  </a>
+</p>
 
 ![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/h-enk/doks/master/images/tn.png)
 

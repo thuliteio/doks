@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getdoks.org/">
-    <img alt="Doks" src="https://doks.netlify.app/doks.svg" width="60" />
+    <img alt="Doks" src="https://doks.netlify.app/doks.svg" width="60">
   </a>
 </p>
 
@@ -18,16 +18,16 @@
 
 <p align="center">
   <a href="https://github.com/h-enk/doks/blob/master/LICENSE">
-    <img alt="GitHub" src="https://img.shields.io/github/license/h-enk/doks?style=flat-square">
+    <img src="https://img.shields.io/github/license/h-enk/doks?style=flat-square" alt="GitHub">
   </a>
   <a href="https://github.com/h-enk/doks/releases">
-    <img alt="GitHub release (latest SemVer including pre-releases)" src="https://img.shields.io/github/v/release/h-enk/doks?include_prereleases&style=flat-square">
+    <img src="https://img.shields.io/github/v/release/h-enk/doks?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
   </a>
   <a href="https://github.com/h-enk/doks/actions?query=workflow%3A%22Hyas+CI%22">
-    <img alt="GitHub Workflow Status (branch)" src="https://img.shields.io/github/workflow/status/h-enk/doks/Hyas%20CI/master?style=flat-square">
+    <img src="https://img.shields.io/github/workflow/status/h-enk/doks/Hyas%20CI/master?style=flat-square" alt="GitHub Workflow Status (branch)">
   </a>
   <a href="https://app.netlify.com/sites/doks/deploys">
-    <img alt="Netlify" src="https://img.shields.io/netlify/895a161c-86be-48a2-8c57-a8c5d68cd1a4?style=flat-square">
+    <img src="https://img.shields.io/netlify/895a161c-86be-48a2-8c57-a8c5d68cd1a4?style=flat-square" alt="Netlify">
   </a>
 </p>
 

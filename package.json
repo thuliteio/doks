@@ -25,7 +25,9 @@
     "release": "standard-version",
     "server": "hugo server",
     "test": "npm run -s lint",
-    "env": "env"
+    "env": "env",
+    "precheck": "npm version",
+    "check": "hugo version"
   },
   "devDependencies": {
     "@babel/cli": "^7.12",

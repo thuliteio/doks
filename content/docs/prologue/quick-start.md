@@ -15,7 +15,7 @@ toc: true
 
 ## Requirements
 
-Doks uses npm for dependency management and customized build scripts. Installing npm is pretty simple. Download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform. I recommend installing the current release.
+Doks uses npm to install site dependencies and run build scripts. Installing npm is pretty simple. Download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform.
 
 ## Start a new Doks project
 

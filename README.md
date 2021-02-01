@@ -71,21 +71,21 @@ Doks uses npm to install dependencies and run commands. Installing npm is pretty
 
 ## Get started
 
-Have your local Doks site in three steps:
+Start a new Doks project in three steps:
 
-### 1. Create new Doks project
+### 1. Create a new site
 
 ```bash
-git clone https://github.com/h-enk/doks.git my-doks-site
+git clone https://github.com/h-enk/doks.git my-doks-site && cd my-doks-site
 ```
 
-### 2. Install npm packages
+### 2. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Start local development server
+### 3. Start development server
 
 ```bash
 npm run start

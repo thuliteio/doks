@@ -47,7 +47,7 @@ Get instructions on how to add even more to Doks. [Extensions →](https://getdo
 
 ### Showcase
 
-See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/mockadillo-documentation/)
+See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/parietal-numerics-documentation/)
 
 ## Contributing
 

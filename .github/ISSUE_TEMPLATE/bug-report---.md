@@ -22,4 +22,4 @@ What happened.
 
 ### Environment
 
-Paste the information here as shown by `hyas info`
+Paste the information here as shown by `npm run check`

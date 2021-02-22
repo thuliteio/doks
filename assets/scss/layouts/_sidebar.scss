@@ -92,6 +92,30 @@ a.docs-link {
   color: $link-color;
 }
 
+.docs-link {
+  transition: all .3s;
+}
+
+.docs-link.active{
+  position: relative;
+  padding-left: .8rem;
+}
+
+
+.docs-link.active:before {
+  content: " ";
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  margin-top: -5px;
+  background-color: $link-color;
+  -webkit-animation: scaleIn .7s forwards;
+  animation: scaleIn .7s forwards;
+}
+
 .docs-links h3.sidebar-link,
 .page-links h3.sidebar-link {
   text-transform: none;

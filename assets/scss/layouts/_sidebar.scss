@@ -85,15 +85,15 @@ a.docs-link {
   font-size: $font-size-base * 0.9375;
 }
 
+.docs-link {
+  transition: all .3s;
+}
+
 .docs-link:hover,
 .docs-link.active,
 .page-links a:hover {
   text-decoration: none;
   color: $link-color;
-}
-
-.docs-link {
-  transition: all .3s;
 }
 
 .docs-link.active{

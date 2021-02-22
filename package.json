@@ -39,7 +39,7 @@
     "clipboard": "^2.0",
     "eslint": "^7.20",
     "flexsearch": "^0.6",
-    "hugo-bin": "^0.68.0",
+    "hugo-bin": "^0.69.0",
     "instant.page": "^5.1",
     "lazysizes": "^5.3",
     "markdownlint-cli": "^0.26",

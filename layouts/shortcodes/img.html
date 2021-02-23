@@ -1,4 +1,8 @@
 {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) -}}
+{{ if eq $image nil}}
+{{ $image = resources.Get (printf "%s" (.Get "src")) -}}
+{{ end -}}
+{{ if ne $image nil}}
 {{ $lqip := $image.Resize $.Site.Params.lqipWidth -}}
 
 {{ $imgSrc := "" -}}
@@ -21,3 +25,6 @@
   <noscript><img class="img-fluid" sizes="100vw" srcset="{{ $imgSrcSet }}" src="{{ $image.Permalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}></noscript>
   {{ with .Get "caption" }}<figcaption class="figure-caption">{{ . | safeHTML }}</figcaption>{{ end }}
 </figure>
+{{ else -}}
+<div class="alert">Image {{ printf "*%s*" (.Get "src") }} not found</div>
+{{ end -}}

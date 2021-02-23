@@ -32,7 +32,7 @@
   "devDependencies": {
     "@babel/cli": "^7.12",
     "@babel/core": "^7.12",
-    "@babel/preset-env": "^7.12",
+    "@babel/preset-env": "^7.13",
     "@fullhuman/postcss-purgecss": "^4.0",
     "autoprefixer": "^10.2",
     "bootstrap": "^4.6",

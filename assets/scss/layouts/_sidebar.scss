@@ -111,9 +111,9 @@ a.docs-link {
   left: 0px;
   top: 50%;
   margin-top: -5px;
-  background-color: $link-color;
-  -webkit-animation: scaleIn .7s forwards;
-  animation: scaleIn .7s forwards;
+  background-color: currentcolor;
+  -webkit-animation: scalein .7s forwards;
+  animation: scalein .7s forwards;
 }
 
 .docs-links h3.sidebar-link,

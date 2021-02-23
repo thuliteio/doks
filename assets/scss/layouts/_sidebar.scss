@@ -86,7 +86,7 @@ a.docs-link {
 }
 
 .docs-link {
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .docs-link:hover,
@@ -96,24 +96,23 @@ a.docs-link {
   color: $link-color;
 }
 
-.docs-link.active{
+.docs-link.active {
   position: relative;
-  padding-left: .8rem;
+  padding-left: 0.8rem;
 }
 
-
-.docs-link.active:before {
+.docs-link.active::before {
   content: " ";
   width: 8px;
   height: 8px;
   border-radius: 10px;
   position: absolute;
-  left: 0px;
+  left: 0;
   top: 50%;
   margin-top: -5px;
   background-color: currentcolor;
-  -webkit-animation: scalein .7s forwards;
-  animation: scalein .7s forwards;
+  -webkit-animation: scalein 0.7s forwards;
+  animation: scalein 0.7s forwards;
 }
 
 .docs-links h3.sidebar-link,

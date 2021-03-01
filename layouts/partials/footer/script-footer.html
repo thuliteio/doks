@@ -1,36 +1,41 @@
 {{ $indexTemplate := resources.Get "js/index.js" -}}
 {{ $index := $indexTemplate | resources.ExecuteAsTemplate "index.js" . -}}
 
+{{ $lazySizes := resources.Get "js/lazySizes.js" -}}
+{{ $lazySizes := $lazySizes | js.Build -}}
+
+{{ $clipBoard := resources.Get "js/clipBoard.js" -}}
+{{ $clipBoard := $clipBoard | js.Build -}}
+
+{{ $instantPage := resources.Get "js/instant.page.js" -}}
+{{ $instantPage := $instantPage | js.Build -}}
+
+{{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.min.js" -}}
+
+{{ $darkMode := resources.Get "js/darkmode.js" -}}
+{{ $darkMode := $darkMode | js.Build -}}
+
 {{ $app := resources.Get "js/app.js" -}}
 
 {{ $slice := slice $app -}}
 
 {{ if .Site.Params.options.lazySizes -}}
-  {{ $lazySizes := resources.Get "js/lazySizes.js" -}}
-  {{ $lazySizes := $lazySizes | js.Build -}}
   {{ $slice = $slice | append $lazySizes -}}
 {{ end -}}
 
 {{ if .Site.Params.options.clipBoard -}}
-  {{ $clipBoard := resources.Get "js/clipBoard.js" -}}
-  {{ $clipBoard := $clipBoard | js.Build -}}
   {{ $slice = $slice | append $clipBoard -}}
 {{ end -}}
 
 {{ if .Site.Params.options.instantPage -}}
-  {{ $instantPage := resources.Get "js/instant.page.js" -}}
-  {{ $instantPage := $instantPage | js.Build -}}
   {{ $slice = $slice | append $instantPage -}}
 {{ end -}}
 
 {{ if .Site.Params.options.flexSearch -}}
-  {{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.min.js" -}}
   {{ $slice = $slice | append $flexSearch -}}
 {{ end -}}
 
 {{ if .Site.Params.options.darkMode -}}
-  {{ $darkMode := resources.Get "js/darkmode.js" -}}
-  {{ $darkMode := $darkMode | js.Build -}}
   {{ $slice = $slice | append $darkMode -}}
 {{ end -}}
 

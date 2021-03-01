@@ -2,6 +2,48 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/h-enk/doks/compare/v0.1.5...v0.1.6) (2021-03-01)
+
+
+### Features
+
+* add check commands ([85baab4](https://github.com/h-enk/doks/commit/85baab47ff06557051f373aa6afeb114fb40f50f))
+* match active class docs menu on identifier ([7384cfe](https://github.com/h-enk/doks/commit/7384cfe8f1652b8053f077c964633d4ad12cf281))
+* update package-lock.json ([8c73d74](https://github.com/h-enk/doks/commit/8c73d741fd789e829c35bf51cfc25c6d790b0dbb))
+
+
+### Bug Fixes
+
+* convert tabs to spaces ([6511531](https://github.com/h-enk/doks/commit/6511531c5e3f4ae1a9ad5e64972bd34c8e62cb0d))
+* remove extra space in else statement ([03637e5](https://github.com/h-enk/doks/commit/03637e547ef7afa1dcea853746634df3161656db))
+* update urls for deploy to github+ ([8c10161](https://github.com/h-enk/doks/commit/8c101613fa488518152675bb0916e74d444df1e2))
+
+
+### Documentation
+
+* update faq ([555fd17](https://github.com/h-enk/doks/commit/555fd17bb21d94764688f8f0c818d352183244b7))
+* update faq ([f751f3f](https://github.com/h-enk/doks/commit/f751f3ff02b736b36854e396b2536a9fef311c50))
+* update readme ([f32c60f](https://github.com/h-enk/doks/commit/f32c60f1ff6fe7f898efa7dc5ff97bd4b60148a6))
+* update requirement sections ([22a8bfb](https://github.com/h-enk/doks/commit/22a8bfbc87b20ae4d03b733b32f1e1f956e3671c))
+* update requirements sections ([3767e8b](https://github.com/h-enk/doks/commit/3767e8bfa0893d9bb827c35b5b2694c023e78ceb))
+* update requirements sections ([8e14777](https://github.com/h-enk/doks/commit/8e14777805500abbf7cbc840a4a19c7635ce5b96))
+* update requirements sections ([49f803e](https://github.com/h-enk/doks/commit/49f803e7e3d905d01ff00f5d02357defb885fe7e))
+* update requirements sections ([4791d5a](https://github.com/h-enk/doks/commit/4791d5a0ba464c57f74d3bd6736985830f0d9e71))
+* update requirements sections ([5321e8d](https://github.com/h-enk/doks/commit/5321e8d3c1094074c2503c3895579ebe32846176))
+* update requirements sections ([920776a](https://github.com/h-enk/doks/commit/920776a6d55167cd8ce40f2edfcc37f2841e3def))
+* update requirements sections ([3420ae9](https://github.com/h-enk/doks/commit/3420ae9c55dedd5424bf7f2f32a3cf1dacaf4e6f))
+* update showcase link ([3e00037](https://github.com/h-enk/doks/commit/3e00037d78b3e980bdbdf005a5c13d9a39d2fa3d))
+
+
+### Dependencies
+
+* bump autoprefixer, bootstrap, stylelint, and netlify-lambda to latest versions ([955cb46](https://github.com/h-enk/doks/commit/955cb46a5d4936ce355c28a4a2a8b5c025a8ca1c))
+* bump deps to latest ([05de29a](https://github.com/h-enk/doks/commit/05de29ace1e735840aea04f90924c2c833b00b86))
+* bump postcss-purgecss to 4.0.0 + eslint to 7.18.0 ([44e90f2](https://github.com/h-enk/doks/commit/44e90f2bc944693967c6e3864673d8f21ee07648))
+* bump versions to latest ([857906c](https://github.com/h-enk/doks/commit/857906c69b2d9779abd158dd88c1057f84c8eb6f))
+* bump versions to latest ([5e52acb](https://github.com/h-enk/doks/commit/5e52acbc35db30267867e1b0981c8f4299bdf51d))
+* bump versions to latest ([3087ae0](https://github.com/h-enk/doks/commit/3087ae0f521a780d38ccbd0afbb07e23fa9fad7d))
+
 ### [0.1.5](https://github.com/h-enk/doks/compare/v0.1.4...v0.1.5) (2021-01-12)
 
 

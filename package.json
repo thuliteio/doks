@@ -23,6 +23,7 @@
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
     "lint:markdown": "markdownlint *.md content/**/*.md",
     "release": "standard-version",
+    "release:dry-run": "standard-version --dry-run",
     "server": "hugo server",
     "test": "npm run -s lint",
     "env": "env",

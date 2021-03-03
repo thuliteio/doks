@@ -43,7 +43,7 @@
     "hugo-bin": "^0.69",
     "instant.page": "^5.1",
     "lazysizes": "^5.3",
-    "markdownlint-cli": "^0.26",
+    "markdownlint-cli": "^0.27",
     "netlify-lambda": "^2.0",
     "postcss": "^8.2",
     "postcss-cli": "^8.3",

@@ -6,7 +6,7 @@
           <li class="list-inline-item">{{ .Site.Params.footer | safeHTML }}</li>
         </ul>
       </div>
-      <div class="col-lg-8 order-first order-lg-last text-lg-right">
+      <div class="col-lg-8 order-first order-lg-last text-lg-end">
         <ul class="list-inline">
           {{ range .Site.Menus.footer -}}
             <li class="list-inline-item"><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>

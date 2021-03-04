@@ -29,7 +29,7 @@ pre code {
   padding: 0;
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
   pre {
     margin: 2rem -1.5rem;
   }

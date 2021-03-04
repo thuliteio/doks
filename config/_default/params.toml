@@ -52,3 +52,4 @@ editPage = false
   instantPage = true
   flexSearch = true
   darkMode = true
+  bootStrapJs = false

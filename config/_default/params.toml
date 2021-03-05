@@ -53,3 +53,4 @@ editPage = false
   flexSearch = true
   darkMode = true
   bootStrapJs = false
+  breadCrumb = false

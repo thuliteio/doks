@@ -291,3 +291,7 @@ body.dark .alert-primary {
 body.dark .figure-caption {
   color: $body-color-dark;
 }
+
+body.dark table {
+  @extend .table-dark;
+}

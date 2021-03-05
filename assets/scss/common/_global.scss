@@ -51,6 +51,16 @@ h6,
   font-size: calc(1.875rem + 1.5vw);
 }
 
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a.btn:hover,
+a.btn:focus {
+  text-decoration: none;
+}
+
 .section {
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -166,6 +176,11 @@ body {
   .docs-navigation a {
     font-size: $font-size-base;
   }
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  text-decoration: none;
 }
 
 #TableOfContents ul {

@@ -20,6 +20,10 @@
   color: $body-color;
 }
 
+.navbar-light .navbar-nav .active .nav-link {
+  color: $primary;
+}
+
 @include media-breakpoint-up(md) {
   .navbar-brand {
     font-size: $font-size-xl;

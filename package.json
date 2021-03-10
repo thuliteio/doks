@@ -50,7 +50,7 @@
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",
     "standard-version": "^9.1",
-    "stylelint": "^13.11",
-    "stylelint-config-standard": "^20.0"
+    "stylelint": "^13.12",
+    "stylelint-config-standard": "^21.0"
   }
 }

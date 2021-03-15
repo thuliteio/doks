@@ -7,37 +7,37 @@ samp {
   border-radius: $border-radius;
 }
 
-pre {
-  background: $beige;
-  color: $black;
-  line-height: $line-height-base;
-  margin: 2rem 0;
-  overflow: auto;
-  padding: 1.25rem 1.5rem;
-  tab-size: 4;
-}
-
 code {
   background: $beige;
   color: $black;
   padding: 0.25rem 0.5rem;
 }
 
+pre {
+  margin: 2rem 0;
+}
+
 pre code {
-  background: none;
-  font-size: inherit;
-  padding: 0;
+  display: block;
+  overflow-x: auto;
+  line-height: $line-height-base;
+  padding: 1.25rem 1.5rem;
+  tab-size: 4;
+}
+
+.hljs {
+  padding: 1.25rem 1.5rem;
 }
 
 @include media-breakpoint-down(sm) {
-  pre {
-    margin: 2rem -1.5rem;
-  }
-
   pre,
   code,
   kbd,
   samp {
     border-radius: 0;
+  }
+
+  pre {
+    margin: 2rem -1.5rem;
   }
 }

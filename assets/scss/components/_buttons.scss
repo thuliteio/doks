@@ -55,9 +55,19 @@ body.dark .toggle-dark {
 }
 
 @include media-breakpoint-up(md) {
+  .doks-clipboard {
+    position: relative;
+    float: right;
+  }
+
   .btn-clipboard {
+    position: absolute;
+    top: 2.125rem;
+    right: 1rem;
+    z-index: 10;
     display: block;
-    margin: 2.0625rem 0.25rem -4rem auto;
+    padding: 0.25rem 0.5rem;
+    font-size: $font-size-xs;
   }
 }
 

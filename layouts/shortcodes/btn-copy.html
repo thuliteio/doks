@@ -1,1 +1,5 @@
-<button class="btn-clipboard btn btn-sm btn-link" data-clipboard-text="{{ .Get "text" | safeHTML }}"><span class="copy-status"></span></button>
+{{ if .Site.Params.options.clipBoard -}}
+<div class="doks-clipboard">
+  <button class="btn-clipboard btn btn-outline-primary" data-clipboard-text="{{ .Get "text" | safeHTML }}"><span class="copy-status"></span></button>
+</div>
+{{ end -}}

@@ -38,6 +38,16 @@ body.dark .btn-primary {
   color: $body-bg-dark !important;
 }
 
+body.dark .btn-outline-primary {
+  @include button-outline-variant($button-color-dark, $button-color-dark);
+
+  color: $link-color-dark;
+}
+
+body.dark .btn-outline-primary:hover {
+  color: $body-bg-dark;
+}
+
 body.dark .navbar {
   background: $body-bg-dark;
   opacity: 0.975;
@@ -178,12 +188,7 @@ body.dark ::selection {
   background: $selection-color-dark;
 }
 
-body.dark pre {
-  background: $body-overlay-dark;
-  color: $body-color-dark;
-}
-
-body.dark code {
+body.dark code:not(.hljs) {
   background: $body-overlay-dark;
   color: $body-color-dark;
 }

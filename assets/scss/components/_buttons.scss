@@ -62,12 +62,12 @@ body.dark .toggle-dark {
 
   .btn-clipboard {
     position: absolute;
-    top: 2.125rem;
-    right: 1rem;
+    top: 1rem;
+    right: 0.25rem;
     z-index: 10;
     display: block;
     padding: 0.25rem 0.5rem;
-    font-size: $font-size-xs;
+    font-size: $font-size-sm;
   }
 }
 

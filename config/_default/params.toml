@@ -48,10 +48,10 @@ editPage = false
 
 [options]
   lazySizes = true
-  clipBoard = true
+  clipBoard = false
   instantPage = true
   flexSearch = true
   darkMode = true
   bootStrapJs = false
   breadCrumb = false
-  highLight = false
+  highLight = true

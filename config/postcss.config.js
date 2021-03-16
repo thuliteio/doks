@@ -23,6 +23,7 @@ module.exports = {
           './assets/scss/components/_code.scss',
           './assets/scss/components/_search.scss',
           './assets/scss/common/_dark.scss',
+          './node_modules/katex/dist/katex.css'
         ]),
       ],
     }),

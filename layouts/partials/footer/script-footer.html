@@ -7,6 +7,9 @@
 {{ $highlight := resources.Get "js/highlight.js" -}}
 {{ $highlight := $highlight | js.Build -}}
 
+{{ $katex := resources.Get "js/vendor/katex/dist/katex.js" -}}
+{{ $katexAutoRender := resources.Get "js/vendor/katex/dist/contrib/auto-render.js" -}}
+
 {{ $app := resources.Get "js/app.js" -}}
 
 {{ $slice := slice $app -}}
@@ -40,6 +43,12 @@
   {{ $slice = $slice | append $darkMode -}}
 {{ end -}}
 
+{{ if .Site.Params.options.kaTex -}}
+  {{ $katexConfig := resources.Get "js/katex.js" -}}
+  {{ $katexConfig := $katexConfig | js.Build -}}
+  {{ $slice = $slice | append $katexConfig -}}
+{{ end -}}
+
 {{ $js := $slice | resources.Concat "main.js" -}}
 
 {{ if eq (hugo.Environment) "development" -}}
@@ -50,6 +59,10 @@
   {{ if .Site.Params.options.highLight -}}
     <script src="{{ $highlight.Permalink }}" defer></script>
   {{ end -}}
+  {{ if .Site.Params.options.kaTex -}}
+    <script src="{{ $katex.Permalink }}" defer></script>
+    <script src="{{ $katexAutoRender.Permalink }}" onload="renderMathInElement(document.body);" defer></script>
+  {{ end -}}
   {{ if .Site.Params.options.flexSearch -}}
     <script src="{{ $index.Permalink }}" defer></script>
   {{ end -}}
@@ -58,12 +71,18 @@
   {{ $index := $index | minify | fingerprint "sha512" -}}
   {{ $bs := $bs | minify | fingerprint "sha512" -}}
   {{ $highlight := $highlight | minify | fingerprint "sha512" -}}
+  {{ $katex := $katex | minify | fingerprint "sha512" -}}
+  {{ $katexAutoRender := $katexAutoRender | minify | fingerprint "sha512" -}}
   {{ if .Site.Params.options.bootStrapJs -}}
     <script src="{{ $bs.Permalink }}" integrity="{{ $bs.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
   <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ if .Site.Params.options.highLight -}}
-    <script src="{{ $highlight.Permalink }}" defer></script>
+    <script src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end -}}
+  {{ if .Site.Params.options.kaTex -}}
+    <script src="{{ $katex.Permalink }}" integrity="{{ $katex.Data.Integrity }}" crossorigin="anonymous" defer></script>
+    <script src="{{ $katexAutoRender.Permalink }}" integrity="{{ $katexAutoRender.Data.Integrity }}" crossorigin="anonymous" onload="renderMathInElement(document.body);" defer></script>
   {{ end -}}
   {{ if .Site.Params.options.flexSearch -}}
     <script src="{{ $index.Permalink }}" integrity="{{ $index.Data.Integrity }}" crossorigin="anonymous" defer></script>

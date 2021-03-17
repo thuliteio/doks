@@ -2,16 +2,23 @@
   publish = "public"
   functions = "functions"
 
+[dev]
+  framework = "#custom"
+  command = "npx hugo server --disableFastRender"
+  targetPort = 1313
+  port = 8888
+  publish = "public"
+  autoLaunch = false
+
 [build.environment]
-  HUGO_VERSION = "0.80.0"
   NODE_VERSION = "15.5.1"
   NPM_VERSION = "7.3.0"
 
 [context.production]
-  command = "hugo -b $URL --gc --minify && npm run build:functions"
+  command = "npx hugo --gc --minify && npm run build:functions"
 
 [context.deploy-preview]
-  command = "hugo -b $DEPLOY_PRIME_URL --gc --minify"
+  command = "npx hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "hugo -b $DEPLOY_PRIME_URL --gc --minify"
+  command = "npx hugo --gc --minify -b $DEPLOY_PRIME_URL"

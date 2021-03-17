@@ -55,7 +55,6 @@
   {{ if .Site.Params.options.bootStrapJs -}}
     <script src="{{ $bs.Permalink }}" defer></script>
   {{ end -}}
-  <script src="{{ $js.Permalink }}" defer></script>
   {{ if .Site.Params.options.highLight -}}
     <script src="{{ $highlight.Permalink }}" defer></script>
   {{ end -}}
@@ -63,6 +62,7 @@
     <script src="{{ $katex.Permalink }}" defer></script>
     <script src="{{ $katexAutoRender.Permalink }}" onload="renderMathInElement(document.body);" defer></script>
   {{ end -}}
+  <script src="{{ $js.Permalink }}" defer></script>
   {{ if .Site.Params.options.flexSearch -}}
     <script src="{{ $index.Permalink }}" defer></script>
   {{ end -}}
@@ -76,14 +76,14 @@
   {{ if .Site.Params.options.bootStrapJs -}}
     <script src="{{ $bs.Permalink }}" integrity="{{ $bs.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
-  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ if .Site.Params.options.highLight -}}
     <script src="{{ $highlight.Permalink }}" integrity="{{ $highlight.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
   {{ if .Site.Params.options.kaTex -}}
     <script src="{{ $katex.Permalink }}" integrity="{{ $katex.Data.Integrity }}" crossorigin="anonymous" defer></script>
-    <script src="{{ $katexAutoRender.Permalink }}" integrity="{{ $katexAutoRender.Data.Integrity }}" crossorigin="anonymous" onload="renderMathInElement(document.body);" defer></script>
+    <script src="{{ $katexAutoRender.Permalink }}" integrity="{{ $katexAutoRender.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
+  <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ if .Site.Params.options.flexSearch -}}
     <script src="{{ $index.Permalink }}" integrity="{{ $index.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}

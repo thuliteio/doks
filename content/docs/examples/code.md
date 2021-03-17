@@ -1,7 +1,7 @@
 ---
 title: "Code"
-description: "Code highlighting examples"
-lead: "Code highlighting examples"
+description: "Code highlighting examples."
+lead: "Code highlighting examples."
 date: 2021-03-16T08:43:34+01:00
 lastmod: 2021-03-16T08:43:34+01:00
 draft: false

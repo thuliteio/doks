@@ -28,7 +28,8 @@
     "test": "npm run -s lint",
     "env": "env",
     "precheck": "npm version",
-    "check": "hugo version"
+    "check": "hugo version",
+    "copy:katex-fonts": "shx cp ./node_modules/katex/dist/fonts/* ./static/fonts/"
   },
   "devDependencies": {
     "@babel/cli": "^7.13",
@@ -43,6 +44,7 @@
     "highlight.js": "^10.6.0",
     "hugo-bin": "^0.69",
     "instant.page": "^5.1",
+    "katex": "^0.13.0",
     "lazysizes": "^5.3",
     "markdownlint-cli": "^0.27",
     "netlify-lambda": "^2.0",
@@ -50,6 +52,7 @@
     "postcss-cli": "^8.3",
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",
+    "shx": "^0.3.3",
     "standard-version": "^9.1",
     "stylelint": "^13.12",
     "stylelint-config-standard": "^21.0"

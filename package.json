@@ -14,7 +14,7 @@
     "prestart": "npm run clean",
     "start": "hugo server --disableFastRender",
     "prebuild": "npm run clean",
-    "build": "hugo --gc --minify && npm run build:functions",
+    "build": "hugo --gc && npm run build:functions",
     "build:functions": "netlify-lambda build assets/lambda",
     "build:preview": "npm run build -D -F",
     "clean": "rimraf public resources functions",

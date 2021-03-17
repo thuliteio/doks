@@ -11,7 +11,7 @@
   command = "hugo -b $URL --gc --minify && npm run build:functions"
 
 [context.deploy-preview]
-  command = "hugo -b $DEPLOY_PRIME_URL --gc --minify"
+  command = "hugo -b $DEPLOY_PRIME_URL --gc"
 
 [context.branch-deploy]
   command = "hugo -b $DEPLOY_PRIME_URL --gc --minify"

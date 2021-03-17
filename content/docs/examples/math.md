@@ -13,6 +13,8 @@ weight: 210
 toc: true
 ---
 
+[KaTeX](https://katex.org/) is switched off by default. Enable it by setting `kaTex = true` in the `[options]` section of `./config/_default/params.toml`.
+
 ## Example 1
 
 _Excerpt taken from [Supernova Neutrinos](https://neutrino.leima.is/book/introduction/supernova-neutrinos/)_

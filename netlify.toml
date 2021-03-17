@@ -15,7 +15,7 @@
   NPM_VERSION = "7.3.0"
 
 [context.production]
-  command = "npx hugo --gc --minify && npm run build:functions"
+  command = "npx hugo --gc --minify -b $URL && npm run build:functions"
 
 [context.deploy-preview]
   command = "npx hugo --gc --minify -b $DEPLOY_PRIME_URL"

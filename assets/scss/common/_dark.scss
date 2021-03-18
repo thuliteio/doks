@@ -161,8 +161,12 @@ body.dark .form-control.is-search {
 }
 
 body.dark .navbar-form::after {
-  color: $gray-700;
-  border: 1px solid $body-bg-dark;
+  color: $gray-600;
+  border: 1px solid $gray-800;
+}
+
+body.dark .form-control {
+  color: $gray-500;
 }
 
 body.dark .form-control:focus {

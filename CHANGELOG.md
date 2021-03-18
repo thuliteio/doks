@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/h-enk/doks/compare/v0.1.6...v0.2.0) (2021-03-18)
+
+
+### Features
+
+* add doks default style + examples ([ad91b05](https://github.com/h-enk/doks/commit/ad91b0523e6e240c98710bfedfd31342cb2389dc))
+* add highlight.js as an option ([5180bd5](https://github.com/h-enk/doks/commit/5180bd53c6349372916907783fa9d0d3b22755af))
+* add katex math typesetting ([253b938](https://github.com/h-enk/doks/commit/253b938a2e303a06d07488c6eae79c74442e56d6))
+* add npm-package workflow ([e2ba008](https://github.com/h-enk/doks/commit/e2ba0086f780380fa171cfc2efaa1e868cfc5fc5))
+* add npm-package workflow ([be4b68c](https://github.com/h-enk/doks/commit/be4b68c3d85a04251a9cdcbf1e5a3639b9c53144))
+* add optional breadcrumb trail ([9c67aca](https://github.com/h-enk/doks/commit/9c67aca368f68ab916ff61caa36e0de69c43dec3))
+* add table support in markdown ([5ee11a8](https://github.com/h-enk/doks/commit/5ee11a80e274d5e71ff7a4809516101e7e7ea214))
+* added options lazySizes, clipBoard, instantPage, flexSearch, and darkMode ([5f03d61](https://github.com/h-enk/doks/commit/5f03d61e81aff6f8a0a194cb23bcf821c3476481))
+* added options lazySizes, clipBoard, instantPage, flexSearch, and darkMode ([5099c47](https://github.com/h-enk/doks/commit/5099c4773195aab0a39bd160330bc25f3173c3b0))
+* added options lazySizes, clipBoard, instantPage, flexSearch, and darkMode ([226f661](https://github.com/h-enk/doks/commit/226f661966ebb68f595541b31e6605d1c71efbdd))
+* preload key katex fonts ([6c4d45d](https://github.com/h-enk/doks/commit/6c4d45d248ee9b58745105d91259fc2dfb9540b3))
+* update bootstrap to 5.0.0-beta2 ([22afec7](https://github.com/h-enk/doks/commit/22afec709a1f11ef010d3436eca401cd4d5fd62f))
+* update netlify.toml for netlify-cli use ([9581fc4](https://github.com/h-enk/doks/commit/9581fc4c44d2fdfe6b6093365fdbf5dcd2b869a2))
+* update netlify.toml for netlify-cli use ([20bac2a](https://github.com/h-enk/doks/commit/20bac2a25bcdb3156120afd0d1b6543c0235f3c7))
+
+
+### Bug Fixes
+
+* linting error ([92798c9](https://github.com/h-enk/doks/commit/92798c92cd300bf1ed953c2a25bcbe0f8b24c1b2))
+* script loading + script order ([89784d9](https://github.com/h-enk/doks/commit/89784d9656712ce31d83c038a87821f78aa07a3c))
+* update content security header ([64efe3f](https://github.com/h-enk/doks/commit/64efe3ff00c5d315b43d40a4dc056ef7a3f88151))
+* update content security header ([e0996b3](https://github.com/h-enk/doks/commit/e0996b36cbdc439bf0ad6595342c0f965f31c119))
+* update content security header ([b54cae0](https://github.com/h-enk/doks/commit/b54cae0621211bce0754c17fdc302c96b6e50f6c))
+* update content security header ([6d38761](https://github.com/h-enk/doks/commit/6d387614d584607d07c3f944ee55b8a2d6a4ce4e))
+* update content security headers ([c70baa4](https://github.com/h-enk/doks/commit/c70baa448770d39d5c8f0842f742f5f8828a31ca))
+* update content security headers ([8df0fdd](https://github.com/h-enk/doks/commit/8df0fdd8c311752de685ed10f7e8ec1d5d22f69c))
+* update content security headers ([d1008a7](https://github.com/h-enk/doks/commit/d1008a736639e731679fd1e18eba4e6d437f00ad))
+
+
+### Dependencies
+
+* bump versions to latest ([e43f982](https://github.com/h-enk/doks/commit/e43f9821e49792e2e06f2e18ac419d58befc7723))
+* bump versions to latest ([9cdd693](https://github.com/h-enk/doks/commit/9cdd69352bb02c12a6174cea5d7d6b330e47f1b5))
+
 ### [0.1.6](https://github.com/h-enk/doks/compare/v0.1.5...v0.1.6) (2021-03-01)
 
 

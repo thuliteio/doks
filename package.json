@@ -1,5 +1,5 @@
 {
-  "name": "doks",
+  "name": "@hyas/doks",
   "version": "0.1.6",
   "private": true,
   "hugo-bin": {

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/h-enk/doks/compare/v0.2.0...v0.2.1) (2021-03-18)
+
+
+### Bug Fixes
+
+* update package.json for npm workflow ([83b2c0e](https://github.com/h-enk/doks/commit/83b2c0e002e09aabc0f4b1e8fb30353151707d8b))
+
 ## [0.2.0](https://github.com/h-enk/doks/compare/v0.1.6...v0.2.0) (2021-03-18)
 
 

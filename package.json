@@ -1,13 +1,18 @@
 {
   "name": "@hyas/doks",
+  "description": "Doks theme",
   "version": "0.2.0",
-  "private": true,
   "hugo-bin": {
     "buildTags": "extended"
   },
   "browserslist": [
     "defaults"
   ],
+  "repository": "https://github.com/h-enk/doks",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "init": "rimraf .git && git init -b main",
     "create": "hugo new",

@@ -23,6 +23,8 @@ pre code {
   line-height: $line-height-base;
   padding: 1.25rem 1.5rem;
   tab-size: 4;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
 }
 
 .hljs {
@@ -40,4 +42,21 @@ pre code {
   pre {
     margin: 2rem -1.5rem;
   }
+}
+
+pre code::-webkit-scrollbar {
+  height: 5px;
+}
+
+pre code::-webkit-scrollbar-thumb {
+  background: $gray-200;
+}
+
+pre code:hover {
+  scrollbar-width: thin;
+  scrollbar-color: $gray-200 transparent;
+}
+
+pre code::-webkit-scrollbar-thumb:hover {
+  background: $gray-200;
 }

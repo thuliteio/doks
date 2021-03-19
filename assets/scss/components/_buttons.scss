@@ -71,14 +71,21 @@ body.dark .toggle-dark {
   }
 }
 
-.copy-status::after,
+.copy-status::after {
+  content: "Copy";
+  display: block;
+  color: $gray-300;
+}
+
 .copy-status:hover::after {
   content: "Copy";
   display: block;
+  color: $blue-300;
 }
 
 .copy-status:focus::after,
 .copy-status:active::after {
   content: "Copied";
   display: block;
+  color: $blue-300;
 }

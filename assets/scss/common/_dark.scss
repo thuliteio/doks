@@ -192,9 +192,22 @@ body.dark ::selection {
   background: $selection-color-dark;
 }
 
+body.dark pre code::-webkit-scrollbar-thumb {
+  background: $border-dark;
+}
+
 body.dark code:not(.hljs) {
   background: $body-overlay-dark;
   color: $body-color-dark;
+}
+
+body.dark pre code:hover {
+  scrollbar-width: thin;
+  scrollbar-color: $border-dark transparent;
+}
+
+body.dark pre code::-webkit-scrollbar-thumb:hover {
+  background: $border-dark;
 }
 
 body.dark blockquote {

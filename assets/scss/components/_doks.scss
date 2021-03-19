@@ -8,11 +8,6 @@ Doks — based on Ascetic by (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: $beige;
-  color: $black;
-}
-
-body.dark .hljs {
   background: $body-overlay-dark;
   color: $body-color-dark;
 }
@@ -26,14 +21,14 @@ body.dark .hljs {
 .hljs-addition,
 .hljs-attribute,
 .hljs-link {
-  color: #888;
+  color: $blue-300;
 }
 
 .hljs-comment,
 .hljs-quote,
 .hljs-meta,
 .hljs-deletion {
-  color: #ccc;
+  color: #888;
 }
 
 .hljs-keyword,

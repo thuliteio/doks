@@ -11,7 +11,6 @@ $dots-dark: darken($body-color-dark, 50%);
 $link-color-dark: $blue-300;
 $button-color-dark: $link-color-dark;
 $focus-color-dark: lighten($link-color-dark, 2.5%);
-$selection-color-dark: lighten($link-color-dark, 2.5%);
 
 $navbar-dark-color:                 $body-color-dark;
 $navbar-dark-hover-color:           $link-color-dark;
@@ -186,10 +185,6 @@ body.dark .border-top {
 
 body.dark .docs-navigation {
   border-top: 1px solid $border-dark;
-}
-
-body.dark ::selection {
-  background: $selection-color-dark;
 }
 
 body.dark pre code::-webkit-scrollbar-thumb {

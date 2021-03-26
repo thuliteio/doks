@@ -8,8 +8,8 @@ Doks — based on Ascetic by (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: $body-overlay-dark;
-  color: $body-color-dark;
+  background: $beige;
+  color: $body-color;
 }
 
 .hljs-string,
@@ -21,7 +21,7 @@ Doks — based on Ascetic by (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 .hljs-addition,
 .hljs-attribute,
 .hljs-link {
-  color: $blue-300;
+  color: $pink-500;
 }
 
 .hljs-comment,
@@ -42,4 +42,21 @@ Doks — based on Ascetic by (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
 
 .hljs-emphasis {
   font-style: italic;
+}
+
+body.dark .hljs {
+  background: $body-overlay-dark;
+  color: $body-color-dark;
+}
+
+body.dark .hljs-string,
+body.dark .hljs-variable,
+body.dark .hljs-template-variable,
+body.dark .hljs-symbol,
+body.dark .hljs-bullet,
+body.dark .hljs-section,
+body.dark .hljs-addition,
+body.dark .hljs-attribute,
+body.dark .hljs-link {
+  color: $blue-300;
 }

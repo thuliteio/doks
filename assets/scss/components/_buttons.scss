@@ -74,18 +74,18 @@ body.dark .toggle-dark {
 .copy-status::after {
   content: "Copy";
   display: block;
-  color: $gray-300;
+  color: $body-color;
 }
 
 .copy-status:hover::after {
   content: "Copy";
   display: block;
-  color: $blue-300;
+  color: $pink-500;
 }
 
 .copy-status:focus::after,
 .copy-status:active::after {
   content: "Copied";
   display: block;
-  color: $blue-300;
+  color: $pink-500;
 }

@@ -312,3 +312,22 @@ body.dark .figure-caption {
 body.dark table {
   @extend .table-dark;
 }
+
+body.dark .copy-status::after {
+  content: "Copy";
+  display: block;
+  color: $body-color-dark;
+}
+
+body.dark .copy-status:hover::after {
+  content: "Copy";
+  display: block;
+  color: $link-color-dark;
+}
+
+body.dark .copy-status:focus::after,
+body.dark .copy-status:active::after {
+  content: "Copied";
+  display: block;
+  color: $link-color-dark;
+}

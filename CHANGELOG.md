@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.2](https://github.com/h-enk/doks/compare/v0.2.1...v0.2.2) (2021-03-26)
+
+
+### Features
+
+* update default highlight style ([28a3b39](https://github.com/h-enk/doks/commit/28a3b39fb9653db3f627cd55d610f28ed95860b3))
+
+
+### Dependencies
+
+* bump bootstrap to 5.0.0-beta3 ([f76e68e](https://github.com/h-enk/doks/commit/f76e68e832737c5fbc2421f164988767dddc5d99))
+* bump versions to latest ([843e8d4](https://github.com/h-enk/doks/commit/843e8d45252bc596f8422fbce6938b38976373f9))
+
 ### [0.2.1](https://github.com/h-enk/doks/compare/v0.2.0...v0.2.1) (2021-03-18)
 
 

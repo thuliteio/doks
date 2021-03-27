@@ -1,0 +1,15 @@
+<!-- https://github.com/alex-shpak/hugo-book/blob/master/layouts/shortcodes/mermaid.html -->
+
+{{ if not (.Page.Scratch.Get "mermaid") }}
+  <!-- Include mermaid only first time -->
+  <script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script>
+  {{ with resources.Get "mermaid.json" }}
+    <script>mermaid.initialize({{ .Content | safeJS }})</script>
+  {{ end }}
+
+  {{ .Page.Scratch.Set "mermaid" true }}
+{{ end }}
+
+<p class="mermaid{{ with .Get "class" }} {{ . }}{{ end }}">
+  {{- .Inner -}}
+</p>

@@ -102,7 +102,7 @@ annotation Annotation {
 
 ## Object Diagram
 
-```plantuml
+```
 {{<plantuml>}}
 @startuml
 object London
@@ -293,7 +293,7 @@ xmas-fifth-day:
 
 ## Network diagram
 
-```plantuml
+```
 {{<plantuml>}}
 @startuml
 nwdiag {
@@ -353,7 +353,7 @@ nwdiag {
 
 ## MindMap
 
-```plantuml
+```
 {{<plantuml>}}
 @startmindmap
 * Debian
@@ -370,10 +370,11 @@ nwdiag {
 *** <s>Raspyfi</s> => Volumio
 @endmindmap
 {{</plantuml>}}
+```
 
 ## Work Breakdown Structure (WBS)
 
-```plantuml
+```
 {{<plantuml>}}
 @startwbs
 * Business Process Modelling WBS
@@ -387,13 +388,13 @@ nwdiag {
 *** Measure AsIs performance metrics
 *** Identify Quick Wins
 ** Complete innovate phase
-@endwbs
+@endwbs`
 {{</plantuml>}}
 ```
 
 ## Entity Relationship Diagram
 
-```plantuml
+```
 {{<plantuml>}}
 @startuml
 

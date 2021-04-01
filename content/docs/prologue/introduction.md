@@ -1,9 +1,9 @@
 ---
 title: "Introduction"
-description: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-lead: "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-date: 2020-10-06T08:48:57+00:00
-lastmod: 2020-10-06T08:48:57+00:00
+description: "ObserveRTC is an open-source project provide solutions to monitor your WebRTC Applications"
+lead: "ObserveRTC is an open-source project provide solutions to monitor your WebRTC Applications"
+date: 2021-04-01
+lastmod: 2021-04-01
 draft: false
 images: []
 menu:
@@ -13,46 +13,13 @@ weight: 100
 toc: true
 ---
 
-## Get started
+Making analytical tools for Real Time Communication (RTC) is fun! However it is challenging. You need to consider strict time limitations of real-time streams, and tightly integrate services that can report to your monitoring solutions with micro second accuracy.
 
-There are two main ways to get started with Doks:
+Here is how ObserveRTC comes into the picture. We make RTC development fun and easy using open-source tools. ObserveRTC aims to provide client side integrations, infrastructure and monitoring tools to observe and analyse WebRTC applications.
 
-### Tutorial
+### What is WebRTC?
 
-{{< alert icon="👉" text="The Tutorial is intended for novice to intermediate users." >}}
+> With WebRTC, you can add real-time communication capabilities to your application that works on top of an open standard. It supports video, voice, and generic data to be sent between peers, allowing developers to build powerful voice- and video-communication solutions. The technology is available on all modern browsers as well as on native clients for all major platforms
 
-Step-by-step instructions on how to start a new Doks project. [Tutorial →](https://getdoks.org/tutorial/introduction/)
+Source: https://webrtc.org/
 
-### Quick Start
-
-{{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." >}}
-
-One page summary of how to start a new Doks project. [Quick Start →]({{< ref "quick-start" >}})
-
-## Go further
-
-Recipes, Reference Guides, Extensions, and Showcase.
-
-### Recipes
-
-Get instructions on how to accomplish common tasks with Doks. [Recipes →](https://getdoks.org/docs/recipes/project-configuration/)
-
-### Reference Guides
-
-Learn how to customize Doks to fully make it your own. [Reference Guides →](https://getdoks.org/docs/reference-guides/security/)
-
-### Extensions
-
-Get instructions on how to add even more to Doks. [Extensions →](https://getdoks.org/docs/extensions/add-google-fonts/)
-
-### Showcase
-
-See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/parietal-numerics-documentation/)
-
-## Contributing
-
-Find out how to contribute to Doks. [Contributing →](https://getdoks.org/docs/contributing/how-to-contribute/)
-
-## Help
-
-Get help on Doks. [Help →]({{< ref "how-to-update" >}})

@@ -1,25 +1,25 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "ObserveRTC"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+titleAddition = "Open-Source WebRTC Monitoring Solution"
+description = "ObserveRTC is an open source initiative aimed to provide tools to monitor and analyze applications for real-time communication."
 
 ## Open Graph + Twitter Cards
-images = ["doks.png"]
-twitterSite = "henkverlinde"
-twitterCreator = "henkverlinde"
-facebookAuthor = "verlinde.henk"
-facebookPublisher = "verlinde.henk"
+images = ["logo.jpeg"]
+# twitterSite = "henkverlinde"
+# twitterCreator = "henkverlinde"
+# facebookAuthor = "verlinde.henk"
+# facebookPublisher = "verlinde.henk"
 ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
 schemaLogo = "logo-doks.png"
-schemaTwitter = "https://twitter.com/henkverlinde"
-schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaGitHub = "https://github.com/h-enk"
+# schemaTwitter = "https://twitter.com/henkverlinde"
+# schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
+schemaGitHub = "https://github.com/observertc"
 schemaSection = "blog"
 
 ## Sitelinks Search Box

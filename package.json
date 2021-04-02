@@ -1,7 +1,7 @@
 {
   "name": "@hyas/doks",
   "description": "Doks theme",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "hugo-bin": {
     "buildTags": "extended"
   },

@@ -3,7 +3,7 @@
   <div class="col-md-12 col-lg-10 col-xl-8">
   {{ range .Paginator.Pages }}
     <article>
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       {{ .Description }}
     </article>
   {{ end }}

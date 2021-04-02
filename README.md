@@ -109,5 +109,6 @@ Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for comm
 
 ## Blog
 <!--START_SECTION:feed-->
+* [Doks v0.2](https:&#x2F;&#x2F;getdoks.org&#x2F;blog&#x2F;doks-v0.2&#x2F;)
 * [Say hello to Doks 👋](https:&#x2F;&#x2F;getdoks.org&#x2F;blog&#x2F;say-hello-to-doks&#x2F;)
 <!--END_SECTION:feed-->

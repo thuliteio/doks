@@ -44,7 +44,7 @@
     "autoprefixer": "^10.2",
     "bootstrap": "^5.0.0-beta3",
     "clipboard": "^2.0",
-    "eslint": "^7.22",
+    "eslint": "^7.23",
     "flexsearch": "^0.6",
     "highlight.js": "^10.7",
     "hugo-bin": "^0.70",

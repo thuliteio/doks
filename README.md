@@ -37,12 +37,6 @@
 
 - [doks.netlify.app](https://doks.netlify.app/)
 
-## Quick start
-
-Get your Doks site in 1 min.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/h-enk/doks)
-
 ## Why Doks?
 
 Nine reasons why you should use Doks:
@@ -55,7 +49,7 @@ Nine reasons why you should use Doks:
 
 4. __Development tools__. Code with confidence. Check styles, scripts, and markdown for errors and fix automatically or manually.
 
-5. __Bootstrap framework__. Build robust, flexible, and intuitive websites with Bootstrap. Or use any other front-end framework if you prefer.
+5. __Bootstrap framework__. Build robust, flexible, and intuitive websites with Bootstrap 5. Easily customize your Doks site with the source Sass files.
 
 6. __Netlify-ready__. Deploy to Netlify with sensible defaults. Easily use Netlify Functions, Netlify Redirects, and Netlify Headers.
 
@@ -67,13 +61,30 @@ Nine reasons why you should use Doks:
 
 ## Requirements
 
-Doks uses npm to install dependencies and run commands. Installing npm is pretty simple. Download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform.
+Doks uses npm to centralize dependency management, making it [easy to update](https://getdoks.org/docs/help/how-to-update/) resources, build tooling, plugins, and build scripts:
+
+- Download and install [Node.js](https://nodejs.org/) (it includes npm) for your platform.
 
 ## Get started
 
 Start a new Doks project in three steps:
 
 ### 1. Create a new site
+
+Doks is available as a child theme, and a starter theme:
+
+- Use the Doks child theme, if you do __not__ plan to customize a lot, and/or need future Doks updates.
+- Use the Doks starter theme, if you plan to customize a lot, and/or do __not__ need future Doks updates.
+
+Not quite sure? Use the Doks child theme.
+
+#### Doks child theme
+
+```bash
+git clone https://github.com/h-enk/doks-child-theme.git my-doks-site && cd my-doks-site
+```
+
+#### Doks starter theme
 
 ```bash
 git clone https://github.com/h-enk/doks.git my-doks-site && cd my-doks-site

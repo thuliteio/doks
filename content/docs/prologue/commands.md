@@ -6,7 +6,7 @@ date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
 images: []
-menu: 
+menu:
   docs:
     parent: "prologue"
 weight: 130
@@ -15,15 +15,17 @@ toc: true
 
 {{< alert icon="💡" text="You can change the commands in the scripts section of `./package.json`." >}}
 
-## start
+## create
 
-Start local development server:
+Create new content for your site:
 
-{{< btn-copy text="npm run start" >}}
+{{< btn-copy text="npm run create" >}}
 
 ```bash
-npm run start
+npm run create [path] [flags]
 ```
+
+See also the Hugo docs: [hugo new](https://gohugo.io/commands/hugo_new/).
 
 ## lint
 
@@ -73,6 +75,16 @@ Delete temporary directories:
 
 ```bash
 npm run clean
+```
+
+## start
+
+Start local development server:
+
+{{< btn-copy text="npm run start" >}}
+
+```bash
+npm run start
 ```
 
 ## build

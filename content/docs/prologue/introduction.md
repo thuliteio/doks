@@ -43,11 +43,11 @@ Learn how to customize Doks to fully make it your own. [Reference Guides →](ht
 
 ### Extensions
 
-Get instructions on how to add even more to Doks. [Extensions →](https://getdoks.org/docs/extensions/add-google-fonts/)
+Get instructions on how to add even more to Doks. [Extensions →](https://getdoks.org/docs/extensions/breadcrumb-navigation/)
 
 ### Showcase
 
-See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/parietal-numerics-documentation/)
+See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/electric-blocks/)
 
 ## Contributing
 

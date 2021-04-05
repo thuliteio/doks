@@ -3,7 +3,7 @@
   <div class="container">
     <input class="menu-btn order-0" type="checkbox" id="menu-btn">
     <label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
-    <a class="navbar-brand order-1 order-md-0 me-auto" href="{{ .Site.BaseURL | absURL }}">{{ .Site.Params.Title }}</a>
+    <a class="navbar-brand order-1 order-md-0 me-auto" href="{{ "/" | relURL }}">{{ .Site.Params.Title }}</a>
     {{ if .Site.Params.options.darkMode -}}
     <button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
       <span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
@@ -13,7 +13,7 @@
     <ul class="navbar-nav social-nav order-3 order-md-5">
       {{ range .Site.Menus.social -}}
         <li class="nav-item">
-          <a class="nav-link" href="{{ .URL | absURL }}">{{ .Pre | safeHTML }}<span class="ms-2 visually-hidden">{{ .Name | safeHTML }}</span></a>
+          <a class="nav-link" href="{{ .URL | relURL }}">{{ .Pre | safeHTML }}<span class="ms-2 visually-hidden">{{ .Name | safeHTML }}</span></a>
         </li>
       {{ end -}}
     </ul>
@@ -27,7 +27,7 @@
           {{- $active = or $active (and (eq .Name "Guides") (eq $current.Section "guides")) -}}
           {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
           <li class="nav-item{{ if $active }} active{{ end }}">
-            <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+            <a class="nav-link" href="{{ .URL | relURL }}">{{ .Name }}</a>
           </li>
         {{ end -}}
       </ul>

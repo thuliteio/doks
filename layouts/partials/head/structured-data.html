@@ -4,9 +4,9 @@
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "url": "{{ "/" | absURL }}",
+      "url": "{{ "/" | relURL }}",
       "name": "{{ .Site.Params.title }}",
-      "logo": "{{ "/" | absURL }}{{ .Site.Params.schemaLogo }}",
+      "logo": "{{ "/" | relURL }}{{ .Site.Params.schemaLogo }}",
       "sameAs": [
         "{{ .Site.Params.schemaTwitter | safeURL }}",
         "{{ .Site.Params.schemaLinkedIn | safeURL }}",
@@ -20,7 +20,7 @@
     {
       "@context": "https://schema.org",
       "@type": "Person",
-      "url": "{{ "/" | absURL }}",
+      "url": "{{ "/" | relURL }}",
       "name": "{{ .Site.Params.title }}",
       "sameAs": [
         "{{ .Site.Params.schemaTwitter | safeURL }}",
@@ -35,10 +35,10 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "url": "{{ "/" | absURL }}",
+      "url": "{{ "/" | relURL }}",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "{{ "/" | absURL }}?q={search_term_string}",
+        "target": "{{ "/" | relURL }}?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
     }
@@ -53,10 +53,10 @@
       "@type": "Article",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "{{ .Permalink }}"
+        "@id": "{{ .RelPermalink }}"
       },
       "headline": "{{ .Title }}",
-      "image": [{{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}{{ printf "%s%s" $.Permalink $e }}{{ end }}],
+      "image": [{{ range $i, $e := .Params.images }}{{ if $i }}, {{ end }}{{ printf "%s%s" $.RelPermalink $e }}{{ end }}],
       "datePublished": "{{ .PublishDate.Format "2006-01-02T15:04:05CET" }}",
       "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05CET" }}",
       "author": {
@@ -69,7 +69,7 @@
         {{ if eq .Site.Params.schemaType "Organization" -}}
         "logo": {
           "@type": "ImageObject",
-          "url": "{{ "/" | absURL }}{{ .Site.Params.schemaLogo }}"
+          "url": "{{ "/" | relURL }}{{ .Site.Params.schemaLogo }}"
         }
         {{ end -}}
       },
@@ -83,7 +83,7 @@
 {{ $dot.Scratch.Set "path" "" -}}
 {{ $dot.Scratch.Set "breadcrumb" slice -}}
 
-{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" -}}
+{{ $url := replace .RelPermalink ( printf "%s" .Site.BaseURL) "" -}}
 {{ $.Scratch.Add "path" .Site.BaseURL -}}
 
 {{ $.Scratch.Add "breadcrumb" (slice (dict "url" .Site.BaseURL "name" "home" "position" 1 )) -}}

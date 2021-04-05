@@ -1,4 +1,5 @@
 baseurl = "/"
+canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 enableEmoji = true
@@ -72,7 +73,7 @@ rel  = "sitemap"
 [taxonomies]
   contributor = "contributors"
 
-[permalinks]
+[RelPermalinks]
   blog = "/blog/:title/"
 
 [module]

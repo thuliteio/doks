@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.3](https://github.com/h-enk/doks/compare/v0.2.2...v0.2.3) (2021-04-02)
+
+
+### Features
+
+* update for netlify dev support ([10d0b45](https://github.com/h-enk/doks/commit/10d0b45203003a43727521dc9f5c35e655500309))
+
+
+### Bug Fixes
+
+* add class user added to img-simple shortcode ([bce8863](https://github.com/h-enk/doks/commit/bce8863269dd036146d5b6e447d67a23de70227d))
+* drop npm workflow ([977bbda](https://github.com/h-enk/doks/commit/977bbdad82e8e21599e1fcfc0d93fc4e448cf2af))
+
+
+### Dependencies
+
+* bump versions to latest ([171293a](https://github.com/h-enk/doks/commit/171293a692450d45348be2870434db2a01578de9))
+
 ### [0.2.2](https://github.com/h-enk/doks/compare/v0.2.1...v0.2.2) (2021-03-26)
 
 

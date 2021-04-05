@@ -3,14 +3,14 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 {{ if $.Scratch.Get "paginator" -}}
   {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Section" "blog" ) -}}
-  <meta property="og:url" content="{{ .Paginator.URL | absURL }}">
+  <meta property="og:url" content="{{ .Paginator.URL | relURL }}">
 {{ else -}}
-  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:url" content="{{ .RelPermalink }}">
 {{ end -}}
 
 {{ with $.Params.images -}}
   {{ range first 6 . -}}
-  <meta property="og:image" content="{{ $.Permalink }}{{ . }}">
+  <meta property="og:image" content="{{ $.RelPermalink }}{{ . }}">
   {{ end -}}
 {{ else -}}
   {{ $images := $.Resources.ByType "image" -}}
@@ -19,10 +19,10 @@
     {{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}
   {{ end -}}
   {{ with $featured -}}
-    <meta property="og:image" content="{{ $featured.Permalink }}"/>
+    <meta property="og:image" content="{{ $featured.RelPermalink }}"/>
   {{ else -}}
     {{ with $.Site.Params.images -}}
-      <meta property="og:image" content="{{ index . 0 | absURL }}"/>
+      <meta property="og:image" content="{{ index . 0 | relURL }}"/>
     {{ end -}}
   {{ end -}}
 {{ end -}}
@@ -54,18 +54,18 @@
 {{ end -}}
 {{ with .Params.videos -}}
   {{ range . -}}
-    <meta property="og:video" content="{{ . | absURL }}">
+    <meta property="og:video" content="{{ . | relURL }}">
   {{ end -}}
 {{ end -}}
 
-{{ $permalink := .Permalink -}}
+{{ $RelPermalink := .RelPermalink -}}
 {{ $siteSeries := .Site.Taxonomies.series -}}
 {{ with .Params.series -}}
   {{ range $name := . -}}
     {{ $series := index $siteSeries $name -}}
     {{ range $page := first 6 $series.Pages -}}
-      {{ if ne $page.Permalink $permalink -}}
-        <meta property="og:see_also" content="{{ $page.Permalink }}">
+      {{ if ne $page.RelPermalink $RelPermalink -}}
+        <meta property="og:see_also" content="{{ $page.RelPermalink }}">
       {{ end -}}
     {{ end -}}
   {{ end -}}

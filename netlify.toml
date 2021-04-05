@@ -2,23 +2,29 @@
   publish = "public"
   functions = "functions"
 
-[dev]
-  framework = "#custom"
-  command = "npx hugo server --disableFastRender"
-  targetPort = 1313
-  port = 8888
-  publish = "public"
-  autoLaunch = false
-
 [build.environment]
   NODE_VERSION = "15.5.1"
   NPM_VERSION = "7.3.0"
 
 [context.production]
-  command = "npx hugo --gc --minify -b $URL && npm run build:functions"
+  command = "npx hugo --gc --minify && npx netlify-lambda build assets/lambda"
 
 [context.deploy-preview]
   command = "npx hugo --gc --minify -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
   command = "npx hugo --gc --minify -b $DEPLOY_PRIME_URL"
+
+[context.next]
+  command = "npx hugo --gc --minify && npx netlify-lambda build assets/lambda"
+
+[context.next.environment]
+  HUGO_ENV = "next"
+
+[dev]
+  framework = "#custom"
+  command = "npx rimraf public resources functions && npx hugo server --bind=0.0.0.0 --disableFastRender"
+  targetPort = 1313
+  port = 8888
+  publish = "public"
+  autoLaunch = false

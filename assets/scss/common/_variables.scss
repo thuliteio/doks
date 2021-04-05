@@ -15,14 +15,36 @@ $black:    #000;
 $yellow:   #ffe000;
 $black:    #1d2d35;
 $beige:    #fbf7f0;
+$orange:   #fd7e14;
+$orange-400: tint-color($orange, 20%) !default;
 // $red:      #e55235;
 $purple:   #5d2f86;
 $brown:    #aa9c84;
+$green:    #198754;
+$cyan:     #0dcaf0;
+
+$blue:     #0d6efd;
+$blue-100: tint-color($blue, 80%) !default;
+$blue-200: tint-color($blue, 60%) !default;
+$blue-300: tint-color($blue, 40%) !default;
+$blue-400: tint-color($blue, 20%) !default;
+$blue-500: $blue !default;
+$blue-600: shade-color($blue, 20%) !default;
+$blue-700: shade-color($blue, 40%) !default;
+$blue-800: shade-color($blue, 60%) !default;
+$blue-900: shade-color($blue, 80%) !default;
 
 $blue-300: #8ed6fb;
 $pink-500: #d32e9d;
 
+$yellow:  #ffc107;
+$green:   #198754;
+$teal:    #20c997;
+
 $primary: $purple;
+
+//$primary: $green;
+$primary: $blue-300;
 
 // Options
 //

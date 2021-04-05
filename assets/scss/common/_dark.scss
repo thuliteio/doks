@@ -6,9 +6,12 @@ $body-bg-dark: $gray-900;
 $body-overlay-dark: darken($body-bg-dark, 2.5%);
 $border-dark: darken($body-bg-dark, 2.5%);
 $body-color-dark: $gray-300;
+//$body-color-dark: $orange;
 $dots-dark: darken($body-color-dark, 50%);
 
-$link-color-dark: $blue-300;
+//$link-color-dark: $blue-300;
+$link-color-dark: $orange-300;
+
 $button-color-dark: $link-color-dark;
 $focus-color-dark: lighten($link-color-dark, 2.5%);
 

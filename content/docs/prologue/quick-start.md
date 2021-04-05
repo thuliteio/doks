@@ -13,11 +13,11 @@ toc: true
 
 ## Requirements
 
- * [docker](https://www.docker.com/)
+[docker](https://www.docker.com/)
 
 ## Usage
 
-1. Run the client integration demo in one terminal:
+Run the client integration demo in one terminal:
 
 ```shell
 docker run -it --rm \
@@ -30,7 +30,7 @@ docker run -it --rm \
     --name observer-js-demo observertc/observer-js-demo:latest
 ```
 
-2. Run the observer in another terminal:
+Run the observer in another terminal:
 
 ```shell
 docker run -it --rm \
@@ -38,8 +38,8 @@ docker run -it --rm \
      --name observer observertc/observer:H
 ```
 
-3. Open browser at `localhost:9090`
+Open browser at `localhost:9090`
 
 ![start the demo](quickstart.gif "Start The Demo")
 
-4. See the summary logs from observer about the samples the demo sent
+See the summary logs from observer about the samples the demo sent

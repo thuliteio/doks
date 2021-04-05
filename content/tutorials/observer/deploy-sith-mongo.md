@@ -10,6 +10,3 @@ contributors: ["Balazs Kreith"]
 ---
 
 ## Prerequisites
-
-
-

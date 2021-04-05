@@ -22,4 +22,3 @@ Here is how ObserveRTC comes into the picture. We make RTC development fun and e
 > With WebRTC, you can add real-time communication capabilities to your application that works on top of an open standard. It supports video, voice, and generic data to be sent between peers, allowing developers to build powerful voice- and video-communication solutions. The technology is available on all modern browsers as well as on native clients for all major platforms
 
 Source: https://webrtc.org/
-

@@ -7,6 +7,10 @@ lastmod: 2021-04-01
 draft: false
 weight: 50
 contributors: ["Balazs Kreith"]
+toc: true
+menu:
+  tutorial:
+    parent: "observer"
 ---
 
 ## Prerequisites

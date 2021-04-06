@@ -11,13 +11,7 @@ weight: 110
 toc: true
 ---
 
-## Requirements
-
-[docker](https://www.docker.com/)
-
-## Usage
-
-Run the client integration demo in one terminal:
+1. Run the client integration demo in one terminal:
 
 ```shell
 docker run -it --rm \
@@ -30,7 +24,7 @@ docker run -it --rm \
     --name observer-js-demo observertc/observer-js-demo:latest
 ```
 
-Run the observer in another terminal:
+2. Run the observer in another terminal:
 
 ```shell
 docker run -it --rm \
@@ -38,8 +32,8 @@ docker run -it --rm \
      --name observer observertc/observer:H
 ```
 
-Open browser at `localhost:9090`
+3. Open browser at `localhost:9090`
 
 ![start the demo](quickstart.gif "Start The Demo")
 
-See the summary logs from observer about the samples the demo sent
+4. See the summary logs from observer about the samples the demo sent

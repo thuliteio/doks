@@ -7,10 +7,10 @@ draft: false
 images: []
 ---
 
-### Drop us a mail
+### Mail
 
 info[at]observertc.org
 
-### Contribute
+### Github
 
 [https://github.com/ObserveRTC](https://github.com/ObserveRTC)

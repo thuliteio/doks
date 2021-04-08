@@ -43,8 +43,8 @@ alert = false
 alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/h-enk/doks"
-editPage = false
+docsRepo = "https://github.com/ObserveRTC/website-2.0"
+editPage = true
 
 [options]
   lazySizes = true

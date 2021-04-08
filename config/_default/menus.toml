@@ -5,6 +5,18 @@
   url = "/docs/prologue/"
 
 [[docs]]
+  name = "Integrations"
+  weight = 20
+  identifier = "integrations"
+  url = "/docs/integrations/"
+
+[[docs]]
+  name = "Deployments"
+  weight = 30
+  identifier = "deployments"
+  url = "/docs/deployments/"
+
+[[docs]]
   name = "Help"
   weight = 60
   identifier = "help"

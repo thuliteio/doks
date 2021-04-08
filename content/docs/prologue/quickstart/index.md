@@ -7,11 +7,13 @@ images: []
 menu:
   docs:
     parent: "prologue"
-weight: 110
+weight: 1030
 toc: true
+images: ["quickstart.gif"]
 ---
 
-1. Open a terminal and run the client integration demo:
+1. Open a terminal and run a demo webrtc app integrated with [observer-js](https://github.com/ObserveRTC/observer-js)
+
 
 ```shell
 docker run -it --rm \
@@ -24,14 +26,14 @@ docker run -it --rm \
     --name observer-js-demo observertc/observer-js-demo:latest
 ```
 
-2. Open another terminal and run the observer:
+2. Open another terminal and run the [observer](https://github.com/ObserveRTC/observer)
 
 ```shell
-docker run -it --rm \
-     -p 7080:7080 \
-     --name observer observertc/observer:H
+docker run -p 7080:7080 observertc/observer:latest
 ```
 
 3. Open browser at `localhost:9090` and start collecting samples
+
+{{< img-simple src="quickstart.gif" alt="Google Lighthouse Scan Results Doks">}}
 
 4. See the summary logs from observer about the samples the demo sent

@@ -26,7 +26,7 @@ mkdir observer-with-mongo
 cd observer-with-mongo
 ```
 
-### 2. Create observer.yaml
+### 2. Create observer config
 
 Create `observer-config.yaml` and add the following contents to it:
 
@@ -48,7 +48,7 @@ observer:
 
 This configuration sets up a connector inside observer to connect to mongo.
 
-### 3. Create docker-compose.yaml
+### 3. Create docker compose file
 
 Create `docker-compose.yaml`, and add the following contents:
 
@@ -91,15 +91,17 @@ services:
       - mongodb
 ```
 
-## Test Deployment
-
-### 1. Launch docker-compose
+### 4. Launch
 
 ```shell
 docker-compose up
 ```
 
-### 2. Run a Demo WebRTC App
+## Test Deployment
+
+### 1. Run WebRTC App
+
+You can run your WebRTC Integration, or a demo app uses the latest [observer-js](https://github.com/ObserveRTC/observer-js).
 
 ```shell
 docker run -it --rm \
@@ -112,21 +114,21 @@ docker run -it --rm \
   --name observer-js-demo observertc/observer-js-demo:latest
 ```
 
-### 3. Initiate a Call
+### 2. Initiate a Call
 
 Go to `localhost:9090` in your browser, `Start` a call and then `Start Collection`.
 In the browser console window you should see no errors
 
-### 4. Check the reports
+### 3. Check the reports
 
 Open a new window in your browser, and go to `localhost:8081`. Authenticate yourself with the
-admin username and password you setup in the docker-compose file (admin/password).
+admin username and password you set in the docker-compose file (admin/password).
 Once you entered, you should see the `reports` database, inside which you found all reports
 observer generated for the call you initiated.
 
 ## Tweaks
 
-The following customization is known regarding to the mongo sink.
+The following customizations are known regarding the mongo sink.
 
 ### Setup collection names
 

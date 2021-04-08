@@ -27,7 +27,7 @@ mkdir observer-with-kafka
 cd observer-with-kafka
 ```
 
-### 2. Create observer.yaml
+### 2. Create observer config
 
 Create `observer-config.yaml` and add the following contents to it:
 
@@ -47,7 +47,7 @@ observer:
 
 This configuration sets up a connector inside observer to connect to mongo.
 
-### 3. Create docker-compose.yaml
+### 3. Create docker compose file
 
 Create `docker-compose.yaml`, and add the following contents:
 
@@ -106,16 +106,17 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: ignored
 
 ```
-
-## Test Deployment
-
-### 1. Launch docker-compose
+### 4. Launch
 
 ```shell
 docker-compose up
 ```
 
-### 2. Run a Demo WebRTC App
+## Test Deployment
+
+### 1. Run WebRTC App
+
+You can run your WebRTC Integration, or a demo app uses the latest [observer-js](https://github.com/ObserveRTC/observer-js).
 
 ```shell
 docker run -it --rm \
@@ -128,12 +129,12 @@ docker run -it --rm \
   --name observer-js-demo observertc/observer-js-demo:latest
 ```
 
-### 3. Initiate a Call
+### 2. Initiate a Call
 
 Go to `localhost:9090` in your browser, `Start` a call and then `Start Collection`.
 In the browser console window you should see no errors.
 
-### 4. Check the reports
+### 3. Check the reports
 
 Consume reports from kafka by kafkacat.
 
@@ -142,7 +143,7 @@ kafkacat -b localhost:9092 -t reports -C
 ```
 
 ## References
-* [MongoDB](https://www.mongodb.com/)
+* [Kafka](https://kafka.apache.org/)
 * [Observer](https://github.com/ObserveRTC/observer)
 * [Observer Documentation](https://observertc.github.io/observer)
 * [Helm](https://github.com/ObserveRTC/helm)

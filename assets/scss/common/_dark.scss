@@ -188,7 +188,7 @@ body.dark .docs-navigation {
 }
 
 body.dark pre code::-webkit-scrollbar-thumb {
-  background: $border-dark;
+  background: $gray-400;
 }
 
 body.dark code:not(.hljs) {
@@ -202,7 +202,7 @@ body.dark pre code:hover {
 }
 
 body.dark pre code::-webkit-scrollbar-thumb:hover {
-  background: $border-dark;
+  background: $gray-500;
 }
 
 body.dark blockquote {
@@ -330,21 +330,4 @@ body.dark .copy-status:active::after {
   content: "Copied";
   display: block;
   color: $link-color-dark;
-}
-
-body.dark pre code::-webkit-scrollbar {
-  height: 5px;
-}
-
-body.dark pre code::-webkit-scrollbar-thumb {
-  background: $gray-400;
-}
-
-body.dark pre code:hover {
-  scrollbar-width: thin;
-  scrollbar-color: $gray-500 transparent;
-}
-
-body.dark pre code::-webkit-scrollbar-thumb:hover {
-  background: $gray-500;
 }

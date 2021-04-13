@@ -331,3 +331,20 @@ body.dark .copy-status:active::after {
   display: block;
   color: $link-color-dark;
 }
+
+body.dark pre code::-webkit-scrollbar {
+  height: 5px;
+}
+
+body.dark pre code::-webkit-scrollbar-thumb {
+  background: $gray-400;
+}
+
+body.dark pre code:hover {
+  scrollbar-width: thin;
+  scrollbar-color: $gray-500 transparent;
+}
+
+body.dark pre code::-webkit-scrollbar-thumb:hover {
+  background: $gray-500;
+}

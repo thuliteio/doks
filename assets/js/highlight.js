@@ -19,6 +19,6 @@ hljs.registerLanguage('md', markdown);
 
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('pre code').forEach((block) => {
-    hljs.highlightBlock(block);
+    hljs.highlightElement(block);
   });
 });

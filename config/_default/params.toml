@@ -56,3 +56,4 @@ editPage = false
   breadCrumb = false
   highLight = true
   kaTex = false
+  mermaid = true

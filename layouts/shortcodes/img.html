@@ -10,7 +10,7 @@
 {{ end -}}
 
 {{ range $widths -}}
-  {{ $srcUrl := (printf "%dx" . | $image.Resize).RelPermalink -}}
+  {{ $srcUrl := (printf "%dx" . | $image.Resize).Permalink -}}
   {{ if eq $imgSrc "" -}}{{ $imgSrc = $srcUrl -}}{{ end -}}
   {{ $imgSrcSet = $imgSrcSet | append (printf "%s %dw" $srcUrl .) -}}
 {{ end -}}

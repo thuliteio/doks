@@ -49,7 +49,7 @@
     "highlight.js": "^10.7",
     "hugo-bin": "^0.70",
     "instant.page": "^5.1",
-    "katex": "^0.13.0",
+    "katex": "^0.13",
     "lazysizes": "^5.3",
     "markdownlint-cli": "^0.27",
     "netlify-lambda": "^2.0",
@@ -58,7 +58,7 @@
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",
     "shx": "^0.3.3",
-    "standard-version": "^9.1",
+    "standard-version": "^9.2",
     "stylelint": "^13.12",
     "stylelint-config-standard": "^21.0"
   }

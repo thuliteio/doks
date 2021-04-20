@@ -1,7 +1,7 @@
 <div class="alert alert-warning d-flex" role="alert">
   <div class="flex-shrink-1 alert-icon">{{ with .Get "icon" }}{{.}} {{ end }}</div>
   {{ with .Get "text"}}
-    <div class="w-100">{{ . }} </div>
+    <div class="w-100">{{ . | safeHTML }} </div>
   {{ else }}
     {{ with .Inner}}
       <div class="w-100"> {{ . | markdownify}}</div>

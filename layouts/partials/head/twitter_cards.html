@@ -1,6 +1,6 @@
 {{ with $.Params.images -}}
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="{{ $.Permalink }}{{ index . 0 }}">
+  <meta name="twitter:image" content="{{ $.RelPermalink }}{{ index . 0 }}">
 {{ else -}}
   {{ $images := $.Resources.ByType "image" -}}
   {{ $featured := $images.GetMatch "*feature*" -}}
@@ -9,11 +9,11 @@
   {{ end -}}
   {{ with $featured -}}
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ $featured.Permalink }}">
+    <meta name="twitter:image" content="{{ $featured.RelPermalink }}">
   {{ else -}}
     {{ with $.Site.Params.images -}}
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:image" content="{{ index . 0 | absURL }}">
+      <meta name="twitter:image" content="{{ index . 0 | relURL }}">
     {{ else -}}
       <meta name="twitter:card" content="summary">
     {{ end -}}

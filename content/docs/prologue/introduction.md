@@ -27,7 +27,7 @@ Step-by-step instructions on how to start a new Doks project. [Tutorial →](htt
 
 {{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." >}}
 
-One page summary of how to start a new Doks project. [Quick Start →]({{< ref "quick-start" >}})
+One page summary of how to start a new Doks project. [Quick Start →]({{< relref "quick-start" >}})
 
 ## Go further
 
@@ -43,11 +43,11 @@ Learn how to customize Doks to fully make it your own. [Reference Guides →](ht
 
 ### Extensions
 
-Get instructions on how to add even more to Doks. [Extensions →](https://getdoks.org/docs/extensions/add-google-fonts/)
+Get instructions on how to add even more to Doks. [Extensions →](https://getdoks.org/docs/extensions/breadcrumb-navigation/)
 
 ### Showcase
 
-See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/parietal-numerics-documentation/)
+See what others have build with Doks. [Showcase →](https://getdoks.org/showcase/electric-blocks/)
 
 ## Contributing
 
@@ -55,4 +55,4 @@ Find out how to contribute to Doks. [Contributing →](https://getdoks.org/docs/
 
 ## Help
 
-Get help on Doks. [Help →]({{< ref "how-to-update" >}})
+Get help on Doks. [Help →]({{< relref "how-to-update" >}})

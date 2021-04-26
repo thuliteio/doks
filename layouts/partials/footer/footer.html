@@ -9,7 +9,7 @@
       <div class="col-lg-8 order-first order-lg-last text-lg-end">
         <ul class="list-inline">
           {{ range .Site.Menus.footer -}}
-            <li class="list-inline-item"><a href="{{ .URL | absURL }}">{{ .Name }}</a></li>
+            <li class="list-inline-item"><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
           {{ end -}}
         </ul>
       </div>

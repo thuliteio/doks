@@ -23,15 +23,15 @@
 {{ end -}}
 
 {{ if $.Scratch.Get "paginator" }}
-  <link rel="canonical" href="{{ .Paginator.URL | absURL }}">
+  <link rel="canonical" href="{{ .Paginator.URL | relURL }}">
   {{ if .Paginator.HasPrev -}}
-    <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}">
+    <link rel="prev" href="{{ .Paginator.Prev.URL | relURL }}">
   {{ end -}}
   {{ if .Paginator.HasNext -}}
-    <link rel="next" href="{{ .Paginator.Next.URL | absURL }}">
+    <link rel="next" href="{{ .Paginator.Next.URL | relURL }}">
   {{ end -}}
 {{ else -}}
-  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="canonical" href="{{ .RelPermalink }}">
 {{ end -}}
 
 {{ partial "head/twitter_cards.html" . }}
@@ -44,7 +44,7 @@
 <meta property="og:locale" content="{{ .Site.Params.ogLocale }}">
 
 {{ range .AlternativeOutputFormats -}}
-  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+  <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .RelPermalink | safeURL }}">
 {{ end -}}
 
 {{ partial "head/structured-data.html" . }}

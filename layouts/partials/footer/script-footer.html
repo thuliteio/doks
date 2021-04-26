@@ -10,6 +10,9 @@
 {{ $katex := resources.Get "js/vendor/katex/dist/katex.js" -}}
 {{ $katexAutoRender := resources.Get "js/vendor/katex/dist/contrib/auto-render.js" -}}
 
+{{ $plantuml :=  resources.Get "js/plantuml.js" | js.Build -}}
+{{ $mermaid :=  resources.Get "js/mermaid.js" | js.Build -}}
+
 {{ $app := resources.Get "js/app.js" -}}
 
 {{ $slice := slice $app -}}
@@ -66,6 +69,12 @@
   {{ if .Site.Params.options.flexSearch -}}
     <script src="{{ $index.Permalink }}" defer></script>
   {{ end -}}
+  {{ if .Site.Params.options.plantuml -}}
+    <script src="{{ $plantuml.Permalink }}" defer></script>
+  {{ end -}}
+  {{ if .Site.Params.options.mermaid -}}
+    <script src="{{ $mermaid.Permalink }}" defer></script>
+  {{ end -}}
 {{ else -}}
   {{ $js := $js | minify | fingerprint "sha512" -}}
   {{ $index := $index | minify | fingerprint "sha512" -}}
@@ -82,6 +91,12 @@
   {{ if .Site.Params.options.kaTex -}}
     <script src="{{ $katex.Permalink }}" integrity="{{ $katex.Data.Integrity }}" crossorigin="anonymous" defer></script>
     <script src="{{ $katexAutoRender.Permalink }}" integrity="{{ $katexAutoRender.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end -}}
+  {{ if .Site.Params.options.plantuml -}}
+    <script src="{{ $plantuml.Permalink }}" integrity="{{ $plantuml.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end -}}
+  {{ if .Site.Params.options.mermaid -}}
+    <script src="{{ $mermaid.Permalink }}" integrity="{{ $mermaid.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
   <script src="{{ $js.Permalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ if .Site.Params.options.flexSearch -}}

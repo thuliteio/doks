@@ -1,20 +1,8 @@
-{{ if not (.Page.Scratch.Get "plantuml") }}
-  <!-- Include mermaid only first time -->
-  <script src="https://cdn.jsdelivr.net/npm/plantuml-encoder@1.4.0/dist/plantuml-encoder.min.js"></script>
-  <script>
-    document.body.onload = function () {
-      let elements = document.querySelectorAll('.plantuml');
-      elements.forEach((v) => {
-        let encoded = window.plantumlEncoder.encode(v.textContent);
-        let src = '//www.plantuml.com/plantuml/svg/' + encoded;
-        v.innerHTML = '<img src="' + src + '" />';
-      })
-    }
-  </script>
-
-  {{ .Page.Scratch.Set "plantuml" true }}
+{{ if .Site.Params.options.plantuml -}}
+  <p class="plantuml{{ with .Get "class" }} {{ . }}{{ end }}">
+    {{ $data := replaceRE "(^\\s+```)" "" .Inner }}
+    {{- replaceRE "(```\\s+$)" "" $data -}}
+  </p>
+{{ else }}
+  Enable <code>mermaid</code> in <code>params.toml</code> before use</blockquote>
 {{ end }}
-
-<p class="plantuml{{ with .Get "class" }} {{ . }}{{ end }}">
-  {{ .Inner }}
-</p>

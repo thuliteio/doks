@@ -1,5 +1,6 @@
 import mermaid from 'mermaid/dist/mermaid';
-mermaid.initialize({
-    startOnLoad:true,
-    theme : 'default'
-});
+let mconfig = {
+  startOnLoad: true,
+  theme : 'default',
+};
+mermaid.initialize(mconfig);

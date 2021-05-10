@@ -38,21 +38,21 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.13",
-    "@babel/core": "^7.13",
-    "@babel/preset-env": "^7.13",
+    "@babel/core": "^7.14",
+    "@babel/preset-env": "^7.14",
     "@fullhuman/postcss-purgecss": "^4.0",
     "autoprefixer": "^10.2",
-    "bootstrap": "^5.0.0-beta3",
+    "bootstrap": "^5.0",
     "clipboard": "^2.0",
-    "eslint": "^7.23",
+    "eslint": "^7.24",
     "flexsearch": "^0.6",
     "highlight.js": "^10.7",
-    "hugo-bin": "^0.70",
+    "hugo-bin": "^0.71",
     "instant.page": "^5.1",
     "katex": "^0.13",
     "lazysizes": "^5.3",
     "markdownlint-cli": "^0.27",
-    "mermaid": "^8.9.2",
+    "mermaid": "^8.9",
     "netlify-lambda": "^2.0",
     "postcss": "^8.2",
     "postcss-cli": "^8.3",
@@ -60,7 +60,7 @@
     "rimraf": "^3.0",
     "shx": "^0.3.3",
     "standard-version": "^9.2",
-    "stylelint": "^13.12",
-    "stylelint-config-standard": "^21.0"
+    "stylelint": "^13.13",
+    "stylelint-config-standard": "^22.0"
   }
 }

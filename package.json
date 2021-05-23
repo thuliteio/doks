@@ -37,7 +37,7 @@
     "copy:katex-fonts": "shx cp ./node_modules/katex/dist/fonts/* ./static/fonts/"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13",
+    "@babel/cli": "^7.14",
     "@babel/core": "^7.14",
     "@babel/preset-env": "^7.14",
     "@fullhuman/postcss-purgecss": "^4.0",

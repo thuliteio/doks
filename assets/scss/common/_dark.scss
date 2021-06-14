@@ -188,7 +188,7 @@ body.dark .docs-navigation {
 }
 
 body.dark pre code::-webkit-scrollbar-thumb {
-  background: $border-dark;
+  background: $gray-400;
 }
 
 body.dark code:not(.hljs) {
@@ -202,7 +202,7 @@ body.dark pre code:hover {
 }
 
 body.dark pre code::-webkit-scrollbar-thumb:hover {
-  background: $border-dark;
+  background: $gray-500;
 }
 
 body.dark blockquote {

@@ -49,14 +49,14 @@ pre code::-webkit-scrollbar {
 }
 
 pre code::-webkit-scrollbar-thumb {
-  background: $gray-200;
+  background: $gray-400;
 }
 
 pre code:hover {
   scrollbar-width: thin;
-  scrollbar-color: $gray-200 transparent;
+  scrollbar-color: $gray-500 transparent;
 }
 
 pre code::-webkit-scrollbar-thumb:hover {
-  background: $gray-200;
+  background: $gray-500;
 }

@@ -14,7 +14,7 @@
         {{ range .Children -}}
           {{- $active := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) -}}
           {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
-          <li><a class="link-dark rounded{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
         {{ end -}}
         </ul>
       </div>

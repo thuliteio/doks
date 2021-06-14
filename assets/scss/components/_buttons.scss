@@ -89,3 +89,62 @@ body.dark .toggle-dark {
   display: block;
   color: $pink-500;
 }
+
+.collapsible-sidebar {
+  margin: 2.125rem 0;
+}
+
+.btn-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem 0.25rem 0;
+  font-weight: $headings-font-weight;
+  font-size: $font-size-base;
+  text-transform: uppercase;
+  color: $body-color;
+  background-color: transparent;
+  border: 0;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: $body-color;
+  background-color: transparent;
+  outline: 0;
+  box-shadow: none;
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%2829, 45, 53, 0.75%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+  margin-bottom: 0.125rem;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: $body-color;
+}
+
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  display: inline-flex;
+  padding: 0.1875rem 0.5rem;
+  margin-top: 0.125rem;
+  margin-left: 1.25rem;
+  text-decoration: none;
+}
+
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: transparent;
+  color: $link-color;
+}
+
+.btn-toggle-nav a.active {
+  color: $link-color;
+}

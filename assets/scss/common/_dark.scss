@@ -98,6 +98,10 @@ body.dark .page-links a {
   color: $body-color-dark;
 }
 
+body.dark .btn-toggle-nav a {
+  color: $body-color-dark;
+}
+
 body.dark .showcase-meta a {
   color: $body-color-dark;
 }
@@ -111,6 +115,43 @@ body.dark .docs-link:hover,
 body.dark .docs-link.active,
 body.dark .page-links a:hover {
   text-decoration: none;
+  color: $link-color-dark;
+}
+
+body.dark .btn-toggle {
+  color: $body-color-dark;
+  background-color: transparent;
+  border: 0;
+}
+
+body.dark .btn-toggle:hover,
+body.dark .btn-toggle:focus {
+  color: $body-color-dark;
+}
+
+body.dark .btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28222, 226, 230, 0.75%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform 0.35s ease;
+  transform-origin: 0.5em 50%;
+  margin-bottom: 0.125rem;
+}
+
+body.dark .btn-toggle[aria-expanded="true"] {
+  color: $body-color-dark;
+}
+
+body.dark .btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+body.dark .btn-toggle-nav a:hover,
+body.dark .btn-toggle-nav a:focus {
+  color: $link-color-dark;
+}
+
+body.dark .btn-toggle-nav a.active {
   color: $link-color-dark;
 }
 

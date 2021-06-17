@@ -54,7 +54,7 @@
     "markdownlint-cli": "^0.27",
     "mermaid": "^8.10.2",
     "netlify-lambda": "^2.0.9",
-    "postcss": "^8.3.4",
+    "postcss": "^8.3.5",
     "postcss-cli": "^8.3",
     "purgecss-whitelister": "^2.4",
     "rimraf": "^3.0",

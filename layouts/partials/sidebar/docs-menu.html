@@ -1,14 +1,14 @@
 {{ if .Site.Params.options.collapsibleSidebar -}}
   <ul class="list-unstyled collapsible-sidebar">
   {{ $currentPage := . -}}
-  {{ range $index, $value := .Site.Menus.docs -}}
+  {{ range $index, $element := .Site.Menus.docs -}}
+  {{- $active := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) -}}
+  {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
     <li class="mb-1">
-      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#{{ .Identifier }}" aria-expanded="{{ if not $index }}true{{ else }}false{{ end }}">
+      <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#{{ .Identifier }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
         {{ .Name }}
       </button>
       {{ if .HasChildren -}}
-      {{- $active := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) -}}
-      {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
       <div class="collapse{{ if $active }} show{{ end }}" id="{{ .Identifier }}">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
         {{ range .Children -}}

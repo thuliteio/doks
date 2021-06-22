@@ -47,7 +47,7 @@
     "eslint": "^7.29",
     "flexsearch": "^0.6",
     "highlight.js": "^11.0",
-    "hugo-bin": "^0.71",
+    "hugo-bin": "^0.72",
     "instant.page": "^5.1",
     "katex": "^0.13",
     "lazysizes": "^5.3",

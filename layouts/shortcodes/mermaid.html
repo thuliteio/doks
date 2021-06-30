@@ -1,3 +1,8 @@
-<div class="mermaid{{ with .Get "class" }} {{ . }}{{ end }}">
-  {{- .Inner -}}
-</div>
+{{ if .Site.Params.options.mermaid -}}
+  <div class="mermaid{{ with .Get "class" }} {{ . }}{{ end }}">
+    {{ $data := replaceRE "(^\\s+```)" "" .Inner -}}
+    {{ replaceRE "(```\\s+$)" "" $data -}}
+  </div>
+{{ else }}
+  {{ errorf "Set `mermaid = true` in `./config/_default/params.toml`"}}
+{{ end }}

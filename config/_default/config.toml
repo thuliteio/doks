@@ -92,6 +92,3 @@ rel  = "sitemap"
   [[module.mounts]]
     source = "node_modules/mermaid"
     target = "assets/js/vendor/mermaid"
-  [[module.mounts]]
-    source = "node_modules/mermaid"
-    target = "static/js/vendor/mermaid"

@@ -72,3 +72,4 @@ editPage = false
   highLight = true
   kaTex = false
   collapsibleSidebar = false
+  mermaid = true

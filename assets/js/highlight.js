@@ -18,7 +18,7 @@ hljs.registerLanguage('yaml', yaml);
 hljs.registerLanguage('md', markdown);
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('pre code').forEach((block) => {
+  document.querySelectorAll('pre code:not(.language-mermaid)').forEach((block) => {
     hljs.highlightElement(block);
   });
 });

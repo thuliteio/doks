@@ -15,6 +15,8 @@ toc: true
 
 ## Flow
 
+### Shortcode
+
 ```md
 {{</* mermaid class="bg-light text-center" */>}}
 graph TD
@@ -32,6 +34,26 @@ graph TD
   C -->|One| D[Result 1]
   C -->|Two| E[Result 2]
 {{< /mermaid >}}
+
+### Code fences
+
+````md
+```mermaid
+graph TD
+  A[Hard] -->|Text| B(Round)
+  B --> C{Decision}
+  C -->|One| D[Result 1]
+  C -->|Two| E[Result 2]
+```
+````
+
+```mermaid
+graph TD
+  A[Hard] -->|Text| B(Round)
+  B --> C{Decision}
+  C -->|One| D[Result 1]
+  C -->|Two| E[Result 2]
+```
 
 ## Sequence
 
@@ -51,13 +73,15 @@ sequenceDiagram
 
 {{< mermaid >}}
 gantt
-  section Section
-  Completed :done,    des1, 2014-01-06,2014-01-08
-  Active        :active,  des2, 2014-01-07, 3d
-  Parallel 1   :         des3, after des1, 1d
-  Parallel 2   :         des4, after des1, 1d
-  Parallel 3   :         des5, after des3, 1d
-  Parallel 4   :         des6, after des4, 1d
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
 {{< /mermaid >}}
 
 ## Class

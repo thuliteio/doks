@@ -3,6 +3,6 @@
     {{ $data := replaceRE "(^\\s+```)" "" .Inner -}}
     {{ replaceRE "(```\\s+$)" "" $data -}}
   </div>
-{{ else }}
-  {{ errorf "Set `mermaid = true` in `./config/_default/params.toml`"}}
-{{ end }}
+{{ else -}}
+  {{ errorf "Set `mermaid = true` in `./config/_default/params.toml`" }}
+{{ end -}}

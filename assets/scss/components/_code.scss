@@ -60,3 +60,7 @@ pre code:hover {
 pre code::-webkit-scrollbar-thumb:hover {
   background: $gray-500;
 }
+
+code.language-mermaid {
+  background: none;
+}

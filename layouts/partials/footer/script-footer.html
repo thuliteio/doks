@@ -65,7 +65,7 @@
     <script src="{{ $katexAutoRender.RelPermalink }}" onload="renderMathInElement(document.body);" defer></script>
   {{ end -}}
   <script src="{{ $js.RelPermalink }}" defer></script>
-  {{ if .Site.Params.options.mermaid -}}
+  {{ with .Params.mermaid -}}
     <script src="{{ $mermaid.RelPermalink }}" defer></script>
   {{ end -}}
   {{ if .Site.Params.options.flexSearch -}}
@@ -90,7 +90,7 @@
     <script src="{{ $katexAutoRender.RelPermalink }}" integrity="{{ $katexAutoRender.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
-  {{ if .Site.Params.options.mermaid -}}
+  {{ with .Params.mermaid -}}
     <script src="{{ $mermaid.RelPermalink }}" integrity="{{ $mermaid.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
   {{ if .Site.Params.options.flexSearch -}}

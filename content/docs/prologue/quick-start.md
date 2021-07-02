@@ -19,7 +19,7 @@ function myFunction(p1, p2) {
 }
 ```
 
-## Flow
+## Flowchart
 
 ### Shortcode
 
@@ -61,7 +61,7 @@ graph TD
   C -->|Two| E[Result 2]
 ```
 
-## Sequence
+## Sequence diagram
 
 {{< mermaid >}}
 sequenceDiagram
@@ -75,22 +75,7 @@ sequenceDiagram
   Bob-->>John: Jolly good!
 {{< /mermaid >}}
 
-## Gantt
-
-{{< mermaid >}}
-gantt
-dateFormat  YYYY-MM-DD
-title Adding GANTT diagram to mermaid
-excludes weekdays 2014-01-10
-
-section A section
-Completed task            :done,    des1, 2014-01-06,2014-01-08
-Active task               :active,  des2, 2014-01-09, 3d
-Future task               :         des3, after des2, 5d
-Future task2               :         des4, after des3, 5d
-{{< /mermaid >}}
-
-## Class
+## Class diagram
 
 {{< mermaid >}}
 classDiagram
@@ -111,7 +96,7 @@ classDiagram
   }
 {{< /mermaid >}}
 
-## State
+## State diagram
 
 {{< mermaid >}}
 stateDiagram-v2
@@ -123,18 +108,16 @@ stateDiagram-v2
   Crash --> [*]
 {{< /mermaid >}}
 
-## Pie
+## Entity Relationship Diagram
 
 {{< mermaid >}}
-pie
-  title Key elements in Product X
-  "Calcium" : 42.96
-  "Potassium" : 50.05
-  "Magnesium" : 10.01
-  "Iron" :  5
+erDiagram
+  CUSTOMER ||--o{ ORDER : places
+  ORDER ||--|{ LINE-ITEM : contains
+  CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
 {{< /mermaid >}}
 
-## User Journey
+## User Journey Diagram
 
 {{< mermaid >}}
 journey
@@ -147,6 +130,52 @@ journey
     Go downstairs: 5: Me
     Sit down: 3: Me
 {{< /mermaid >}}
+
+## Gantt chart
+
+{{< mermaid >}}
+gantt
+dateFormat  YYYY-MM-DD
+title Adding GANTT diagram to mermaid
+excludes weekdays 2014-01-10
+
+section A section
+Completed task            :done,    des1, 2014-01-06,2014-01-08
+Active task               :active,  des2, 2014-01-09, 3d
+Future task               :         des3, after des2, 5d
+Future task2               :         des4, after des3, 5d
+{{< /mermaid >}}
+
+## Pie chart
+
+{{< mermaid >}}
+pie
+  title Key elements in Product X
+  "Calcium" : 42.96
+  "Potassium" : 50.05
+  "Magnesium" : 10.01
+  "Iron" :  5
+{{< /mermaid >}}
+
+## Requirement Diagram
+
+```mermaid
+requirementDiagram
+
+  requirement test_req {
+  id: 1
+  text: the test text.
+  risk: high
+  verifymethod: test
+  }
+
+  element test_entity {
+  type: simulation
+  }
+
+  test_entity - satisfies -> test_req
+
+```
 
 ## Requirements
 

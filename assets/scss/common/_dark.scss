@@ -246,6 +246,11 @@ body.dark code:not(.hljs):not(.language-mermaid) {
   color: $body-color-dark;
 }
 
+body.dark .mermaid,
+body.dark pre code.language-mermaid {
+  background: $white;
+}
+
 body.dark blockquote {
   border-left: 3px solid $border-dark;
 }

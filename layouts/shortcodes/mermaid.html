@@ -4,5 +4,5 @@
     {{ replaceRE "(```\\s+$)" "" $data -}}
   </div>
 {{ else -}}
-  {{ errorf "Set `mermaid = true` in `./config/_default/params.toml`" }}
+  {{ errorf "Failed to process mermaid shortcode(s). Set `mermaid = true` in `./config/_default/params.toml`." }}
 {{ end -}}

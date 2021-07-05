@@ -11,4 +11,4 @@ features = ["security aware", "fast by default", "seo-ready", "development tools
 
 [author]
   name = "Henk Verlinde"
-  homepage = "https://henkverlinde.com/"
+  homepage = "https://henkverlinde.com"

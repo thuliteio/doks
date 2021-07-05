@@ -77,6 +77,10 @@ rel  = "sitemap"
   blog = "/blog/:title/"
 
 [module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.80.0"
+    max = ""
   [[module.mounts]]
     source = "assets"
     target = "assets"

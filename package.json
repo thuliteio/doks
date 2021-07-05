@@ -1,7 +1,7 @@
 {
   "name": "@hyas/doks",
   "description": "Doks theme",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "browserslist": [
     "defaults"
   ],

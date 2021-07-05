@@ -23,7 +23,7 @@
     "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown",
     "lint:scripts": "eslint assets/js config functions",
     "lint:styles": "stylelint \"assets/scss/**/*.{css,sass,scss,sss,less}\"",
-    "lint:markdown": "markdownlint *.md content/**/*.md",
+    "lint:markdown": "markdownlint \"*.md\" \"content/**/*.md\"",
     "server": "exec-bin bin/hugo/hugo server",
     "test": "npm run -s lint",
     "env": "env",
@@ -60,6 +60,6 @@
     "stylelint-config-standard": "^22.0"
   },
   "otherDependencies": {
-    "hugo": "0.84.0"
+    "hugo": "0.84.4"
   }
 }

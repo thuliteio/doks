@@ -232,11 +232,6 @@ body.dark pre code::-webkit-scrollbar-thumb {
   background: $gray-400;
 }
 
-body.dark code:not(.hljs) {
-  background: $body-overlay-dark;
-  color: $body-color-dark;
-}
-
 body.dark pre code:hover {
   scrollbar-width: thin;
   scrollbar-color: $border-dark transparent;
@@ -244,6 +239,16 @@ body.dark pre code:hover {
 
 body.dark pre code::-webkit-scrollbar-thumb:hover {
   background: $gray-500;
+}
+
+body.dark code:not(.hljs):not(.language-mermaid) {
+  background: $body-overlay-dark;
+  color: $body-color-dark;
+}
+
+body.dark .mermaid,
+body.dark pre code.language-mermaid {
+  background: $white;
 }
 
 body.dark blockquote {

@@ -8,7 +8,7 @@
 @import "bootstrap/scss/bootstrap";
 
 /** Import highlight.js */
-// @import "highlight.js/scss/dracula";
+// @import "highlight.js/scss/github-dark-dimmed";
 
 /** Import KaTeX */
 @import "katex/dist/katex";
@@ -17,14 +17,14 @@
 @import "common/fonts";
 @import "common/global";
 @import "common/dark";
-@import "components/doks";
-// @import "components/syntax";
-@import "components/code";
 @import "components/alerts";
 @import "components/buttons";
+@import "components/code";
+@import "components/syntax";
 @import "components/comments";
 @import "components/forms";
 @import "components/images";
+@import "components/mermaid";
 @import "components/search";
 @import "components/tables";
 @import "layouts/footer";

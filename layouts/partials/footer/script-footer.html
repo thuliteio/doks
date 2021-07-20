@@ -10,6 +10,8 @@
 {{ $katex := resources.Get "js/vendor/katex/dist/katex.js" -}}
 {{ $katexAutoRender := resources.Get "js/vendor/katex/dist/contrib/auto-render.js" -}}
 
+{{ $mermaid := resources.Get "js/mermaid.js" | js.Build -}}
+
 {{ $app := resources.Get "js/app.js" -}}
 
 {{ $slice := slice $app -}}
@@ -33,7 +35,7 @@
 {{ end -}}
 
 {{ if .Site.Params.options.flexSearch -}}
-  {{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.min.js" -}}
+  {{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.bundle.js" -}}
   {{ $slice = $slice | append $flexSearch -}}
 {{ end -}}
 
@@ -63,6 +65,9 @@
     <script src="{{ $katexAutoRender.RelPermalink }}" onload="renderMathInElement(document.body);" defer></script>
   {{ end -}}
   <script src="{{ $js.RelPermalink }}" defer></script>
+  {{ with .Params.mermaid -}}
+    <script src="{{ $mermaid.RelPermalink }}" defer></script>
+  {{ end -}}
   {{ if .Site.Params.options.flexSearch -}}
     <script src="{{ $index.RelPermalink }}" defer></script>
   {{ end -}}
@@ -73,6 +78,7 @@
   {{ $highlight := $highlight | minify | fingerprint "sha512" -}}
   {{ $katex := $katex | minify | fingerprint "sha512" -}}
   {{ $katexAutoRender := $katexAutoRender | minify | fingerprint "sha512" -}}
+  {{ $mermaid := $mermaid | minify | fingerprint "sha512" -}}
   {{ if .Site.Params.options.bootStrapJs -}}
     <script src="{{ $bs.RelPermalink }}" integrity="{{ $bs.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
@@ -84,6 +90,9 @@
     <script src="{{ $katexAutoRender.RelPermalink }}" integrity="{{ $katexAutoRender.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
   <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ with .Params.mermaid -}}
+    <script src="{{ $mermaid.RelPermalink }}" integrity="{{ $mermaid.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end -}}
   {{ if .Site.Params.options.flexSearch -}}
     <script src="{{ $index.RelPermalink }}" integrity="{{ $index.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}

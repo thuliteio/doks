@@ -2,11 +2,13 @@ name = "Doks"
 license = "MIT"
 licenselink = "https://github.com/h-enk/doks/blob/master/LICENSE"
 description = "Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
-homepage = "https://getdoks.org/"
+
+homepage = "https://github.com/h-enk/doks"
+demosite = "https://doks.netlify.app"
+
 tags = ["landing page", "documentation", "blog", "minimal", "modern", "customizable", "search", "dark mode", "bootstrap"]
 features = ["security aware", "fast by default", "seo-ready", "development tools", "bootstrap framework", "netlify-ready", "full text search", "page layouts", "dark mode"]
-min_version = "0.75.0"
 
 [author]
   name = "Henk Verlinde"
-  homepage = "https://henkverlinde.com/"
+  homepage = "https://henkverlinde.com"

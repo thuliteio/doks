@@ -19,13 +19,13 @@ There are two main ways to get started with Doks:
 
 ### Tutorial
 
-{{< alert icon="👉" text="The Tutorial is intended for novice to intermediate users." >}}
+{{< alert icon="👉" text="The Tutorial is intended for novice to intermediate users." />}}
 
 Step-by-step instructions on how to start a new Doks project. [Tutorial →](https://getdoks.org/tutorial/introduction/)
 
 ### Quick Start
 
-{{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." >}}
+{{< alert icon="👉" text="The Quick Start is intended for intermediate to advanced users." />}}
 
 One page summary of how to start a new Doks project. [Quick Start →]({{< relref "quick-start" >}})
 

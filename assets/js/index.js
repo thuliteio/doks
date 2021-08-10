@@ -117,39 +117,36 @@ Source:
   suggestions.addEventListener('click', accept_suggestion, true);
 
   function show_results(){
+    const maxResult = 5;
 
     var value = this.value;
-    var results = index.search(value, { limit: 5, index: ["content"], enrich: true });
-    var entry, childs = suggestions.childNodes;
-    var i = 0, len = results.length;
+    var results = index.search(value, {limit: maxResult, enrich: true});
 
     suggestions.classList.remove('d-none');
+    suggestions.innerHTML = "";
 
-    results.forEach(function(results) {
-
-      entry = document.createElement('div');
-
-      entry.innerHTML = '<a href><span></span><span></span></a>';
-
-      a = entry.querySelector('a'),
-      t = entry.querySelector('span:first-child'),
-      d = entry.querySelector('span:nth-child(2)');
-
-      // console.log(results);
-
-      a.href = results.result[i].doc.href;
-      t.textContent = results.result[i].doc.title;
-      d.textContent = results.result[i].doc.description;
-
-      suggestions.appendChild(entry);
-
+    //flatSearch now returns results for each index field. create a single list
+    const flatResults = {}; //keyed by href to dedupe results
+    results.forEach(result=>{
+        result.result.forEach(r=>{
+          flatResults[r.doc.href] = r.doc;
+        });
     });
 
-    while(childs.length > len){
+    //construct a list of suggestions list
+    for(const href in flatResults) {
+        const doc = flatResults[href];
 
-        suggestions.removeChild(childs[i])
+        const entry = document.createElement('div');
+        entry.innerHTML = '<a href><span></span><span></span></a>';
+
+        entry.querySelector('a').href = href;
+        entry.querySelector('span:first-child').textContent = doc.title;
+        entry.querySelector('span:nth-child(2)').textContent = doc.description;
+
+        suggestions.appendChild(entry);
+        if(suggestions.childElementCount == maxResult) break;
     }
-
   }
 
   function accept_suggestion(){

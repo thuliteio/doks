@@ -76,6 +76,9 @@ rel  = "sitemap"
 [permalinks]
   blog = "/blog/:title/"
 
+[minify.tdewolff.html]
+  keepWhitespace = false
+
 [module]
   [module.hugoVersion]
     extended = true

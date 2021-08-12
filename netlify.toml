@@ -5,7 +5,7 @@
 [build.environment]
   NODE_VERSION = "16.3.0"
   NPM_VERSION = "7.16.0"
-  HUGO_VERSION = "0.84.4"
+  HUGO_VERSION = "0.87.0"
 
 [context.production]
   command = "hugo --gc --minify"

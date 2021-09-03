@@ -5,26 +5,25 @@
 [build.environment]
   NODE_VERSION = "16.3.0"
   NPM_VERSION = "7.16.0"
-  HUGO_VERSION = "0.87.0"
 
 [context.production]
-  command = "hugo --gc --minify"
+  command = "npm run build"
 
 [context.deploy-preview]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "npm run build -- -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+  command = "npm run build -- -b $DEPLOY_PRIME_URL"
 
 [context.next]
-  command = "hugo --gc --minify"
+  command = "npm run build"
 
 [context.next.environment]
   HUGO_ENV = "next"
 
 [dev]
   framework = "#custom"
-  command = "shx rm -rf public resources && hugo server --bind=0.0.0.0 --disableFastRender"
+  command = "npm run start"
   targetPort = 1313
   port = 8888
   publish = "public"

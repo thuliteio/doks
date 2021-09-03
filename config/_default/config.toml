@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://doks.netlify.app/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -41,6 +41,11 @@ isHTML = false
 isPlainText = true
 noUgly = true
 rel  = "sitemap"
+
+[caches]
+  [caches.getjson]
+    dir = ":cacheDir/:project"
+    maxAge = "10s"
 
 [markup]
   [markup.goldmark]

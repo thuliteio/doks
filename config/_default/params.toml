@@ -51,6 +51,8 @@ lqipWidth = "20x"
 
 # Footer
 footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
+
+# Feed
 copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
 
 # Alert

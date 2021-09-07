@@ -1,7 +1,7 @@
 {
   "name": "@hyas/doks",
   "description": "Doks theme",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "browserslist": [
     "defaults"
   ],
@@ -61,6 +61,6 @@
     "stylelint-config-standard": "^22.0"
   },
   "otherDependencies": {
-    "hugo": "0.88.0"
+    "hugo": "0.88.1"
   }
 }

@@ -1,20 +1,19 @@
 var suggestions = document.getElementById('suggestions');
-var userinput = document.getElementById('userinput');
+var search = document.getElementById('search');
 
-document.addEventListener('keydown', inputFocus);
+if (search !== null) {
+  document.addEventListener('keydown', inputFocus);
+}
 
 function inputFocus(e) {
-
-  if (e.keyCode === 191 ) {
+  if (e.ctrlKey && e.key === '/' ) {
     e.preventDefault();
-    userinput.focus();
+    search.focus();
   }
-
-  if (e.keyCode === 27 ) {
-    userinput.blur();
+  if (e.key === 'Escape' ) {
+    search.blur();
     suggestions.classList.add('d-none');
   }
-
 }
 
 document.addEventListener('click', function(event) {
@@ -40,21 +39,22 @@ function suggestionFocus(e){
   const focusable= [...focusableSuggestions];
   const index = focusable.indexOf(document.activeElement);
 
+  const keyDefault = suggestions.classList.contains('d-none');
+
   let nextIndex = 0;
 
-  if (e.keyCode === 38) {
+  if ((e.keyCode === 38) && (!keyDefault)) {
     e.preventDefault();
     nextIndex= index > 0 ? index-1 : 0;
     focusableSuggestions[nextIndex].focus();
   }
-  else if (e.keyCode === 40) {
+  else if ((e.keyCode === 40) && (!keyDefault)) {
     e.preventDefault();
     nextIndex= index+1 < focusable.length ? index+1 : index;
     focusableSuggestions[nextIndex].focus();
   }
 
 }
-
 
 /*
 Source:
@@ -113,7 +113,7 @@ Source:
     {{ end -}}
   ;
 
-  userinput.addEventListener('input', show_results, true);
+  search.addEventListener('input', show_results, true);
   suggestions.addEventListener('click', accept_suggestion, true);
 
   function show_results(){

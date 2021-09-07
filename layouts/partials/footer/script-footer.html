@@ -45,6 +45,12 @@
   {{ $slice = $slice | append $darkMode -}}
 {{ end -}}
 
+{{ if .Site.Params.alertDismissable -}}
+  {{ $alert := resources.Get "js/alert.js" -}}
+  {{ $alert := $alert | js.Build -}}
+  {{ $slice = $slice | append $alert -}}
+{{ end -}}
+
 {{ if .Site.Params.options.kaTex -}}
   {{ $katexConfig := resources.Get "js/katex.js" -}}
   {{ $katexConfig := $katexConfig | js.Build -}}
@@ -68,7 +74,7 @@
   {{ with .Params.mermaid -}}
     <script src="{{ $mermaid.RelPermalink }}" defer></script>
   {{ end -}}
-  {{ if .Site.Params.options.flexSearch -}}
+  {{ if and (.Site.Params.options.flexSearch) (eq .Section "docs") -}}
     <script src="{{ $index.RelPermalink }}" defer></script>
   {{ end -}}
 {{ else -}}
@@ -93,7 +99,7 @@
   {{ with .Params.mermaid -}}
     <script src="{{ $mermaid.RelPermalink }}" integrity="{{ $mermaid.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
-  {{ if .Site.Params.options.flexSearch -}}
+  {{ if and (.Site.Params.options.flexSearch) (eq .Section "docs") -}}
     <script src="{{ $index.RelPermalink }}" integrity="{{ $index.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
 {{ end -}}

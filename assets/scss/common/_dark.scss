@@ -4,7 +4,11 @@
 
 $body-bg-dark: $gray-900;
 $body-overlay-dark: darken($body-bg-dark, 2.5%);
+
+/*
 $border-dark: darken($body-bg-dark, 2.5%);
+*/
+$border-dark: $gray-800;
 $body-color-dark: $gray-300;
 $dots-dark: darken($body-color-dark, 50%);
 
@@ -18,118 +22,163 @@ $navbar-dark-active-color:          $link-color-dark;
 
 /** Theme styles */
 
-body.dark {
+[data-dark-mode] body {
   background: $body-bg-dark;
   color: $body-color-dark;
 }
 
-body.dark a {
+[data-dark-mode] body a {
   color: $link-color-dark;
 }
 
-body.dark a.text-body {
+[data-dark-mode] body a.text-body {
   color: $body-color-dark !important;
 }
 
-body.dark .btn-primary {
+[data-dark-mode] body .btn-primary {
   @include button-variant($button-color-dark, $button-color-dark);
 
   color: $body-bg-dark !important;
 }
 
-body.dark .btn-outline-primary {
+[data-dark-mode] body .btn-outline-primary {
   @include button-outline-variant($button-color-dark, $button-color-dark);
 
   color: $link-color-dark;
 }
 
-body.dark .btn-outline-primary:hover {
+[data-dark-mode] body .btn-outline-primary:hover {
   color: $body-bg-dark;
 }
 
-body.dark .navbar {
-  background: $body-bg-dark;
-  opacity: 0.975;
+[data-dark-mode] body .btn-doks-light {
+  color: $navbar-dark-color;
+}
+
+[data-dark-mode] body .show > .btn-doks-light,
+[data-dark-mode] body .btn-doks-light:hover,
+[data-dark-mode] body .btn-doks-light:active {
+  color: $link-color-dark;
+}
+
+[data-dark-mode] body .btn-menu svg {
+  color: $body-color-dark;
+}
+
+[data-dark-mode] body .doks-sidebar-toggle {
+  color: $navbar-dark-color;
+}
+
+[data-dark-mode] body .btn-menu:hover,
+[data-dark-mode] body .btn-doks-light:hover,
+[data-dark-mode] body .doks-sidebar-toggle:hover {
+  background: $body-overlay-dark;
+}
+
+[data-dark-mode] body .dropdown-menu {
+  @extend .dropdown-menu-dark;
+}
+
+[data-dark-mode] body .navbar,
+[data-dark-mode] body .doks-subnavbar {
+  background-color: rgba(33, 37, 41, 0.95);
   border-bottom: 1px solid $border-dark;
 }
 
-body.dark.home .navbar {
+[data-dark-mode] body.home .navbar {
   border-bottom: 0;
 }
 
-body.dark .navbar-light .navbar-brand {
+[data-dark-mode] body .offcanvas-header {
+  border-bottom: 1px solid $gray-800;
+}
+
+[data-dark-mode] body .offcanvas .nav-link {
+  color: $body-color-dark;
+}
+
+[data-dark-mode] body .offcanvas .nav-link:hover,
+[data-dark-mode] body .offcanvas .nav-link:focus {
+  color: $link-color-dark;
+}
+
+[data-dark-mode] body .offcanvas .nav-link.active {
+  color: $link-color-dark;
+}
+
+[data-dark-mode] body .navbar-light .navbar-brand {
   color: $navbar-dark-color !important;
 }
 
-body.dark .navbar-light .navbar-nav .nav-link {
+[data-dark-mode] body .navbar-light .navbar-nav .nav-link {
   color: $navbar-dark-color;
 }
 
-body.dark .navbar-light .navbar-nav .nav-link:hover,
-body.dark .navbar-light .navbar-nav .nav-link:focus {
+[data-dark-mode] body .navbar-light .navbar-nav .nav-link:hover,
+[data-dark-mode] body .navbar-light .navbar-nav .nav-link:focus {
   color: $navbar-dark-hover-color;
 }
 
-body.dark .navbar-light .navbar-nav .nav-link.disabled {
+[data-dark-mode] body .navbar-light .navbar-nav .nav-link.disabled {
   color: $navbar-dark-disabled-color;
 }
 
-body.dark .navbar-light .navbar-nav .show > .nav-link,
-body.dark .navbar-light .navbar-nav .active > .nav-link,
-body.dark .navbar-light .navbar-nav .nav-link.show,
-body.dark .navbar-light .navbar-nav .nav-link.active {
+[data-dark-mode] body .navbar-light .navbar-nav .show > .nav-link,
+[data-dark-mode] body .navbar-light .navbar-nav .active > .nav-link,
+[data-dark-mode] body .navbar-light .navbar-nav .nav-link.show,
+[data-dark-mode] body .navbar-light .navbar-nav .nav-link.active {
   color: $navbar-dark-active-color;
 }
 
-body.dark .navbar-light .navbar-text {
+[data-dark-mode] body .navbar-light .navbar-text {
   color: $navbar-dark-color;
 }
 
-body.dark .alert-primary a {
+[data-dark-mode] body .alert-primary a {
   color: $body-bg-dark;
 }
 
-body.dark .alert-warning {
+[data-dark-mode] body .alert-warning {
   background: $body-overlay-dark;
   color: $body-color-dark;
 }
 
-body.dark .page-links a {
+[data-dark-mode] body .page-links a {
   color: $body-color-dark;
 }
 
-body.dark .btn-toggle-nav a {
+[data-dark-mode] body .btn-toggle-nav a {
   color: $body-color-dark;
 }
 
-body.dark .showcase-meta a {
+[data-dark-mode] body .showcase-meta a {
   color: $body-color-dark;
 }
 
-body.dark .showcase-meta a:hover,
-body.dark .showcase-meta a:focus {
+[data-dark-mode] body .showcase-meta a:hover,
+[data-dark-mode] body .showcase-meta a:focus {
   color: $link-color-dark;
 }
 
-body.dark .docs-link:hover,
-body.dark .docs-link.active,
-body.dark .page-links a:hover {
+[data-dark-mode] body .docs-link:hover,
+[data-dark-mode] body .docs-link.active,
+[data-dark-mode] body .page-links a:hover {
   text-decoration: none;
   color: $link-color-dark;
 }
 
-body.dark .btn-toggle {
+[data-dark-mode] body .btn-toggle {
   color: $body-color-dark;
   background-color: transparent;
   border: 0;
 }
 
-body.dark .btn-toggle:hover,
-body.dark .btn-toggle:focus {
+[data-dark-mode] body .btn-toggle:hover,
+[data-dark-mode] body .btn-toggle:focus {
   color: $body-color-dark;
 }
 
-body.dark .btn-toggle::before {
+[data-dark-mode] body .btn-toggle::before {
   width: 1.25em;
   line-height: 0;
   content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28222, 226, 230, 0.75%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
@@ -138,59 +187,61 @@ body.dark .btn-toggle::before {
   margin-bottom: 0.125rem;
 }
 
-body.dark .btn-toggle[aria-expanded="true"] {
+[data-dark-mode] body .btn-toggle[aria-expanded="true"] {
   color: $body-color-dark;
 }
 
-body.dark .btn-toggle[aria-expanded="true"]::before {
+[data-dark-mode] body .btn-toggle[aria-expanded="true"]::before {
   transform: rotate(90deg);
 }
 
-body.dark .btn-toggle-nav a:hover,
-body.dark .btn-toggle-nav a:focus {
+[data-dark-mode] body .btn-toggle-nav a:hover,
+[data-dark-mode] body .btn-toggle-nav a:focus {
   color: $link-color-dark;
 }
 
-body.dark .btn-toggle-nav a.active {
+[data-dark-mode] body .btn-toggle-nav a.active {
   color: $link-color-dark;
 }
 
-body.dark .navbar-light .navbar-text a {
+[data-dark-mode] body .navbar-light .navbar-text a {
   color: $navbar-dark-active-color;
 }
 
-body.dark .docs-links h3.sidebar-link a,
-body.dark .page-links h3.sidebar-link a {
+[data-dark-mode] body .docs-links h3.sidebar-link a,
+[data-dark-mode] body .page-links h3.sidebar-link a {
   color: $body-color-dark;
 }
 
-body.dark .navbar-light .navbar-text a:hover,
-body.dark .navbar-light .navbar-text a:focus {
+[data-dark-mode] body .navbar-light .navbar-text a:hover,
+[data-dark-mode] body .navbar-light .navbar-text a:focus {
   color: $navbar-dark-active-color;
 }
 
-body.dark .navbar .btn-link {
+[data-dark-mode] body .navbar .btn-link {
   color: $navbar-dark-color;
 }
 
-body.dark .content .btn-link {
+[data-dark-mode] body .content .btn-link {
   color: $link-color-dark;
 }
 
-body.dark .content .btn-link:hover {
+[data-dark-mode] body .content .btn-link:hover {
   color: $link-color-dark;
 }
 
-body.dark .navbar .btn-link:hover {
+[data-dark-mode] body .navbar .btn-link:hover {
   color: $navbar-dark-hover-color;
 }
 
-body.dark .navbar .btn-link:active {
+[data-dark-mode] body .navbar .btn-link:active {
   color: $navbar-dark-active-color;
 }
 
-body.dark .form-control.is-search {
+[data-dark-mode] body .form-control.is-search {
   background: $body-overlay-dark;
+  border: 1px solid transparent;
+  color: $gray-300;
 
   /*
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-search'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
@@ -200,180 +251,232 @@ body.dark .form-control.is-search {
   */
 }
 
-body.dark .navbar-form::after {
+[data-dark-mode] body .form-control.is-search:focus {
+  border: 1px solid $link-color-dark;
+}
+
+[data-dark-mode] body .doks-search::after {
+  color: $gray-300;
+  border: 1px solid $gray-700;
+}
+
+[data-dark-mode] body .text-dark {
+  color: $body-color-dark !important;
+}
+
+/*
+[data-dark-mode] body .navbar-form::after {
   color: $gray-600;
   border: 1px solid $gray-800;
 }
+*/
 
-body.dark .form-control {
-  color: $gray-500;
+[data-dark-mode] body .form-control {
+  color: $gray-300;
 }
 
-body.dark .form-control:focus {
-  box-shadow: 0 0 0 0.2rem $focus-color-dark;
+[data-dark-mode] body .form-control::placeholder {
+  color: $gray-400;
+  opacity: 1;
 }
 
-body.dark .border-top {
+[data-dark-mode] body .border-top {
   border-top: 1px solid $border-dark !important;
 }
 
 @include media-breakpoint-up(lg) {
-  body.dark .docs-sidebar {
+  [data-dark-mode] body .docs-sidebar {
     order: 0;
     border-right: 1px solid $border-dark;
   }
 }
 
-body.dark .docs-navigation {
+[data-dark-mode] body .docs-navigation {
   border-top: 1px solid $border-dark;
 }
 
-body.dark pre code::-webkit-scrollbar-thumb {
+[data-dark-mode] body pre code::-webkit-scrollbar-thumb {
   background: $gray-400;
 }
 
-body.dark pre code:hover {
-  scrollbar-width: thin;
-  scrollbar-color: $border-dark transparent;
-}
-
-body.dark pre code::-webkit-scrollbar-thumb:hover {
-  background: $gray-500;
-}
-
-body.dark code:not(.hljs):not(.language-mermaid) {
+[data-dark-mode] body code:not(.hljs) {
   background: $body-overlay-dark;
   color: $body-color-dark;
 }
 
-body.dark .mermaid,
-body.dark pre code.language-mermaid {
-  background: $white;
+[data-dark-mode] body pre code:hover {
+  scrollbar-width: thin;
+  scrollbar-color: $border-dark transparent;
 }
 
-body.dark blockquote {
+[data-dark-mode] body pre code::-webkit-scrollbar-thumb:hover {
+  background: $gray-500;
+}
+
+[data-dark-mode] body blockquote {
   border-left: 3px solid $border-dark;
 }
 
-body.dark .footer {
+[data-dark-mode] body .footer {
   border-top: 1px solid $border-dark;
 }
 
-body.dark .docs-links,
-body.dark .docs-toc {
+[data-dark-mode] body .docs-links,
+[data-dark-mode] body .docs-toc {
   scrollbar-width: thin;
   scrollbar-color: $body-bg-dark $body-bg-dark;
 }
 
-body.dark .docs-links::-webkit-scrollbar,
-body.dark .docs-toc::-webkit-scrollbar {
+[data-dark-mode] body .docs-links::-webkit-scrollbar,
+[data-dark-mode] body .docs-toc::-webkit-scrollbar {
   width: 5px;
 }
 
-body.dark .docs-links::-webkit-scrollbar-track,
-body.dark .docs-toc::-webkit-scrollbar-track {
+[data-dark-mode] body .docs-links::-webkit-scrollbar-track,
+[data-dark-mode] body .docs-toc::-webkit-scrollbar-track {
   background: $body-bg-dark;
 }
 
-body.dark .docs-links::-webkit-scrollbar-thumb,
-body.dark .docs-toc::-webkit-scrollbar-thumb {
+[data-dark-mode] body .docs-links::-webkit-scrollbar-thumb,
+[data-dark-mode] body .docs-toc::-webkit-scrollbar-thumb {
   background: $body-bg-dark;
 }
 
-body.dark .docs-links:hover,
-body.dark .docs-toc:hover {
+[data-dark-mode] body .docs-links:hover,
+[data-dark-mode] body .docs-toc:hover {
   scrollbar-width: thin;
   scrollbar-color: $border-dark $body-bg-dark;
 }
 
-body.dark .docs-links:hover::-webkit-scrollbar-thumb,
-body.dark .docs-toc:hover::-webkit-scrollbar-thumb {
+[data-dark-mode] body .docs-links:hover::-webkit-scrollbar-thumb,
+[data-dark-mode] body .docs-toc:hover::-webkit-scrollbar-thumb {
   background: $border-dark;
 }
 
-body.dark .docs-links::-webkit-scrollbar-thumb:hover,
-body.dark .docs-toc::-webkit-scrollbar-thumb:hover {
+[data-dark-mode] body .docs-links::-webkit-scrollbar-thumb:hover,
+[data-dark-mode] body .docs-toc::-webkit-scrollbar-thumb:hover {
   background: $border-dark;
 }
 
-body.dark .docs-links h3:not(:first-child) {
+[data-dark-mode] body .docs-links h3:not(:first-child) {
   border-top: 1px solid $border-dark;
 }
 
-body.dark a.docs-link {
+[data-dark-mode] body a.docs-link {
   color: $body-color-dark;
 }
 
-body.dark .page-links li:not(:first-child) {
+[data-dark-mode] body .page-links li:not(:first-child) {
   border-top: 1px dashed $border-dark;
 }
 
-body.dark .card {
+[data-dark-mode] body .card {
   background: $body-bg-dark;
   border: 1px solid $border-dark;
 }
 
-body.dark .card.bg-light {
+[data-dark-mode] body .card.bg-light {
   background: $body-overlay-dark !important;
 }
 
-body.dark .navbar .menu-icon .navicon {
+[data-dark-mode] body .navbar .menu-icon .navicon {
   background: $navbar-dark-color;
 }
 
-body.dark .navbar .menu-icon .navicon::before,
-body.dark .navbar .menu-icon .navicon::after {
+[data-dark-mode] body .navbar .menu-icon .navicon::before,
+[data-dark-mode] body .navbar .menu-icon .navicon::after {
   background: $navbar-dark-color;
 }
 
-body.dark .logo-light {
+[data-dark-mode] body .logo-light {
   display: none !important;
 }
 
-body.dark .logo-dark {
+[data-dark-mode] body .logo-dark {
   display: inline-block !important;
 }
 
-body.dark .bg-light {
+[data-dark-mode] body .bg-light {
   background: darken($body-bg-dark, 1.5%) !important;
 }
 
-body.dark .bg-dots {
+[data-dark-mode] body .bg-dots {
   background-image: radial-gradient($dots-dark 15%, transparent 15%);
 }
 
-body.dark .text-muted {
+[data-dark-mode] body .text-muted {
   color: darken($body-color-dark, 7.5%) !important;
 }
 
-body.dark .alert-primary {
+[data-dark-mode] body .alert-primary {
   background: $link-color-dark;
   color: $body-bg-dark;
 }
 
-body.dark .figure-caption {
+[data-dark-mode] body .figure-caption {
   color: $body-color-dark;
 }
 
-body.dark table {
+[data-dark-mode] body table {
   @extend .table-dark;
 }
 
-body.dark .copy-status::after {
+[data-dark-mode] body .copy-status::after {
   content: "Copy";
   display: block;
   color: $body-color-dark;
 }
 
-body.dark .copy-status:hover::after {
+[data-dark-mode] body .copy-status:hover::after {
   content: "Copy";
   display: block;
   color: $link-color-dark;
 }
 
-body.dark .copy-status:focus::after,
-body.dark .copy-status:active::after {
+[data-dark-mode] body .copy-status:focus::after,
+[data-dark-mode] body .copy-status:active::after {
   content: "Copied";
   display: block;
   color: $link-color-dark;
+}
+
+/*
+[data-dark-mode] body .dropdown-toggle:focus,
+[data-dark-mode] body .doks-sidebar-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $focus-color-dark;
+}
+*/
+
+[data-dark-mode] body .offcanvas {
+  background-color: $body-bg-dark;
+}
+
+[data-dark-mode] body .btn-close {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiNkZWUyZTYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLXgiPjxsaW5lIHgxPSIxOCIgeTE9IjYiIHgyPSI2IiB5Mj0iMTgiPjwvbGluZT48bGluZSB4MT0iNiIgeTE9IjYiIHgyPSIxOCIgeTI9IjE4Ij48L2xpbmU+PC9zdmc+");
+  background-size: 1.5rem;
+}
+
+@include media-breakpoint-up(md) {
+  [data-dark-mode] body .alert-dismissible .btn-close {
+    background-size: 1.25rem;
+  }
+}
+
+/*
+[data-dark-mode] body .btn-close:focus {
+  box-shadow: 0 0 0 0.2rem $focus-color-dark;
+}
+*/
+
+[data-dark-mode] body hr.text-black-50 {
+  color: $gray-600 !important;
+}
+
+[data-dark-mode] body .email-form .form-control {
+  background: $body-overlay-dark;
+  border: 1px solid transparent;
+}
+
+[data-dark-mode] body .email-form .form-control:focus {
+  border: 1px solid $link-color-dark;
 }

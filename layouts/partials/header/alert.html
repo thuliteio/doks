@@ -1,0 +1,10 @@
+{{ if .Site.Params.alertDismissable -}}
+  <div id="announcement" class="alert alert-primary alert-dismissible fade show d-none text-lg-center" role="alert">
+    {{ .Site.Params.alertText | safeHTML }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+{{ else -}}
+  <div class="alert alert-primary text-center" role="alert">
+    {{ .Site.Params.alertText | safeHTML }}
+  </div>
+{{ end -}}

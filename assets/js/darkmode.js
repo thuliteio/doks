@@ -1,12 +1,38 @@
-document.getElementById('mode').addEventListener('click', () => {
+const mode = document.getElementById('mode');
 
-  document.body.classList.toggle('dark');
-  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+if (mode !== null) {
 
-});
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
 
-if (localStorage.getItem('theme') === 'dark') {
+    if (event.matches) {
 
-  document.body.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.setAttribute('data-dark-mode', '');
+
+    } else {
+
+      localStorage.setItem('theme', 'light');
+      document.documentElement.removeAttribute('data-dark-mode');
+
+    }
+
+  })
+
+  mode.addEventListener('click', () => {
+
+    document.documentElement.toggleAttribute('data-dark-mode');
+    localStorage.setItem('theme', document.documentElement.hasAttribute('data-dark-mode') ? 'dark' : 'light');
+
+  });
+
+  if (localStorage.getItem('theme') === 'dark') {
+
+    document.documentElement.setAttribute('data-dark-mode', '');
+
+  } else {
+
+    document.documentElement.removeAttribute('data-dark-mode');
+
+  }
 
 }

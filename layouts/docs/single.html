@@ -26,6 +26,11 @@
 			{{ end }}
 			<h1>{{ .Title }}</h1>
 			<p class="lead">{{ .Params.lead | safeHTML }}</p>
+			{{ if ne .Params.toc false -}}
+			<nav class="d-xl-none" aria-label="Quaternary navigation">
+				{{ partial "sidebar/docs-toc.html" . }}
+			</nav>
+			{{ end -}}
 			{{ partial "main/headline-hash.html" .Content }}
 			{{ if .Site.Params.editPage -}}
 				{{ partial "main/edit-page.html" . }}

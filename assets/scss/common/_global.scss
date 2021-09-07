@@ -24,10 +24,27 @@ h6,
   margin: 2rem 0 1rem;
 }
 
+.offcanvas-header {
+  border-bottom: 1px solid $gray-300;
+  padding-top: 1.0625rem;
+  padding-bottom: 0.8125rem;
+}
+
+h5.offcanvas-title {
+  margin: 0;
+}
+
+body.docs {
+  padding-top: 0 !important;
+}
+
 @include media-breakpoint-up(md) {
   body {
     font-size: $font-size-md;
+
+    /*
     padding-top: 4rem !important;
+    */
   }
 
   h1,
@@ -85,9 +102,11 @@ a.btn:focus {
 }
 */
 
+/*
 body {
   padding-top: 3.5625rem;
 }
+*/
 
 .docs-sidebar {
   order: 2;
@@ -226,4 +245,24 @@ body {
 
 .katex {
   font-size: $font-size-md;
+}
+
+.card-bar {
+  border-top: 4px solid;
+  border-image-source: linear-gradient(90deg, $primary, #8ed6fb 50%, #d32e9d);
+  border-image-slice: 1;
+}
+
+.modal-backdrop {
+  background-color: #fff;
+}
+
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+@include media-breakpoint-up(md) {
+  .modal-backdrop.show {
+    opacity: 0;
+  }
 }

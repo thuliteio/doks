@@ -480,3 +480,36 @@ $navbar-dark-active-color:          $link-color-dark;
 [data-dark-mode] body .email-form .form-control:focus {
   border: 1px solid $link-color-dark;
 }
+
+[data-dark-mode] .page-link {
+  color: $link-color-dark;
+  background-color: transparent;
+  border: $pagination-border-width solid $border-dark;
+
+  &:hover {
+    color: $body-bg-dark;
+    background-color: $body-color-dark;
+    border-color: $body-color-dark;
+  }
+
+  &:focus {
+    color: $body-bg-dark;
+    background-color: $body-color-dark;
+  }
+}
+
+[data-dark-mode] .page-item {
+  &.active .page-link {
+    color: $body-bg-dark;
+
+    @include gradient-bg($link-color-dark);
+
+    border-color: $link-color-dark;
+  }
+
+  &.disabled .page-link {
+    color: $pagination-disabled-color;
+    background-color: $body-overlay-dark;
+    border-color: $border-dark;
+  }
+}

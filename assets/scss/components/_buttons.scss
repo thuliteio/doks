@@ -209,3 +209,12 @@ pre {
 .offcanvas-header .btn-close {
   margin-right: 0 !important;
 }
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-caret {
+  margin-left: -0.1875rem;
+  margin-right: -0.3125rem;
+}

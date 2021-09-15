@@ -28,7 +28,7 @@ pre code {
 }
 
 .hljs {
-  padding: 1.25rem 1.5rem;
+  padding: 1.5rem !important;
 }
 
 @include media-breakpoint-down(sm) {

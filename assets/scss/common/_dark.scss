@@ -75,9 +75,11 @@ $navbar-dark-active-color:          $link-color-dark;
   background: $body-overlay-dark;
 }
 
+/*
 [data-dark-mode] body .dropdown-menu {
   @extend .dropdown-menu-dark;
 }
+*/
 
 [data-dark-mode] body .navbar,
 [data-dark-mode] body .doks-subnavbar {
@@ -467,6 +469,10 @@ $navbar-dark-active-color:          $link-color-dark;
   box-shadow: 0 0 0 0.2rem $focus-color-dark;
 }
 */
+
+[data-dark-mode] .dropdown-item {
+  color: $body-bg-dark;
+}
 
 [data-dark-mode] body hr.text-black-50 {
   color: $gray-600 !important;

@@ -10,7 +10,7 @@
 
 <header class="navbar navbar-expand-md navbar-light doks-navbar">
   <nav class="container-xxl flex-wrap flex-md-nowrap" aria-label="Main navigation">
-    <a class="navbar-brand p-0 me-auto" href="{{ "/" | relURL }}" aria-label="Bootstrap">
+    <a class="navbar-brand p-0 me-auto" href="{{ "/" | relLangURL }}" aria-label="{{ .Site.Params.Title }}">
       {{ .Site.Params.Title }}
     </a>
 
@@ -21,7 +21,7 @@
     <div class="offcanvas offcanvas-start border-0 py-md-1" tabindex="-1" id="offcanvasDoks" data-bs-backdrop="true" aria-labelledby="offcanvasDoksLabel">
       <div class="header-bar d-md-none"></div>
       <div class="offcanvas-header d-md-none">
-        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="{{ "/" | relURL }}">{{ .Site.Params.Title }}</a></h2>
+        <h2 class="h5 offcanvas-title ps-2" id="offcanvasDoksLabel"><a class="text-dark" href="{{ "/" | relLangURL }}">{{ .Site.Params.Title }}</a></h2>
         <button type="button" class="btn-close text-reset me-2" data-bs-dismiss="offcanvas" aria-label="Close main menu"></button>
       </div>
       <div class="offcanvas-body px-4">
@@ -58,16 +58,31 @@
 
     {{ if eq .Site.Params.options.multilingualMode true -}}
     <div class="dropdown order-md-2">
-      <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" aria-label="Toggle language menu">
-        <span class="d-none d-lg-inline"></span>English
+      <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+        {{ .Site.Params.languageISO }}
+        <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
       </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="doks-languages">
-        <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">English</a></li>
+      <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-languages">
+
+        <li><a class="dropdown-item current" aria-current="true" href="{{ .RelPermalink }}">{{ .Site.Language.LanguageName }}</a></li>
+
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">Dutch</a></li>
-        <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">Russian</a></li>
+
+      {{ if .IsTranslated -}}
+        {{ range .Translations }}
+          <li><a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
+        {{ end -}}
+      {{ else -}}
+        {{ range .Site.Languages -}}
+          {{ if ne $.Site.Language.Lang .Lang }}
+            <li><a class="dropdown-item" rel="alternate" href="{{ .Lang | relLangURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
+          {{ end -}}
+        {{ end -}}
+      {{ end -}}
+        <!--
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="/docs/contributing/how-to-contribute/">Help Translate</a></li>
+        -->
       </ul>
     </div>
     {{ end -}}

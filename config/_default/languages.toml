@@ -5,6 +5,13 @@
   [en.params]
     languageISO = "EN"
 
+[de]
+  languageName = "German"
+  contentDir = "content/de"
+  weight = 15
+  [de.params]
+    languageISO = "DE"
+
 [nl]
   languageName = "Nederlands"
   contentDir = "content/nl"

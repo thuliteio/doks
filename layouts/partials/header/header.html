@@ -57,28 +57,12 @@
     {{ end -}}
 
     {{ if eq .Site.Params.options.multilingualMode true -}}
-    <!--
-    <div class="dropdown order-md-2">
-      <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" aria-label="Toggle language menu">
-        <span class="d-none d-lg-inline"></span>English
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="doks-languages">
-        <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">English</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">Dutch</a></li>
-        <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">Russian</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="/docs/contributing/how-to-contribute/">Help Translate</a></li>
-      </ul>
-    </div>
-    -->
-
     <div class="dropdown order-md-2">
       <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
         {{ .Site.Params.languageISO }}
         <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
       </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="doks-languages">
+      <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-languages">
 
         <li><a class="dropdown-item current" aria-current="true" href="{{ .RelPermalink }}">{{ .Site.Language.LanguageName }}</a></li>
 
@@ -101,7 +85,6 @@
         -->
       </ul>
     </div>
-
     {{ end -}}
   </nav>
 </header>

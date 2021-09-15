@@ -8,4 +8,3 @@ draft: false
 images: []
 ---
 
-:cow:

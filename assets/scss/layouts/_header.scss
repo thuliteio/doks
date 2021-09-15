@@ -431,3 +431,15 @@ button#doks-versions {
 .navbar-light .navbar-nav .active .nav-link {
   color: $primary;
 }
+
+.dropdown-divider {
+  border-top: 1px dashed $gray-200;
+}
+
+.dropdown-item:hover {
+  background: $gray-100;
+}
+
+.dropdown-item:active {
+  color: inherit;
+}

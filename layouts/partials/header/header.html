@@ -34,7 +34,7 @@
             {{- $active = or $active (and (eq .Name "Docs") (eq $current.Section "docs")) -}}
             {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
             <li class="nav-item">
-              <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a>
+              <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
             </li>
           {{ end -}}
         </ul>

@@ -232,6 +232,10 @@ $navbar-dark-active-color:          $link-color-dark;
   color: $link-color-dark;
 }
 
+[data-dark-mode] body .content img[src^="https://latex.codecogs.com/svg.latex"] {
+  filter: invert(1)
+}
+
 [data-dark-mode] body .navbar .btn-link:hover {
   color: $navbar-dark-hover-color;
 }

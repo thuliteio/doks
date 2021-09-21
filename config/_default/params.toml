@@ -63,6 +63,7 @@ alertText = "Introducing the Doks child theme, several DX + UX updates, and more
 
 # Edit Page
 docsRepo = "https://github.com/h-enk/doks"
+docsRepoBranch = "master"
 editPage = false
 
 [options]

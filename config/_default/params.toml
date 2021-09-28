@@ -6,6 +6,9 @@ titleSeparator = "-"
 titleAddition = "Modern Documentation Theme"
 description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
 
+## Documentation
+docsVersion = "1.0"
+
 ## Open Graph
 images = ["doks.png"]
 ogLocale = "en_US"
@@ -79,4 +82,4 @@ editPage = false
   kaTex = false
   collapsibleSidebar = true
   multilingualMode = false
-  docsVersioning = false # Not yet functional
+  docsVersioning = true

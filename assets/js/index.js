@@ -102,7 +102,7 @@ Source:
     {{ range $index, $element := $list -}}
       {
         id: {{ $index }},
-        href: "{{ .Permalink }}",
+        href: "{{ .RelPermalink }}",
         title: {{ .Title | jsonify }},
         description: {{ .Params.description | jsonify }},
         content: {{ .Content | jsonify }}

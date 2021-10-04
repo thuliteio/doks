@@ -107,14 +107,13 @@
     {{ if eq .Site.Params.options.docsVersioning true -}}
     <div class="dropdown ms-3">
       <button class="btn btn-doks-light dropdown-toggle" id="doks-versions" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static" aria-label="Toggle version menu">
-        <span class="d-none d-lg-inline">Doks</span> v5.0
+        <span class="d-none d-lg-inline">Doks</span> v{{ .Site.Params.docsVersion }}
       </button>
-      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="doks-versions">
-        <li><a class="dropdown-item current" aria-current="true" href="/docs/5.0/">Latest (5.0.x)</a></li>
+      <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-versions">
+        <li><a class="dropdown-item current" aria-current="true" href="/docs/{{ .Site.Params.docsVersion }}/prologue/introduction/">Latest ({{ .Site.Params.docsVersion }}.x)</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="https://getbootstrap.com/docs/4.6/">v4.6.x</a></li>
-        <li><a class="dropdown-item" href="https://getbootstrap.com/docs/3.4/">v3.4.1</a></li>
-        <li><a class="dropdown-item" href="https://getbootstrap.com/2.3.2/">v2.3.2</a></li>
+        <li><a class="dropdown-item" href="/docs/0.2/prologue/introduction/">v0.2.x</a></li>
+        <li><a class="dropdown-item" href="/docs/0.1/prologue/introduction/">v0.1.x</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="/docs/versions/">All versions</a></li>
       </ul>

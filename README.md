@@ -131,13 +131,12 @@ Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for comm
 
 ## Sponsors
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/doks)]
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
 
 [![OC sponsor 0](https://opencollective.com/doks/sponsor/0/avatar.svg)](https://opencollective.com/doks/sponsor/0/website)
 
 ## Backers
 
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/doks)]
+Thank you to all our backers! 🙏
 
 [![Backers](https://opencollective.com/doks/backers.svg)](https://opencollective.com/doks)
-

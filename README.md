@@ -129,20 +129,6 @@ Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for comm
 - [Hugo Forums](https://discourse.gohugo.io/)
 - [Doks Discussions](https://github.com/h-enk/doks/discussions)
 
-## Thanks
-
-<a href="https://www.netlify.com/">
-  <img src="https://cdn.netlify.com/15ecf59b59c9d04b88097c6b5d2c7e8a7d1302d0/1b6d6/img/press/logos/full-logo-light.svg" width="110.25" height="30" alt="Netlify Logo">
-</a>
-
-Thanks to [Netlify](https://www.netlify.com/) for providing the hosting infrastructure.
-
-<a href="https://www.algolia.com/">
-  <img src="https://res.cloudinary.com/hilnmyskv/image/upload/q_auto/v1631888269/Algolia_com_Website_assets/images/shared/algolia_logo/logo-algolia-nebula-blue-full.svg" width="97" height="30" alt="Algolia Logo">
-</a>
-
-Thanks to [Algolia](https://www.algolia.com/) for providing the documentation search.
-
 ## Sponsors
 
 Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/doks)]

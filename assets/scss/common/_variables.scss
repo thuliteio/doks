@@ -20,6 +20,7 @@ $purple:   #5d2f86;
 $brown:    #aa9c84;
 
 $blue-300: #8ed6fb;
+$pink-100: #fcfaff;
 $pink-500: #d32e9d;
 
 $primary: $purple;
@@ -115,7 +116,7 @@ $font-size-lg:                $font-size-base * 1.25;
 $font-size-md:                $font-size-base * 1.125;
 $font-size-sm:                $font-size-base * 0.875;
 
-$line-height-base:            1.5;
+// $line-height-base:            1.5;
 
 $headings-font-family:        null;
 $headings-font-weight:        700;
@@ -159,3 +160,30 @@ $alert-border-width:                0;
 $alert-bg-scale:                    0;
 $alert-border-scale:                0;
 $alert-color-scale:                 0;
+
+// docsearch
+$dropdown-config: (
+  main-color: $purple,
+  layout-type: normal,
+  layout-width: normal,
+  layout-alignment: align,
+  background-color: $white,
+  border-radius: 4,
+  border-width: 1,
+  border-color: $gray-200,
+  box-shadow: none,
+  branding-position: bottom,
+  spacing: normal,
+  include-desc: yes,
+  background-category-header: $white,
+  font-size: normal,
+  header-color: $black,
+  title-color: $black,
+  subtitle-color: $black,
+  text-color: $black,
+  highlight-color: $purple,
+  highlight-opacity: 0.1,
+  highlight-type: underline
+);
+
+$input-btn-focus-width:       0;

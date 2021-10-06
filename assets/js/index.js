@@ -1,20 +1,19 @@
 var suggestions = document.getElementById('suggestions');
-var userinput = document.getElementById('userinput');
+var search = document.getElementById('search');
 
-document.addEventListener('keydown', inputFocus);
+if (search !== null) {
+  document.addEventListener('keydown', inputFocus);
+}
 
 function inputFocus(e) {
-
-  if (e.keyCode === 191 ) {
+  if (e.ctrlKey && e.key === '/' ) {
     e.preventDefault();
-    userinput.focus();
+    search.focus();
   }
-
-  if (e.keyCode === 27 ) {
-    userinput.blur();
+  if (e.key === 'Escape' ) {
+    search.blur();
     suggestions.classList.add('d-none');
   }
-
 }
 
 document.addEventListener('click', function(event) {
@@ -40,21 +39,22 @@ function suggestionFocus(e){
   const focusable= [...focusableSuggestions];
   const index = focusable.indexOf(document.activeElement);
 
+  const keyDefault = suggestions.classList.contains('d-none');
+
   let nextIndex = 0;
 
-  if (e.keyCode === 38) {
+  if ((e.keyCode === 38) && (!keyDefault)) {
     e.preventDefault();
     nextIndex= index > 0 ? index-1 : 0;
     focusableSuggestions[nextIndex].focus();
   }
-  else if (e.keyCode === 40) {
+  else if ((e.keyCode === 40) && (!keyDefault)) {
     e.preventDefault();
     nextIndex= index+1 < focusable.length ? index+1 : index;
     focusableSuggestions[nextIndex].focus();
   }
 
 }
-
 
 /*
 Source:
@@ -102,7 +102,7 @@ Source:
     {{ range $index, $element := $list -}}
       {
         id: {{ $index }},
-        href: "{{ .Permalink }}",
+        href: "{{ .RelPermalink }}",
         title: {{ .Title | jsonify }},
         description: {{ .Params.description | jsonify }},
         content: {{ .Content | jsonify }}
@@ -113,43 +113,40 @@ Source:
     {{ end -}}
   ;
 
-  userinput.addEventListener('input', show_results, true);
+  search.addEventListener('input', show_results, true);
   suggestions.addEventListener('click', accept_suggestion, true);
 
   function show_results(){
+    const maxResult = 5;
 
     var value = this.value;
-    var results = index.search(value, { limit: 5, index: ["content"], enrich: true });
-    var entry, childs = suggestions.childNodes;
-    var i = 0, len = results.length;
+    var results = index.search(value, {limit: maxResult, enrich: true});
 
     suggestions.classList.remove('d-none');
+    suggestions.innerHTML = "";
 
-    results.forEach(function(results) {
-
-      entry = document.createElement('div');
-
-      entry.innerHTML = '<a href><span></span><span></span></a>';
-
-      a = entry.querySelector('a'),
-      t = entry.querySelector('span:first-child'),
-      d = entry.querySelector('span:nth-child(2)');
-
-      // console.log(results);
-
-      a.href = results.result[i].doc.href;
-      t.textContent = results.result[i].doc.title;
-      d.textContent = results.result[i].doc.description;
-
-      suggestions.appendChild(entry);
-
+    //flatSearch now returns results for each index field. create a single list
+    const flatResults = {}; //keyed by href to dedupe results
+    results.forEach(result=>{
+        result.result.forEach(r=>{
+          flatResults[r.doc.href] = r.doc;
+        });
     });
 
-    while(childs.length > len){
+    //construct a list of suggestions list
+    for(const href in flatResults) {
+        const doc = flatResults[href];
 
-        suggestions.removeChild(childs[i])
+        const entry = document.createElement('div');
+        entry.innerHTML = '<a href><span></span><span></span></a>';
+
+        entry.querySelector('a').href = href;
+        entry.querySelector('span:first-child').textContent = doc.title;
+        entry.querySelector('span:nth-child(2)').textContent = doc.description;
+
+        suggestions.appendChild(entry);
+        if(suggestions.childElementCount == maxResult) break;
     }
-
   }
 
   function accept_suggestion(){

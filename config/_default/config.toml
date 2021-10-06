@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://doks.netlify.app/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -8,6 +8,11 @@ enableRobotsTXT = true
 languageCode = "en-US"
 paginate = 7
 rssLimit = 10
+
+# Multilingual
+defaultContentLanguage = "en"
+disableLanguages = ["de", "nl"]
+# defaultContentLanguageInSubdir = true
 
 # add redirects/headers
 [outputs]
@@ -42,28 +47,10 @@ isPlainText = true
 noUgly = true
 rel  = "sitemap"
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      linkify = false
-    [markup.goldmark.parser]
-      autoHeadingID = true
-      autoHeadingIDType = "github"
-      [markup.goldmark.parser.attribute]
-        block = true
-        title = true
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    codeFences = false
-    guessSyntax = false
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = false
-    style = "dracula"
-    tabWidth = 4
+[caches]
+  [caches.getjson]
+    dir = ":cacheDir/:project"
+    maxAge = "10s"
 
 [sitemap]
   changefreq = "weekly"
@@ -75,6 +62,10 @@ rel  = "sitemap"
 
 [permalinks]
   blog = "/blog/:title/"
+# docs = "/docs/1.0/:sections[1:]/:title/"
+
+[minify.tdewolff.html]
+  keepWhitespace = false
 
 [module]
   [module.hugoVersion]

@@ -1,3 +1,7 @@
 {{ $image := .Page.Resources.GetMatch (printf "*%s*" (.Get "src")) -}}
 {{ $lqip := $image.Resize $.Site.Params.lqipWidth -}}
-<img class="img-simple img-fluid lazyload blur-up{{ with .Get "class" }} {{.}}{{ end }}" src="{{ $lqip.RelPermalink }}" data-src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
+{{ if eq .Site.Params.options.lazySizes true -}}
+  <img class="img-simple img-fluid lazyload blur-up{{ with .Get "class" }} {{.}}{{ end }}" src="{{ $lqip.RelPermalink }}" data-src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
+{{ else -}}
+  <img class="img-simple img-fluid{{ with .Get "class" }} {{.}}{{ end }}" src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" {{ with .Get "alt" }}alt="{{.}}"{{ end }}>
+{{ end -}}

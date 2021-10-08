@@ -71,7 +71,7 @@ repoHost = "GitHub"
 #repoHost = "Gitea"
 docsRepo = "https://github.com/h-enk/doks"
 docsRepoBranch = "master"
-editPage = true
+editPage = false
 
 [options]
   lazySizes = true

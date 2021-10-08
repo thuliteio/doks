@@ -1,14 +1,15 @@
 {{ $filePath := replace .File.Path "\\" "/" }}
+{{ $editPath := "null" }}
 
-{{ $contentPath := "null"}}
-
-{{ if (eq .Site.Params.repoHost "GitHub")}}
-  {{ $contentPath = print .Site.Params.docsRepo "/blob/" .Site.Params.docsRepoBranch "/content/" }}
+{{ if (eq .Site.Params.repoHost "GitHub") }}
+  {{ $editPath = "/blob/" }}
+{{ else if (eq .Site.Params.repoHost "Gitea") }}
+  {{ $editPath = "/_edit/"}}
+{{ else if (eq .Site.Params.repoHost "GitLab") }}
+  {{ $editPath = "/-/blob/" }}
 {{ end }}
 
-{{ if (eq .Site.Params.repoHost "Gitea")}}
-  {{ $contentPath = print .Site.Params.docsRepo "/_edit/" .Site.Params.docsRepoBranch "/content/" }}
-{{ end }}
+{{ $contentPath := print .Site.Params.docsRepo $editPath .Site.Params.docsRepoBranch "/content/" }}
 
 {{ $url := print $contentPath $filePath }}
 

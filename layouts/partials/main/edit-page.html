@@ -4,7 +4,7 @@
 {{ if (eq .Site.Params.repoHost "GitHub") }}
   {{ $editPath = "/blob/" }}
 {{ else if (eq .Site.Params.repoHost "Gitea") }}
-  {{ $editPath = "/_edit/"}}
+  {{ $editPath = "/_edit/" }}
 {{ else if (eq .Site.Params.repoHost "GitLab") }}
   {{ $editPath = "/-/blob/" }}
 {{ end }}

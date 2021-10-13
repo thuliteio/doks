@@ -104,7 +104,11 @@ Source:
         id: {{ $index }},
         href: "{{ .RelPermalink }}",
         title: {{ .Title | jsonify }},
-        description: {{ .Params.description | jsonify }},
+        {{ with .Description -}}
+          description: {{ . | jsonify }},
+        {{ else -}}
+          description: {{ .Summary | plainify | jsonify }},
+        {{ end -}}
         content: {{ .Content | jsonify }}
       })
       {{ if ne (add $index 1) $len -}}

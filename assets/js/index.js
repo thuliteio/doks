@@ -33,24 +33,23 @@ Source:
 
 document.addEventListener('keydown',suggestionFocus);
 
-function suggestionFocus(e){
+function suggestionFocus(e) {
+  const suggestionsHidden = suggestions.classList.contains('d-none');
+  if (suggestionsHidden) return;
 
-  const focusableSuggestions= suggestions.querySelectorAll('a');
-  const focusable= [...focusableSuggestions];
-  const index = focusable.indexOf(document.activeElement);
+  const focusableSuggestions= [...suggestions.querySelectorAll('a')];
+  if (focusableSuggestions.length === 0) return;
 
-  const keyDefault = suggestions.classList.contains('d-none');
+  const index = focusableSuggestions.indexOf(document.activeElement);
 
-  let nextIndex = 0;
-
-  if ((e.keyCode === 38) && (!keyDefault)) {
+  if (e.key === "ArrowUp") {
     e.preventDefault();
-    nextIndex= index > 0 ? index-1 : 0;
+    const nextIndex = index > 0 ? index - 1 : 0;
     focusableSuggestions[nextIndex].focus();
   }
-  else if ((e.keyCode === 40) && (!keyDefault)) {
+  else if (e.key === "ArrowDown") {
     e.preventDefault();
-    nextIndex= index+1 < focusable.length ? index+1 : index;
+    const nextIndex= index + 1 < focusableSuggestions.length ? index + 1 : index;
     focusableSuggestions[nextIndex].focus();
   }
 
@@ -127,11 +126,9 @@ Source:
 
     //flatSearch now returns results for each index field. create a single list
     const flatResults = {}; //keyed by href to dedupe results
-    results.forEach(result=>{
-        result.result.forEach(r=>{
-          flatResults[r.doc.href] = r.doc;
-        });
-    });
+    for (const result of results.flatMap(r => r.result)) {
+      flatResults[result.doc.href] = result.doc;
+    }
 
     //construct a list of suggestions list
     for(const href in flatResults) {

@@ -133,6 +133,15 @@ Source:
     suggestions.innerHTML = "";
     suggestions.classList.remove('d-none');
 
+    // inform user that no results were found
+    if (flatResults.size === 0) {
+      const noResultsMessage = document.createElement('div')
+      noResultsMessage.innerHTML = `No results for "<strong>${searchQuery}</strong>"`
+      noResultsMessage.classList.add("suggestion__no-results");
+      suggestions.appendChild(noResultsMessage);
+      return;
+    }
+
     // construct a list of suggestions
     for(const [href, doc] of flatResults) {
         const entry = document.createElement('div');

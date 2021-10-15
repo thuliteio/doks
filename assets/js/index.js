@@ -117,7 +117,6 @@ Source:
   ;
 
   search.addEventListener('input', show_results, true);
-  suggestions.addEventListener('click', accept_suggestion, true);
 
   function show_results(){
     const maxResult = 5;
@@ -157,15 +156,4 @@ Source:
         if(suggestions.childElementCount == maxResult) break;
     }
   }
-
-  function accept_suggestion(){
-
-      while(suggestions.lastChild){
-
-          suggestions.removeChild(suggestions.lastChild);
-      }
-
-      return false;
-  }
-
 }());

@@ -144,10 +144,12 @@ Source:
 
         const title = document.createElement('span');
         title.textContent = doc.title;
+        title.classList.add("suggestion__title");
         a.appendChild(title);
 
         const description = document.createElement('span');
         description.textContent = doc.description;
+        description.classList.add("suggestion__description");
         a.appendChild(description);
 
         suggestions.appendChild(entry);

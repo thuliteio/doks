@@ -121,31 +121,39 @@ Source:
 
   function show_results(){
     const maxResult = 5;
+    var searchQuery = this.value;
+    var results = index.search(searchQuery, {limit: maxResult, enrich: true});
 
-    var value = this.value;
-    var results = index.search(value, {limit: maxResult, enrich: true});
-
-    suggestions.classList.remove('d-none');
-    suggestions.innerHTML = "";
-
-    //flatSearch now returns results for each index field. create a single list
-    const flatResults = {}; //keyed by href to dedupe results
+    // flatten results since index.search() returns results for each indexed field
+    const flatResults = {}; // keyed by href to dedupe results
     for (const result of results.flatMap(r => r.result)) {
       flatResults[result.doc.href] = result.doc;
     }
 
-    //construct a list of suggestions list
+    suggestions.innerHTML = "";
+    suggestions.classList.remove('d-none');
+
+    // construct a list of suggestions
     for(const href in flatResults) {
         const doc = flatResults[href];
 
         const entry = document.createElement('div');
-        entry.innerHTML = '<a href><span></span><span></span></a>';
+        suggestions.appendChild(entry);
 
-        entry.querySelector('a').href = href;
-        entry.querySelector('span:first-child').textContent = doc.title;
-        entry.querySelector('span:nth-child(2)').textContent = doc.description;
+        const a = document.createElement('a');
+        a.href = href;
+        entry.appendChild(a);
+
+        const title = document.createElement('span');
+        title.textContent = doc.title;
+        a.appendChild(title);
+
+        const description = document.createElement('span');
+        description.textContent = doc.description;
+        a.appendChild(description);
 
         suggestions.appendChild(entry);
+
         if(suggestions.childElementCount == maxResult) break;
     }
   }

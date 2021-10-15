@@ -108,7 +108,7 @@ Source:
         {{ else -}}
           description: {{ .Summary | plainify | jsonify }},
         {{ end -}}
-        content: {{ .Content | jsonify }}
+        content: {{ .Plain | jsonify }}
       })
       {{ if ne (add $index 1) $len -}}
         .add(

@@ -124,18 +124,17 @@ Source:
     var results = index.search(searchQuery, {limit: maxResult, enrich: true});
 
     // flatten results since index.search() returns results for each indexed field
-    const flatResults = {}; // keyed by href to dedupe results
+    const flatResults = new Map(); // keyed by href to dedupe results
     for (const result of results.flatMap(r => r.result)) {
-      flatResults[result.doc.href] = result.doc;
+      if (flatResults.has(result.doc.href)) continue;
+      flatResults.set(result.doc.href, result.doc);
     }
 
     suggestions.innerHTML = "";
     suggestions.classList.remove('d-none');
 
     // construct a list of suggestions
-    for(const href in flatResults) {
-        const doc = flatResults[href];
-
+    for(const [href, doc] of flatResults) {
         const entry = document.createElement('div');
         suggestions.appendChild(entry);
 

@@ -1,4 +1,6 @@
 {{ $image := .Page.Resources.GetMatch .Destination -}}
+{{ with $image -}}
+
 {{ $lqip := $image.Resize site.Params.lqipWidth -}}
 
 {{ $imgSrc := "" -}}
@@ -24,4 +26,11 @@
   </figure>
 {{ else -}}
   <img class="img-fluid lazyload blur-up" src="{{ $lqip.Permalink }}" data-src="{{ $image.Permalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ $.Text }}">
+{{ end -}}
+
+{{ else -}}
+<figure class="figure">
+  <img src="{{ .Destination | safeURL }}"  alt="{{ $.Text }}" />
+  {{ with $.Title }}<figcaption class="figure-caption">{{ . | safeHTML }}</figcaption>{{ end -}}
+</figure>
 {{ end -}}

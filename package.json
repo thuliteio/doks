@@ -48,7 +48,7 @@
     "flexsearch": "^0.7.21",
     "highlight.js": "^11.2",
     "instant.page": "^5.1",
-    "katex": "^0.13",
+    "katex": "^0.15",
     "lazysizes": "^5.3",
     "markdownlint-cli": "^0.29",
     "node-fetch": "^3.0",

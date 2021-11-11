@@ -10,11 +10,15 @@
   z-index: $zindex-dropdown;
 }
 
+#suggestions a,
+.suggestion__no-results {
+  padding: 0.75rem;
+  margin: 0 0.5rem;
+}
+
 #suggestions a {
   display: block;
   text-decoration: none;
-  padding: 0.75rem;
-  margin: 0 0.5rem;
 }
 
 #suggestions a:focus {
@@ -43,12 +47,13 @@
   font-size: $font-size-base;
 }
 
-#suggestions span:first-child {
+.suggestion__title {
   font-weight: $headings-font-weight;
   color: $black;
 }
 
-#suggestions span:nth-child(2) {
+.suggestion__description,
+.suggestion__no-results {
   color: $gray-700;
 }
 
@@ -61,7 +66,7 @@
     display: flex;
   }
 
-  #suggestions span:first-child {
+  .suggestion__title {
     width: 9rem;
     padding-right: 1rem;
     border-right: 1px solid $gray-200;
@@ -69,7 +74,7 @@
     text-align: right;
   }
 
-  #suggestions span:nth-child(2) {
+  .suggestion__description {
     width: 19rem;
     padding-left: 1rem;
   }

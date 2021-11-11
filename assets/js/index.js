@@ -108,7 +108,7 @@ Source:
         {{ else -}}
           description: {{ .Summary | plainify | jsonify }},
         {{ end -}}
-        content: {{ .Content | jsonify }}
+        content: {{ .Plain | jsonify }}
       })
       {{ if ne (add $index 1) $len -}}
         .add(
@@ -117,47 +117,53 @@ Source:
   ;
 
   search.addEventListener('input', show_results, true);
-  suggestions.addEventListener('click', accept_suggestion, true);
 
   function show_results(){
     const maxResult = 5;
+    var searchQuery = this.value;
+    var results = index.search(searchQuery, {limit: maxResult, enrich: true});
 
-    var value = this.value;
-    var results = index.search(value, {limit: maxResult, enrich: true});
-
-    suggestions.classList.remove('d-none');
-    suggestions.innerHTML = "";
-
-    //flatSearch now returns results for each index field. create a single list
-    const flatResults = {}; //keyed by href to dedupe results
+    // flatten results since index.search() returns results for each indexed field
+    const flatResults = new Map(); // keyed by href to dedupe results
     for (const result of results.flatMap(r => r.result)) {
-      flatResults[result.doc.href] = result.doc;
+      if (flatResults.has(result.doc.href)) continue;
+      flatResults.set(result.doc.href, result.doc);
     }
 
-    //construct a list of suggestions list
-    for(const href in flatResults) {
-        const doc = flatResults[href];
+    suggestions.innerHTML = "";
+    suggestions.classList.remove('d-none');
 
+    // inform user that no results were found
+    if (flatResults.size === 0 && searchQuery) {
+      const noResultsMessage = document.createElement('div')
+      noResultsMessage.innerHTML = `No results for "<strong>${searchQuery}</strong>"`
+      noResultsMessage.classList.add("suggestion__no-results");
+      suggestions.appendChild(noResultsMessage);
+      return;
+    }
+
+    // construct a list of suggestions
+    for(const [href, doc] of flatResults) {
         const entry = document.createElement('div');
-        entry.innerHTML = '<a href><span></span><span></span></a>';
+        suggestions.appendChild(entry);
 
-        entry.querySelector('a').href = href;
-        entry.querySelector('span:first-child').textContent = doc.title;
-        entry.querySelector('span:nth-child(2)').textContent = doc.description;
+        const a = document.createElement('a');
+        a.href = href;
+        entry.appendChild(a);
+
+        const title = document.createElement('span');
+        title.textContent = doc.title;
+        title.classList.add("suggestion__title");
+        a.appendChild(title);
+
+        const description = document.createElement('span');
+        description.textContent = doc.description;
+        description.classList.add("suggestion__description");
+        a.appendChild(description);
 
         suggestions.appendChild(entry);
+
         if(suggestions.childElementCount == maxResult) break;
     }
   }
-
-  function accept_suggestion(){
-
-      while(suggestions.lastChild){
-
-          suggestions.removeChild(suggestions.lastChild);
-      }
-
-      return false;
-  }
-
 }());

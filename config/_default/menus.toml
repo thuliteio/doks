@@ -4,17 +4,17 @@
   identifier = "prologue"
   url = "/docs/prologue/"
 
-[[docs]]
+[[tutorials]]
   name = "Integrations"
   weight = 20
   identifier = "integrations"
-  url = "/docs/integrations/"
+  url = "/tutorials/integrations/"
 
-[[docs]]
+[[tutorials]]
   name = "Deployments"
   weight = 30
   identifier = "deployments"
-  url = "/docs/deployments/"
+  url = "/tutorials/deployments/"
 
 [[docs]]
   name = "Help"
@@ -29,7 +29,7 @@
 
 [[main]]
   name = "Tutorials"
-  url = "/tutorials/"
+  url = "/tutorials/prologue/quickstart/"
   weight = 20
 
 [[main]]

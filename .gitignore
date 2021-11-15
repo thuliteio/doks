@@ -4,3 +4,4 @@ public
 resources
 # Local Netlify folder
 .netlify
+.idea

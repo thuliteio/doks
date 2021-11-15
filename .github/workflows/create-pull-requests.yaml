@@ -1,0 +1,18 @@
+name: Create Pull Request Example Command
+on:
+  repository_dispatch:
+    types: [cpr-example-command]
+jobs:
+  createPullRequest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8 #install the python needed
+      - name: execute py script # run the run.py to get the latest data
+        run: |
+          cd scripts
+          python fetch_schemas.py

@@ -102,7 +102,6 @@ button#doks-versions {
 
 .doks-subnavbar {
   background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid $gray-200;
 }
 
 .doks-subnavbar .nav-link {
@@ -443,3 +442,17 @@ button#doks-versions {
 .dropdown-item:active {
   color: inherit;
 }
+
+.progress-container {
+    margin-top: 8px;
+    width: 100%;
+    height: 1px;
+    background: $gray-200;
+}
+
+.progress-bar {
+  height: 1px;
+  background: $primary;
+  width: 0%;
+}
+

@@ -83,6 +83,7 @@ editPage = false
   breadCrumb = false
   highLight = true
   kaTex = false
+  progressbar = true
   collapsibleSidebar = true
   multilingualMode = false
   docsVersioning = false

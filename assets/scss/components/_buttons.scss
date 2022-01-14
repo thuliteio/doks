@@ -65,7 +65,7 @@ pre {
 
 .btn-copy {
   transition: opacity 0.3s ease-in-out;
-  opacity: 0;
+  visibility: hidden !important;
   position: absolute;
   right: 0.25rem;
   top: 0.25rem;
@@ -105,7 +105,7 @@ pre {
 
 @include media-breakpoint-up(md) {
   pre:hover .btn-copy {
-    opacity: 1;
+    visibility: visible !important;
   }
 }
 

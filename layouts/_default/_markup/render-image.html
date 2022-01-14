@@ -1,4 +1,9 @@
-{{ $image := .Page.Resources.GetMatch .Destination -}}
+{{ $image := "" -}}
+{{ if (urls.Parse .Destination).IsAbs }}
+  {{ $image = resources.GetRemote .Destination -}}
+{{ else -}}
+  {{ $image = .Page.Resources.GetMatch .Destination -}}
+{{ end -}}
 {{ with $image -}}
   {{ $lqip := $image.Resize site.Params.lqipWidth -}}
 

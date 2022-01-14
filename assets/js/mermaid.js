@@ -1,4 +1,4 @@
-import mermaid from 'mermaid/dist/mermaid';
+import mermaid from 'mermaid';
 
 var config = {
   theme: 'default',

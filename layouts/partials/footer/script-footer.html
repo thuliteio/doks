@@ -45,7 +45,7 @@
   {{ $slice = $slice | append $darkMode -}}
 {{ end -}}
 
-{{ if .Site.Params.alertDismissable -}}
+{{ if and (.Site.Params.alert) (.Site.Params.alertDismissable) -}}
   {{ $alert := resources.Get "js/alert.js" -}}
   {{ $alert := $alert | js.Build -}}
   {{ $slice = $slice | append $alert -}}

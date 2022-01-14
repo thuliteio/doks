@@ -2,16 +2,19 @@ var announcement = document.getElementById('announcement');
 
 if (announcement !== null) {
 
-  if (localStorage.getItem('announcement') === null ) {
+  var id = announcement.dataset.id;
 
-    announcement.classList.remove('d-none');
-
-  }
+  Object.keys(localStorage).forEach(function(key) {
+    if (/^global-alert-/.test(key)) {
+      if (key !== id ) {
+        localStorage.removeItem(key);
+        document.documentElement.removeAttribute('data-global-alert');
+      }
+    }
+  });
 
   announcement.addEventListener('closed.bs.alert', () => {
-
-    localStorage.setItem('announcement', 'closed');
-
+    localStorage.setItem(id, 'closed');
   });
 
 }

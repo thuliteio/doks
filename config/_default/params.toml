@@ -72,6 +72,7 @@ repoHost = "GitHub"
 docsRepo = "https://github.com/h-enk/doks"
 docsRepoBranch = "master"
 editPage = false
+lastMod = false
 
 [options]
   lazySizes = true

@@ -1,4 +1,4 @@
-<div class="alert alert-warning d-flex" role="alert">
+<div class="alert alert-{{ with .Get "context" }}{{.}}{{ else }}doks{{ end }} d-flex" role="alert">
   <div class="flex-shrink-1 alert-icon">{{ with .Get "icon" }}{{.}} {{ end }}</div>
   {{ with .Get "text"}}
     <div class="w-100">{{ . | safeHTML }} </div>

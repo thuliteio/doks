@@ -1,3 +1,81 @@
+<aside>
+  <ul class="list-unstyled collapsible-sidebar">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.docs }}
+          {{ if .HasChildren }}
+              <li class="{{ if $currentPage.HasMenuCurrent "docs" . }}active{{ end }}">
+                  <a href="#">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+              <ul class="sub-menu">
+                  {{ range .Children }}
+
+
+                    {{ if .HasChildren }}
+                        <li class="{{ if $currentPage.HasMenuCurrent "docs" . }}active{{ end }}">
+                            <a href="#">
+                                {{ .Pre }}
+                                <span>{{ .Name }}</span>
+                            </a>
+                        </li>
+                        <ul class="sub-menu">
+                            {{ range .Children }}
+
+
+                                {{ if .HasChildren }}
+                                    <li class="{{ if $currentPage.HasMenuCurrent "docs" . }}active{{ end }}">
+                                        <a href="#">
+                                            {{ .Pre }}
+                                            <span>{{ .Name }}</span>
+                                        </a>
+                                    </li>
+                                    <ul class="sub-menu">
+                                        {{ range .Children }}
+                                            <li class="{{ if $currentPage.IsMenuCurrent "docs" . }}active{{ end }}">
+                                                <a href="{{ .URL }}">{{ .Name }}</a>
+                                            </li>
+                                        {{ end }}
+                                    </ul>
+                                {{ else }}
+                                    <li>
+                                        <a href="{{ .URL }}">
+                                            {{ .Pre }}
+                                            <span>{{ .Name }}</span>
+                                        </a>
+                                    </li>
+                                {{ end }}
+
+
+                            {{ end }}
+                        </ul>
+                    {{ else }}
+                        <li>
+                            <a href="{{ .URL }}">
+                                {{ .Pre }}
+                                <span>{{ .Name }}</span>
+                            </a>
+                        </li>
+                    {{ end }}
+
+
+
+                  {{ end }}
+              </ul>
+          {{ else }}
+              <li>
+                  <a href="{{ .URL }}">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+          {{ end }}
+      {{ end }}
+  </ul>
+</aside>
+
+<!--
 {{ if .Site.Params.options.collapsibleSidebar -}}
   <ul class="list-unstyled collapsible-sidebar">
   {{ $currentPage := . -}}
@@ -37,3 +115,4 @@
     {{ end -}}
   {{ end -}}
 {{ end -}}
+-->

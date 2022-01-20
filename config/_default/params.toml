@@ -92,7 +92,6 @@ mainSections = ["docs"]
   docsVersioning = false
 
 [menu]
-
   [menu.section]
-    auto = false
-    collapsibleSidebar = false
+    auto = true
+    collapsibleSidebar = true

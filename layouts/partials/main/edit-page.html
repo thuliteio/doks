@@ -1,5 +1,4 @@
 {{ $parts := slice .Site.Params.docsRepo }}
-{{ $filePath := replace .File.Path "\\" "/" }}
 
 {{ if (eq .Site.Params.repoHost "GitHub") }}
   {{ $parts = $parts | append "blob" .Site.Params.docsRepoBranch }}
@@ -8,6 +7,8 @@
 {{ else if (eq .Site.Params.repoHost "GitLab") }}
   {{ $parts = $parts | append "-/blob" .Site.Params.docsRepoBranch }}
 {{ else if (eq .Site.Params.repoHost "Bitbucket") }}
+  {{ $parts = $parts | append "src" .Site.Params.docsRepoBranch }}
+{{ else if (eq .Site.Params.repoHost "BitbucketServer") }}
   {{ $parts = $parts | append "browse" .Site.Params.docsRepoBranch }}
 {{ end }}
 
@@ -16,6 +17,8 @@
     {{ $parts = $parts | append .Site.Params.docsRepoSubPath }}
   {{ end }}
 {{ end }}
+
+{{ $filePath := replace .File.Path "\\" "/" }}
 
 {{ if .Site.Params.options.multilingualMode }}
   {{ $parts = $parts | append "content" .Lang $filePath }}

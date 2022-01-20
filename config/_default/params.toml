@@ -74,6 +74,10 @@ docsRepoBranch = "master"
 editPage = false
 lastMod = false
 
+
+mainSections = ["docs"]
+
+
 [options]
   lazySizes = true
   clipBoard = true
@@ -84,6 +88,11 @@ lastMod = false
   breadCrumb = true
   highLight = true
   kaTex = false
-  collapsibleSidebar = true
   multilingualMode = false
   docsVersioning = false
+
+[menu]
+
+  [menu.section]
+    auto = false
+    collapsibleSidebar = false

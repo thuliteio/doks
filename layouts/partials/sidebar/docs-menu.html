@@ -1,4 +1,65 @@
-{{ if .Site.Params.options.collapsibleSidebar -}}
+{{ if and .Site.Params.menu.section.auto .Site.Params.menu.section.collapsibleSidebar -}}
+  <!-- Auto collapsibile section menu, multi level -->
+  <ul class="list-unstyled collapsible-sidebar">
+    {{ $currentPage := . -}}
+    {{ range (where .Site.Sections "Type" "in" site.Params.mainSections) }}
+      {{ range .Sections.Reverse }}
+        {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+        <li class="mb-1">
+          <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+            {{ .Title }}
+          </button>
+          <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
+            <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+              {{ range .Pages }}
+                {{ if .IsNode }}
+                  {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                  <li class="my-1 ms-3">
+                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+                      {{ .Title }}
+                    </button>
+                    <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
+                      <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        {{ range .Pages }}
+                          {{ if .IsNode }}
+                            {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                            <li class="my-1 ms-3">
+                              <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+                                {{ .Title }}
+                              </button>
+                              <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ md5 .Title }}">
+                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                  {{ range .Pages }}
+                                    {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                                    <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a></li>
+                                  {{ end }}
+                                </ul>
+                              </div>
+                            </li>
+                          {{ else }}
+                            {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                            <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a></li>
+                          {{ end }}
+                        {{ end }}
+                      </ul>
+                    </div>
+                  </li>
+                {{ else }}
+                  {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+                  <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a></li>
+                {{ end }}
+              {{ end }}
+            </ul>
+          </div>
+        </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+{{ else if and .Site.Params.menu.section.auto (not .Site.Params.menu.section.collapsibleSidebar) -}}
+  <!-- Auto default section menu, single level -->
+
+{{ else if and (not .Site.Params.menu.section.auto) .Site.Params.menu.section.collapsibleSidebar -}}
+  <!-- Manual collapsibile section menu, multi level -->
   <ul class="list-unstyled collapsible-sidebar">
     {{ $currentPage := . -}}
     {{ range $index, $element := .Site.Menus.docs -}}
@@ -60,7 +121,8 @@
       </li>
     {{ end -}}
   </ul>
-{{ else -}}
+{{ else if and (not .Site.Params.menu.section.auto) (not .Site.Params.menu.section.collapsibleSidebar) -}}
+  <!-- Manual default section menu, single level -->
   {{ $currentPage := . -}}
   {{ range .Site.Menus.docs -}}
     <h3 class="h6 text-uppercase">{{ .Name }}</h3>

@@ -74,10 +74,6 @@ docsRepoBranch = "master"
 editPage = false
 lastMod = false
 
-
-mainSections = ["docs"]
-
-
 [options]
   lazySizes = true
   clipBoard = true
@@ -93,5 +89,6 @@ mainSections = ["docs"]
 
 [menu]
   [menu.section]
-    auto = true
+    auto = false
     collapsibleSidebar = true
+    mainSections = ["docs", "tutorial"]

@@ -1,4 +1,4 @@
-<!-- Auto default section menu, single level -->
+<!-- Auto default section menu -->
 {{ $currentPage := . -}}
 {{ range (where .Site.Sections "Section" "in" site.Params.menu.section.mainSections) }}
   {{ range .Sections.Reverse }}

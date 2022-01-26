@@ -81,7 +81,7 @@ lastMod = false
   flexSearch = true
   darkMode = true
   bootStrapJs = true
-  breadCrumb = true
+  breadCrumb = false
   highLight = true
   kaTex = false
   multilingualMode = false
@@ -90,5 +90,5 @@ lastMod = false
 [menu]
   [menu.section]
     auto = true
-    collapsibleSidebar = false
+    collapsibleSidebar = true
     mainSections = ["docs"]

@@ -90,5 +90,5 @@ lastMod = false
 [menu]
   [menu.section]
     auto = true
-    collapsibleSidebar = true
-    mainSections = ["docs", "tutorial"]
+    collapsibleSidebar = false
+    mainSections = ["docs"]

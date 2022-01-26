@@ -84,6 +84,11 @@ lastMod = false
   breadCrumb = false
   highLight = true
   kaTex = false
-  collapsibleSidebar = true
   multilingualMode = false
   docsVersioning = false
+
+[menu]
+  [menu.section]
+    auto = true
+    collapsibleSidebar = true
+    mainSections = ["docs"]

@@ -34,20 +34,10 @@
 # url = "/docs/1.0/prologue/introduction/"
   weight = 10
 
-[[main]]
-  name = "Guide"
-  url = "/guide/lorem/ipsum/"
-  weight = 11
-
-[[main]]
-  name = "Tutorial"
-  url = "/tutorial/lorem/ipsum/"
-  weight = 12
-
-[[main]]
-  name = "Hints"
-  url = "/hints/lorem/ipsum/"
-  weight = 13
+# [[main]]
+#   name = "Tutorial"
+#   url = "/tutorial/lorem/ipsum/"
+#   weight = 15
 
 [[main]]
   name = "Blog"

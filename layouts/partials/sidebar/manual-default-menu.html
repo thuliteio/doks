@@ -1,6 +1,7 @@
 <!-- Manual default section menu -->
 {{ $currentPage := . -}}
-{{ range .Site.Menus.docs -}}
+{{ $section := $currentPage.Section -}}
+{{ range (index .Site.Menus $section) -}}
   <h3 class="h6 text-uppercase mb-2">{{ .Name }}</h3>
   {{ if .HasChildren -}}
     <ul class="list-unstyled">
@@ -15,14 +16,14 @@
                   {{ if .HasChildren -}}
                     <ul class="list-unstyled ms-3">
                       {{ range .Children -}}
-                        {{- $active := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) -}}
+                        {{- $active := or ($currentPage.IsMenuCurrent $section .) ($currentPage.HasMenuCurrent $section .) -}}
                         {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
                         <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                       {{ end -}}
                     </ul>
                   {{ end -}}
                 {{ else -}}
-                  {{- $active := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) -}}
+                  {{- $active := or ($currentPage.IsMenuCurrent $section .) ($currentPage.HasMenuCurrent $section .) -}}
                   {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
                   <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                 {{ end -}}
@@ -30,7 +31,7 @@
             </ul>
           {{ end -}}
         {{ else -}}
-          {{- $active := or ($currentPage.IsMenuCurrent "docs" .) ($currentPage.HasMenuCurrent "docs" .) -}}
+          {{- $active := or ($currentPage.IsMenuCurrent $section .) ($currentPage.HasMenuCurrent $section .) -}}
           {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
           <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
         {{ end -}}

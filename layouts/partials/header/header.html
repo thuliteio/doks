@@ -28,11 +28,12 @@
         <h3 class="h6 text-uppercase mb-3 d-md-none">Main</h3>
         <ul class="nav flex-column flex-md-row ms-md-n3">
           {{- $current := . -}}
+          {{- $section := $current.Section -}}
           {{ range .Site.Menus.main -}}
             {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
             {{- $active = or $active (eq .Name $current.Title) -}}
-            {{- $active = or $active (and (eq .Name "Docs") (eq $current.Section "docs")) -}}
-            {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "authors")) -}}
+            {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
+            {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "contributors")) -}}
             <li class="nav-item">
               <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
             </li>

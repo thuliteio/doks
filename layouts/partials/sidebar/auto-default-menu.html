@@ -1,6 +1,7 @@
 <!-- Auto default section menu -->
 {{ $currentPage := . -}}
-{{ range (where .Site.Sections "Section" "in" site.Params.menu.section.mainSections) }}
+{{ $section := $currentPage.Section -}}
+{{ range (where .Site.Sections "Section" "in" $section) }}
   {{ range .Sections.Reverse }}
     {{ $active := in $currentPage.RelPermalink .RelPermalink }}
     <h3 class="h6 text-uppercase mb-2">{{ .Title }}</h3>

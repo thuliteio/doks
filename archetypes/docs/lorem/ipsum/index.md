@@ -8,12 +8,8 @@ draft: false
 images: []
 type: docs
 menu:
-  tutorial:
+  {{ .Section }}:
     parent: "lorem"
 weight: 100
 toc: true
 ---
-
-## Intro
-
-Welcome to the Tutorial!

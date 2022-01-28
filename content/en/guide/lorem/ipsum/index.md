@@ -8,7 +8,7 @@ draft: false
 images: []
 type: docs
 menu:
-  tutorial:
+  guide:
     parent: "lorem"
 weight: 100
 toc: true
@@ -16,4 +16,4 @@ toc: true
 
 ## Intro
 
-Welcome to the Tutorial!
+Welcome to the Guide!

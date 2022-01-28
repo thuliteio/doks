@@ -14,7 +14,7 @@
   {{ end -}}
   <body class="{{ .Scratch.Get "class" }}">
     {{ partial "header/header.html" . }}
-    <div class="wrap container-xxl" role="document">
+    <div class="wrap container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}" role="document">
       <div class="content">
         {{ block "main" . }}{{ end }}
       </div>

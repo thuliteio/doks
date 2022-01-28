@@ -11,7 +11,7 @@
 		</nav>
 		{{ end -}}
 		{{ if .Params.toc -}}
-		<main class="docs-content col-lg-11 col-xl-9">
+		<main class="docs-content col-lg-11 col-xl{{ if eq .Site.Params.options.fullWidth false }}-9{{ end }}">
 		{{ else -}}
 		<main class="docs-content col-lg-11 col-xl-9 mx-xl-auto">
 		{{ end -}}

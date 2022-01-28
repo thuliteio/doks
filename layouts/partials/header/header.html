@@ -137,7 +137,7 @@
   </aside>
 </div>
 
-{{ else -}}
+{{ else if ne .CurrentSection .FirstSection -}}
 <nav class="doks-subnavbar py-2 sticky-lg-top d-lg-none" aria-label="Secondary navigation">
   <div class="container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }} d-flex align-items-md-center">
     <span class="navbar-text ms-0">{{ .Section | humanize }}</span>

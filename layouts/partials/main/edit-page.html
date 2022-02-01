@@ -20,11 +20,7 @@
 
 {{ $filePath := replace .File.Path "\\" "/" }}
 
-{{ if .Site.Params.options.multilingualMode }}
-  {{ $parts = $parts | append "content" .Lang $filePath }}
-{{ else }}
-  {{ $parts = $parts | append "content" $filePath }}
-{{ end }}
+{{ $parts = $parts | append "content" .Lang $filePath }}
 
 {{ $url := delimit $parts "/" }}
 

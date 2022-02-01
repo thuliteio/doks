@@ -527,3 +527,19 @@ $navbar-dark-active-color:          $link-color-dark;
     border-color: $border-dark;
   }
 }
+
+[data-dark-mode] .dropdown-menu.dropdown-menu-main {
+  background: $body-overlay-dark;
+}
+
+[data-dark-mode] .dropdown-menu-main .dropdown-item {
+  color: $body-color-dark;
+}
+
+[data-dark-mode] .dropdown-menu-main .dropdown-item:hover {
+  color: $link-color-dark;
+}
+
+[data-dark-mode] .dropdown-menu-main .dropdown-item.active {
+  color: $link-color-dark;
+}

@@ -218,3 +218,30 @@ pre {
   margin-left: -0.1875rem;
   margin-right: -0.3125rem;
 }
+
+.dropdown-menu.dropdown-menu-main {
+  width: 100%;
+}
+
+.dropdown-menu-main .dropdown-item {
+  color: inherit;
+  font-size: $font-size-base;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.dropdown-menu-main .dropdown-item:hover {
+  background-color: transparent;
+  color: $primary;
+}
+
+.dropdown-menu-main .dropdown-item.active {
+  color: $primary;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+.dropdown-menu-main .dropdown-item.active:hover {
+  background-color: transparent;
+}

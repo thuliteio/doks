@@ -34,9 +34,26 @@
             {{- $active = or $active (eq .Name $current.Title) -}}
             {{- $active = or $active (and (eq .Name ($section | humanize)) (eq $current.Section $section)) -}}
             {{- $active = or $active (and (eq .Name "Blog") (eq $current.Section "blog" "contributors")) -}}
-            <li class="nav-item">
-              <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
-            </li>
+            {{ if .HasChildren }}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle ps-0 py-1" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ .Name }}
+                  <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-main shadow rounded border-0" aria-labelledby="navbarDropdownMenuLink">
+                  {{ range .Children -}}
+                  {{- $active = eq .Name $current.Title -}}
+                    <li>
+                      <a class="dropdown-item{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a>
+                    </li>
+                  {{ end -}}
+                </ul>
+              </li>
+            {{ else }}
+              <li class="nav-item">
+                <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
           {{ end -}}
         </ul>
         <hr class="text-black-50 my-4 d-md-none">

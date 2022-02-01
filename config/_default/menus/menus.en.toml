@@ -45,31 +45,24 @@
   weight = 20
 
 [[main]]
-  name = "Prologue"
+  name = "Get Started"
   weight = 30
-  identifier = "prologue"
-  url = "/docs/prologue/"
-
-[[main]]
-  name = "Introduction"
-  weight = 35
-  identifier = "introduction"
+  identifier = "get-started"
   url = "/docs/prologue/introduction/"
-  parent = "prologue"
 
 [[main]]
   name = "Quick Start"
   weight = 40
   identifier = "quick-start"
   url = "/docs/prologue/quick-start/"
-  parent = "prologue"
+  parent = "get-started"
 
 [[main]]
-  name = "Commands"
-  weight = 45
-  identifier = "commands"
-  url = "/docs/prologue/commands/"
-  parent = "prologue"
+  name = "Tutorial"
+  weight = 50
+  identifier = "tutorial"
+  url = "https://getdoks.org/tutorial/introduction/"
+  parent = "get-started"
 
 [[social]]
   name = "GitHub"

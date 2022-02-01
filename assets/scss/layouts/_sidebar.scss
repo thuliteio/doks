@@ -92,6 +92,12 @@ a.docs-link {
   color: $link-color;
 }
 
+.nav-link.active,
+.dropdown-menu-main .dropdown-item.active,
+.docs-link.active {
+  font-weight: 500;
+}
+
 .docs-links h3.sidebar-link,
 .page-links h3.sidebar-link {
   text-transform: none;

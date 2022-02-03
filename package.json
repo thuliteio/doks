@@ -34,8 +34,8 @@
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16",
-    "@babel/core": "^7.16",
+    "@babel/cli": "^7.17",
+    "@babel/core": "^7.17",
     "@babel/preset-env": "^7.16",
     "@fullhuman/postcss-purgecss": "^4.1",
     "auto-changelog": "^2.3.0",

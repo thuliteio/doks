@@ -50,6 +50,8 @@ Doks is a Hugo theme for building secure, fast, and SEO-ready documentation webs
 
 {{< details "Headings" >}}
 
+Paragraph before heading.
+
 ## Heading 2
 
 Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize.

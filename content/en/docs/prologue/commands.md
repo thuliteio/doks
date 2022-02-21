@@ -25,6 +25,20 @@ npm run create [path] [flags]
 
 See also the Hugo docs: [hugo new](https://gohugo.io/commands/hugo_new/).
 
+### Docs based tree
+
+Create a docs based tree — with a single command:
+
+```bash
+npm run create -- --kind docs [section]
+```
+
+For example, create a docs based tree named guides:
+
+```bash
+npm run create -- --kind docs guides
+```
+
 ## lint
 
 Check scripts, styles, and markdown for errors:

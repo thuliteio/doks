@@ -18,18 +18,18 @@
                 <ul class="list-unstyled ms-3">
                   {{ range .Pages }}
                     {{ $active := in $currentPage.RelPermalink .RelPermalink }}
-                    <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                    <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
                   {{ end }}
                 </ul>
               {{ else }}
                 {{ $active := in $currentPage.RelPermalink .RelPermalink }}
-                <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
               {{ end }}
             {{ end }}
           </ul>
         {{ else }}
           {{ $active := in $currentPage.RelPermalink .RelPermalink }}
-          <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+          <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
         {{ end }}
       {{ end }}
     </ul>

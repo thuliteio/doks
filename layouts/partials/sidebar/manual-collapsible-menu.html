@@ -33,7 +33,7 @@
                                   {{ range .Children -}}
                                     {{- $active := or ($currentPage.IsMenuCurrent $section .) ($currentPage.HasMenuCurrent $section .) -}}
                                     {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
-                                    <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
+                                    <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                                   {{ end -}}
                                   </ul>
                                 </div>
@@ -42,7 +42,7 @@
                           {{ else -}}
                             {{- $active := or ($currentPage.IsMenuCurrent $section .) ($currentPage.HasMenuCurrent $section .) -}}
                             {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
-                            <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
+                            <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                           {{ end -}}
                         {{ end -}}
                       </ul>
@@ -52,7 +52,7 @@
               {{ else -}}
                 {{- $active := or ($currentPage.IsMenuCurrent $section .) ($currentPage.HasMenuCurrent $section .) -}}
                 {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
-                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .Permalink }}">{{ .Name }}</a></li>
+                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
               {{ end -}}
             {{ end -}}
           </ul>

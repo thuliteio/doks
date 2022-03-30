@@ -223,6 +223,12 @@ pre {
   width: 100%;
 }
 
+@include media-breakpoint-up(md) {
+  .dropdown-menu.dropdown-menu-main {
+    width: auto;
+  }
+}
+
 .dropdown-menu-main .dropdown-item {
   color: inherit;
   font-size: $font-size-base;

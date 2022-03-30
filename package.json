@@ -43,7 +43,7 @@
     "autoprefixer": "^10.4",
     "bootstrap": "^5.1",
     "clipboard": "^2.0",
-    "eslint": "^8.11",
+    "eslint": "^8.12",
     "exec-bin": "^1.0.0",
     "flexsearch": "^0.7.21",
     "highlight.js": "^11.5",
@@ -63,6 +63,6 @@
     "stylelint-config-standard-scss": "^3.0"
   },
   "otherDependencies": {
-    "hugo": "0.95.0"
+    "hugo": "0.96.0"
   }
 }

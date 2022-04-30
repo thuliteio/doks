@@ -97,8 +97,8 @@ Source:
   {{ $list := (where .Site.Pages "Section" "docs") -}}
   {{ $len := (len $list) -}}
 
-  index.add(
-    {{ range $index, $element := $list -}}
+  {{ range $index, $element := $list -}}
+    index.add(
       {
         id: {{ $index }},
         href: "{{ .RelPermalink }}",
@@ -109,12 +109,9 @@ Source:
           description: {{ .Summary | plainify | jsonify }},
         {{ end -}}
         content: {{ .Plain | jsonify }}
-      })
-      {{ if ne (add $index 1) $len -}}
-        .add(
-      {{ end -}}
-    {{ end -}}
-  ;
+      }
+    );
+  {{ end -}}
 
   search.addEventListener('input', show_results, true);
 

@@ -62,6 +62,19 @@ Nine main reasons why you should use Doks:
 
 9. __Dark mode__. Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.
 
+
+
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
+
 ### Other features
 
 - __Multilingual and i18n__ support

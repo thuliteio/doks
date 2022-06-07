@@ -52,7 +52,7 @@
     "highlight.js": "^11.5",
     "hugo-installer": "^3.1",
     "instant.page": "^5.1",
-    "katex": "^0.15",
+    "katex": "^0.16",
     "lazysizes": "^5.3",
     "markdownlint-cli2": "^0.4.0",
     "netlify-plugin-submit-sitemap": "^0.3.0",

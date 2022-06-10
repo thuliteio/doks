@@ -1,6 +1,20 @@
 {{ if and (ne .Params.toc false) (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") -}}
-  <div class="page-links">
-    <h3>On this page</h3>
-    {{ .TableOfContents }}
+<div class="d-xl-none">
+  <p>
+    <a class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" href="#onThisPage" role="button" aria-expanded="false" aria-controls="onThisPage">
+      On this page
+    </a>
+  </p>
+  <div class="collapse" id="onThisPage">
+    <div class="card card-body py-1">
+      <div class="page-links">
+        {{ .TableOfContents }}
+      </div>
+    </div>
   </div>
+</div>
+<div class="page-links d-none d-xl-block">
+  <h3>On this page</h3>
+  {{ .TableOfContents }}
+</div>
 {{ end -}}

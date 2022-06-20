@@ -434,15 +434,18 @@ button#doks-versions {
   outline: 0;
 }
 
-.doks-sidebar-toggle .doks-collapse {
+.doks-sidebar-toggle .doks-collapse,
+.doks-toc-toggle .doks-collapse {
   display: none;
 }
 
-.doks-sidebar-toggle:not(.collapsed) .doks-expand {
+.doks-sidebar-toggle:not(.collapsed) .doks-expand,
+.doks-toc-toggle:not(.collapsed) .doks-expand {
   display: none;
 }
 
-.doks-sidebar-toggle:not(.collapsed) .doks-collapse {
+.doks-sidebar-toggle:not(.collapsed) .doks-collapse,
+.doks-toc-toggle:not(.collapsed) .doks-collapse {
   display: inline-block;
 }
 

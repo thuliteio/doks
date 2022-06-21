@@ -75,6 +75,9 @@ docsRepoSubPath = ""
 editPage = false
 lastMod = false
 
+[sections]
+  sectionNav = ["docs", "guides"]
+
 [options]
   lazySizes = true
   clipBoard = true

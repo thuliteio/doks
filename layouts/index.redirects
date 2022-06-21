@@ -1,8 +1,8 @@
 {{- range $p := .Site.Pages -}}
 {{- range .Aliases }}
-{{ . }} {{ $p.RelPermalink -}}
+{{ . }} {{ $p.RelPermalink }}
 {{- end }}
-{{- end -}}
+{{- end }}
 
 # /docs/1.0/prologue/   /docs/1.0/prologue/introduction/
 # /docs/1.0/help/       /docs/1.0/help/how-to-update/

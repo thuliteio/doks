@@ -3,8 +3,8 @@
   functions = "functions"
 
 [build.environment]
-  NODE_VERSION = "16.15.0"
-  NPM_VERSION = "8.5.5"
+  NODE_VERSION = "16.15.1"
+  NPM_VERSION = "8.11.0"
 
 [context.production]
   command = "npm run build"

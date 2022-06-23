@@ -214,9 +214,15 @@ body {
   text-decoration: none;
 }
 
-#TableOfContents ul {
+#TableOfContents ul,
+#toc ul {
   padding-left: 0;
   list-style: none;
+}
+
+#toc a.active {
+  color: $primary;
+  font-weight: 500;
 }
 
 ::selection {

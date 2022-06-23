@@ -92,6 +92,7 @@ lastMod = false
   docsVersioning = false
   fullWidth = false
   navbarSticky = true
+  scrollSpy = true # experimental; needs Bootstrap >= 5.2.0-beta1
 
 [menu]
   [menu.section]

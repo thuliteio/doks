@@ -100,6 +100,9 @@ Source:
   {{- $list = .Site.Pages }}
   {{- else }}
   {{- $list = (where .Site.Pages "Type" "in" .Site.Params.options.searchSectionsIndex) }}
+  {{- if (in .Site.Params.options.searchSectionsIndex "HomePage") }}
+  {{ $list = $list | append .Site.Home }}
+  {{- end }}
   {{- end }}
   {{- else }}
   {{- $list = (where .Site.Pages "Section" "docs") }}

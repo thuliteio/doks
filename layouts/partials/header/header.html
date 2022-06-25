@@ -80,7 +80,7 @@
         {{- $showFlexSearch := .Site.Params.options.flexSearch }}
         {{- if $showFlexSearch }}
         {{- if and (isset .Site.Params.options "searchsectionsshow") (not (eq .Site.Params.options.searchSectionsShow "ALL")) }}
-        {{- $showFlexSearch = or (eq (len .Site.Params.options.searchSectionsShow) 0) (in .Site.Params.options.searchSectionsShow .Section) }}
+        {{- $showFlexSearch = or (eq (len .Site.Params.options.searchSectionsShow) 0) (in .Site.Params.options.searchSectionsShow .Section) (and .IsHome (in .Site.Params.options.searchSectionsShow "HomePage")) }}
         {{- end }}
         {{- end }}
 

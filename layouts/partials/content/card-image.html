@@ -1,4 +1,4 @@
-{{ $fillImage := .Scratch.Get "fillImage" }}
+{{ $fillImage := .Scratch.Get "fillImageCard" }}
 {{ if not $fillImage -}}
   {{ $fillImage = site.Params.fillImage }}
 {{ end -}}
@@ -8,7 +8,15 @@
   {{ $image = resources.Get (printf "%s%s" "images/" site.Params.defaultImage) }}
 {{ end -}}
 
-{{ $image = $image.Fill $fillImage }}
+{{ $webp := printf "%s%s" $fillImage " webp" }}
+{{ $image = $image.Resize $webp}}
+
 {{ $lqip := $image.Resize site.Params.lqipWidth -}}
 
-<img class="card-img-top img-fluid lazyload blur-up" src="{{ $lqip.Permalink }}" data-src="{{ $image.Permalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .Title }}">
+<img
+  class="card-img-top img-fluid lazyload blur-up"
+  src="{{ $lqip.Permalink }}"
+  data-src="{{ $image.Permalink }}"
+  width="{{ $image.Width }}"
+  height="{{ $image.Height }}"
+  alt="{{ .Title }}">

@@ -9,3 +9,7 @@ weight: 50
 images: ["say-hello-to-doks.png"]
 contributors: ["Henk Verlinde"]
 ---
+
+![Image](security-as-code-startup-jit-comes-out-of-stealth-with-38-5m-in-seed-funding.jpg)
+
+![Screenshot](image003.png)

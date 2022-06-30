@@ -58,7 +58,7 @@
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "node-fetch": "^3.2",
     "postcss": "^8.4",
-    "postcss-cli": "^9.1",
+    "postcss-cli": "^10.0",
     "purgecss-whitelister": "^2.4",
     "shx": "^0.3.4",
     "stylelint": "^14.9",

@@ -1,7 +1,7 @@
 {
   "name": "@hyas/doks",
   "description": "Doks theme",
-  "version": "0.5.0-alpha.1",
+  "version": "0.5.0-alpha.2",
   "engines": {
     "node": ">=16.15.1"
   },
@@ -38,7 +38,7 @@
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17",
+    "@babel/cli": "^7.18",
     "@babel/core": "^7.18",
     "@babel/preset-env": "^7.18",
     "@fullhuman/postcss-purgecss": "^4.1",
@@ -58,7 +58,7 @@
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "node-fetch": "^3.2",
     "postcss": "^8.4",
-    "postcss-cli": "^9.1",
+    "postcss-cli": "^10.0",
     "purgecss-whitelister": "^2.4",
     "shx": "^0.3.4",
     "stylelint": "^14.9",

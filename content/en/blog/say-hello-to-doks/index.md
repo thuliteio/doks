@@ -42,7 +42,6 @@ contributors: ["Henk Verlinde"]
 
 ![Image](images/harley-davidson.jpg)
 
-
 ## Image in base64
 
 ```md
@@ -80,7 +79,6 @@ contributors: ["Henk Verlinde"]
 ```
 
 {{< figure src="images/harley-davidson.jpg" alt="Harley Davidson" caption="For a figure caption can be different than alt text" >}}
-
 
 ### Image in base64
 

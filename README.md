@@ -34,7 +34,7 @@
   </a>
 </p>
 
-![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/h-enk/doks/master/images/tn.png)
+![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/h-enk/doks/master/images/doks.png)
 
 ## Demo
 
@@ -156,4 +156,4 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 
 Support this project by becoming a backer. Your avatar will show up here.
 
-[![Backers](https://opencollective.com/doks/tiers/backer.svg)](https://opencollective.com/doks)
+[![Backers](https://opencollective.com/doks/tiers/backer.svg?49741992)](https://opencollective.com/doks)

@@ -77,7 +77,14 @@
           {{ end -}}
         </ul>
 
-        {{ if .Site.Params.options.flexSearch -}}
+        {{- $showFlexSearch := .Site.Params.options.flexSearch }}
+        {{- if $showFlexSearch }}
+        {{- if and (isset .Site.Params.options "searchsectionsshow") (not (eq .Site.Params.options.searchSectionsShow "ALL")) }}
+        {{- $showFlexSearch = or (eq (len .Site.Params.options.searchSectionsShow) 0) (in .Site.Params.options.searchSectionsShow .Section) (and .IsHome (in .Site.Params.options.searchSectionsShow "HomePage")) }}
+        {{- end }}
+        {{- end }}
+
+        {{ if $showFlexSearch -}}
         <hr class="text-black-50 my-4 d-lg-none">
         <form class="doks-search position-relative flex-grow-1 ms-lg-auto me-lg-2">
           <input id="search" class="form-control is-search" type="search" placeholder="Search docs..." aria-label="Search docs..." autocomplete="off">

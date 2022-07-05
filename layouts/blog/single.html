@@ -3,14 +3,13 @@
 <div class="row justify-content-center">
   <div class="col-md-12 col-lg-10">
     <div class="blog-header">
-      <div class="mt-5 mb-n3">{{ if .Params.categories -}}{{ range $index, $category := .Params.categories -}}{{ if gt $index 0 -}}, {{ end -}}<a class="link-muted" href="{{ "/categories/" | absURL }}{{ . | urlize }}/">{{ . }}</a>{{ end -}}{{ end -}}</div>
       <h1>{{ .Title }}</h1>
       {{ partial "main/blog-meta.html" . }}
     </div>
   </div>
   <div class="col-md-13">
-    <div class="mt-n3">
-      {{- .Scratch.Set "fillImage" "1270x620 Center" -}}
+    <div class="mt-n4">
+      {{- .Scratch.Set "fillImage" "1270x715 Center" -}}
       {{ partial "content/figure.html" . }}
     </div>
   </div>

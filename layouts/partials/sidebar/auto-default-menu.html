@@ -2,7 +2,7 @@
 {{ $currentPage := . -}}
 {{ $section := $currentPage.Section -}}
 {{ range (where .Site.Sections "Section" "in" $section) }}
-  {{ range .Sections.ByWeight.Reverse }}
+  {{ range .Sections }}
     {{ $active := in $currentPage.RelPermalink .RelPermalink }}
     <h3 class="h6 text-uppercase mb-2">{{ .Title }}</h3>
     <ul class="list-unstyled">

@@ -573,10 +573,10 @@ $navbar-dark-active-color:          $link-color-dark;
 
 [data-dark-mode] #toc a.active {
   color: $link-color-dark;
+}
 
 [data-dark-mode] .btn-light {
   color: $link-color-dark;
   background: $body-overlay-dark;
   border: 1px solid $body-overlay-dark;
-
 }

@@ -92,6 +92,7 @@ lastMod = false
   docsVersioning = false
   fullWidth = false
   navbarSticky = true
+  toTopButton = false
 
 [menu]
   [menu.section]

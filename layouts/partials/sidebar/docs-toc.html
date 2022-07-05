@@ -17,6 +17,10 @@
 </div>
 <div class="page-links d-none d-xl-block">
   <h3>On this page</h3>
-  {{ .TableOfContents }}
+  {{ if eq .Site.Params.options.scrollSpy true -}}
+    {{ .TableOfContents | replaceRE "<nav id=\"TableOfContents\">" "<nav id=\"toc\">" | safeHTML }}
+  {{ else -}}
+    {{ .TableOfContents }}
+  {{ end -}}
 </div>
 {{ end -}}

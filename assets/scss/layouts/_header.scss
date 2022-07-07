@@ -413,6 +413,11 @@ button#doks-versions {
 
 .btn-menu {
   margin-left: 1rem;
+  border: transparent;
+}
+
+.btn-doks-light {
+  border: transparent;
 }
 
 .btn-menu,
@@ -426,12 +431,15 @@ button#doks-versions {
 .btn-doks-light:hover,
 .doks-sidebar-toggle:hover {
   background: $pink-100;
+  border: transparent;
 }
 
 .btn-menu:focus,
+.btn-doks-light:focus,
 .doks-sidebar-toggle:focus,
 .doks-mode-toggle:focus {
   outline: 0;
+  border: transparent;
 }
 
 .doks-sidebar-toggle .doks-collapse,

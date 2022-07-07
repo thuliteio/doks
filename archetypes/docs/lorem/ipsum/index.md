@@ -10,6 +10,7 @@ type: docs
 menu:
   {{ .Section }}:
     parent: "lorem"
+    identifier: "{{ .Name }}"
 weight: 100
 toc: true
 ---

@@ -9,6 +9,7 @@ images: []
 menu:
   docs:
     parent: ""
+    identifier: "{{ .Name }}"
 weight: 999
 toc: true
 ---

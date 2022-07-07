@@ -4,6 +4,7 @@
   weight = 10
   [en.params]
     languageISO = "EN"
+    languageTag = "en-US"
 
 [de]
   languageName = "German"
@@ -11,6 +12,7 @@
   weight = 15
   [de.params]
     languageISO = "DE"
+    languageTag = "de-DE"
 
 [nl]
   languageName = "Nederlands"
@@ -18,6 +20,7 @@
   weight = 20
   [nl.params]
     languageISO = "NL"
+    languageTag = "nl-NL"
     titleAddition = "Modern documentatie-thema"
     description = "Doks is een Hugo-thema waarmee je moderne documentatie-websites kunt bouwen die veilig, snel en klaar voor SEO zijn — standaard."
     titleHome = "Doks thema"

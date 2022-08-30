@@ -1,18 +1,16 @@
 {
-  "name": "@hyas/doks",
-  "description": "Doks theme",
-  "version": "0.5.0",
+  "name": "Doks",
+  "description": "Doks theme for Hyas sites",
+  "version": "0.6.0",
   "engines": {
-    "node": ">=16.16.0"
+    "node": ">=16.17.0",
+    "npm": ">=8.15.0"
   },
   "browserslist": [
     "defaults"
   ],
   "repository": "https://github.com/h-enk/doks",
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "scripts": {
     "init": "shx rm -rf .git && git init -b main",
     "create": "exec-bin node_modules/.bin/hugo/hugo new",
@@ -42,7 +40,10 @@
     "@babel/core": "^7.18",
     "@babel/preset-env": "^7.18",
     "@fullhuman/postcss-purgecss": "^4.1",
-    "@hyas/images": "^0.2.2",
+    "@hyas/core": "^0.1.1",
+    "@hyas/images": "^0.2.3",
+    "@hyas/seo": "^0.1.2",
+    "@hyas/themes-doks": "^0.1.0",
     "auto-changelog": "^2.4",
     "autoprefixer": "^10.4",
     "bootstrap": "^5.2.0-beta1",
@@ -53,9 +54,10 @@
     "highlight.js": "^11.5",
     "hugo-installer": "^3.1",
     "instant.page": "^5.1",
-    "katex": "^0.16",
+    "katex": "^0.16.2",
     "lazysizes": "^5.3",
     "markdownlint-cli2": "^0.4.0",
+    "mermaid": "^9.1.6",
     "netlify-plugin-submit-sitemap": "^0.4.0",
     "node-fetch": "^3.2",
     "postcss": "^8.4",

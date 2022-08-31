@@ -4,7 +4,7 @@
 title = "Doks"
 titleSeparator = "-"
 titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
+description = "Doks is a documentation theme for Hyas, a Hugo-powered Jamstack framework for building production-ready websites."
 
 ## Documentation
 # docsVersion = "0.3"

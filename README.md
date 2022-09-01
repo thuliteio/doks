@@ -31,7 +31,7 @@
   </a>
 </p>
 
-![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/h-enk/doks/master/images/doks.png)
+![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/h-enk/doks/master/static/images/doks-screenshot.png)
 
 ## Demo
 

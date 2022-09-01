@@ -22,10 +22,6 @@
   source = "node_modules/@hyas/themes-doks/assets"
   target = "assets"
 
-# [[mounts]]
-#   source = "node_modules/@hyas/themes-doks/content"
-#   target = "content"
-
 [[mounts]]
   source = "node_modules/@hyas/themes-doks/data"
   target = "data"
@@ -61,10 +57,6 @@
 [[mounts]]
   source = "assets"
   target = "assets"
-
-# [[mounts]]
-#   source = "content"
-#   target = "content"
 
 [[mounts]]
   source = "data"

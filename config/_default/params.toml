@@ -10,9 +10,8 @@ description = "Doks is a documentation theme for Hyas, a Hugo-powered Jamstack f
 # docsVersion = "0.3"
 
 ## Open Graph
-images = ["doks.png"]
+images = ["images/doks-schema-image.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
 titleHome = "Doks Theme"
 
 ## Twitter Cards
@@ -28,30 +27,18 @@ schemaAuthorTwitter = "https://twitter.com/henkverlinde"
 schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
 schemaAuthorGitHub = "https://github.com/h-enk"
 schemaLocale = "en-US"
-schemaLogo = "logo-doks.png"
+schemaLogo = "images/doks-schema-logo.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "doks.png"
+schemaImage = "images/doks-schema-image.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/getdoks"
 schemaLinkedIn = ""
 schemaGitHub = "https://github.com/h-enk/doks"
-schemaSection = "blog"
-
-## Sitelinks Search Box
-siteLinksSearchBox = false
 
 ## Chrome Browser
 themeColor = "#fff"
-
-# Images
-quality = 85
-bgColor = "#fff"
-landscapePhotoWidths = [900, 800, 700, 600, 500]
-portraitPhotoWidths = [800, 700, 600, 500]
-lqipWidth = "20x"
-smallLimit = "300"
 
 # Images
 imageResponsive = true
@@ -60,7 +47,15 @@ imageImageSizes = ["480","720","1080","1280","1600","2048"]
 singleSize = false
 imageAddClass = "img-fluid lazyload blur-up"
 
-### Image template
+# Images - Temporarily left in place for backward compatibility
+quality = 85
+bgColor = "#fff"
+landscapePhotoWidths = [900, 800, 700, 600, 500]
+portraitPhotoWidths = [800, 700, 600, 500]
+lqipWidth = "20x"
+smallLimit = "300"
+
+### Image template - Temporarily left in place for backward compatibility
 defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 

@@ -1,7 +1,7 @@
 name = "Doks"
 license = "MIT"
 licenselink = "https://github.com/h-enk/doks/blob/master/LICENSE"
-description = "Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+description = "Doks is a documentation theme for Hyas, a Hugo-powered Jamstack framework for building production-ready websites."
 
 homepage = "https://github.com/h-enk/doks"
 demosite = "https://doks.netlify.app"

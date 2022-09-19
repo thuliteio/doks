@@ -46,6 +46,7 @@ body.docs {
 
 @include media-breakpoint-up(md) {
   body {
+    color: $body-color;
     font-size: $font-size-md;
 
     /*

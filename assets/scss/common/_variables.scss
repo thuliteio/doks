@@ -63,8 +63,8 @@ $navbar-light-toggler-icon-bg: none;
 //
 // Settings for the `<body>` element.
 
-$body-bg:                   $white;
-$body-color:                $black;
+$body-bg:                   $white !default;
+$body-color:                $black !default;
 
 // Links
 //
@@ -139,7 +139,7 @@ $navbar-padding-x:                  null;
 
 $navbar-nav-link-padding-x:         0.5rem;
 
-$navbar-light-color:                $black;
+$navbar-light-color:                $body-color;
 $navbar-light-hover-color:          $primary;
 $navbar-light-active-color:         $primary;
 
@@ -168,20 +168,20 @@ $dropdown-config: (
   layout-type: normal,
   layout-width: normal,
   layout-alignment: align,
-  background-color: $white,
+  background-color: $body-bg,
   border-radius: 4,
   border-width: 1,
-  border-color: $gray-200,
+  border-color: $body-bg,
   box-shadow: none,
   branding-position: bottom,
   spacing: normal,
   include-desc: yes,
-  background-category-header: $white,
+  background-category-header: $body-bg,
   font-size: normal,
-  header-color: $black,
-  title-color: $black,
-  subtitle-color: $black,
-  text-color: $black,
+  header-color: $body-color,
+  title-color: $body-color,
+  subtitle-color: $body-color,
+  text-color: $body-color,
   highlight-color: $purple,
   highlight-opacity: 0.1,
   highlight-type: underline

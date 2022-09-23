@@ -51,7 +51,7 @@
     "exec-bin": "^1.0.0",
     "flexsearch": "^0.7.21",
     "highlight.js": "^11.5",
-    "hugo-installer": "^3.1",
+    "hugo-installer": "^4.0",
     "instant.page": "^5.1",
     "katex": "^0.16",
     "lazysizes": "^5.3",

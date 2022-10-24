@@ -1,10 +1,15 @@
 <!-- Auto collapsible section menu -->
 <ul class="list-unstyled collapsible-sidebar">
+  <li class="mb-1">
+    <button data-link="home" class="btn btn-toggle align-items-centers">
+      <a class="docs-link rounded {{ if .IsHome }}active{{ end }}" href="{{ .Site.Home.Permalink }}">Home</a></li>
+    </button>
+  </li>
   {{ $currentPage := . -}}
-  {{ $section := $currentPage.Section -}}
-  {{ range (where .Site.Sections "Section" "in" $section) }}
-    {{ range .Sections }}
-      {{ $active := in $currentPage.RelPermalink .RelPermalink }}
+    {{ range .Site.Sections }}
+    {{ if eq .Title "Search"}}
+    {{else}}
+    {{ $active := in $currentPage.RelPermalink .RelPermalink }}
       <li class="mb-1">
         <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ md5 .Title }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
           {{ .Title }}
@@ -53,5 +58,5 @@
         </div>
       </li>
     {{ end }}
-  {{ end }}
+    {{ end }}
 </ul>

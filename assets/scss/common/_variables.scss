@@ -30,6 +30,8 @@ $color-btn-bg: $pink-500;
 $color-btn-border: darken($pink-500, 5%);
 $color-btn-text: $white;
 
+$zindex-dropdown: 1002;
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -82,7 +84,7 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1240px,
-  xxl: 1320px
+  xxl: 1920px
 );
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");

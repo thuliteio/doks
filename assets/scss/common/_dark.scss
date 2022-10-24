@@ -16,9 +16,9 @@ $link-color-dark: $blue-300;
 $button-color-dark: $link-color-dark;
 $focus-color-dark: lighten($link-color-dark, 2.5%);
 
-$navbar-dark-color:                 $body-color-dark;
-$navbar-dark-hover-color:           $link-color-dark;
-$navbar-dark-active-color:          $link-color-dark;
+$navbar-dark-color: $body-color-dark;
+$navbar-dark-hover-color: $link-color-dark;
+$navbar-dark-active-color: $link-color-dark;
 
 /** Theme styles */
 
@@ -55,7 +55,7 @@ $navbar-dark-active-color:          $link-color-dark;
   color: $navbar-dark-color;
 }
 
-[data-dark-mode] body .show > .btn-doks-light,
+[data-dark-mode] body .show>.btn-doks-light,
 [data-dark-mode] body .btn-doks-light:hover,
 [data-dark-mode] body .btn-doks-light:active {
   color: $link-color-dark;
@@ -125,8 +125,8 @@ $navbar-dark-active-color:          $link-color-dark;
   color: $navbar-dark-disabled-color;
 }
 
-[data-dark-mode] body .navbar-light .navbar-nav .show > .nav-link,
-[data-dark-mode] body .navbar-light .navbar-nav .active > .nav-link,
+[data-dark-mode] body .navbar-light .navbar-nav .show>.nav-link,
+[data-dark-mode] body .navbar-light .navbar-nav .active>.nav-link,
 [data-dark-mode] body .navbar-light .navbar-nav .nav-link.show,
 [data-dark-mode] body .navbar-light .navbar-nav .nav-link.active {
   color: $navbar-dark-active-color;
@@ -265,7 +265,8 @@ $navbar-dark-active-color:          $link-color-dark;
   border: 1px solid $link-color-dark;
 }
 
-[data-dark-mode] body .doks-search::after {
+[data-dark-mode] #form::after,
+[data-dark-mode] #form-search:after {
   color: $gray-300;
   border: 1px solid $gray-700;
 }
@@ -332,38 +333,45 @@ $navbar-dark-active-color:          $link-color-dark;
 }
 
 [data-dark-mode] body .docs-links,
+[data-dark-mode] body .offcanvas-body,
 [data-dark-mode] body .docs-toc {
   scrollbar-width: thin;
   scrollbar-color: $body-bg-dark $body-bg-dark;
 }
 
 [data-dark-mode] body .docs-links::-webkit-scrollbar,
+[data-dark-mode] body .offcanvas-body::-webkit-scrollbar,
 [data-dark-mode] body .docs-toc::-webkit-scrollbar {
   width: 5px;
 }
 
 [data-dark-mode] body .docs-links::-webkit-scrollbar-track,
+[data-dark-mode] body .offcanvas-body::-webkit-scrollbar-track,
 [data-dark-mode] body .docs-toc::-webkit-scrollbar-track {
   background: $body-bg-dark;
 }
 
 [data-dark-mode] body .docs-links::-webkit-scrollbar-thumb,
+[data-dark-mode] body .offcanvas-body::-webkit-scrollbar-thumb,
 [data-dark-mode] body .docs-toc::-webkit-scrollbar-thumb {
   background: $body-bg-dark;
 }
 
 [data-dark-mode] body .docs-links:hover,
+[data-dark-mode] body .offcanvas-body:hover,
 [data-dark-mode] body .docs-toc:hover {
   scrollbar-width: thin;
   scrollbar-color: $border-dark $body-bg-dark;
 }
 
 [data-dark-mode] body .docs-links:hover::-webkit-scrollbar-thumb,
+[data-dark-mode] body .offcanvas-body:hover::-webkit-scrollbar-thumb,
 [data-dark-mode] body .docs-toc:hover::-webkit-scrollbar-thumb {
   background: $border-dark;
 }
 
 [data-dark-mode] body .docs-links::-webkit-scrollbar-thumb:hover,
+[data-dark-mode] body .offcanvas-body::-webkit-scrollbar-thumb:hover,
 [data-dark-mode] body .docs-toc::-webkit-scrollbar-thumb:hover {
   background: $border-dark;
 }
@@ -526,57 +534,4 @@ $navbar-dark-active-color:          $link-color-dark;
     background-color: $body-overlay-dark;
     border-color: $border-dark;
   }
-}
-
-[data-dark-mode] .dropdown-menu {
-  background: $body-overlay-dark;
-}
-
-[data-dark-mode] .dropdown-menu .dropdown-item {
-  color: $body-color-dark;
-}
-
-[data-dark-mode] .dropdown-menu .dropdown-item:hover {
-  color: $link-color-dark;
-  background: $body-bg-dark;
-}
-
-[data-dark-mode] .dropdown-menu .dropdown-item.active,
-[data-dark-mode] .dropdown-menu .dropdown-item:focus {
-  color: $link-color-dark;
-  background: $body-bg-dark;
-}
-
-[data-dark-mode] .doks-navbar .dropdown-item.current,
-[data-dark-mode] .doks-subnavbar .dropdown-item.current {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23dee2e6' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 1rem top 0.6rem;
-  background-size: 0.75rem 0.75rem;
-}
-
-[data-dark-mode] details {
-  border: 1px solid $border-dark;
-}
-
-[data-dark-mode] summary:hover {
-  background: $body-overlay-dark;
-}
-
-[data-dark-mode] details[open] > summary {
-  border-bottom: 1px solid $border-dark;
-}
-
-[data-dark-mode] details summary::before {
-  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%28222, 226, 230, 0.75%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
-}
-
-[data-dark-mode] #toc a.active {
-  color: $link-color-dark;
-}
-
-[data-dark-mode] .btn-light {
-  color: $link-color-dark;
-  background: $body-overlay-dark;
-  border: 1px solid $body-overlay-dark;
 }

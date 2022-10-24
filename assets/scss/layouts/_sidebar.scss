@@ -1,37 +1,44 @@
 .docs-links,
-.docs-toc {
+.docs-toc,
+.offcanvas-body {
   scrollbar-width: thin;
   scrollbar-color: $white $white;
 }
 
 .docs-links::-webkit-scrollbar,
-.docs-toc::-webkit-scrollbar {
+.docs-toc::-webkit-scrollbar,
+.offcanvas-body::-webkit-scrollbar {
   width: 5px;
 }
 
 .docs-links::-webkit-scrollbar-track,
-.docs-toc::-webkit-scrollbar-track {
-  background: $white;
+.docs-toc::-webkit-scrollbar-track,
+.offcanvas-body::-webkit-scrollbar-track {
+  background: $body-bg;
 }
 
 .docs-links::-webkit-scrollbar-thumb,
-.docs-toc::-webkit-scrollbar-thumb {
+.docs-toc::-webkit-scrollbar-thumb,
+.offcanvas-body::-webkit-scrollbar-thumb {
   background: $white;
 }
 
 .docs-links:hover,
-.docs-toc:hover {
+.docs-toc:hover,
+.offcanvas-body:hover {
   scrollbar-width: thin;
   scrollbar-color: $gray-200 $white;
 }
 
 .docs-links:hover::-webkit-scrollbar-thumb,
-.docs-toc:hover::-webkit-scrollbar-thumb {
+.docs-toc:hover::-webkit-scrollbar-thumb,
+.offcanvas-body:hover::-webkit-scrollbar-thumb {
   background: $gray-200;
 }
 
 .docs-links::-webkit-scrollbar-thumb:hover,
-.docs-toc::-webkit-scrollbar-thumb:hover {
+.docs-toc::-webkit-scrollbar-thumb:hover,
+.offcanvas-body::-webkit-scrollbar-thumb:hover {
   background: $gray-200;
 }
 
@@ -44,6 +51,7 @@
 }
 
 @include media-breakpoint-up(lg) {
+
   .docs-links h3,
   .page-links h3 {
     margin: 1.125rem 1.5rem 0.75rem 0;
@@ -56,6 +64,7 @@
 }
 
 a.docs-link {
+  overflow-wrap: break-word;
   color: $body-color;
   display: block;
   padding: 0.125rem 0;
@@ -90,12 +99,6 @@ a.docs-link {
 .page-links a:hover {
   text-decoration: none;
   color: $link-color;
-}
-
-.nav-link.active,
-.dropdown-menu-main .dropdown-item.active,
-.docs-link.active {
-  font-weight: 500;
 }
 
 .docs-links h3.sidebar-link,

@@ -9,3 +9,8 @@
   <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
 {{ end -}}
 <noscript><style>img.lazyload { display: none; }</style></noscript>
+
+{{ if .Site.Params.options.cookieConsent }}
+  {{ $cookieConsentCss := resources.Get "vanilla-cookieconsent/cookieconsent.css" -}}
+  <link rel="stylesheet" href="{{ $cookieConsentCss.Permalink | relURL }}">
+{{ end -}}

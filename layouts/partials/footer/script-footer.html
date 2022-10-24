@@ -1,5 +1,9 @@
 {{ $indexTemplate := resources.Get "js/index.js" -}}
 {{ $index := $indexTemplate | resources.ExecuteAsTemplate "index.js" . -}}
+{{ $fullSearchTemplate := resources.Get "js/fullSearch.js" -}}
+{{ $fullSearch := $fullSearchTemplate | resources.ExecuteAsTemplate "fullSearch.js" . -}}
+{{ $searchUtilitiesTemplate := resources.Get "js/search-utilities.js" -}}
+{{ $searchUtilities := $searchUtilitiesTemplate | resources.ExecuteAsTemplate "search-utilities.js" . -}}
 
 {{ $bs := resources.Get "js/bootstrap.js" -}}
 {{ $bs := $bs | js.Build -}}
@@ -34,14 +38,9 @@
   {{ $slice = $slice | append $instantPage -}}
 {{ end -}}
 
-{{ $showFlexSearch := .Site.Params.options.flexSearch }}
-
-{{ if $showFlexSearch -}}
+{{ if .Site.Params.options.flexSearch -}}
   {{ $flexSearch := resources.Get "js/vendor/flexsearch/dist/flexsearch.bundle.js" -}}
   {{ $slice = $slice | append $flexSearch -}}
-  {{ if and (isset .Site.Params.options "searchsectionsshow") (not (eq .Site.Params.options.searchSectionsShow "ALL")) -}}
-  {{ $showFlexSearch = or (eq (len .Site.Params.options.searchSectionsShow) 0) (in .Site.Params.options.searchSectionsShow .Section) (and .IsHome (in .Site.Params.options.searchSectionsShow "HomePage")) -}}
-  {{ end -}}
 {{ end -}}
 
 {{ if .Site.Params.options.darkMode -}}
@@ -62,17 +61,13 @@
   {{ $slice = $slice | append $katexConfig -}}
 {{ end -}}
 
-{{ $scrollLock := resources.Get "js/scroll-lock.js" | js.Build -}}
-{{ $slice = $slice | append $scrollLock -}}
-
-{{ if .Site.Params.options.toTopButton -}}
-  {{ $toTopButton := resources.Get "js/to-top.js" -}}
-  {{ $toTopButton := $toTopButton | js.Build -}}
-  {{ $slice = $slice | append $toTopButton -}}
+{{ if .Site.Params.options.cookieConsent }}
+  {{ $cookieConsentPlugin := resources.Get "vanilla-cookieconsent/cookieconsent.js" -}}
+  {{ $cookieConsentInit := resources.Get "js/cookieconsent-init.js" | minify | fingerprint "sha512" -}}
+  {{ $slice = $slice | append $cookieConsentPlugin | append $cookieConsentInit -}}
 {{ end -}}
 
 {{ $js := $slice | resources.Concat "main.js" -}}
-
 {{ if eq (hugo.Environment) "development" -}}
   {{ if .Site.Params.options.bootStrapJs -}}
     <script src="{{ $bs.RelPermalink }}" defer></script>
@@ -88,12 +83,26 @@
   {{ with .Params.mermaid -}}
     <script src="{{ $mermaid.RelPermalink }}" defer></script>
   {{ end -}}
-  {{ if $showFlexSearch -}}
+  {{ if (.Site.Params.options.flexSearch) -}}
+    <script src="{{ $searchUtilities.RelPermalink }}" defer></script>
+  {{ end -}}
+  {{ if eq .Title "Search"}}
+    {{ if (.Site.Params.options.flexSearch) -}}
+    <script src="{{ $fullSearch.RelPermalink }}" defer></script>
+    {{ end -}}
+  {{ else }}
+    {{ if (.Site.Params.options.flexSearch) -}}
     <script src="{{ $index.RelPermalink }}" defer></script>
+    {{ end -}}
   {{ end -}}
 {{ else -}}
   {{ $js := $js | minify | fingerprint "sha512" -}}
+  {{ $searchUtilities := $searchUtilities | minify | fingerprint "sha512" -}}
+  {{ if eq .Title "Search"}}
+  {{ $fullSearch := $fullSearch | minify | fingerprint "sha512" -}}
+  {{ else }}
   {{ $index := $index | minify | fingerprint "sha512" -}}
+  {{ end -}}
   {{ $bs := $bs | minify | fingerprint "sha512" -}}
   {{ $highlight := $highlight | minify | fingerprint "sha512" -}}
   {{ $katex := $katex | minify | fingerprint "sha512" -}}
@@ -113,7 +122,16 @@
   {{ with .Params.mermaid -}}
     <script src="{{ $mermaid.RelPermalink }}" integrity="{{ $mermaid.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}
-  {{ if $showFlexSearch -}}
-    <script src="{{ $index.Permalink }}" integrity="{{ $index.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ if (.Site.Params.options.flexSearch) -}}
+    <script src="{{ $searchUtilities.Permalink }}" integrity="{{ $searchUtilities.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ end -}}
+  {{ if eq .Title "Search"}}
+    {{ if and (.Site.Params.options.flexSearch) -}}
+      <script src="{{ $fullSearch.Permalink }}" integrity="{{ $fullSearch.Data.Integrity }}" crossorigin="anonymous" defer></script>
+    {{ end -}}
+  {{ else }}
+    {{ if and (.Site.Params.options.flexSearch) -}}
+      <script src="{{ $index.Permalink }}" integrity="{{ $index.Data.Integrity }}" crossorigin="anonymous" defer></script>
+    {{ end -}}
   {{ end -}}
 {{ end -}}

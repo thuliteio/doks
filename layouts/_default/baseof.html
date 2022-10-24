@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ .Site.Params.languageTag | default "en-US" }}">
+<html lang="{{ .Site.LanguageCode | default "en" }}">
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}
@@ -12,9 +12,9 @@
     {{ .Scratch.Set "class" .Type -}}
     {{ .Scratch.Add "class" " list" -}}
   {{ end -}}
-  <body class="{{ .Scratch.Get "class" }}"{{ if eq .Site.Params.options.scrollSpy true }} data-bs-spy="scroll" data-bs-target="#toc" data-bs-root-margin="0px 0px -90%" data-bs-smooth-scroll="true" tabindex="0"{{ end }}>
+  <body class="{{ .Scratch.Get "class" }}">
     {{ partial "header/header.html" . }}
-    <div class="wrap container-{{ if .Site.Params.options.fullWidth }}fluid{{ else }}xxl{{ end }}" role="document">
+    <div class="wrap container-xxl" role="document">
       <div class="content">
         {{ block "main" . }}{{ end }}
       </div>
@@ -23,10 +23,44 @@
     {{ block "sidebar-footer" . }}{{ end }}
     {{ partial "footer/footer.html" . }}
     {{ partial "footer/script-footer.html" . }}
-    {{ if eq .Site.Params.options.toTopButton true -}}
-    <div class="d-flex fixed-bottom pb-4 pb-lg-5 pe-4 pe-lg-5">
-      <a id="toTop" href="#" class="btn btn-outline-primary rounded-circle ms-auto p-2"><span class="visually-hidden">Top</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg></a>
-    </div>
-    {{ end }}
+
+    <!-- Google Tag Manager -->
+    <script type="text/plain" data-cookiecategory="analytics">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TR443T9');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Send Custom Event to Google Analytics for the live search functionality. -->
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const searchSuggestionsWrapper = document.getElementById('suggestions');
+        if (!searchSuggestionsWrapper) return;
+
+        searchSuggestionsWrapper.addEventListener('click', (event) => {
+          const target = event.target;
+
+          for (const suggestionElement of searchSuggestionsWrapper.children) {
+            if (!suggestionElement.contains(target)) continue;
+
+            // This guards when the event is triggered on the padding area of the "search result" element.
+            // The page from the result will only be loaded when clicked on the <a> or any element inside.
+            if (target === suggestionElement) return;
+
+            const suggestionTitle = suggestionElement.querySelector('.suggestion__title');
+
+            // When there are no results for the search term.
+            if (!suggestionTitle) return;
+            const searchTerm = document.getElementById('search').value;
+
+            window.dataLayer.push({
+              'event': 'liveSearch',
+              'searchTerm': searchTerm
+            });
+          }
+        });
+      });
+    </script>
   </body>
 </html>

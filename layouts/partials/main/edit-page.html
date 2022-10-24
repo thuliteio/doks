@@ -1,28 +1,16 @@
-{{ $parts := slice .Site.Params.docsRepo }}
+{{ $filePath := replace .File.Path "\\" "/" }}
+{{ $editPath := "null" }}
 
 {{ if (eq .Site.Params.repoHost "GitHub") }}
-  {{ $parts = $parts | append "blob" .Site.Params.docsRepoBranch }}
+  {{ $editPath = "/blob/" }}
 {{ else if (eq .Site.Params.repoHost "Gitea") }}
-  {{ $parts = $parts | append "_edit" .Site.Params.docsRepoBranch }}
+  {{ $editPath = "/_edit/" }}
 {{ else if (eq .Site.Params.repoHost "GitLab") }}
-  {{ $parts = $parts | append "-/blob" .Site.Params.docsRepoBranch }}
-{{ else if (eq .Site.Params.repoHost "Bitbucket") }}
-  {{ $parts = $parts | append "src" .Site.Params.docsRepoBranch }}
-{{ else if (eq .Site.Params.repoHost "BitbucketServer") }}
-  {{ $parts = $parts | append "browse" .Site.Params.docsRepoBranch }}
+  {{ $editPath = "/-/blob/" }}
 {{ end }}
 
-{{ if isset .Site.Params "docsreposubpath" }}
-  {{ if not (eq .Site.Params.docsRepoSubPath "") }}
-    {{ $parts = $parts | append .Site.Params.docsRepoSubPath }}
-  {{ end }}
-{{ end }}
-
-{{ $filePath := replace .File.Path "\\" "/" }}
-
-{{ $parts = $parts | append "content" .Lang $filePath }}
-
-{{ $url := delimit $parts "/" }}
+{{ $contentPath := print .Site.Params.docsRepo $editPath .Site.Params.docsRepoBranch "/content/" }}
+{{ $url := print $contentPath .Lang "/" $filePath }}
 
 <div class="edit-page">
   <a href="{{ $url }}">

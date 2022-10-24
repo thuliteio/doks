@@ -29,7 +29,6 @@
 .navbar {
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid $gray-200;
 
   /*
   margin-top: 4px;
@@ -39,8 +38,6 @@
 @include media-breakpoint-up(lg) {
   .navbar {
     z-index: 1025;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
   }
 }
 
@@ -89,19 +86,13 @@
 }
 
 button#doks-languages {
-  margin: 0.25rem 0 0;
-
-  @include media-breakpoint-up(lg) {
-    margin: 0.25rem 0.5rem 0 0.25rem;
-  }
+  margin-right: -0.5625rem;
+  margin-left: 0.75rem;
 }
 
 button#doks-versions {
-  margin: 0.25rem 0 0;
-
-  @include media-breakpoint-up(lg) {
-    margin: 0.25rem 0.5rem 0 0.25rem;
-  }
+  margin-right: -0.5625rem;
+  margin-left: 0;
 }
 
 .offcanvas .nav-link {
@@ -140,7 +131,7 @@ button#doks-versions {
 
 .header-bar {
   border-top: 4px solid;
-  border-image-source: linear-gradient(90deg, $primary, #8ed6fb 50%, #d32e9d);
+  border-image-source: linear-gradient(90deg, $primary, #02abff 50%, #2ed365);
   border-image-slice: 1;
 }
 
@@ -159,10 +150,12 @@ button#doks-versions {
 }
 */
 
+.doks-search.list-search {
+  width: 80%;
+  max-width: none;
+}
+
 @include media-breakpoint-up(md) {
-  .navbar-brand {
-    margin-right: 0.75rem !important;
-  }
 
   .main-nav .nav-item:first-child .nav-link,
   .social-nav .nav-item:first-child .nav-link {
@@ -189,28 +182,37 @@ button#doks-versions {
   */
 }
 
+.show--consent,
+.show--consent body {
+  height: auto !important;
+  width: 100vw !important;
+  overflow-x: hidden !important;
+}
+
+/*We need this so the IM examples don't overflow the page*/
+object {
+  width: 100%;
+}
+
 .form-control.is-search {
   padding-right: 4rem;
   border: 1px solid transparent;
   background: $gray-100;
+}
 
-  @include media-breakpoint-up(md) {
-    width: calc(100% + 2rem);
-  }
-
-  @include media-breakpoint-up(lg) {
-    width: 100%;
-  }
+.form-control.is-search.list-search {
+  width: 100%;
+  display: inline;
 }
 
 .form-control.is-search:focus {
   border: 1px solid $primary;
 }
 
-.doks-search::after {
+#form::after,
+#form-search::after {
   position: absolute;
   top: 0.4625rem;
-  right: 0.5375rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,14 +224,14 @@ button#doks-versions {
   content: "Ctrl + /";
   border: 1px solid $gray-300;
   border-radius: 0.25rem;
+}
 
-  @include media-breakpoint-up(md) {
-    right: -1.4625rem;
-  }
+#form-search::after {
+  right: 3.3rem;
+}
 
-  @include media-breakpoint-up(lg) {
-    right: 0.3125rem;
-  }
+#form::after {
+  right: 0.3rem;
 }
 
 /*
@@ -389,35 +391,30 @@ button#doks-versions {
   display: none;
 }
 
-.navbar .menu-btn:checked ~ .navbar-collapse {
+.navbar .menu-btn:checked~.navbar-collapse {
   display: block;
   max-height: 100vh;
 }
 
-.navbar .menu-btn:checked ~ .menu-icon .navicon {
+.navbar .menu-btn:checked~.menu-icon .navicon {
   background: transparent;
 }
 
-.navbar .menu-btn:checked ~ .menu-icon .navicon::before {
+.navbar .menu-btn:checked~.menu-icon .navicon::before {
   transform: rotate(-45deg);
 }
 
-.navbar .menu-btn:checked ~ .menu-icon .navicon::after {
+.navbar .menu-btn:checked~.menu-icon .navicon::after {
   transform: rotate(45deg);
 }
 
-.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon::before,
-.navbar .menu-btn:checked ~ .menu-icon:not(.steps) .navicon::after {
+.navbar .menu-btn:checked~.menu-icon:not(.steps) .navicon::before,
+.navbar .menu-btn:checked~.menu-icon:not(.steps) .navicon::after {
   top: 0;
 }
 
 .btn-menu {
   margin-left: 1rem;
-  border: transparent;
-}
-
-.btn-doks-light {
-  border: transparent;
 }
 
 .btn-menu,
@@ -431,29 +428,23 @@ button#doks-versions {
 .btn-doks-light:hover,
 .doks-sidebar-toggle:hover {
   background: $pink-100;
-  border: transparent;
 }
 
 .btn-menu:focus,
-.btn-doks-light:focus,
 .doks-sidebar-toggle:focus,
 .doks-mode-toggle:focus {
   outline: 0;
-  border: transparent;
 }
 
-.doks-sidebar-toggle .doks-collapse,
-.doks-toc-toggle .doks-collapse {
+.doks-sidebar-toggle .doks-collapse {
   display: none;
 }
 
-.doks-sidebar-toggle:not(.collapsed) .doks-expand,
-.doks-toc-toggle:not(.collapsed) .doks-expand {
+.doks-sidebar-toggle:not(.collapsed) .doks-expand {
   display: none;
 }
 
-.doks-sidebar-toggle:not(.collapsed) .doks-collapse,
-.doks-toc-toggle:not(.collapsed) .doks-collapse {
+.doks-sidebar-toggle:not(.collapsed) .doks-collapse {
   display: inline-block;
 }
 
@@ -479,15 +470,25 @@ button#doks-versions {
   color: inherit;
 }
 
-.social-link {
-  padding-left: 0.5rem;
+button[data-link="home"]::before {
+  display: none;
+}
 
-  @include media-breakpoint-up(md) {
-    padding-left: 0;
-  }
+.coh-title {
+  white-space: pre-line;
+  overflow-wrap: break-word;
+}
 
-  @include media-breakpoint-up(lg) {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
+[data-bs-target="#offcanvasDoks"] {
+  margin-right: 0.4rem !important;
+}
+
+[data-bs-target="#offcanvasDoks"]:hover,
+[data-bs-target="#offcanvasDoks"]:focus {
+  border: 1px solid #dee2e6 !important;
+}
+
+[data-dark-mode] [data-bs-target="#offcanvasDoks"]:hover,
+[data-dark-mode] [data-bs-target="#offcanvasDoks"]:focus {
+  border: 1px solid #495057 !important;
 }

@@ -4,6 +4,7 @@ var searchButton = document.getElementById('start-search-btn');
 var pagination = document.getElementById('pagination');
 
 (function () {
+  let searchScheduled = false;
   searchButton.addEventListener('click', show_results, true);
   const numResultsPerPage = 20, numButtonsPerPage = 5;
   let paginationButtons = null,
@@ -22,7 +23,7 @@ var pagination = document.getElementById('pagination');
     suggestions.innerHTML = '';
 
     const resultsCountBox = document.createElement('div');
-    resultsCountBox.style = "margin:0 0.5rem;padding:0.75rem;font-size:1rem;"
+    resultsCountBox.style = 'margin:0 0.5rem;padding:0.75rem;font-size:1rem;'
     resultsCountBox.innerHTML = `Found: <b>${entries.length}</b> results`;
     suggestions.appendChild(resultsCountBox);
 
@@ -128,14 +129,43 @@ var pagination = document.getElementById('pagination');
 
   function clearPrevResults() {
     entries = [];
-    suggestions.innerHTML = "";
-    pagination.innerHTML = "";
+    suggestions.innerHTML = '';
+    pagination.innerHTML = '';
+    suggestions.classList.remove('loader-visible');
+    suggestions.classList.remove('d-none');
+  }
+
+  function addLoader() {
+    const loader = document.createElement('div');
+    loader.classList.add('loader');
+    suggestions.classList.add('loader-visible');
+    const text = document.createElement('span');
+    suggestions.appendChild(loader);
+    text.textContent = 'Loading results. Please wait...'
+    suggestions.appendChild(text);
     suggestions.classList.remove('d-none');
   }
 
   function show_results() {
-    clearPrevResults();
     var searchQuery = search.value;
+
+    if (!searchQuery) {
+      searchScheduled = false;
+      clearPrevResults();
+      return;
+    }
+
+    if (!window.searchIndexReady) {
+      if (searchScheduled) return;
+
+      addLoader();
+      search.addEventListener('search-index-ready', show_results);
+      searchScheduled = true;
+      return;
+    }
+    search.removeEventListener('search-index-ready', show_results);
+
+    clearPrevResults();
     window.localStorage.setItem('searchQuery', searchQuery);
     const [resultIds, resultTitlesIds] = getIndexResults(index, searchQuery);
 

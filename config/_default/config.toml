@@ -46,6 +46,11 @@ isPlainText = true
 noUgly = true
 rel  = "sitemap"
 
+[outputFormats.JSON]
+mediaType = "application/json"
+baseName = "search-index"
+rel = "search-index"
+
 [caches]
   [caches.getjson]
     dir = ":cacheDir/:project"

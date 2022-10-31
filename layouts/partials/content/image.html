@@ -6,6 +6,10 @@
   {{ $image = resources.Get (printf "%s%s" "images/" site.Params.defaultImage) }}
 {{ end -}}
 
+{{ if eq $image.MediaType.SubType "svg" }}
+  <img class="img-fluid lazyload blur-up" src="{{ $image.Permalink }}" data-src="{{ $image.Permalink }}" alt="{{ .Title }}">
+{{ else }}
+
 {{ $image = $image.Fill site.Params.fillImage }}
 {{ $lqip := $image.Resize site.Params.lqipWidth -}}
 
@@ -32,4 +36,6 @@
   </figure>
 {{ else -}}
   <img class="img-fluid lazyload blur-up" src="{{ $lqip.Permalink }}" data-src="{{ $image.Permalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .Title }}">
+{{ end -}}
+
 {{ end -}}

@@ -20,6 +20,11 @@
       </div>
       <div class="offcanvas-body px-4 d-md-flex flex-column">
         <ul class="nav flex-md-row ms-lg-auto me-lg-n5 pe-lg-3 d-sm-flex d-md-none d-lg-flex">
+          {{ if eq .Site.Params.options.docsVersioning true -}}
+          <li class="nav-item">
+              <span class="nav-link ps-0 py-1">v{{ .Site.Params.docsVersion }}</span>
+          </li>
+          {{ end -}}
           {{ range .Site.Menus.social -}}
             <li class="nav-item">
               <a class="nav-link ps-0 py-1" href="{{ .URL }}">{{ .Pre | safeHTML }}<small class="ms-2 d-none">{{ .Name | safeHTML }}</small></a>

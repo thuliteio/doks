@@ -3,7 +3,7 @@
 {{ end -}}
 
 {{ if eq .Site.Params.options.flexSearch false -}}
-<div class="sticky-lg-top">
+<div class="sticky-sm-top">
 {{ end -}}
 
 <header class="navbar navbar-expand-lg navbar-light doks-navbar">
@@ -93,7 +93,7 @@
 
 {{ if eq .Title "Search"}}
 {{else}}
-<nav class="doks-subnavbar py-2 sticky-lg-top{{ if eq .Site.Params.options.flexSearch false }} d-lg-none{{ end }}" aria-label="Secondary navigation">
+<nav class="doks-subnavbar py-2 sticky-sm-top{{ if eq .Site.Params.options.flexSearch false }} d-lg-none{{ end }}" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
     {{ if .Site.Params.options.flexSearch -}}
       <div class="doks-search d-inline-flex me-auto placeholder-glow">

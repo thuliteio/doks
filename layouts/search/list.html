@@ -11,14 +11,22 @@
             aria-label="Secondary navigation">
             <div class="container-xxl d-flex flex-row align-items-md-center flex-wrap">
                 <form id="form" class="doks-search list-search position-relative flex-grow-1 me-2">
-                    <input id="search" class="form-control is-search list-search" type="search" placeholder="Search..." aria-label="Search..." autocomplete="off">
+                    <input id="search" class="form-control is-search list-search" type="search" placeholder="Search..."
+                        aria-label="Search..." autocomplete="off">
                 </form>
-                <button id="start-search-btn" type="submit" style="background: none; border:none; width: 38px; height: 38px;" >
-                   <img src="/GameUIComponents/images/search.png">
+                <button id="start-search-btn" type="submit"
+                    style="background: none; border:none; width: 38px; height: 38px;">
+                    <img src="/GameUIComponents/images/search.png">
                 </button>
             </div>
         </nav>
-        <div id="suggestions" style="position:relative; z-index: 999;" class="d-none"></div>
+        <div id="suggestions-wrapper">
+            <div id="suggestions" style="position:relative; z-index: 999;" class="d-none"></div>
+            <div id="loader-container" class="d-none">
+                <div class="loader"></div>
+                <span>Loading results. Please wait...</span>
+            </div>
+        </div>
         <div id="pagination"></div>
     </main>
 </div>

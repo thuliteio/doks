@@ -111,7 +111,13 @@
     
     {{ if eq .Title "Search"}}
     {{ else }}
-    <div id="suggestions" class="shadow rounded d-none"></div>
+    <div id="suggestions-wrapper">
+      <div id="suggestions" class="shadow rounded d-none"></div>
+      <div id="loader-container" class="shadow rounded d-none">
+        <div class="loader"></div>
+        <span>Loading results. Please wait...</span>
+      </div>
+    </div>
     {{ end -}}
   </div>
 </nav>

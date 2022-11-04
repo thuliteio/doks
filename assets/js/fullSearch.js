@@ -1,3 +1,5 @@
+var suggestionsWrapper = document.getElementById('suggestions-wrapper');
+var loader = suggestionsWrapper.querySelector('#loader-container');
 var suggestions = document.getElementById('suggestions');
 var search = document.getElementById('search');
 var searchButton = document.getElementById('start-search-btn');
@@ -131,19 +133,12 @@ var pagination = document.getElementById('pagination');
     entries = [];
     suggestions.innerHTML = '';
     pagination.innerHTML = '';
-    suggestions.classList.remove('loader-visible');
+    loader.classList.add('d-none');
     suggestions.classList.remove('d-none');
   }
 
   function addLoader() {
-    const loader = document.createElement('div');
-    loader.classList.add('loader');
-    suggestions.classList.add('loader-visible');
-    const text = document.createElement('span');
-    suggestions.appendChild(loader);
-    text.textContent = 'Loading results. Please wait...'
-    suggestions.appendChild(text);
-    suggestions.classList.remove('d-none');
+    loader.classList.remove('d-none');
   }
 
   function show_results() {

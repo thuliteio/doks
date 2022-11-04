@@ -80,7 +80,7 @@ function getMatchIndices(str, regex, limit = -1) {
   while (match = regex.exec(str)) {
     if (limit > -1 && i >= limit) break;
     result.push(match.index);
-    i++
+    i++;
   }
 
   return result;

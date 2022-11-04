@@ -44,7 +44,6 @@ body>#suggestions {
 }
 
 #suggestions {
-  margin-top: 0.5rem;
   left: 0;
   width: 100% !important;
   z-index: 999;
@@ -52,7 +51,14 @@ body>#suggestions {
   background: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
 }
 
-#suggestions.loader-visible {
+#suggestions-wrapper {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+#loader-container {
+  margin-top: 0.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

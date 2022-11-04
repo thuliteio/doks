@@ -1,3 +1,5 @@
+var suggestionsWrapper = document.getElementById('suggestions-wrapper');
+var loader = suggestionsWrapper.querySelector('#loader-container');
 var suggestions = document.getElementById('suggestions');
 var search = document.getElementById('search');
 const form = document.getElementById('form-search');
@@ -7,7 +9,7 @@ let baseUrl = "{{.Site.BaseURL}}";
 baseUrl = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
 (function () {
   let entries = [];
-
+  let searchScheduled = false;
   search.addEventListener('input', show_results, true);
 
   function showMoreResults(searchQuery) {
@@ -25,10 +27,31 @@ baseUrl = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
   function clearPrevResults() {
     entries = [];
     suggestions.innerHTML = "";
+    loader.classList.add('d-none');
     suggestions.classList.remove('d-none');
   }
 
+  function addLoader() {
+    loader.classList.remove('d-none');
+  }
+
   function show_results(limit) {
+    if (!this.value) {
+      searchScheduled = false;
+      clearPrevResults();
+      return;
+    }
+
+    if (!window.searchIndexReady) {
+      if (searchScheduled) return;
+
+      addLoader();
+      search.addEventListener('search-index-ready', show_results);
+      searchScheduled = true;
+      return;
+    }
+    search.removeEventListener('search-index-ready', show_results);
+
     clearPrevResults();
     if (isNaN(limit)) limit = 3;
     var searchQuery = this.value;

@@ -3,7 +3,7 @@
 {{ end -}}
 
 {{ if eq .Site.Params.options.flexSearch false -}}
-<div class="sticky-lg-top">
+<div class="sticky-sm-top">
 {{ end -}}
 
 <header class="navbar navbar-expand-lg navbar-light doks-navbar">
@@ -20,11 +20,6 @@
       </div>
       <div class="offcanvas-body px-4 d-md-flex flex-column">
         <ul class="nav flex-md-row ms-lg-auto me-lg-n5 pe-lg-3 d-sm-flex d-md-none d-lg-flex">
-          {{ if eq .Site.Params.options.docsVersioning true -}}
-          <li class="nav-item">
-              <span class="nav-link ps-0 py-1">v{{ .Site.Params.docsVersion }}</span>
-          </li>
-          {{ end -}}
           {{ range .Site.Menus.social -}}
             <li class="nav-item">
               <a class="nav-link ps-0 py-1" href="{{ .URL }}">{{ .Pre | safeHTML }}<small class="ms-2 d-none">{{ .Name | safeHTML }}</small></a>
@@ -98,22 +93,26 @@
 
 {{ if eq .Title "Search"}}
 {{else}}
-<nav class="doks-subnavbar py-2 sticky-lg-top{{ if eq .Site.Params.options.flexSearch false }} d-lg-none{{ end }}" aria-label="Secondary navigation">
+<nav class="doks-subnavbar py-2 sticky-sm-top{{ if eq .Site.Params.options.flexSearch false }} d-lg-none{{ end }}" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
-
     {{ if .Site.Params.options.flexSearch -}}
-    <form id="form-search" class="doks-search position-relative flex-grow-1 me-md-auto d-flex">
-      <input id="search" class="form-control is-search me-2" type="search" placeholder="Search..." aria-label="Search..." autocomplete="off">
-      <button id="start-search-btn" type="submit" style="background: none; border:none; width: 38px; height: 38px;">
-         <img src="/GameUIComponents/images/search.png">
-      </button>
-    </form>
+      <div class="doks-search d-inline-flex me-auto placeholder-glow">
+          <form id="form-search" class="doks-search position-relative me-md-auto d-flex">
+            <input id="search" class="form-control is-search me-2" type="search" placeholder="Search..." aria-label="Search..." autocomplete="off">
+            <button id="start-search-btn" type="submit" style="background: none; border:none; width: 38px; height: 38px;">
+              <img src="/GameUIComponents/images/search.png">
+            </button>
+          </form>
+      </div>
+      {{ if eq .Site.Params.options.docsVersioning true -}}
+      <span class="navbar-text fs-6 d-none d-sm-block">v{{ .Site.Params.docsVersion }}</span>
+      {{ end -}}
     {{ end -}}
     
     {{ if eq .Title "Search"}}
     {{ else }}
     <div id="suggestions" class="shadow rounded d-none"></div>
     {{ end -}}
-    </div>
+  </div>
 </nav>
 {{ end -}}

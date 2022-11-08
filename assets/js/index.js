@@ -14,7 +14,8 @@ baseUrl = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
 
   function showMoreResults(searchQuery) {
     if (searchQuery) window.localStorage.setItem('searchQuery', searchQuery);
-    window.location.href = baseUrl + 'search';
+    const searchUrl = window.siteLanguage ? `${window.siteLanguage}/search` : 'search';
+    window.location.href = baseUrl + searchUrl;
   }
 
   function displayShowMoreFooter(searchQuery) {
@@ -61,7 +62,7 @@ baseUrl = baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
       showMoreResults(searchQuery);
     }, true)
 
-    const [resultIds, resultTitlesIds] = getIndexResults(index, searchQuery, limit);
+    const [resultIds, resultTitlesIds] = getIndexResults(searchQuery, limit);
 
     if (!hasResultsForQuery(resultIds, resultTitlesIds, searchQuery)) return;
 

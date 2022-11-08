@@ -67,6 +67,10 @@
   {{ $slice = $slice | append $cookieConsentPlugin | append $cookieConsentInit -}}
 {{ end -}}
 
+<script>
+  const hasMultipleLanguages = '{{ if gt (len .Site.Languages) 0 }}true{{end}}';
+  window.siteLanguage = hasMultipleLanguages === 'true' ? '{{.Site.Language.Lang}}' : '';
+</script>
 {{ $js := $slice | resources.Concat "main.js" -}}
 {{ if eq (hugo.Environment) "development" -}}
   {{ if .Site.Params.options.bootStrapJs -}}

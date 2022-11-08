@@ -40,7 +40,7 @@ function suggestionFocus(e) {
   }
 }
 
-const index = new FlexSearch.Document({
+const indexConfig = {
   tokenize: 'forward',
   cache: true,
   document: {
@@ -50,16 +50,32 @@ const index = new FlexSearch.Document({
     ],
     index: ['title', 'content'],
   },
-});
+};
+
+if (window.siteLanguage === 'kor') {
+  indexConfig.encode = (str) => {
+    // not replacing with `str.replace(/[\x00-\x7F]/g, "").split("")` because we
+    // want to mix english words with korean. For example `요소는 npm`
+    return str.split('');
+  };
+}
+
+const index = new FlexSearch.Document(indexConfig);
 
 window.searchIndexReady = false;
 function getBaseUrl() {
   const baseUrl = '{{.Site.BaseURL}}';
-  return baseUrl.endsWith('/') ? baseUrl : baseUrl + '/';
+  return baseUrl.endsWith('/') ? baseUrl : baseUrl.slice(0, -1);
+}
+
+function getSearchIndexUrl() {
+  const baseUrl = getBaseUrl();
+  const searchIndexUrl = window.siteLanguage ? `${window.siteLanguage}/search-index.json` : `search-index.json`;
+  return `${baseUrl}/${searchIndexUrl}`;
 }
 
 const getPostsJSON = async () => {
-  let response = await fetch(`${getBaseUrl()}search-index.json`);
+  let response = await fetch(getSearchIndexUrl());
   let data = await response.json();
   data.forEach((el) => index.add(el));
   window.searchIndexReady = true;
@@ -189,7 +205,7 @@ function constructContentSuggestions(entries, searchQuery, resultIds, suggestion
   }
 }
 
-function getIndexResults(index, searchQuery, limit) {
+function getIndexResults(searchQuery, limit) {
   let results = [];
 
   if (limit) {

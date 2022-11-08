@@ -31,6 +31,36 @@
             <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
           </li>
           {{ end -}}
+          {{ if eq .Site.Params.options.multilingualMode true -}}
+          <div class="dropdown order-md-2 d-md-none d-lg-block">
+            <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+              {{ .Site.Params.languageISO }}
+              <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-languages">
+      
+              <li><a class="dropdown-item current" aria-current="true" href="{{ .RelPermalink }}">{{ .Site.Language.LanguageName }}</a></li>
+      
+              <li><hr class="dropdown-divider"></li>
+      
+            {{ if .IsTranslated -}}
+              {{ range .Translations }}
+                <li><a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
+              {{ end -}}
+            {{ else -}}
+              {{ range .Site.Languages -}}
+                {{ if ne $.Site.Language.Lang .Lang }}
+                  <li><a class="dropdown-item" rel="alternate" href="{{ .Lang | relLangURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
+                {{ end -}}
+              {{ end -}}
+            {{ end -}}
+              <!--
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="/docs/contributing/how-to-contribute/">Help Translate</a></li>
+              -->
+            </ul>
+          </div>
+          {{ end -}}
         </ul>
         <div class="d-lg-none">
           {{ partial "sidebar/docs-menu.html" . }}
@@ -51,39 +81,38 @@
           <span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
         </li>
         {{ end -}}
-      </ul>
-    </div>
-
-    {{ if eq .Site.Params.options.multilingualMode true -}}
-    <div class="dropdown order-md-2">
-      <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-        {{ .Site.Params.languageISO }}
-        <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-languages">
-
-        <li><a class="dropdown-item current" aria-current="true" href="{{ .RelPermalink }}">{{ .Site.Language.LanguageName }}</a></li>
-
-        <li><hr class="dropdown-divider"></li>
-
-      {{ if .IsTranslated -}}
-        {{ range .Translations }}
-          <li><a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
-        {{ end -}}
-      {{ else -}}
-        {{ range .Site.Languages -}}
-          {{ if ne $.Site.Language.Lang .Lang }}
-            <li><a class="dropdown-item" rel="alternate" href="{{ .Lang | relLangURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
+        {{ if eq .Site.Params.options.multilingualMode true -}}
+        <div class="dropdown order-md-2">
+          <button class="btn btn-doks-light dropdown-toggle" id="doks-languages" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+            {{ .Site.Params.languageISO }}
+            <span class="dropdown-caret"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end shadow rounded border-0" aria-labelledby="doks-languages">
+    
+            <li><a class="dropdown-item current" aria-current="true" href="{{ .RelPermalink }}">{{ .Site.Language.LanguageName }}</a></li>
+    
+            <li><hr class="dropdown-divider"></li>
+    
+          {{ if .IsTranslated -}}
+            {{ range .Translations }}
+              <li><a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .Language.LanguageName }}</a></li>
+            {{ end -}}
+          {{ else -}}
+            {{ range .Site.Languages -}}
+              {{ if ne $.Site.Language.Lang .Lang }}
+                <li><a class="dropdown-item" rel="alternate" href="{{ .Lang | relLangURL }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}">{{ .LanguageName }}</a></li>
+              {{ end -}}
+            {{ end -}}
           {{ end -}}
+            <!--
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="/docs/contributing/how-to-contribute/">Help Translate</a></li>
+            -->
+          </ul>
+        </div>
         {{ end -}}
-      {{ end -}}
-        <!--
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="/docs/contributing/how-to-contribute/">Help Translate</a></li>
-        -->
       </ul>
     </div>
-    {{ end -}}
   </nav>
 </header>
 
@@ -95,19 +124,22 @@
 {{else}}
 <nav class="doks-subnavbar py-2 sticky-sm-top{{ if eq .Site.Params.options.flexSearch false }} d-lg-none{{ end }}" aria-label="Secondary navigation">
   <div class="container-xxl d-flex align-items-md-center">
-    {{ if .Site.Params.options.flexSearch -}}
-      <div class="doks-search d-inline-flex me-auto placeholder-glow">
+    <div class="d-flex flex-row justify-content-between w-100">
+      {{ if .Site.Params.options.flexSearch -}}
+        <div class="doks-search d-inline-flex me-auto placeholder-glow">
           <form id="form-search" class="doks-search position-relative me-md-auto d-flex">
-            <input id="search" class="form-control is-search me-2" type="search" placeholder="Search..." aria-label="Search..." autocomplete="off">
+            <input id="search" class="form-control is-search me-2" type="search" placeholder="Search..."
+              aria-label="Search..." autocomplete="off">
             <button id="start-search-btn" type="submit" style="background: none; border:none; width: 38px; height: 38px;">
               <img src="/GameUIComponents/images/search.png">
             </button>
           </form>
-      </div>
-      {{ if eq .Site.Params.options.docsVersioning true -}}
-      <span class="navbar-text fs-6 d-none d-sm-block">v{{ .Site.Params.docsVersion }}</span>
+        </div>
+        {{ if eq .Site.Params.options.docsVersioning true -}}
+        <span class="navbar-text fs-6 d-block">v{{ .Site.Params.docsVersion }}</span>
+        {{ end -}}
       {{ end -}}
-    {{ end -}}
+    </div>
     
     {{ if eq .Title "Search"}}
     {{ else }}

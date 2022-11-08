@@ -162,7 +162,7 @@ var pagination = document.getElementById('pagination');
 
     clearPrevResults();
     window.localStorage.setItem('searchQuery', searchQuery);
-    const [resultIds, resultTitlesIds] = getIndexResults(index, searchQuery);
+    const [resultIds, resultTitlesIds] = getIndexResults(searchQuery);
 
     if (!hasResultsForQuery(resultIds, resultTitlesIds, searchQuery)) return;
 

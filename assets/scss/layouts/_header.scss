@@ -27,6 +27,7 @@
 */
 
 .navbar {
+  /* z-index is 1021 because the languages dropdown is not visible when the z-index is 1000*/
   z-index: 1021;
   background-color: rgba(255, 255, 255, 0.95);
 

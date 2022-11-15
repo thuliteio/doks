@@ -65,7 +65,7 @@ const index = new FlexSearch.Document(indexConfig);
 window.searchIndexReady = false;
 function getBaseUrl() {
   const baseUrl = '{{.Site.BaseURL}}';
-  return baseUrl.endsWith('/') ? baseUrl : baseUrl.slice(0, -1);
+  return !baseUrl.endsWith('/') ? baseUrl : baseUrl.slice(0, -1);
 }
 
 function getSearchIndexUrl() {

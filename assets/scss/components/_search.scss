@@ -49,6 +49,15 @@ body>#suggestions {
   z-index: 999;
   --bs-bg-opacity: 1;
   background: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+  z-index: $zindex-dropdown;
+
+  @include media-breakpoint-up(md) {
+    right: -2rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    right: 0;
+  }
 }
 
 #suggestions-wrapper {

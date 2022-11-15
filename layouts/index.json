@@ -1,13 +1,13 @@
 [
-{{ $list := .Site.Pages  -}}
-{{ $len := (len $list) -}}
-    {{ range $index, $element := $list -}}
-    {{ if $index }},{{ end }}
-    {
-        "id": {{ $index }},
-        "href": "{{ .RelPermalink }}",
-        "title": {{ .Title | jsonify }},
-        "content": {{ .Plain | jsonify }}
-    }
-{{ end -}}
+    {{ $list := .Site.Pages  -}}
+    {{ $len := (len $list) -}}
+        {{ range $index, $element := where $list "Title" "not in" (slice "Search" "Categories" "Tags") -}}
+        {{ if $index }},{{ end }}
+        {
+            "id": {{ $index }},
+            "href": "{{ .RelPermalink }}",
+            "title": {{ .Title | jsonify }},
+            "content": {{ .Plain | jsonify }}
+        }
+    {{ end -}}
 ]

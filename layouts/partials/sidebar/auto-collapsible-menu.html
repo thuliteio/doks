@@ -1,11 +1,19 @@
 <!-- Auto collapsible section menu -->
 <ul class="list-unstyled collapsible-sidebar">
+  {{ $currentPage := . -}}
   <li class="mb-1">
     <button data-link="home" class="btn btn-toggle align-items-centers">
       <a class="docs-link rounded {{ if .IsHome }}active{{ end }}" href="{{ .Site.Home.Permalink }}">Home</a></li>
     </button>
   </li>
-  {{ $currentPage := . -}}
+  {{ if .Site.Params.options.changelog}}
+  <li class="mb-1">
+    {{ $active := in $currentPage.RelPermalink "changelog" }}
+    <button data-link="home" class="btn btn-toggle align-items-centers">
+      <a class="docs-link rounded {{ if $active }}active{{ end }}" href="{{ .Site.Home.Permalink }}/changelog">Changelog</a></li>
+    </button>
+  </li>
+  {{end}}
     {{ range .Site.Sections }}
     {{ if eq .Title "Search"}}
     {{else}}

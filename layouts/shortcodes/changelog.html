@@ -1,0 +1,10 @@
+
+<tr>
+    <td>
+        <span class="type badge changelog-{{ .Get "type" }}">{{ strings.FirstUpper (.Get "type") }}</span>
+        <span class="type badge bg-secondary">{{ .Get "product" }}</span>
+    </td>
+    <td>
+        {{ .Get "description" }}
+    </td>
+</tr>

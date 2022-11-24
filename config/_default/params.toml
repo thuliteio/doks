@@ -107,6 +107,7 @@ lastMod = false
   navbarSticky = true
   toTopButton = false
   scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
+  changelog = true
 
 [menu]
   [menu.section]

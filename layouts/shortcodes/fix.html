@@ -1,0 +1,22 @@
+
+<tr>
+    <td>
+        <span class="badge bg-danger">Fix</span>
+        {{ $engines := .Site.Params.options.engines }}
+        {{ if (.Get "engine") }}
+        {{ $engine := .Get "engine" }}
+        {{ if in $engines $engine }}
+        <span class="badge bg-secondary">{{ .Get "engine" }}</span>
+        {{ else }}
+            {{ errorf "engine can be one of the following values: " $engines }}
+        {{ end }}
+        {{ end }}
+    </td>
+    <td>
+        {{ with .Inner }}
+            {{ . | markdownify }}
+        {{ else }}
+            {{ .Get "description" }}
+        {{ end }}
+    </td>
+</tr>

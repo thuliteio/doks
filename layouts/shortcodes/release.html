@@ -1,0 +1,10 @@
+<h3 style="text-align:center;">
+    <a href="#">
+        Version {{ .Get "version" }}
+        <span> – released {{ .Get "date" }}</span>
+    </a>
+</h3>
+<hr>
+<table class="table table-striped">
+{{ .Inner }}
+</table>

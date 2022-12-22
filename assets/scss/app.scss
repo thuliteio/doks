@@ -8,7 +8,11 @@
 @import "bootstrap/scss/bootstrap";
 
 /** Import highlight.js */
-// @import "highlight.js/scss/github-dark-dimmed";
+@import "highlight.js/scss/github";
+
+[data-dark-mode] {
+    @import "highlight.js/scss/github-dark";
+}
 
 /** Import KaTeX */
 @import "katex/dist/katex";

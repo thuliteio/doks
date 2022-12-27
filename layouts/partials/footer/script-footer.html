@@ -44,11 +44,11 @@
   {{ end -}}
 {{ end -}}
 
-{{ if .Site.Params.options.darkMode -}}
+{{/* if .Site.Params.options.darkMode -}}
   {{ $darkMode := resources.Get "js/darkmode.js" -}}
-  {{ $darkMode := $darkMode | js.Build -}}
+  {{ $darkMode = $darkMode | js.Build -}}
   {{ $slice = $slice | append $darkMode -}}
-{{ end -}}
+{{ end */ -}}
 
 {{ if and (.Site.Params.alert) (.Site.Params.alertDismissable) -}}
   {{ $alert := resources.Get "js/alert.js" -}}

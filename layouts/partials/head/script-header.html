@@ -1,7 +1,12 @@
-{{ if .Site.Params.options.darkMode -}}
+{{/*  if .Site.Params.options.darkMode -}}
   {{ $darkModeInit := resources.Get "js/darkmode-init.js" | js.Build | minify -}}
   <script>{{ $darkModeInit.Content | safeJS }}</script>
+{{ end */ -}}
+{{  if .Site.Params.options.darkMode -}}
+  {{ $darkMode := resources.Get "js/bs-darkmode.js" | js.Build | minify -}}
+  <script>{{ $darkMode.Content | safeJS }}</script>
 {{ end -}}
+{{$darkMode := resources.Get "js/bs-darkmode.js" -}}
 {{- if and (.Site.Params.alert) (.Site.Params.alertDismissable) -}}
   {{ $alertInit := resources.Get "js/alert-init.js" | js.Build | minify -}}
   <script>{{ $alertInit.Content | safeJS }}</script>

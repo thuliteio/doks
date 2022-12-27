@@ -1,3 +1,15 @@
+/* hide the light theme toggle if the bs theme is dark */
+html[data-bs-theme="dark"] {
+  .toggle-light {
+    display: block;
+  }
+
+  .toggle-dark {
+    display: none;
+  }
+}
+
+
 /** Theme variables */
 
 // Source: https://material.io/design/color/dark-theme.html

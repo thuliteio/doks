@@ -20,7 +20,7 @@
     "start": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender",
     "prebuild": "npm run clean",
     "build": "exec-bin node_modules/.bin/hugo/hugo --gc --minify",
-    "build:preview": "npm run build -D -F",
+    "build:preview": "exec-bin node_modules/.bin/hugo/hugo --gc --minify -D -F",
     "clean": "shx rm -rf public resources",
     "clean:install": "shx rm -rf package-lock.json node_modules ",
     "lint": "npm run -s lint:scripts && npm run -s lint:styles && npm run -s lint:markdown",
@@ -29,6 +29,7 @@
     "lint:markdown": "markdownlint-cli2 \"*.md\" \"content/**/*.md\"",
     "lint:markdown-fix": "markdownlint-cli2-fix \"*.md\" \"content/**/*.md\"",
     "server": "exec-bin node_modules/.bin/hugo/hugo server",
+    "server:preview": "exec-bin node_modules/.bin/hugo/hugo server -D -F",
     "test": "npm run -s lint",
     "env": "env",
     "precheck": "npm version",
@@ -66,6 +67,6 @@
     "stylelint-config-standard-scss": "^4.0"
   },
   "otherDependencies": {
-    "hugo": "0.107.0"
+    "hugo": "0.109.0"
   }
 }

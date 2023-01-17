@@ -1,0 +1,1 @@
+{{ if (.Get 0)}}{{.Site.BaseURL}}/{{ .Get 0 }}{{else}}{{ errorf "No url provided to staticUrl shortcode"}}{{end}}

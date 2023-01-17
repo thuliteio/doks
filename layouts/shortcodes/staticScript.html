@@ -1,0 +1,5 @@
+{{ if (.Get "src")}}
+  <script src="{{.Site.BaseURL}}/{{ .Get "src" }}"></script>
+{{else}}
+  {{ errorf "No src parameter passed to staticScript shortcode"}}
+{{end}}

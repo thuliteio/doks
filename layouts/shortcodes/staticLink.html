@@ -1,0 +1,5 @@
+{{ if (.Get "href")}}
+  <link rel="stylesheet" href="{{.Site.BaseURL}}/{{ .Get "href" }}">
+{{else}}
+  {{ errorf "No href parameter passed to staticLink shortcode"}}
+{{end}}

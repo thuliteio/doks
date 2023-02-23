@@ -1,0 +1,5 @@
+{{ $value := .Get 0 }}
+{{ $param := hugo.Environment }}
+{{ if eq $param $value }}
+{{ .Inner | markdownify }}
+{{ end }}

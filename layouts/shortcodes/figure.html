@@ -38,14 +38,14 @@
 {{- if or (or ($title) ($caption)) ($attr) -}}
 <figcaption>
 {{ if (or ($caption) ($title) ($attr)) }}<p><i>
-    {{ if $caption}}
-        {{ $caption | $.Page.RenderString | emojify }}
-    {{ else }}
-        {{ $title | $.Page.RenderString | emojify }}
-    {{ end }}
-    {{ with .Get "attrlink" }}<a href="{{ . }}"> {{ end }}
-    {{ $attr | $.Page.RenderString }}
-    {{ if .Get "attrlink" }}</a>{{ end }}</i></p>
+{{ if $caption}}
+{{ $caption | $.Page.RenderString | emojify }}
+{{ else }}
+{{ $title | $.Page.RenderString | emojify }}
+{{ end }}
+{{ with .Get "attrlink" }}<a href="{{ . }}"> {{ end }}
+{{ $attr | $.Page.RenderString }}
+{{ if .Get "attrlink" }}</a>{{ end }}</i></p>
 {{ end }}
 </figcaption>
 {{- end -}}

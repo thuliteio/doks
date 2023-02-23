@@ -1,0 +1,52 @@
+<!-- This fixes acouple of Hugo issues, related to figures in combination with -->
+<!-- BaseURL and non-relative URLs Basically, if we use the default figure, we -->
+<!-- will be missing "cpp-gameface" or w/e else the subdomain is from our figure src, -->
+<!-- so we replace them with a custom figure shortcode that does not have this issue -->
+<!-- https://github.com/gohugoio/hugo/issues/4406 -->
+<!-- https://github.com/gohugoio/hugo/issues/4406 -->
+<!-- https://github.com/gohugoio/hugo/issues/4562 -->
+{{ $image := .Get "src" }}
+{{ $title := .Get "title"}}
+{{ $caption := .Get "caption"}}
+{{ $attr := .Get "attr"}}
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+{{ if (.Get "link") }}<a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>{{ end }}
+{{ if (findRE "(^|:)//" $image) -}} <!-- If image link is a URL with protocol or two leading slashes, use just that unmodified. -->
+<img src="{{ $image }}"
+{{- else if (findRE "^/" $image) -}} <!-- If image link has one leading slash -->
+{{- /* Cannot use absURL below because it doesn't work as expected if baseURL has a subdir. */ -}}
+{{- $baseurl_no_trailing_slash := site.BaseURL | replaceRE "/$" "" -}}
+<img src="{{ (printf "%s%s" $baseurl_no_trailing_slash $image) }}"
+{{- else -}}
+{{- /* Below variable will always have a trailing slash, even with uglyURLs enabled. */ -}}
+{{- $permalink_pretty := $.Page.Permalink | replaceRE "\\.html$" "/" -}}
+<img src="{{ (printf "%s%s" $permalink_pretty $image) }}"
+{{- end -}}
+{{- if (or (.Get "alt") ($caption)) -}}
+{{- with (.Get "alt")}}
+{{- printf " alt=\"%s\"" . | safeHTMLAttr -}}
+{{- else -}}
+{{- printf " alt=\"%s\"" ($caption | $.Page.RenderString | plainify) | safeHTMLAttr -}}
+{{- end -}}
+{{- end -}}
+{{ with ($title) }}
+{{- printf " title=\"%s\"" . | safeHTMLAttr -}}
+{{ end }}
+{{- with .Get "width" }} width="{{ . }}"{{ end -}}
+{{- with .Get "height" }} height="{{ . }}"{{ end -}}/> <!-- Closing img tag -->
+{{- if (.Get "link") }}</a>{{ end -}}
+{{- if or (or ($title) ($caption)) ($attr) -}}
+<figcaption>
+{{ if (or ($caption) ($title) ($attr)) }}<p><i>
+    {{ if $caption}}
+        {{ $caption | $.Page.RenderString | emojify }}
+    {{ else }}
+        {{ $title | $.Page.RenderString | emojify }}
+    {{ end }}
+    {{ with .Get "attrlink" }}<a href="{{ . }}"> {{ end }}
+    {{ $attr | $.Page.RenderString }}
+    {{ if .Get "attrlink" }}</a>{{ end }}</i></p>
+{{ end }}
+</figcaption>
+{{- end -}}
+</figure>

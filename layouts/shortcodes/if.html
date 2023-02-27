@@ -1,0 +1,6 @@
+{{ $name := .Get 0 }}
+{{ $value := .Get 1 }}
+{{ $param := index .Site.Params $name }}
+{{ if eq $param $value }}
+{{ .Inner | markdownify }}
+{{ end }}

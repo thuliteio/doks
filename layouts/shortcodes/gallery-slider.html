@@ -1,0 +1,178 @@
+{{ $.Scratch.Add "width" (.Get "width" | default "500px") }}
+{{ $.Scratch.Add "height" (.Get "height" | default "300px") }}
+{{ $.Scratch.Add "auto-slide" (.Get "auto-slide" | default "0") }}
+
+{{ $.Scratch.Add "arrow-left" (.Get "arrow-left" | default "fa-chevron-left") }}
+{{ $.Scratch.Add "arrow-right" (.Get "arrow-right" | default "fa-chevron-right") }}
+
+{{ $.Scratch.Add "id" (.Get "id") }}
+
+{{ if ne (.Get "no-fa") "true" }}
+    <!-- FontAwesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+{{end}}
+
+{{ if ne (.Get "no-jquery") "true" }}
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
+{{end}}
+
+<style>
+#slide-window_{{ $.Scratch.Get "id" }} {
+    position: relative;
+    width: {{ $.Scratch.Get "width" }};
+    height: {{ $.Scratch.Get "height" }};
+    overflow: hidden;
+    top: 0px;
+    left: 0px;
+}
+
+#slides-list_{{ $.Scratch.Get "id" }} {
+    width: {{ $.Scratch.Get "width" }};
+    height: {{ $.Scratch.Get "height" }};
+    position: absolute;
+    margin: 0px;
+    padding: 0px;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0.66s ease;
+    -webkit-transition: all 0.66s ease;
+}
+
+.slide {
+    list-style: none;
+    position: relative;
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: {{ $.Scratch.Get "width" }};
+    height: {{ $.Scratch.Get "height" }};
+    background: #ccc;
+    text-align: center;
+    line-height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    color: #fff;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    -webkit-transform-style: preserve-3d;
+}
+
+.nav {
+    position: relative;
+    background-color: gray;
+    border-radius: 5%;
+    z-index: 9;
+    top: 45%;
+    cursor: pointer;
+    color: #fff;
+    opacity: 0.7;
+    transition: all 0.66s ease;
+    -webkit-transition: all 0.66s ease;
+}
+
+.nav:hover {
+    opacity: 1.0;
+}
+
+#left_{{ $.Scratch.Get "id" }} {
+    left: 3%;
+    float: left;
+}
+
+#right_{{ $.Scratch.Get "id" }} {
+    right: 3%;
+    float: right;
+}
+</style>
+
+<!-- Gallery -->
+<div id="slide-window_{{ $.Scratch.Get "id" }}">
+    <ol id="slides-list_{{ $.Scratch.Get "id" }}">
+        {{- with (.Get "dir") -}} 
+            {{- $files := readDir (print "/static/" .) }} 
+            {{- range $files -}} 
+                {{- $absoluteUrl := print ($.Get "dir") "/" .Name | absURL }}
+                <li class="slide" style="background-image:url({{ $absoluteUrl }});"></li>
+            {{- end }} 
+        {{- end }}
+    </ol>
+    <span class="nav fa {{ $.Scratch.Get "arrow-left" }} fa-3x" id="left_{{ $.Scratch.Get "id" }}"></span>
+    <span class="nav fa {{ $.Scratch.Get "arrow-right" }} fa-3x" id="right_{{ $.Scratch.Get "id" }}"></span>
+</div>
+
+<script>
+sliderJQuery = jQuery.noConflict();
+sliderJQuery(function( $ ) {
+    $.global = new Object();
+    $.global.total = 0;
+
+    $(document).ready(function () {
+        var slideWindowWidth = $('#slide-window_{{ $.Scratch.Get "id" }}').width();
+        var slideCount = $('#slides-list_{{ $.Scratch.Get "id" }} li').length;
+        var totalSlidesWidth = slideCount * slideWindowWidth;
+
+        $.global.item = 0;
+        $.global.total = slideCount;
+
+        $('.slide').css('width', slideWindowWidth + 'px');
+        $('#slides-list_{{ $.Scratch.Get "id" }}').css('width', totalSlidesWidth + 'px');
+
+        $('#left_{{ $.Scratch.Get "id" }}').click(function () {
+            resetAutoSlide();
+            performSlide('back');
+        });
+
+        $('#right_{{ $.Scratch.Get "id" }}').click(function () {
+            resetAutoSlide();
+            performSlide('forward');
+        });
+
+    });
+
+    function performSlide(direction) {
+        if (direction == 'back') {
+            var nextSlideId = $.global.item - 1;
+        }
+        if (direction == 'forward') {
+            var nextSlideId = $.global.item + 1;
+        }
+
+        if (nextSlideId == -1) {
+            /* At first position and requesting 'back' -> Go to last item */
+            moveCss($.global.total - 1);
+        } else if (nextSlideId == $.global.total) {
+            /* At last position and requesting 'forward' -> Go to first item */
+            moveCss(0);
+        } else {
+            /* Move to requested item */
+            moveCss(nextSlideId);
+        }
+    }
+
+    function moveCss(nextSlideId) {
+        var slideWindowWidth = $('#slide-window_{{ $.Scratch.Get "id" }}').width();
+        var margin = slideWindowWidth * nextSlideId;
+
+        $('#slides-list_{{ $.Scratch.Get "id" }}').css('transform', 'translate3d(-' + margin + 'px,0px,0px)');
+
+        $.global.item = nextSlideId;
+    }
+
+    {{ if ne (.Get "auto-slide") "0" }}
+      var autoSlide = parseInt({{ $.Scratch.Get "auto-slide" }}, 10);
+      var autoSlideInterval;
+      function resetAutoSlide(){
+        if(autoSlide) {
+          if(autoSlideInterval) {
+            clearInterval(autoSlideInterval);
+          }
+          autoSlideInterval = setInterval(function(){
+            performSlide('forward');
+          }, autoSlide)
+        }
+      }
+      resetAutoSlide();
+
+    {{- end }}
+});
+</script>

@@ -1,3 +1,15 @@
+<h1 align="center">
+  Coherent Labs Section
+</h1>
+
+## How to Update Unreal Repository
+
+When a change is introduced / merged in the doks repo, the subtree of [CoherentUI_UE4](https://github.com/CoherentLabs/CoherentUI_UE4/) must be updated. To do so, pull the latest develop, create a new branch, open a CLI and run:
+`git subtree pull --prefix=CoherentSample/Documentation_Source/themes/doks https://github.com/CoherentLabs/doks coherent-doks-theme --squash`
+This will create a merge commit which you should commit and later merge into develop.
+
+For more information and possible pitfalls, see [Fetching updates of the doks theme](https://github.com/CoherentLabs/CoherentUI_UE4/tree/develop/CoherentSample/Documentation_Source#fetching-updates-of-the-doks-theme).
+
 <p align="center">
   <a href="https://getdoks.org/">
     <img alt="Doks" src="https://doks.netlify.app/doks.svg" width="60">

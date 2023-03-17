@@ -96,6 +96,11 @@
   border-color: #ffecb5;
 }
 
+body .alert-warning code:not(.hljs),
+body .alert-note code:not(.hljs) {
+  background: $gray-300;
+}
+
 .alert-warning .alert-link {
   color: #523e02;
 }

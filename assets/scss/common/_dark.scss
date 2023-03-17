@@ -266,7 +266,8 @@ $navbar-dark-active-color: $link-color-dark;
 }
 
 [data-dark-mode] #form::after,
-[data-dark-mode] #form-search:after {
+[data-dark-mode] #form-search:after,
+[data-dark-mode] body .doks-search::after {
   color: $gray-300;
   border: 1px solid $gray-700;
 }
@@ -310,9 +311,15 @@ $navbar-dark-active-color: $link-color-dark;
   background: $gray-400;
 }
 
-[data-dark-mode] body code:not(.hljs) {
-  background: $body-overlay-dark;
+[data-dark-mode] body code:not(.hljs),
+[data-dark-mode] body .alert-note code:not(.hljs) {
+  background: #4e4e4e;
   color: $body-color-dark;
+}
+
+[data-dark-mode] body .alert-warning code:not(.hljs) {
+  background: $gray-300;
+  color: #664d03;
 }
 
 [data-dark-mode] body pre code:hover {
@@ -534,4 +541,10 @@ $navbar-dark-active-color: $link-color-dark;
     background-color: $body-overlay-dark;
     border-color: $border-dark;
   }
+}
+
+/* Image is in section WHAT IS GAMEFACE? -> Differences to traditional browsers */
+/* In Native documentation */
+[data-dark-mode] figure img[title="Color matrix syntax"] {
+  filter: invert(1);
 }

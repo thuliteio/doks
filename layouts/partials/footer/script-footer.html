@@ -63,7 +63,7 @@
 
 {{ if .Site.Params.options.cookieConsent }}
   {{ $cookieConsentPlugin := resources.Get "vanilla-cookieconsent/cookieconsent.js" -}}
-  {{ $cookieConsentInit := resources.Get "js/cookieconsent-init.js" | minify | fingerprint "sha512" -}}
+  {{ $cookieConsentInit := resources.Get "js/cookieconsent-init.js" | minify | fingerprint "md5" -}}
   {{ $slice = $slice | append $cookieConsentPlugin | append $cookieConsentInit -}}
 {{ end -}}
 
@@ -100,18 +100,18 @@
     {{ end -}}
   {{ end -}}
 {{ else -}}
-  {{ $js := $js | minify | fingerprint "sha512" -}}
-  {{ $searchUtilities := $searchUtilities | minify | fingerprint "sha512" -}}
+  {{ $js := $js | minify | fingerprint "md5" -}}
+  {{ $searchUtilities := $searchUtilities | minify | fingerprint "md5" -}}
   {{ if eq .Title "Search"}}
-  {{ $fullSearch := $fullSearch | minify | fingerprint "sha512" -}}
+  {{ $fullSearch := $fullSearch | minify | fingerprint "md5" -}}
   {{ else }}
-  {{ $index := $index | minify | fingerprint "sha512" -}}
+  {{ $index := $index | minify | fingerprint "md5" -}}
   {{ end -}}
-  {{ $bs := $bs | minify | fingerprint "sha512" -}}
-  {{ $highlight := $highlight | minify | fingerprint "sha512" -}}
-  {{ $katex := $katex | minify | fingerprint "sha512" -}}
-  {{ $katexAutoRender := $katexAutoRender | minify | fingerprint "sha512" -}}
-  {{ $mermaid := $mermaid | minify | fingerprint "sha512" -}}
+  {{ $bs := $bs | minify | fingerprint "md5" -}}
+  {{ $highlight := $highlight | minify | fingerprint "md5" -}}
+  {{ $katex := $katex | minify | fingerprint "md5" -}}
+  {{ $katexAutoRender := $katexAutoRender | minify | fingerprint "md5" -}}
+  {{ $mermaid := $mermaid | minify | fingerprint "md5" -}}
   {{ if .Site.Params.options.bootStrapJs -}}
     <script src="{{ $bs.RelPermalink }}" integrity="{{ $bs.Data.Integrity }}" crossorigin="anonymous" defer></script>
   {{ end -}}

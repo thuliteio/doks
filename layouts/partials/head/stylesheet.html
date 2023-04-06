@@ -5,7 +5,7 @@
 {{ else -}}
   {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) -}}
   {{ $css := resources.Get "scss/app.scss" | toCSS $options | postCSS (dict "config" "config/postcss.config.js") -}}
-  {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
+  {{ $secureCSS := $css | resources.Fingerprint "md5" -}}
   <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
 {{ end -}}
 <noscript><style>img.lazyload { display: none; }</style></noscript>

@@ -1,10 +1,10 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "Shivratan Singh Rajvi"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
+titleAddition = "Shivratan Singh Rajvi's Blog"
+description = "DevOps Engineer, a seasoned blogger with 4+ years of experience in the Information Technology."
 
 ## Documentation
 # docsVersion = "0.3"
@@ -12,21 +12,21 @@ description = "Doks is a Hugo theme for building secure, fast, and SEO-ready doc
 ## Open Graph
 images = ["doks.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
+domainTLD = "shivratanrajvi.in"
+titleHome = "Shivratan Singh Rajvi"
 
 ## Twitter Cards
-twitterSite = "@getdoks"
-twitterCreator = "@henkverlinde"
+twitterSite = "@shivratanrajvi"
+twitterCreator = "@shivratanrajvi"
 
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Doks"
-schemaAuthor = "Henk Verlinde"
-schemaAuthorTwitter = "https://twitter.com/henkverlinde"
-schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaAuthorGitHub = "https://github.com/h-enk"
+schemaName = "Shivratan Rajvi"
+schemaAuthor = "Shivratan Singh Rajvi"
+schemaAuthorTwitter = "https://twitter.com/shivratanrajvi"
+schemaAuthorLinkedIn = "https://www.linkedin.com/in/shivratanrajvi/"
+schemaAuthorGitHub = "https://github.com/shivratanrajvi"
 schemaLocale = "en-US"
 schemaLogo = "logo-doks.png"
 schemaLogoWidth = 512
@@ -34,9 +34,9 @@ schemaLogoHeight = 512
 schemaImage = "doks.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/getdoks"
+schemaTwitter = "https://twitter.com/shivratanrajvi"
 schemaLinkedIn = ""
-schemaGitHub = "https://github.com/h-enk/doks"
+schemaGitHub = "https://github.com/shivratanrajvi"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -65,10 +65,10 @@ defaultImage = "default-image.png" # put in `./assets/images/`
 fillImage = "1270x740 Center" # normalize image size
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "Managed by <a class=\"text-muted\" href=\"https://linkedin.com/in/shivratanrajvi">Shivratan Singh Rajvi</a>"
 
 # Feed
-copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+copyRight = "Copyright (c) 2023-2024 Shivratan Singh Rajvi"
 
 # Alert
 alert = false

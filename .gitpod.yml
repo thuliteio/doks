@@ -1,0 +1,12 @@
+# Source:
+# - https://github.com/gitpod-io/template-hugo
+# - https://www.gitpod.io/docs/configure/workspaces/tasks#one-line-tasks
+
+tasks:
+  - name: Dev Server
+    init: pnpm install
+    command: pnpm clean:build && pnpm dev:gitpod
+
+ports:
+  - port: 1313
+    onOpen: open-preview

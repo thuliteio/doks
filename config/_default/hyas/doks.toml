@@ -1,0 +1,68 @@
+# Color mode
+colorMode = "auto" # auto (default), light or dark (the light and dark options are only relevant when forceColorMode = true)
+colorModeToggler = true # false (default) or true (this setting is only relevant when forceColorMode = false)
+forceColorMode = false # false (default) or true
+
+# Navbar
+navbarSticky = true # false (default) or true
+containerBreakpoint = "xxl" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
+
+## Button
+navBarButton = false # false (default) or true
+navBarButtonUrl = "/docs/prologue/introduction/"
+navBarButtonText = "Get started"
+
+# FlexSearch
+flexSearch = true # true (default) or false
+indexPages = [] # [] (all regular pages, default) or list of sections (e.g. ["blog", "guides"])
+showSearch = [] # [] (all pages, default) or homepage (optionally) and list of sections (e.g. ["homepage", "blog", "guides"])
+
+## Search results
+showDate = false # false (default) or true
+showSummary = true # true (default) or false
+searchLimit = 5 # 0 (no limit, default) or natural number
+
+# Global alert
+alert = false # false (default) or true
+alertDismissable = true # true (default) or false
+alertText = '<a class="alert-link stretched-link fw-normal" href="/doks-version-10/">Doks version 1.0 just shipped!</a>'
+
+# Bootstrap
+bootstrapJavascript = false # false (default) or true
+
+# Nav
+sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+toTopButton = false # false (default) or true
+breadcrumbTrail = false # false (default) or true
+headlineHash = true # true (default) or false
+scrollSpy = true # false (default) or true
+
+# Multilingual
+multilingualMode = false # false (default) or true
+
+# Versioning
+docsVersioning = false # false (default) or true
+
+# UX
+headerBar = true # true (default)  or false
+backgroundDots = true # true (default)  or false
+
+# Homepage
+sectionFooter = false # true (default)  or false
+
+# Blog
+relatedPosts = false # false (default) or true
+
+# SCSS
+# backGround = "yellowgreen"
+
+# Colors
+
+## Dark theme
+# textDark =  "#dee2e6" # "#dee2e6" (default), "#dee2e6" (orignal), or custom color
+# accentDark = "#5d2f86" # "#5d2f86" (default), "#5d2f86" (original), or custom color
+
+## Light theme
+# textLight =  "#1d2d35" # "#1d2d35" (default), "#1d2d35" (orignal), or custom color
+# accentLight =  "#8ed6fb" # "#8ed6fb" (default), "#8ed6fb" (orignal), or custom color
+ 

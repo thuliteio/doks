@@ -4,77 +4,44 @@
 title = "Doks"
 titleSeparator = "-"
 titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize."
-
-## Documentation
-# docsVersion = "0.3"
+description = "Hyas is a Hugo starter helping you build modern websites that are secure, fast, and SEO-ready — by default."
 
 ## Open Graph
-images = ["doks.png"]
+images = ["hyas.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
+titleHome = "Hyas Hugo Starter"
 
 ## Twitter Cards
-twitterSite = "@getdoks"
+twitterSite = "@gethyas"
 twitterCreator = "@henkverlinde"
 
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Doks"
+schemaName = "Hyas"
 schemaAuthor = "Henk Verlinde"
 schemaAuthorTwitter = "https://twitter.com/henkverlinde"
 schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
 schemaAuthorGitHub = "https://github.com/h-enk"
 schemaLocale = "en-US"
-schemaLogo = "logo-doks.png"
+schemaLogo = "logo-hyas.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "doks.png"
+schemaImage = "hyas.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/getdoks"
+schemaTwitter = "https://twitter.com/gethyas"
 schemaLinkedIn = ""
-schemaGitHub = "https://github.com/h-enk/doks"
-schemaSection = "blog"
-
-## Sitelinks Search Box
-siteLinksSearchBox = false
-
-## Chrome Browser
-themeColor = "#fff"
-
-# Images
-quality = 85
-bgColor = "#fff"
-landscapePhotoWidths = [900, 800, 700, 600, 500]
-portraitPhotoWidths = [800, 700, 600, 500]
-lqipWidth = "20x"
-smallLimit = "300"
-
-# Images
-imageResponsive = true
-imageConvertTo = "webp"
-imageImageSizes = ["480","720","1080","1280","1600","2048"]
-singleSize = false
-imageAddClass = "img-fluid lazyload blur-up"
-
-### Image template
-defaultImage = "default-image.png" # put in `./assets/images/`
-fillImage = "1270x740 Center" # normalize image size
-
-# Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+schemaGitHub = "https://github.com/h-enk/hyas"
 
 # Feed
 copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
 
-# Alert
-alert = false
-alertDismissable = true
-# alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\" target=\"_blank\" rel=\"noopener\">Check out Doks v0.2</a>"
-alertText = "Introducing the Doks child theme, several DX + UX updates, and more! <a class=\"alert-link stretched-link\" href=\"https://getdoks.org/blog/doks-v0.2/\">Check out Doks v0.2</a>"
+# Footer
+footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+
+## Documentation
+# docsVersion = "1.0"
 
 # Edit Page
 # repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
@@ -86,26 +53,58 @@ docsRepoSubPath = ""
 editPage = false
 lastMod = false
 
+# Images
+
+## defaultImage
+defaultImage = "default-image.jpg" # put in `./assets/images/`
+
+## imaging
+[imaging]
+  anchor = 'Smart'
+  bgColor = '#fff'
+  hint = 'photo'
+  quality = 95
+  resampleFilter = 'Lanczos'
+
+## lazyimg
+[lazyimg]
+  resizer = "auto"
+  renderer = "lqip-webp"
+
+  # Resizer options:
+  lqipSize = "120x Gaussian"
+  # maxSize = "1920x"
+  maxSize = "1366x"
+  responsiveSizes = [ "320x", "640x", "768x", "1024x", "1366x", "1600x", "1920x" ]
+  resizeOptions = "Lanczos q95"
+
+  # Renderer options:
+  class = "img-fluid"
+  # alt = ""
+  noscript = true
+
+  errorHandler = "warning"
+
 [sections]
-  sectionNav = ["docs", "guides"]
+  sectionNav = ["docs", "guides", "books"]
 
 [options]
-  lazySizes = true
-  clipBoard = true
-  instantPage = true
-  flexSearch = true
-  searchSectionsShow = []
-  searchSectionsIndex = []
-  darkMode = true
-  bootStrapJs = true
-  breadCrumb = false
-  highLight = true
+  lazySizes = true # no longer an option (included by default)
+  clipBoard = true # no longer an option (included by default)
+  instantPage = false # no longer an option (replaced with quicklink, included by default)
+  flexSearch = true # new setup
+  searchSectionsShow = [] # new setup
+  searchSectionsIndex = [] # new setup
+  darkMode = true # new setup
+  bootStrapJs = true # new setup
+  breadCrumb = false # new setup
+  highLight = false # no longer an option (dropped, use Hugo's Chroma syntax highlighting)
   kaTex = false
   multilingualMode = false
   docsVersioning = false
-  fullWidth = false
-  navbarSticky = true
-  toTopButton = false
+  fullWidth = false # new setup
+  navbarSticky = true # same option
+  toTopButton = false # new setup (included by default)
   scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
 
 [menu]

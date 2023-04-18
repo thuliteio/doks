@@ -13,7 +13,7 @@
 </h3>
 
 <p align="center">
-  Doks is a Hugo theme for building secure, fast, and SEO-ready documentation websites, which you can easily update and customize.
+  Doks is a documentation theme for Hyas — the Hugo-powered Jamstack framework for building production-ready websites.
 </p>
 
 <p align="center">
@@ -22,15 +22,6 @@
   </a>
   <a href="https://github.com/h-enk/doks/releases">
     <img src="https://img.shields.io/github/v/release/h-enk/doks?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
-  </a>
-  <a href="https://www.npmjs.com/package/@hyas/doks">
-    <img src="https://img.shields.io/npm/v/@hyas/doks?style=flat-square" alt="npm (scoped)">
-  </a>
-  <a href="https://github.com/h-enk/doks/actions?query=workflow%3A%22Hyas+CI%22">
-    <img src="https://img.shields.io/github/workflow/status/h-enk/doks/Hyas%20CI/master?style=flat-square" alt="GitHub Workflow Status (branch)">
-  </a>
-  <a href="https://app.netlify.com/sites/doks/deploys">
-    <img src="https://img.shields.io/netlify/8a1009d5-88ac-413e-96ef-3f928674a083?style=flat-square" alt="Netlify">
   </a>
 </p>
 
@@ -72,50 +63,17 @@ Nine main reasons why you should use Doks:
 
 ## Requirements
 
-- [Git](https://git-scm.com/) — latest source release
-- [Node.js](https://nodejs.org/) — latest LTS version or newer
-
-<details>
-<summary>Why Node.js?</summary>
-
-Doks uses npm (included with Node.js) to centralize dependency management, making it [easy to update](https://getdoks.org/docs/help/how-to-update/) resources, build tooling, plugins, and build scripts.
-
-</details>
+- [Node.js](https://nodejs.org/) — v16.17.0 or higher
 
 ## Get started
 
 Start a new Doks project in three steps:
 
-### 1. Create a new site
-
-Doks is available as a child theme and a starter theme.
-
-#### Child theme
-
-- Intended for novice to intermediate users
-- Intended for minor customizations
-- [Easily update npm packages](https://getdoks.org/docs/help/how-to-update/) — __including__ [Doks](https://www.npmjs.com/package/@hyas/doks)
+### 1. Scaffold a Doks project with recommended plugins
 
 ```bash
-git clone https://github.com/h-enk/doks-child-theme.git my-doks-site && cd my-doks-site
+npm create hyas@latest my-doks-site -- --template doks-recommended
 ```
-
-#### Starter theme
-
-- Intended for intermediate to advanced users
-- Intended for major customizations
-- [Easily update npm packages](https://getdoks.org/docs/help/how-to-update/)
-
-```bash
-git clone https://github.com/h-enk/doks.git my-doks-site && cd my-doks-site
-```
-
-<details>
-<summary>Help me choose</summary>
-
-Not sure which one is for you? Pick the child theme.
-
-</details>
 
 ### 2. Install dependencies
 
@@ -126,7 +84,7 @@ npm install
 ### 3. Start development server
 
 ```bash
-npm run start
+npm run dev
 ```
 
 ## Other commands

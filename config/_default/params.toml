@@ -50,7 +50,7 @@ repoHost = "GitHub"
 docsRepo = "https://github.com/h-enk/doks"
 docsRepoBranch = "master"
 docsRepoSubPath = ""
-editPage = false
+editPage = true
 lastMod = false
 
 # Images

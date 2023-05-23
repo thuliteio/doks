@@ -1,10 +1,15 @@
 ---
-title: "The Doks Blog"
-headline: "Blog"
-description: "Get all the latest news from Doks."
-summary: "Get all the latest news from Doks."
-date: 2020-10-06T08:49:55+00:00
-lastmod: 2020-10-06T08:49:55+00:00
+title: "Blog"
+description: ""
+summary: ""
+date: 2023-05-17T08:59:31+02:00
+lastmod: 2023-05-17T08:59:31+02:00
 draft: false
+weight: 50
 images: []
+categories: []
+tags: []
+contributors: []
+pinned: false
+homepage: false
 ---

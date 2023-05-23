@@ -1,20 +1,25 @@
 ---
 title: "Markdown Extended Syntax"
-description: "This Markdown cheat sheet provides a quick overview of all extended Markdown syntax elements."
-summary: "This Markdown cheat sheet provides a quick overview of all extended Markdown syntax elements."
-date: 2023-03-31T12:07:15+02:00
-lastmod: 2023-03-31T12:07:15+02:00
+description: "A quick reference to the Markdown extended syntax."
+summary: "A quick reference to the Markdown extended syntax."
+date: 2023-05-12T16:35:56+02:00
+lastmod: 2023-05-12T16:35:56+02:00
 draft: false
-weight: 50
 images: []
-categories: []
-tags: []
-contributors: ["Henk Verlinde"]
-pinned: false
-homepage: false
+menu:
+  docs:
+    parent: ""
+    identifier: "markdown-extended-syntax-f467db1a842b35cffcbd916e2e6a56bc"
+weight: 220
+toc: true
 ---
 
-If you need more information about any of these elements, refer to the reference guide for [extended syntax](https://www.markdownguide.org/extended-syntax).
+A quick reference to the Markdown extended syntax.
+{ .lead }
+
+{{< callout icon="info-circle" >}}
+Refer to the [extended syntax](https://www.markdownguide.org/extended-syntax) reference guide for more information.
+{{< /callout >}}
 
 ## Table
 
@@ -23,14 +28,12 @@ If you need more information about any of these elements, refer to the reference
 | ----------- | ----------- |
 | Header | Title |
 | Paragraph | Text |
-{.table .table-striped}
 ```
 
 | Syntax | Description |
 | ----------- | ----------- |
 | Header | Title |
 | Paragraph | Text |
-{.table .table-striped}
 
 ## Fenced Code Block
 
@@ -110,14 +113,22 @@ term
 
 ## Emoji
 
+{{< callout icon="info-circle" >}}
+Copy the emoji shortcode from [Emoji Cheat Sheet](https://www.webfx.com/tools/emoji-cheat-sheet/) by clicking on the emoji.
+{{< /callout >}}
+
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">That is so funny! &#58;joy:
 </span></span></code></pre></div>
 
 That is so funny! :joy:
 
-(See also [Copying and Pasting Emoji](https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji))
+## Unsupported elements
 
-## Highlight
+{{< callout icon="info-circle" >}}
+Hugo does not [support](https://www.markdownguide.org/tools/hugo/#hugo-markdown-support) the highlight, subscript, and superscript elements. Use the HTML element itself instead.
+{{< /callout >}}
+
+### Highlight
 
 ```md
 I need to highlight these <mark>very important words</mark>.
@@ -125,9 +136,7 @@ I need to highlight these <mark>very important words</mark>.
 
 I need to highlight these <mark>very important words</mark>.
 
-(See also [Hugo Markdown Support](https://www.markdownguide.org/tools/hugo/#hugo-markdown-support))
-
-## Subscript
+### Subscript
 
 ```md
 H<sub>2</sub>O
@@ -135,14 +144,10 @@ H<sub>2</sub>O
 
 H<sub>2</sub>O
 
-(See also [Hugo Markdown Support](https://www.markdownguide.org/tools/hugo/#hugo-markdown-support))
-
-## Superscript
+### Superscript
 
 ```md
 X<sup>2</sup>
 ```
 
 X<sup>2</sup>
-
-(See also [Hugo Markdown Support](https://www.markdownguide.org/tools/hugo/#hugo-markdown-support))

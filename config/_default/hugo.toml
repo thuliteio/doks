@@ -43,7 +43,7 @@ rel  = "sitemap"
 [caches]
   [caches.getjson]
     dir = ":cacheDir/:project"
-    maxAge = "10s"
+    maxAge = "30m"
 
 [taxonomies]
   contributor = "contributors"
@@ -51,8 +51,8 @@ rel  = "sitemap"
   tag = "tags"
 
 [permalinks]
-  blog = "/blog/:title/"
-# docs = "/docs/1.0/:sections[1:]/:title/"
+  blog = "/blog/:slug/"
+# docs = "/docs/1.0/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]
   keepWhitespace = false

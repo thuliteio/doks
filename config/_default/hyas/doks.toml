@@ -25,7 +25,7 @@ searchLimit = 5 # 0 (no limit, default) or natural number
 # Global alert
 alert = false # false (default) or true
 alertDismissable = true # true (default) or false
-alertText = '<a class="alert-link stretched-link fw-normal" href="/doks-version-10/">Doks version 1.0 just shipped!</a>'
+alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/doks-1/">Doks version 1.0 just shipped!</a>'
 
 # Bootstrap
 bootstrapJavascript = false # false (default) or true

@@ -59,6 +59,14 @@
   target = "assets/js/vendor/mermaid"
 
 [[mounts]]
+  source = "node_modules/@tabler/icons/icons"
+  target = "assets/svgs/tabler-icons"
+
+[[mounts]]
+  source = "node_modules/@hyas/tabler-icons/layouts"
+  target = "layouts"
+
+[[mounts]]
   source = "archetypes"
   target = "archetypes"
 

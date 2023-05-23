@@ -1,20 +1,25 @@
 ---
 title: "Markdown Basic Syntax"
-description: "This Markdown cheat sheet provides a quick overview of all basic Markdown syntax elements."
-summary: "This Markdown cheat sheet provides a quick overview of all basic Markdown syntax elements."
-date: 2023-03-31T12:06:49+02:00
-lastmod: 2023-03-31T12:06:49+02:00
+description: "A quick reference to the Markdown basic syntax."
+summary: "A quick reference to the Markdown basic syntax."
+date: 2023-05-12T16:35:44+02:00
+lastmod: 2023-05-12T16:35:44+02:00
 draft: false
-weight: 50
-images: ["markdown-guide.jpg"]
-categories: []
-tags: []
-contributors: ["Henk Verlinde"]
-pinned: false
-homepage: false
+images: []
+menu:
+  docs:
+    parent: ""
+    identifier: "markdown-basic-syntax-08aeef306d3f46c4e40c17b559b715c1"
+weight: 210
+toc: true
 ---
 
-If you need more information about any of these elements, refer to the reference guide for [basic syntax](https://www.markdownguide.org/basic-syntax).
+A quick reference to the Markdown basic syntax.
+{ .lead }
+
+{{< callout icon="info-circle" >}}
+Refer to the [basic syntax](https://www.markdownguide.org/basic-syntax) reference guide for more information.
+{{< /callout >}}
 
 ## Heading
 
@@ -23,10 +28,6 @@ If you need more information about any of these elements, refer to the reference
 ## H2
 ### H3
 ```
-
-# H1
-## H2
-### H3
 
 ## Bold
 

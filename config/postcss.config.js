@@ -29,7 +29,7 @@ module.exports = {
         'h4',
         'h5',
         'alert-link',
-        'container-xxl',
+        'container-lg',
         'container-fluid',
         'offcanvas-backdrop',
         'img-fluid',
@@ -38,6 +38,8 @@ module.exports = {
         'figcaption',
         'dt',
         'dd',
+        'showing',
+        'hiding',
         ...whitelister([
           './node_modules/@hyas/core/assets/scss/app.scss',
           './node_modules/@hyas/doks-core/assets/scss/common/_global.scss',

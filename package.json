@@ -1,21 +1,19 @@
 {
-  "name": "doks-recommended",
-  "version": "1.0.0-alpha2",
-  "description": "Doks theme with recommended plugins",
+  "name": "doks",
+  "version": "1.0.0-beta.1",
+  "description": "Doks theme",
   "main": "index.js",
   "scripts": {
-    "predev": "npm run clean:build",
-    "dev": "exec-bin node_modules/.bin/hugo/hugo server --gc --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache",
-    "dev:gitpod": "exec-bin node_modules/.bin/hugo/hugo server --gc --disableFastRender --baseUrl $(gp url 1313) --liveReloadPort=443 --appendPort=false --bind=0.0.0.0",
+    "dev": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache",
+    "dev:gitpod": "exec-bin node_modules/.bin/hugo/hugo server --disableFastRender --baseUrl $(gp url 1313) --liveReloadPort=443 --appendPort=false --bind=0.0.0.0",
     "create": "exec-bin node_modules/.bin/hugo/hugo new",
-    "check": "npm run check:scripts && npm run check:markdown",
-    "check:scripts": "eslint config",
+    "check": "npm run check:markdown",
+    "check:scripts": "eslint themes/doks/assets/js",
     "check:styles": "stylelint \"themes/doks/assets/scss/**/*.{css,sass,scss}\"",
     "check:markdown": "markdownlint-cli2 \"*.md\" \"content/**/*.md\"",
     "fix:markdown": "markdownlint-cli2-fix \"*.md\" \"content/**/*.md\"",
     "test": "npm run check",
-    "prebuild": "npm run clean:build",
-    "build": "exec-bin node_modules/.bin/hugo/hugo --gc --minify",
+    "build": "exec-bin node_modules/.bin/hugo/hugo --minify",
     "preview": "http-server --gzip --brotli --ext=html --cors",
     "clean": "npm run clean:build && npm run clean:install",
     "clean:build": "shx rm -rf public resources .hugo_build.lock",
@@ -42,10 +40,8 @@
   },
   "homepage": "https://github.com/hyas/doks#readme",
   "devDependencies": {
-    "@hyas/doks-core": "^0.1.7",
-    "@hyas/images": "^0.3.2",
-    "@hyas/seo": "^0.1.3",
+    "@hyas/doks-core": "^0.1.8",
     "auto-changelog": "^2.4.0",
-    "gethyas": "^2.0.5"
+    "shx": "^0.3.4"
   }
 }

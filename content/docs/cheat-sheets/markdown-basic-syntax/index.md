@@ -104,7 +104,7 @@ Refer to the [basic syntax](https://www.markdownguide.org/basic-syntax) referenc
 ## Image
 
 ```md
-![alt text](markdown-guide.jpg)
+![Young turtle](kris-mikael-krister-aGihPIbrtVE-unsplash.jpg)
 ```
 
-![alt text](markdown-guide.jpg)
+![Young turtle](kris-mikael-krister-aGihPIbrtVE-unsplash.jpg)

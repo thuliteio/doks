@@ -1,10 +1,10 @@
 # Customizations
 
-Customizations for the [SEO](https://github.com/gethyas/seo) plugin go here.
+Customizations for the [SEO](https://github.com/gethyas/seo) integration go here.
 
 ## Usage
 
-Copy the file(s) you'd like to override from `./node_modules/@hyas/seo/` and paste to `./plugins/seo/`. Make sure to keep the folder structure.
+Copy the file(s) you'd like to override from `./node_modules/@hyas/seo/` and paste to `./integrations/seo/`. Make sure to keep the folder structure.
 
 Supported folders are: `layouts`.
 

@@ -1,23 +1,27 @@
-# Meta Data for SEO
+# Hyas (gethyas)
+
+## Feed
+copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+
+# SEO (@hyas/seo)
 
 ## Homepage
 title = "Doks"
-titleSeparator = "-"
+titleSeparator = "-" # - (default)
 titleAddition = "Modern Documentation Theme"
-description = "Hyas is a Hugo starter helping you build modern websites that are secure, fast, and SEO-ready — by default."
+description = "Doks is a Hyas theme for building custom, production-ready documentation websites." # Default description
 
 ## Open Graph
 images = ["hyas.png"]
 ogLocale = "en_US"
-titleHome = "Hyas Hugo Starter"
+titleHome = "Modern Documentation Theme"
 
 ## Twitter Cards
 twitterSite = "@gethyas"
 twitterCreator = "@henkverlinde"
 
 ## JSON-LD
-# schemaType = "Person"
-schemaType = "Organization"
+schemaType = "Organization" # Organization (default) or Person
 schemaName = "Hyas"
 schemaAuthor = "Henk Verlinde"
 schemaAuthorTwitter = "https://twitter.com/henkverlinde"
@@ -34,80 +38,21 @@ schemaTwitter = "https://twitter.com/gethyas"
 schemaLinkedIn = ""
 schemaGitHub = "https://github.com/h-enk/hyas"
 
-# Feed
-copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+# Images (@hyas/images)
 
-# Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
-
-## Documentation
-# docsVersion = "1.0"
-
-# Edit Page
-# repoHost [Github | Gitea | GitLab | Bitbucket | BitbucketServer ] is used for building the edit link based on git hoster
-repoHost = "GitHub"
-#repoHost = "Gitea"
-docsRepo = "https://github.com/h-enk/doks"
-docsRepoBranch = "master"
-docsRepoSubPath = ""
-editPage = true
-lastMod = false
-
-# Images
-
-## defaultImage
-defaultImage = "default-image.jpg" # put in `./assets/images/`
-
-## imaging
-[imaging]
-  anchor = 'Smart'
-  bgColor = '#fff'
-  hint = 'photo'
-  quality = 95
-  resampleFilter = 'Lanczos'
-
-## lazyimg
 [lazyimg]
   resizer = "auto"
-  renderer = "lqip-webp"
+  renderer = "lqip-webp" # "lqip (default)"
 
   # Resizer options:
   lqipSize = "120x Gaussian"
-  # maxSize = "1920x"
-  maxSize = "1366x"
+  maxSize = "1024x" # "1920x" (default)
   responsiveSizes = [ "320x", "640x", "768x", "1024x", "1366x", "1600x", "1920x" ]
   resizeOptions = "Lanczos q95"
 
   # Renderer options:
   class = "img-fluid"
-  # alt = ""
+  # alt = "" # Default alt tag
   noscript = true
 
-  errorHandler = "warning"
-
-[sections]
-  sectionNav = ["docs", "guides", "books"]
-
-[options]
-  lazySizes = true # no longer an option (included by default)
-  clipBoard = true # no longer an option (included by default)
-  instantPage = false # no longer an option (replaced with quicklink, included by default)
-  flexSearch = true # new setup
-  searchSectionsShow = [] # new setup
-  searchSectionsIndex = [] # new setup
-  darkMode = true # new setup
-  bootStrapJs = true # new setup
-  breadCrumb = false # new setup
-  highLight = false # no longer an option (dropped, use Hugo's Chroma syntax highlighting)
-  kaTex = false
-  multilingualMode = false
-  docsVersioning = false
-  fullWidth = false # new setup
-  navbarSticky = true # same option
-  toTopButton = false # new setup (included by default)
-  scrollSpy = false # experimental; needs Bootstrap >= 5.2.0-beta1
-
-[menu]
-  [menu.section]
-    auto = true
-    collapsibleSidebar = true
+  errorHandler = "warning" # "warning-remote" (default)

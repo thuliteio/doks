@@ -1,11 +1,10 @@
 # Color mode
-colorMode = "auto" # auto (default), light or dark (the light and dark options are only relevant when forceColorMode = true)
-colorModeToggler = true # false (default) or true (this setting is only relevant when forceColorMode = false)
-forceColorMode = false # false (default) or true
+colorMode = "auto" # auto (default), light or dark
+colorModeToggler = true # true (default) or false (this setting is only relevant when colorMode = auto)
 
 # Navbar
-navbarSticky = true # false (default) or true
-containerBreakpoint = "xxl" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
+navbarSticky = true # true (default) or false
+containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
 
 ## Button
 navBarButton = false # false (default) or true
@@ -35,23 +34,43 @@ sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "g
 toTopButton = false # false (default) or true
 breadcrumbTrail = false # false (default) or true
 headlineHash = true # true (default) or false
-scrollSpy = true # false (default) or true
+scrollSpy = true # true (default) or false
 
 # Multilingual
 multilingualMode = false # false (default) or true
 
 # Versioning
 docsVersioning = false # false (default) or true
+docsVersion = "1.0"
 
 # UX
 headerBar = true # true (default)  or false
 backgroundDots = true # true (default)  or false
 
 # Homepage
-sectionFooter = false # true (default)  or false
+sectionFooter = false # false (default) or true
 
 # Blog
 relatedPosts = false # false (default) or true
+
+# Footer
+footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+
+# kaTex
+kaTex = false
+
+# Repository
+repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
+docsRepo = "https://github.com/h-enk/doks"
+docsRepoBranch = "main"
+docsRepoSubPath = ""
+editPage = false # false (default) or true
+lastMod = false # false (default) or true
+
+[menu]
+  [menu.section]
+    auto = true
+    collapsibleSidebar = true
 
 # SCSS
 # backGround = "yellowgreen"
@@ -65,4 +84,3 @@ relatedPosts = false # false (default) or true
 ## Light theme
 # textLight =  "#1d2d35" # "#1d2d35" (default), "#1d2d35" (orignal), or custom color
 # accentLight =  "#8ed6fb" # "#8ed6fb" (default), "#8ed6fb" (orignal), or custom color
- 

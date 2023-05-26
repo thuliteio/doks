@@ -34,12 +34,16 @@ The [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) gets embedded into t
 Add e.g. a logo from the `assets` directory:
 
 ```md
-{{</* svg icon="svgs/logos/logo-netlify-small-monochrome-lightmode.svg" width="192px" height="79px" class="icon-custom netlify-logo" */>}}
+{{</* svg icon="svgs/logos/logo-netlify-small-fullcolor-lightmode.svg" width="192px" height="79px" class="icon-custom icon-lightmode" */>}}
+
+{{</* svg icon="svgs/logos/logo-netlify-small-fullcolor-darkmode.svg" width="192px" height="79px" class="icon-custom icon-darkmode" */>}}
 ```
 
-{{< svg icon="svgs/logos/logo-netlify-small-monochrome-lightmode.svg" width="192px" height="79px" class="icon-custom netlify-logo" >}}
+{{< svg icon="svgs/logos/logo-netlify-small-fullcolor-lightmode.svg" width="192px" height="79px" class="icon-custom icon-lightmode" >}}
 
-### Page resources
+{{< svg icon="svgs/logos/logo-netlify-small-fullcolor-darkmode.svg" width="192px" height="79px" class="icon-custom icon-darkmode" >}}
+
+### Page resource
 
 {{< callout icon="info-circle" >}}
 Refer to [page resources](https://gohugo.io/content-management/page-resources/) and [page bundles](https://gohugo.io/content-management/page-bundles/) for more information.
@@ -49,10 +53,10 @@ Add e.g a monogram
 :
 
 ```md
-{{</* svg icon="logo-netlify-monogram-monochrome-lightmode.svg" width="64px" height="57px" class="icon-custom netlify-monogram" */>}}
+{{</* svg icon="logo-netlify-monogram-monochrome-lightmode.svg" width="64px" height="57px" class="icon-custom icon-monochrome" */>}}
 ```
 
-{{< svg icon="logo-netlify-monogram-monochrome-lightmode.svg" width="64px" height="57px" class="icon-custom netlify-monogram" >}}
+{{< svg icon="logo-netlify-monogram-monochrome-lightmode.svg" width="64px" height="57px" class="icon-custom icon-monochrome" >}}
 
 ### Tabler icons
 
@@ -63,18 +67,18 @@ Copy the icon name from [Tabler Icons](https://tabler-icons.io/) by clicking on 
 Add a Tabler icon:
 
 ```md
-{{</* svg "rubber-stamp" */>}}
+{{</* svg "hand-rock" */>}}
 ```
 
-{{< svg "rubber-stamp" >}}
+{{< svg "hand-rock" >}}
 
 Specify [SVG attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute), for example:
 
 ```md
-{{</* svg icon="rubber-stamp" stroke-width="1" height="3rem" width="3rem" class="icon-custom" */>}}
+{{</* svg icon="hand-rock" stroke-width="1" stroke="#ee52b7" height="3rem" width="3rem" class="icon-custom" */>}}
 ```
 
-{{< svg icon="rubber-stamp" stroke-width="1" height="3rem" width="3rem" class="icon-custom" >}}
+{{< svg icon="hand-rock" stroke-width="1" stroke="#ee52b7" height="3rem" width="3rem" class="icon-custom" >}}
 
 ## Callouts
 
@@ -159,13 +163,13 @@ You can change the commands in the scripts section of `./package.json`.
 ## Details
 
 ```md
-{{</* details "How will we conduct IEP and 504 meetings?" */>}}
-All meetings will be held *remotely*.
+{{</* details "Details" */>}}
+Something small enough to escape casual notice.
 {{</* /details */>}}
 ```
 
-{{< details "How will we conduct IEP and 504 meetings?" >}}
-All meetings will be held *remotely*.
+{{< details "Details" >}}
+Something small enough to escape casual notice.
 {{< /details >}}
 
 ### Start in open state
@@ -264,10 +268,30 @@ yarn install
 {{< /tab >}}
 {{< /tabs >}}
 
+## Image
+
+### Assets directory
+
+Add an image from the assets directory:
+
+```md
+{{</* lazyimg img="images/bozhin-karaivanov-3HnVKfQZGTQ-unsplash.jpg" alt="Red raspberry" */>}}
+```
+
+{{< lazyimg img="images/bozhin-karaivanov-3HnVKfQZGTQ-unsplash.jpg" alt="Red raspberry" >}}
+
+### Page resource
+
+```md
+{{</* lazyimg img="bozhin-karaivanov-zs6GW81O538-unsplash.jpg" alt="Red apples on a tree" */>}}
+```
+
+{{< lazyimg img="bozhin-karaivanov-zs6GW81O538-unsplash.jpg" alt="Red apples on a tree" >}}
+
 ## Video
 
 ```md
-{{</* video ratio="16x9" attributes="controls autoplay muted" webm-src="videos/flower.webm" mp4-src="videos/flower.mp4" */>}}
+{{</* video src="flower" autoplay="true" muted="true" */>}}
 ```
 
-{{< video ratio="16x9" attributes="controls autoplay muted" webm-src="videos/flower.webm" mp4-src="videos/flower.mp4" >}}
+{{< video src="flower" autoplay="true" muted="true" >}}

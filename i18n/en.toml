@@ -27,3 +27,6 @@ other = "The page you are looking for doesn't exist or has been moved."
 
 [browse]
 other = "Browse"
+
+[videoUnsupported]
+other = "Your browser doesn't support embedded videos, but don't worry, you can <a href=\"{{ .RelPermalink }}\">download it</a> and watch it with your favorite video player!"

@@ -4,7 +4,7 @@ disableAliases = true
 disableHugoGeneratorInject = true
 # disableKinds = ["taxonomy", "term"]
 enableEmoji = true
-enableGitInfo = false
+enableGitInfo = true
 enableRobotsTXT = true
 languageCode = "en-US"
 paginate = 10
@@ -14,7 +14,7 @@ summarylength = 20 # 70 (default)
 # Multilingual
 defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
-# defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 [outputs]
   home = ["HTML", "RSS", "searchIndex"]

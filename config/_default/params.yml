@@ -1,0 +1,64 @@
+# Images (@hyas/images)
+image:
+  ## General
+  type: page # page (default) or global
+  widths: [480, 640, 768, 1024, 1366] # [600, 900, 1300] (default)
+  densities: [1,2] # [1,2] (default)
+  formats: [original, webp] # [original, webp] (default)
+  provider: null # null (default) or netlify
+  loading: lazysizes # auto (default), lazy, or lazysizes
+  class: "img-fluid blur-up" # img-fluid (default)
+  output: picture # picture (default), figure, or img
+  noscript: false # false (default) or true
+
+  ## Placeholder
+  placeholder: lqip # null (default), lqip, dominant, or [black, [gray-100..gray-900], white]
+  lqip_div_factor: 5 # 5 (default)
+  lqip_blur_amount: 5 # 5 (default)
+  gif_div_factor: 10 # 10 (default)
+
+  ## Figure
+  target: "_blank" # _blank (default)
+  rel: "noopener, noreferrer" # noopener, noreferrer (default)
+  figure_class: "figure" # figure (default)
+  figure_image_class: "figure-img img-fluid blur-up" # "figure-img img-fluid" (default)
+  figcaption_class: figure-caption # figure-caption (default)
+  figcaption_title_h: 4 # 4 (default)
+  attr_link_target: "_blank" # _blank (default)
+  attr_link_rel: "noopener, noreferrer" # noopener, noreferrer (default)
+
+  ## Render hook
+  render_hook: true # false (default) or true
+  render_hook_wrapper_class: img-wrapper # img-wrapper (default)
+
+  ## Shortcode
+  shortcode_wrapper_class: img-wrapper # img-wrapper (default)
+
+  ## Debugging
+  suppress_width_warning: false # false (default) or true
+  debug: false # false (default) or true
+
+# SEO (@hyas/seo)
+seo:
+  description: "Doks is a Hyas theme for building custom, production-ready documentation websites."
+  generate:
+    title: true
+    meta: true
+    twitter: true
+    og: true
+    jsonld:
+      article: true
+      breadcrumbs: true
+  title_tag:
+    separator: "|"
+    home_text: "Modern Documentation Theme"
+  og_article_types: [post, posts, blog, news, article, articles, event, events, course, courses]
+  jsonld_article_types: [article, articles]
+  jsonld_news_article_types: [news, updates]
+  jsonld_blog_posting_types: [post, posts, blog]
+  image: "/images/hyas-schema-image.png" 
+  private: false
+
+# Inline SVG (@hyas/inline-svg)
+inline_svg:
+  icon_set_dir: "tabler-icons" # tabler-icons (default)

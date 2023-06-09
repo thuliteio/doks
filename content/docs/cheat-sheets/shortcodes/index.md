@@ -23,7 +23,7 @@ Refer to [components](https://getdoks.org/docs/components/) for more information
 
 ## SVG
 
-Add an [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) from the assets directory, page resources, or Tabler icons.
+Insert an [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) from the assets directory, page resources, or Tabler Icons.
 
 {{< callout icon="info-circle" >}}
 The [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) gets embedded into the pages' HTML.
@@ -34,51 +34,50 @@ The [SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) gets embedded into t
 Add e.g. a logo from the `assets` directory:
 
 ```md
-{{</* svg icon="svgs/logos/logo-netlify-small-fullcolor-lightmode.svg" width="192px" height="79px" class="icon-custom icon-lightmode" */>}}
+{{</* inline-svg src="svgs/logos/logo-netlify-small-fullcolor-lightmode.svg" width="192px" height="79px" class="svg-inline-custom svg-lightmode" */>}}
 
-{{</* svg icon="svgs/logos/logo-netlify-small-fullcolor-darkmode.svg" width="192px" height="79px" class="icon-custom icon-darkmode" */>}}
+{{</* inline-svg src="svgs/logos/logo-netlify-small-fullcolor-darkmode.svg" width="192px" height="79px" class="svg-inline-custom svg-darkmode" */>}}
 ```
 
-{{< svg icon="svgs/logos/logo-netlify-small-fullcolor-lightmode.svg" width="192px" height="79px" class="icon-custom icon-lightmode" >}}
+{{< inline-svg src="svgs/logos/logo-netlify-small-fullcolor-lightmode.svg" width="192px" height="79px" class="svg-inline-custom svg-lightmode" >}}
 
-{{< svg icon="svgs/logos/logo-netlify-small-fullcolor-darkmode.svg" width="192px" height="79px" class="icon-custom icon-darkmode" >}}
+{{< inline-svg src="svgs/logos/logo-netlify-small-fullcolor-darkmode.svg" width="192px" height="79px" class="svg-inline-custom svg-darkmode" >}}
 
 ### Page resource
 
-{{< callout icon="info-circle" >}}
+{{< callout src="info-circle" >}}
 Refer to [page resources](https://gohugo.io/content-management/page-resources/) and [page bundles](https://gohugo.io/content-management/page-bundles/) for more information.
 {{< /callout >}}
 
-Add e.g a monogram
-:
+Add e.g a monogram:
 
 ```md
-{{</* svg icon="logo-netlify-monogram-monochrome-lightmode.svg" width="64px" height="57px" class="icon-custom icon-monochrome" */>}}
+{{</* inline-svg src="logo-netlify-monogram-monochrome-lightmode.svg" width="64px" height="57px" class="svg-inline-custom svg-monochrome" */>}}
 ```
 
-{{< svg icon="logo-netlify-monogram-monochrome-lightmode.svg" width="64px" height="57px" class="icon-custom icon-monochrome" >}}
+{{< inline-svg src="logo-netlify-monogram-monochrome-lightmode.svg" width="64px" height="57px" class="svg-inline-custom svg-monochrome" >}}
 
 ### Tabler icons
 
-{{< callout icon="copy" >}}
+{{< callout src="copy" >}}
 Copy the icon name from [Tabler Icons](https://tabler-icons.io/) by clicking on it's name.
 {{< /callout >}}
 
 Add a Tabler icon:
 
 ```md
-{{</* svg "hand-rock" */>}}
+{{</* inline-svg "coffee" */>}}
 ```
 
-{{< svg "hand-rock" >}}
+{{< inline-svg "coffee" >}}
 
 Specify [SVG attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute), for example:
 
 ```md
-{{</* svg icon="hand-rock" stroke-width="1" stroke="#ee52b7" height="3rem" width="3rem" class="icon-custom" */>}}
+{{</* inline-svg src="hand-rock" stroke-width="1" stroke="#ee52b7" height="3rem" width="3rem" class="svg-inline-custom" */>}}
 ```
 
-{{< svg icon="hand-rock" stroke-width="1" stroke="#ee52b7" height="3rem" width="3rem" class="icon-custom" >}}
+{{< inline-svg src="hand-rock" stroke-width="1" stroke="#ee52b7" height="3rem" width="3rem" class="svg-inline-custom" >}}
 
 ## Callouts
 
@@ -275,18 +274,18 @@ yarn install
 Add an image from the assets directory:
 
 ```md
-{{</* lazyimg img="images/bozhin-karaivanov-3HnVKfQZGTQ-unsplash.jpg" alt="Red raspberry" */>}}
+{{</* picture src="assets/images/bozhin-karaivanov-3HnVKfQZGTQ-unsplash.jpg" alt="Red raspberry" */>}}
 ```
 
-{{< lazyimg img="images/bozhin-karaivanov-3HnVKfQZGTQ-unsplash.jpg" alt="Red raspberry" >}}
+{{< picture src="assets/images/bozhin-karaivanov-3HnVKfQZGTQ-unsplash.jpg" alt="Red raspberry" >}}
 
 ### Page resource
 
 ```md
-{{</* lazyimg img="bozhin-karaivanov-zs6GW81O538-unsplash.jpg" alt="Red apples on a tree" */>}}
+{{</* picture src="bozhin-karaivanov-zs6GW81O538-unsplash.jpg" alt="Red apples on a tree" */>}}
 ```
 
-{{< lazyimg img="bozhin-karaivanov-zs6GW81O538-unsplash.jpg" alt="Red apples on a tree" >}}
+{{< picture src="bozhin-karaivanov-zs6GW81O538-unsplash.jpg" alt="Red apples on a tree" >}}
 
 ## Video
 

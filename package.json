@@ -1,6 +1,6 @@
 {
   "name": "doks",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Doks theme",
   "main": "index.js",
   "scripts": {
@@ -36,12 +36,13 @@
   "author": "Henk Verlinde",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hyas/doks/issues"
+    "url": "https://github.com/gethyas/doks/issues"
   },
-  "homepage": "https://github.com/hyas/doks#readme",
+  "homepage": "https://github.com/gethyas/doks#readme",
   "devDependencies": {
-    "@hyas/doks-core": "^0.1.8",
+    "@hyas/doks-core": "^1.0.0",
     "auto-changelog": "^2.4.0",
     "shx": "^0.3.4"
-  }
+  },
+  "packageManager": "pnpm@8.3.1"
 }

@@ -15,6 +15,11 @@
   target = "layouts"
 
 [[mounts]]
+  source = "node_modules/@hyas/images/assets"
+  target = "assets"
+  excludeFiles = "/scss/**.scss"
+
+[[mounts]]
   source = "node_modules/@hyas/images/layouts"
   target = "layouts"
 
@@ -63,7 +68,11 @@
   target = "assets/svgs/tabler-icons"
 
 [[mounts]]
-  source = "node_modules/@hyas/tabler-icons/layouts"
+  source = "assets/svgs"
+  target = "assets/svgs"
+
+[[mounts]]
+  source = "node_modules/@hyas/inline-svg/layouts"
   target = "layouts"
 
 [[mounts]]

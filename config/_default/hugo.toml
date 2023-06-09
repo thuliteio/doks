@@ -1,3 +1,4 @@
+title = "Doks"
 baseurl = "/"
 canonifyURLs = false
 disableAliases = true
@@ -15,6 +16,11 @@ summarylength = 20 # 70 (default)
 defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = false
+
+copyRight = "Copyright (c) 2020-2023 Henk Verlinde"
+
+[social]
+  twitter = "getdoks"
 
 [outputs]
   home = ["HTML", "RSS", "searchIndex"]
@@ -70,3 +76,10 @@ rel  = "sitemap"
     [[related.indices]]
     name = "date"
     weight = 10
+
+[imaging]
+  anchor = 'Smart'
+  bgColor = '#fff'
+  hint = 'photo'
+  quality = 90
+  resampleFilter = 'Lanczos'

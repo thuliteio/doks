@@ -1,4 +1,4 @@
-name: Continuous Integration - Action
+name: Hyas CI
 
 on:
   push:
@@ -8,30 +8,40 @@ on:
 
 jobs:
   build:
+    name: "Build: ${{ matrix.os }}"
     runs-on: ${{ matrix.os }}
-
+    timeout-minutes: 3
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
         node-version: [18.x, 20.x]
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: pnpm/action-setup@v2
+    - name: Checkout
+      uses: actions/checkout@v3
+    
+    - name: Setup PNPM
+      uses: pnpm/action-setup@v2
       with:
-        version: 7
+        version: 8
 
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Setup node@${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
 
     - name: Install dependencies
-      run: pnpm install
+      run: pnpm ci
 
-    - name: Run test script
-      run: pnpm test
+    # - name: Run formatter
+    #   run: pnpm format --if-present
 
-    - name: Build production website
+    # - name: Run linters
+    #   run: pnpm lint --if-present
+
+    - name: Build site
       run: pnpm build
+
+    # - name: Run tests
+    #   run: pnpm test --if-present

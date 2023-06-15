@@ -32,7 +32,7 @@ jobs:
         cache: 'pnpm'
 
     - name: Install dependencies
-      run: pnpm ci
+      run: pnpm install
 
     # - name: Run formatter
     #   run: pnpm format --if-present

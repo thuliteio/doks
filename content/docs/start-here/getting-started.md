@@ -63,8 +63,4 @@ Join us on [Doks Discussions](https://github.com/h-enk/doks/discussions) to shar
 
 ## Contribute
 
-Doks is brought to you by all these helpful people. [Join us on GitHub!](https://github.com/h-enk/doks)
-
-{{< contributors >}}
-
-{{< contributors "h-enk/getdoks.org" >}}
+We welcome contributions of any size and contributors of any skill level. Check out oour [Contributor Guides](https://getdoks.org/contribute/)

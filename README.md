@@ -1,117 +1,62 @@
-<p align="center">
-  <a href="https://getdoks.org/">
-    <img alt="Doks" src="https://doks.netlify.app/doks.svg" width="60">
-  </a>
-</p>
-
-<h1 align="center">
-  Doks
-</h1>
-
-<h3 align="center">
-  Modern Documentation Theme
-</h3>
+![Modern documentation theme](.github/assets/banner.png)
 
 <p align="center">
-  Doks is a documentation theme for Hyas — the Hugo-powered Jamstack framework for building production-ready websites.
+  <br/>
+  <a href="https://getdoks.org/">Doks</a> is a theme for building custom, production-ready documentation websites.
+  <br/>
+  Powered by <a href="https://gethyas.com/">Hyas</a> &mdash; the all-in-one Hugo framework designed for ease of use.
+  <br/><br/>
 </p>
-
-<p align="center">
-  <a href="https://github.com/h-enk/doks/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/h-enk/doks?style=flat-square" alt="GitHub">
-  </a>
-  <a href="https://github.com/h-enk/doks/releases">
-    <img src="https://img.shields.io/github/v/release/h-enk/doks?include_prereleases&style=flat-square"alt="GitHub release (latest SemVer including pre-releases)">
-  </a>
-</p>
-
-![Doks — Modern Documentation Theme](https://raw.githubusercontent.com/h-enk/doks/master/images/doks.png)
 
 ## Demo
 
 - [doks.netlify.app](https://doks.netlify.app/)
 
-## Why Doks?
+## Key Features
 
-Nine main reasons why you should use Doks:
+- **Hugo powered:** Fast and flexible framework for building websites.
+- **Project dependencies**: Install and update dependencies easier with [npm](https://www.npmjs.com/).
+- **Production-ready**: Optimized for speed, SEO, and security.
+- **Customizable:** Build the website you want with settings and integrations.
+- **Development tools:** Check scripts, styles, and markdown for errors.
+- **Deploy anywhere:** Deployment guides to different deployment services.
 
-1. __Security aware__. Get A+ scores on [Mozilla Observatory](https://observatory.mozilla.org/analyze/doks.netlify.app) out of the box. Easily change the default Security Headers to suit your needs.
-
-2. __Fast by default__. Get 100 scores on [Google Lighthouse](https://googlechrome.github.io/lighthouse/viewer/?gist=59aafe464a68f8bc30b8e9a636d5b053) by default. Doks removes unused css, prefetches links, and lazy loads images.
-
-3. __SEO-ready__. Use sensible defaults for structured data, open graph, and Twitter cards. Or easily change the SEO settings to your liking.
-
-4. __Development tools__. Code with confidence. Check styles, scripts, and markdown for errors and fix automatically or manually.
-
-5. __Bootstrap framework__. Build robust, flexible, and intuitive websites with Bootstrap 5. Easily customize your Doks site with the source Sass files.
-
-6. __Netlify-ready__. Deploy to Netlify with sensible defaults. Easily use Netlify Functions, Netlify Redirects, and Netlify Headers.
-
-7. __Full text search__. Search your Doks site with FlexSearch. Easily customize index settings and search options to your liking.
-
-8. __Page layouts__. Build pages with a landing page, blog, or documentation layout. Add custom sections and components to suit your needs.
-
-9. __Dark mode__. Switch to a low-light UI with the click of a button. Change colors with variables to match your branding.
-
-### Other features
-
-- __Multilingual and i18n__ support
-- __Versioning__ documentation support
-- __KaTeX__ math typesetting
-- __Mermaid__ diagrams and visualization
-- __highlight.js__ syntax highlighting
+Check out our detailed [Why Doks](https://getdoks.org/concepts/why-doks/) breakdown to learn more about what makes Doks special. ✨
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) — v16.17.0 or higher
+- [Node.js](https://nodejs.org/) — LTS or higher
 
-## Get started
+## Install
 
-Start a new Doks project in three steps:
-
-### 1. Scaffold a Doks project with recommended plugins
+The recommended way to install the latest version of Doks is by running the command below:
 
 ```bash
-npm create hyas@latest my-doks-site -- --template doks-recommended
+npm create hyas@latest -- --template doks
 ```
 
-### 2. Install dependencies
-
-```bash
-npm install
-```
-
-### 3. Start development server
-
-```bash
-npm run dev
-```
-
-## Other commands
-
-Doks comes with [commands](https://getdoks.org/docs/prologue/commands/) for common tasks.
+Looking for help? Start with our [Getting Started](https://getdoks.org/docs/start-here/getting-started/) guide.
 
 ## Documentation
 
-- [Netlify](https://docs.netlify.com/)
-- [Hugo](https://gohugo.io/documentation/)
-- [Doks](https://getdoks.org/)
+Visit our [official documentation](https://getdoks.org/).
 
-## Communities
+## Support
 
-- [Netlify Community](https://community.netlify.com/)
-- [Hugo Forums](https://discourse.gohugo.io/)
-- [Doks Discussions](https://github.com/h-enk/doks/discussions)
+Having trouble? Get help in the official [Doks Discussions](https://github.com/h-enk/doks/discussions).
+
+## Contributing
+
+New contributors welcome! Check out our [Contributor Guides](https://getdoks.org/contribute/) for help getting started.
+
+## Links
+
+- [License (MIT)](LICENSE)
+- [Code of Conduct](CODE_OF_CONDUCT.md)
+- [Open Governance & Voting](GOVERNANCE.md)
+- [Project Funding](FUNDING.md)
+- [Website](https://getdoks.org/)
 
 ## Sponsors
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website.
-
-[![OC sponsor 0](https://opencollective.com/doks/tiers/sponsor/0/avatar.svg)](https://opencollective.com/doks/tiers/sponsor/0/website)
-[![OC sponsor 1](https://opencollective.com/doks/tiers/sponsor/1/avatar.svg)](https://opencollective.com/doks/tiers/sponsor/1/website)
-
-## Backers
-
-Support this project by becoming a backer. Your avatar will show up here.
-
-[![Backers](https://opencollective.com/doks/tiers/backer.svg?49741992)](https://opencollective.com/doks)
+Doks is supported by Netlify, Algolia, and several other amazing organizations and inidviduals. [Sponsor Doks](.github/FUNDING.md)!

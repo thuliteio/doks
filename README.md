@@ -59,4 +59,4 @@ New contributors welcome! Check out our [Contributor Guides](https://getdoks.org
 
 ## Sponsors
 
-Doks is supported by Netlify, Algolia, and several other amazing organizations and inidviduals. [Sponsor Doks](.github/FUNDING.md)!
+Doks is supported by Netlify, Algolia, and several other amazing organizations and inidviduals. [Sponsor Doks](.github/FUNDING.md)! 💚

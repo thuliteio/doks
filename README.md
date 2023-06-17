@@ -25,7 +25,7 @@ Check out our detailed [Why Doks](https://getdoks.org/concepts/why-doks/) breakd
 
 ## Requirements
 
-- [Node.js](https://nodejs.org/) — LTS or higher
+- [Node.js](https://nodejs.org/) — `v16.12.0` or higher
 
 ## Install
 
@@ -52,11 +52,10 @@ New contributors welcome! Check out our [Contributor Guides](https://getdoks.org
 ## Links
 
 - [License (MIT)](LICENSE)
-- [Code of Conduct](CODE_OF_CONDUCT.md)
-- [Open Governance & Voting](GOVERNANCE.md)
-- [Project Funding](FUNDING.md)
+- [Code of Conduct](https://github.com/gethyas/.github/blob/main/CODE_OF_CONDUCT.md)
+- [Project Funding](.github/FUNDING.md)
 - [Website](https://getdoks.org/)
 
 ## Sponsors
 
-Doks is supported by Netlify, Algolia, and several other amazing organizations and inidviduals. [Sponsor Doks](.github/FUNDING.md)! 💚
+Doks is supported by Netlify, Algolia, and several other amazing organizations and inidviduals. [Sponsor Doks!](.github/FUNDING.md) ❤️

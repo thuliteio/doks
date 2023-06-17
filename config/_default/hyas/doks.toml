@@ -60,17 +60,17 @@ footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">N
 kaTex = false
 
 # Repository
-repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
-docsRepo = "https://github.com/h-enk/doks"
-docsRepoBranch = "main"
-docsRepoSubPath = ""
 editPage = false # false (default) or true
 lastMod = false # false (default) or true
+repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
+docsRepo = "https://github.com/h-enk/doks"
+docsRepoBranch = "main" # main (default), master, or <branch name>
+docsRepoSubPath = "" # "" (none, default) or <sub path>
 
 [menu]
   [menu.section]
-    auto = true
-    collapsibleSidebar = true
+    auto = true # true (default) or false
+    collapsibleSidebar = true # true (default) or false
 
 # SCSS
 # backGround = "yellowgreen"

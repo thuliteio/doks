@@ -3,9 +3,9 @@
 # - https://www.gitpod.io/docs/configure/workspaces/tasks#one-line-tasks
 
 tasks:
-  - name: Dev Server
+  - name: Run development server
     init: pnpm install
-    command: pnpm clean:build && pnpm dev:gitpod
+    command: pnpm dev
 
 ports:
   - port: 1313

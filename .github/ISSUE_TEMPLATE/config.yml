@@ -1,4 +1,7 @@
 contact_links:
-  - name: Question 🙋
-    url: https://github.com/h-enk/doks/discussions/categories/q-a
-    about: Ask your question in Doks Discussions
+  - name: 📘 Documentation
+    url: https://github.com/gethyas/getdoks.org
+    about: File an issue or make an improvement to the docs website.
+  - name: 💁 Support
+    url: https://github.com/gethyas/doks/discussions
+    about: 'Get help on Hyas Discussions'

@@ -2,9 +2,9 @@
 
 <p align="center">
   <br/>
-  <a href="https://getdoks.org/">Doks</a> is a theme for building custom, production-ready documentation websites.
+  <a href="https://getdoks.org/">Doks</a> is a fast, flexible, and easy-to-use documentation theme built on <a href="https://gethyas.com/">Hyas</a> &mdash; 
   <br/>
-  Powered by <a href="https://gethyas.com/">Hyas</a> &mdash; the all-in-one Hugo framework designed for ease of use.
+  the all-in-one Hugo-npm framework.
   <br/><br/>
 </p>
 

@@ -16,7 +16,7 @@ toc: true
 
 ## What is Doks?
 
-Doks is a [Hyas](https://gethyas.com/) theme for building custom, production-ready documentation websites.
+Doks is a fast, flexible, and easy-to-use documentation theme built on [Hyas](https://gethyas.com/).
 
 ## Key Features
 

@@ -1,11 +1,15 @@
 {
   "name": "doks",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "Doks theme",
-  "main": "index.js",
+  "author": "Hyas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gethyas/doks.git"
+  },
   "scripts": {
     "dev": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache",
-    "dev:gitpod": "exec-bin node_modules/.bin/hugo/hugo server --disableFastRender --baseUrl $(gp url 1313) --liveReloadPort=443 --appendPort=false --bind=0.0.0.0",
     "dev:drafts": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache --buildDrafts",
     "create": "exec-bin node_modules/.bin/hugo/hugo new",
     "lint": "npm run lint:markdown",
@@ -25,28 +29,15 @@
     "postinstall": "shx rm -rf node_modules/.bin/hugo && shx mkdir node_modules/.bin/hugo && shx cp node_modules/gethyas/node_modules/.bin/hugo/* node_modules/.bin/hugo",
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hyas/doks.git"
+  "dependencies": {
+    "@hyas/doks-core": "^1.0.3"
   },
-  "keywords": [
-    "doks",
-    "hyas",
-    "hugo"
-  ],
-  "author": "Henk Verlinde",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gethyas/doks/issues"
-  },
-  "homepage": "https://github.com/gethyas/doks#readme",
   "devDependencies": {
-    "@hyas/doks-core": "^1.0.1",
     "auto-changelog": "^2.4.0"
   },
   "engines": {
     "node": ">=16.12.0",
-    "pnpm": ">=8.2.0"
+    "pnpm": ">=8.6.2"
   },
-  "packageManager": "pnpm@8.6.0"
+  "packageManager": "pnpm@8.6.2"
 }

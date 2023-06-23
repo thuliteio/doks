@@ -2,9 +2,9 @@ name: Hyas CI
 
 on:
   push:
-    branches: master
+    branches: main
   pull_request:
-    branches: master
+    branches: main
 
 jobs:
   build:
@@ -20,28 +20,19 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
     
-    - name: Setup PNPM
-      uses: pnpm/action-setup@v2
-      with:
-        version: 8
-
     - name: Setup node@${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'pnpm'
 
     - name: Install dependencies
-      run: pnpm install
+      run: npm ci
 
-    # - name: Run formatter
-    #   run: pnpm format --if-present
-
-    # - name: Run linters
-    #   run: pnpm lint --if-present
+    - name: Run linters
+      run: npm run lint --if-present
 
     - name: Build site
-      run: pnpm build
+      run: npm run build
 
     # - name: Run tests
-    #   run: pnpm test --if-present
+    #   run: npm test --if-present

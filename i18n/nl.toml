@@ -1,0 +1,17 @@
+[search_title]
+other = "Zoeken"
+
+[get-started]
+other = "Aan de slag"
+
+[on-this-page]
+other = "Op deze pagina"
+
+[404-title]
+other = "Pagina niet gevonden :("
+
+[404-text]
+other = "De gezochte pagina bestaat niet of deze is verplaatst."
+
+[browse]
+other = "Browse"

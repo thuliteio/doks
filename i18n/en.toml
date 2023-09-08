@@ -1,0 +1,32 @@
+[search_placeholder]
+other = "Search"
+
+[search_title]
+other = "Search"
+
+[search_loading]
+other = "Loading search index…"
+
+[search_no_recent]
+other = "No recent searches"
+
+[search_no_results]
+other = "No results"
+
+[get-started]
+other = "Example Guide"
+
+[on-this-page]
+other = "On this page"
+
+[404-title]
+other = "Page not found :("
+
+[404-text]
+other = "The page you are looking for doesn't exist or has been moved."
+
+[browse]
+other = "Browse"
+
+[videoUnsupported]
+other = "Your browser doesn't support embedded videos, but don't worry, you can <a href=\"{{ .RelPermalink }}\">download it</a> and watch it with your favorite video player!"

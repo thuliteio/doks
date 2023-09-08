@@ -1,0 +1,8 @@
+[get-started]
+other = "Loslegen"
+
+[on-this-page]
+other = "Auf dieser Seite"
+
+[videoUnsupported]
+other = "Ihr Browser unterstützt keine integrierten Videos, aber keine Sorge, Sie können <a href=\"{{ .RelPermalink }}\">es herunterladen</a> und mit Ihrem Lieblings-Videoplayer ansehen!"

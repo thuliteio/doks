@@ -1,0 +1,88 @@
+# Color mode
+colorMode = "auto" # auto (default), light or dark
+colorModeToggler = true # true (default) or false (this setting is only relevant when colorMode = auto)
+
+# Navbar
+navbarSticky = true # true (default) or false
+containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
+
+## Button
+navBarButton = false # false (default) or true
+navBarButtonUrl = "/docs/prologue/introduction/"
+navBarButtonText = "Get started"
+
+# FlexSearch
+flexSearch = true # true (default) or false
+searchExclKinds = [] # list of page kinds to exclude from search indexing (e.g. ["home", "taxonomy", "term"] )
+searchExclTypes = [] # list of content types to exclude from search indexing (e.g. ["blog", "docs", "legal", "contributors", "categories"])
+showSearch = [] # [] (all pages, default) or homepage (optionally) and list of sections (e.g. ["homepage", "blog", "guides"])
+
+## Search results
+showDate = false # false (default) or true
+showSummary = true # true (default) or false
+searchLimit = 5 # 0 (no limit, default) or natural number
+
+# Global alert
+alert = false # false (default) or true
+alertDismissable = true # true (default) or false
+alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/example-post/">Doks version 1.0 just shipped!</a>'
+
+# Bootstrap
+bootstrapJavascript = false # false (default) or true
+
+# Nav
+sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
+toTopButton = false # false (default) or true
+breadcrumbTrail = false # false (default) or true
+headlineHash = true # true (default) or false
+scrollSpy = true # true (default) or false
+
+# Multilingual
+multilingualMode = false # false (default) or true
+showMissingLanguages = true # whether or not to show untranslated languages in the language menu; true (default) or false
+
+# Versioning
+docsVersioning = false # false (default) or true
+docsVersion = "1.0"
+
+# UX
+headerBar = false # false (default) or true
+backgroundDots = true # true (default)  or false
+
+# Homepage
+sectionFooter = false # false (default) or true
+
+# Blog
+relatedPosts = false # false (default) or true
+
+# Footer
+footer = "Brought to you by <a class=\"text-muted\" href=\"https://gethyas.com/\">Hyas</a>"
+
+# KaTex
+katex = false
+
+# Repository
+editPage = false # false (default) or true
+lastMod = false # false (default) or true
+repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
+docsRepo = "https://github.com/h-enk/doks"
+docsRepoBranch = "main" # main (default), master, or <branch name>
+docsRepoSubPath = "" # "" (none, default) or <sub path>
+
+[menu]
+  [menu.section]
+    auto = true # true (default) or false
+    collapsibleSidebar = true # true (default) or false
+
+# SCSS
+# backGround = "yellowgreen"
+
+# Colors
+
+## Dark theme
+# textDark =  "#dee2e6" # "#dee2e6" (default), "#dee2e6" (orignal), or custom color
+# accentDark = "#5d2f86" # "#5d2f86" (default), "#5d2f86" (original), or custom color
+
+## Light theme
+# textLight =  "#1d2d35" # "#1d2d35" (default), "#1d2d35" (orignal), or custom color
+# accentLight =  "#8ed6fb" # "#8ed6fb" (default), "#8ed6fb" (orignal), or custom color

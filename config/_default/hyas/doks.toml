@@ -13,7 +13,8 @@ navBarButtonText = "Get started"
 
 # FlexSearch
 flexSearch = true # true (default) or false
-indexPages = [] # [] (all regular pages, default) or list of sections (e.g. ["blog", "guides"])
+searchExclKinds = [] # list of page kinds to exclude from search indexing (e.g. ["home", "taxonomy", "term"] )
+searchExclTypes = [] # list of content types to exclude from search indexing (e.g. ["blog", "docs", "legal", "contributors", "categories"])
 showSearch = [] # [] (all pages, default) or homepage (optionally) and list of sections (e.g. ["homepage", "blog", "guides"])
 
 ## Search results
@@ -24,7 +25,7 @@ searchLimit = 5 # 0 (no limit, default) or natural number
 # Global alert
 alert = false # false (default) or true
 alertDismissable = true # true (default) or false
-alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/doks-1/">Doks version 1.0 just shipped!</a>'
+alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/example-post/">Doks version 1.0 just shipped!</a>'
 
 # Bootstrap
 bootstrapJavascript = false # false (default) or true
@@ -38,13 +39,14 @@ scrollSpy = true # true (default) or false
 
 # Multilingual
 multilingualMode = false # false (default) or true
+showMissingLanguages = true # whether or not to show untranslated languages in the language menu; true (default) or false
 
 # Versioning
 docsVersioning = false # false (default) or true
 docsVersion = "1.0"
 
 # UX
-headerBar = true # true (default)  or false
+headerBar = false # false (default) or true
 backgroundDots = true # true (default)  or false
 
 # Homepage
@@ -54,10 +56,10 @@ sectionFooter = false # false (default) or true
 relatedPosts = false # false (default) or true
 
 # Footer
-footer = "Powered by <a class=\"text-muted\" href=\"https://www.netlify.com/\">Netlify</a>, <a class=\"text-muted\" href=\"https://gohugo.io/\">Hugo</a>, and <a class=\"text-muted\" href=\"https://getdoks.org/\">Doks</a>"
+footer = "Brought to you by <a class=\"text-muted\" href=\"https://gethyas.com/\">Hyas</a>"
 
-# kaTex
-kaTex = false
+# KaTex
+katex = false
 
 # Repository
 editPage = false # false (default) or true

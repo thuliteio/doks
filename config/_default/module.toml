@@ -32,10 +32,6 @@
   target = "assets"
 
 [[mounts]]
-  source = "node_modules/@hyas/doks-core/content"
-  target = "content"
-
-[[mounts]]
   source = "node_modules/@hyas/doks-core/data"
   target = "data"
 
@@ -73,6 +69,10 @@
 
 [[mounts]]
   source = "node_modules/@hyas/inline-svg/layouts"
+  target = "layouts"
+
+[[mounts]]
+  source = "themes/doks/layouts"
   target = "layouts"
 
 [[mounts]]

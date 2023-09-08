@@ -21,18 +21,6 @@
 [context.next.environment]
   HUGO_ENV = "next"
 
-# [[plugins]]
-#   package = "netlify-plugin-submit-sitemap"
-# 
-# 	[plugins.inputs]
-#     baseUrl = "/"
-#     sitemapPath = "/sitemap.xml"
-#     ignorePeriod = 0
-#     providers = [
-#       "google",
-#       "yandex"
-#     ]
-
 [dev]
   framework = "#custom"
   command = "pnpm dev"

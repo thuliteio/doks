@@ -2,7 +2,7 @@
 image:
   ## General
   type: page # page (default) or global
-  widths: [480, 640, 768, 1024, 1366] # [600, 900, 1300] (default)
+  widths: [600, 900, 1300] # [600, 900, 1300] (default)
   densities: [1,2] # [1,2] (default)
   formats: [original, webp] # [original, webp] (default)
   provider: null # null (default) or netlify
@@ -40,7 +40,7 @@ image:
 
 # SEO (@hyas/seo)
 seo:
-  description: "Doks is a Hyas theme for building custom, production-ready documentation websites."
+  description: ""
   generate:
     title: true
     meta: true
@@ -51,7 +51,7 @@ seo:
       breadcrumbs: true
   title_tag:
     separator: "|"
-    home_text: "Modern Documentation Theme"
+    home_text: ""
   og_article_types: [post, posts, blog, news, article, articles, event, events, course, courses]
   jsonld_article_types: [article, articles]
   jsonld_news_article_types: [news, updates]

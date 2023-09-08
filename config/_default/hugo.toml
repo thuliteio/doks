@@ -1,4 +1,4 @@
-title = "Doks"
+title = "My Docs"
 baseurl = "/"
 canonifyURLs = false
 disableAliases = true
@@ -58,6 +58,7 @@ rel  = "sitemap"
 
 [permalinks]
   blog = "/blog/:slug/"
+  docs = "/docs/:sections[1:]/:slug/"
 # docs = "/docs/1.0/:sections[1:]/:slug/"
 
 [minify.tdewolff.html]
@@ -78,8 +79,8 @@ rel  = "sitemap"
     weight = 10
 
 [imaging]
-  anchor = 'Smart'
-  bgColor = '#fff'
-  hint = 'photo'
-  quality = 90
-  resampleFilter = 'Lanczos'
+  anchor = "Smart"
+  bgColor = "#ffffff"
+  hint = "photo"
+  quality = 75
+  resampleFilter = "Box"

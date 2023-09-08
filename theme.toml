@@ -1,7 +1,7 @@
 name = "Doks"
 license = "MIT"
 licenselink = "https://github.com/gethyas/doks/blob/master/LICENSE"
-description = "Build beautiful, high-performance documentation websites with Doks. Fast, flexible, and easy-to-use. Deploy anywhere."
+description = "Build beautiful, high-performance documentation websites with Doks."
 
 homepage = "https://github.com/gethyas/doks"
 demosite = "https://doks.netlify.app"

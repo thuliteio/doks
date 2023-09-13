@@ -30,6 +30,7 @@
 [[mounts]]
   source = "node_modules/@hyas/doks-core/assets"
   target = "assets"
+  excludeFiles = "scss/common/_custom.scss"
 
 [[mounts]]
   source = "node_modules/@hyas/doks-core/data"
@@ -72,7 +73,11 @@
   target = "layouts"
 
 [[mounts]]
-  source = "themes/doks/layouts"
+  source = "themes/my-doks-theme/assets" 
+  target = "assets"
+
+[[mounts]]
+  source = "themes/my-doks-theme/layouts"
   target = "layouts"
 
 [[mounts]]

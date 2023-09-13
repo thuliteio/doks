@@ -1,0 +1,60 @@
+// Put your custom SCSS code here
+
+.col-main-section {
+  flex: 0 0 auto;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;;
+
+  @include media-breakpoint-up(md) {
+    padding-left: 2rem;
+    padding-right: 2rem;;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: 100rem;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .col-xl {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .showcase .col-main-section {
+    max-width: 80rem;
+  }
+}
+
+.showcase .card {
+  height: auto;
+  margin: 1rem;
+}
+
+.showcase .card-img-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: var(--bs-card-img-overlay-padding);
+  border-radius: 0;
+  background-color: hsla(224deg, 14%, 16%, 0.95);
+  transition-timing-function: cubic-bezier(0,0,.2,1);
+  transition-duration: .3s;
+  transition-property: opacity;
+  opacity: 0;
+
+  .card-title {
+    margin-top: 0;
+    color: var(--sl-color-gray-2);
+  }
+
+  .card-text {
+    color: var(--sl-color-gray-2);
+  }
+}
+
+.showcase .card:hover .card-img-overlay {
+  opacity: 1;
+}

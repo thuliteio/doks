@@ -62,3 +62,6 @@ seo:
 # Inline SVG (@hyas/inline-svg)
 inline_svg:
   icon_set_dir: "tabler-icons" # tabler-icons (default)
+
+# mainSections
+mainSections: [docs]

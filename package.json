@@ -1,6 +1,6 @@
 {
   "name": "doks",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Doks theme",
   "author": "Hyas",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@hyas/doks-core": "^1.0.6"
+    "@hyas/doks-core": "^1.0.7"
   },
   "devDependencies": {
     "auto-changelog": "^2.4.0"

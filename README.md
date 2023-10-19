@@ -6,8 +6,6 @@ Doks is a documentation theme for [Hyas](https://gethyas.com/).
 
 - [doks.netlify.app](https://doks.netlify.app/)
 
-
-
 ## Install
 
 The recommended way to install the latest version of Doks is by running the command below:

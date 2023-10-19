@@ -6,52 +6,47 @@ module.exports = {
   plugins: [
     autoprefixer(),
     purgecss({
-      content: [
-        './node_modules/@hyas/*/layouts/**/*.html',
-        './themes/*/layouts/**/*.html',
-        './layouts/**/*.html',
-        './content/**/*.html',
-        './content/**/*.md',
+      content: [ './hugo_stats.json' ],
+      extractors: [
+        {
+          extractor: (content) => {
+            const els = JSON.parse(content).htmlElements;
+            return els.tags.concat(els.classes, els.ids);
+          },
+          extensions: ['json'],
+        },
+      ],
+      dynamicAttributes: [
+        'aria-expanded',
+        'data-bs-popper',
+        'data-bs-target',
+        'data-bs-theme',
+        'data-dark-mode',
+        'data-global-alert',
+        'data-pane',             // tabs.js
+        'data-popper-placement',
+        'data-sizes',
+        'data-toggle-tab',       // tabs.js
+        'id',
+        'size',
+        'type',
       ],
       safelist: [
-        'lazyloaded',
-        'table',
-        'thead',
-        'tbody',
-        'tr',
-        'th',
-        'td',
-        'h1',
-        'h2',
-        'h3',
-        'h4',
-        'h5',
-        'alert-link',
-        'container-lg',
-        'container-fluid',
-        'offcanvas-backdrop',
+        'active',
+        'btn-clipboard',         // clipboards.js
+        'clipboard',             // clipboards.js
+        'disabled',
+        'hidden',
+        'modal-backdrop',        // search-modal.js
+        'selected',              // search-modal.js
+        'show',
         'img-fluid',
-        'lazyload',
         'blur-up',
-        'figcaption',
-        'dt',
-        'dd',
-        'showing',
-        'hiding',
+        'lazyloaded',
         ...whitelister([
-          './node_modules/@hyas/core/assets/scss/app.scss',
-          './node_modules/@hyas/doks-core/assets/scss/common/_global.scss',
-          './node_modules/@hyas/doks-core/assets/scss/components/_alerts.scss',
-          './node_modules/@hyas/doks-core/assets/scss/components/_buttons.scss',
-          './node_modules/@hyas/doks-core/assets/scss/components/_callouts.scss',
-          './node_modules/@hyas/doks-core/assets/scss/components/_code.scss',
-          // './node_modules/@hyas/doks-core/assets/scss/components/_diagrams.scss',
-          './node_modules/@hyas/doks-core/assets/scss/components/_modals.scss',
-          './node_modules/@hyas/doks-core/assets/scss/components/_syntax.scss',
-          './node_modules/@hyas/doks-core/assets/scss/components/_search.scss',
-          './node_modules/@hyas/doks-core/assets/scss/common/_dark.scss',
-          './node_modules/bootstrap/scss/_dropdown.scss',
-          // './node_modules/katex/dist/katex.css',
+          './assets/scss/**/*.css',
+          './assets/scss/**/*.scss',
+          './node_modules/katex/dist/katex.css',
         ]),
       ],
     }),

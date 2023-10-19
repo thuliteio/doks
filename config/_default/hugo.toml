@@ -19,6 +19,9 @@ defaultContentLanguageInSubdir = false
 
 copyRight = "Copyright (c) 2020-2023 Henk Verlinde"
 
+[build.buildStats]
+  enable = true
+
 [social]
   twitter = "getdoks"
 

@@ -3,8 +3,8 @@
   functions = "functions"
 
 [build.environment]
-  NODE_VERSION = "18.12.1"
-  NPM_VERSION = "8.19.2"
+  NODE_VERSION = "18.16.1"
+  NPM_VERSION = "9.5.1"
 
 [context.production]
   command = "pnpm build"

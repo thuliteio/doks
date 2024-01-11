@@ -3,6 +3,12 @@ title = "My Docs"
 description = "Congrats on setting up a new Doks project!"
 images = ["cover.png"]
 
+# mainSections
+mainSections = ["docs"]
+
+[social]
+  twitter = "getdoks"
+
 # Doks (@hyas/doks-core)
 [doks]
   # Color mode
@@ -63,9 +69,6 @@ images = ["cover.png"]
   relatedPosts = false # false (default) or true
   imageList = true # true (default) or false
   imageSingle = true # true (default) or false
-
-  # KaTex
-  katex = false
 
   # Repository
   editPage = false # false (default) or true

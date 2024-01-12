@@ -1,7 +1,2 @@
-node_modules
-public
-resources
-.netlify
-.hugo_build.lock
-yarn-error.log
-hugo_stats.json
+!.npmrc
+!.gitignore

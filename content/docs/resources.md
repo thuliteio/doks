@@ -1,17 +1,17 @@
 ---
-title: "Reference"
+title: "Resources"
 description: ""
 summary: ""
-date: 2023-09-07T16:12:37+02:00
-lastmod: 2023-09-07T16:12:37+02:00
+date: 2024-02-27T09:30:56+01:00
+lastmod: 2024-02-27T09:30:56+01:00
 draft: false
-weight: 900
+weight: 999
 toc: true
-sidebar:
-  collapsed: true
 seo:
   title: "" # custom title (optional)
   description: "" # custom description (recommended)
   canonical: "" # custom canonical URL (optional)
   noindex: false # false (default) or true
 ---
+
+Link to valuable, relevant resources.

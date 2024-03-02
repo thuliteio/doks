@@ -1,6 +1,6 @@
 {
   "name": "doks",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Doks theme",
   "author": "Hyas",
   "license": "MIT",
@@ -30,24 +30,21 @@
     "version": "auto-changelog -p && git add CHANGELOG.md"
   },
   "dependencies": {
-    "@hyas/doks-core": "^1.4.0",
+    "@hyas/doks-core": "^1.4.1",
     "@hyas/images": "^3.1.0",
     "@hyas/inline-svg": "^1.0.5",
     "@hyas/seo": "^2.1.0",
     "@tabler/icons": "^2.40.0",
     "exec-bin": "^1.0.0",
     "gethyas": "^2.2.2",
-    "hugo-installer": "^4.0.1",
-    "@hyas/bootstrap": "^1.0.4",
-    "clipboard": "^2.0.11",
-    "flexsearch": "^0.7.34"
+    "hugo-installer": "^4.0.1"
   },
   "devDependencies": {
     "auto-changelog": "^2.4.0",
     "shx": "^0.3.4"
   },
   "otherDependencies": {
-    "hugo": "0.123.6"
+    "hugo": "0.123.7"
   },
   "overrides": {
     "semver": "^7.5.4"

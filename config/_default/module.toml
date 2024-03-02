@@ -12,7 +12,6 @@
 [[mounts]]
   source = "node_modules/@hyas/core/assets"
   target = "assets"
-  excludeFiles = ["scss/app.scss", "js/app.js"]
 
 [[mounts]]
   source = "node_modules/@hyas/images/assets"

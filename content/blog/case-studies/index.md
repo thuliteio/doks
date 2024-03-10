@@ -1,5 +1,5 @@
 ---
-title: "Bioleaching jako ekologiczna metoda odzysku"
+title: "Case studies: Udane projekty odzysku metali szlachetnych"
 description: ""
 summary: ""
 date: 2023-09-07T16:27:22+02:00

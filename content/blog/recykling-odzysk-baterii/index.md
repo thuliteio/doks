@@ -1,5 +1,5 @@
 ---
-title: "Bioleaching jako ekologiczna metoda odzysku"
+title: "Recykling i odzysk baterii: Metody i wyzwania"
 description: ""
 summary: ""
 date: 2023-09-07T16:27:22+02:00

@@ -71,10 +71,10 @@ mainSections = ["docs"]
   imageSingle = true # true (default) or false
 
   # Repository
-  editPage = false # false (default) or true
+  editPage = true # false (default) or true
   lastMod = false # false (default) or true
   repoHost = "GitHub" # GitHub (default), Gitea, GitLab, Bitbucket, or BitbucketServer
-  docsRepo = "https://github.com/h-enk/doks"
+  docsRepo = "https://github.com/MariuszKedziora/MariuszKedziora.github.io/"
   docsRepoBranch = "main" # main (default), master, or <branch name>
   docsRepoSubPath = "" # "" (none, default) or <sub path>
 

@@ -1,5 +1,5 @@
 ---
-title: "odzysk miedzi
+title: "odzysk miedzi"
 description: "Rozkurwiaj miedz jak PRO"
 summary: "Jak sie zabrac i ile mozna zarobic?"
 date: 2023-09-07T16:27:22+02:00

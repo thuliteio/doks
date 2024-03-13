@@ -18,3 +18,4 @@ seo:
   noindex: false # false (default) or true
 ---
 
+To jest przykładowy art o zrównoważonym rozwoju.

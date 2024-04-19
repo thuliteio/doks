@@ -8,16 +8,16 @@
   HUGO_VERSION = "0.125.1"
 
 [context.production]
-  command = "hugo --minify --gc"
+  command = "npm run build"
 
 [context.deploy-preview]
-  command = "hugo --minify --gc -b $DEPLOY_PRIME_URL"
+  command = "npm run build -- -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-  command = "hugo --minify --gc -b $DEPLOY_PRIME_URL"
+  command = "npm run build -- -b $DEPLOY_PRIME_URL"
 
 [context.next]
-  command = "hugo --minify --gc"
+  command = "npm run build"
 
 [context.next.environment]
   HUGO_ENV = "next"

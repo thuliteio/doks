@@ -1,5 +1,5 @@
 title = "My Docs"
-baseurl = "/"
+baseurl = "http://localhost/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true

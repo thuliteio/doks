@@ -1,7 +1,6 @@
 ---
 name: "\U0001F41B Bug report"
 about: Report an issue or possible bug
-
 ---
 
 ## Description

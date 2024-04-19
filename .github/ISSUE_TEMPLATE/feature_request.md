@@ -1,7 +1,6 @@
 ---
 name: "\U0001F4A1 Feature request "
 about: Propose and discuss future improvements to Doks
-
 ---
 
 ## Summary

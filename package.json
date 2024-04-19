@@ -9,49 +9,30 @@
     "url": "https://github.com/gethyas/doks.git"
   },
   "scripts": {
-    "dev": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache",
-    "dev:drafts": "exec-bin node_modules/.bin/hugo/hugo server --bind=0.0.0.0 --disableFastRender --baseURL=http://localhost --noHTTPCache --buildDrafts",
-    "create": "exec-bin node_modules/.bin/hugo/hugo new",
-    "lint": "npm run lint:scripts && npm run lint:styles && npm run lint:markdown",
-    "lint:scripts": "eslint --cache assets/js",
-    "lint:styles": "stylelint --cache \"assets/scss/**/*.{css,sass,scss}\"",
-    "lint:markdown": "markdownlint-cli2 \"*.md\" \"content/**/*.md\"",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "exec-bin node_modules/.bin/hugo/hugo --minify",
-    "preview": "http-server --gzip --brotli --ext=html --cors",
-    "clean": "npm run clean:build && npm run clean:lint && npm run clean:install",
-    "clean:build": "shx rm -rf public resources .hugo_build.lock",
-    "clean:install": "shx rm -rf node_modules package-lock.json yarn.lock pnpm-lock.yaml",
-    "clean:lint": "shx rm -rf .eslintcache .stylelintcache",
-    "preinfo": "npm version",
-    "info": "npm list",
-    "postinfo": "exec-bin node_modules/.bin/hugo/hugo version",
-    "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo",
-    "version": "auto-changelog -p && git add CHANGELOG.md"
+    "create": "hugo new",
+    "dev": "hugo server --disableFastRender --noHTTPCache",
+    "format": "prettier **/** -w -c",
+    "build": "hugo --minify --gc",
+    "preview": "vite preview --outDir public"
   },
   "dependencies": {
-    "@hyas/doks-core": "^1.4.1",
-    "@hyas/images": "^3.1.0",
-    "@hyas/inline-svg": "^1.0.5",
-    "@hyas/seo": "^2.1.0",
-    "@tabler/icons": "^2.40.0",
-    "exec-bin": "^1.0.0",
-    "gethyas": "^2.2.2",
-    "hugo-installer": "^4.0.1"
+    "@hyas/doks-core": "^1.5.1",
+    "@hyas/images": "^3.2.0",
+    "@hyas/inline-svg": "^1.1.0",
+    "@hyas/seo": "^2.3.0",
+    "@tabler/icons": "^3.2.0"
   },
   "devDependencies": {
-    "auto-changelog": "^2.4.0",
-    "shx": "^0.3.4"
-  },
-  "otherDependencies": {
-    "hugo": "0.123.7"
-  },
-  "overrides": {
-    "semver": "^7.5.4"
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.1",
+    "prettier": "^3.2.5",
+    "vite": "^5.2.9"
   },
   "engines": {
-    "node": ">=18.14.1",
-    "pnpm": ">=8.10.0"
+    "node": ">=20.11.0"
   },
-  "packageManager": "pnpm@8.12.0"
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

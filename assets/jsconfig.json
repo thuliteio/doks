@@ -1,11 +1,8 @@
 {
- "compilerOptions": {
-  "baseUrl": ".",
-  "paths": {
-   "*": [
-    "*",
-    "..\\node_modules\\@hyas\\doks-core\\assets\\*"
-   ]
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "..\\node_modules\\@hyas\\doks-core\\assets\\*"]
+    }
   }
- }
 }

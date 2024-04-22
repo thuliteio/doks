@@ -1,5 +1,11 @@
 # doks
 
+## 1.6.0
+
+### Minor Changes
+
+- [#1228](https://github.com/gethyas/doks/pull/1228) [`4be4a68`](https://github.com/gethyas/doks/commit/4be4a689619b49f62df4c65024d3e865c1ead99e) Thanks [@h-enk](https://github.com/h-enk)! - Update dependencies to latest versions
+
 ## 1.5.0
 
 ### Minor Changes

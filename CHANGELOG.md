@@ -1,5 +1,11 @@
 # doks
 
+## 1.6.1
+
+### Patch Changes
+
+- [#1229](https://github.com/gethyas/doks/pull/1229) [`7666ab6`](https://github.com/gethyas/doks/commit/7666ab62a9b04f0508530dfb8c7f5f7c6db0f966) Thanks [@h-enk](https://github.com/h-enk)! - Add gethyas dependency
+
 ## 1.6.0
 
 ### Minor Changes

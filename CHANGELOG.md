@@ -1,5 +1,11 @@
 # doks
 
+## 1.6.2
+
+### Patch Changes
+
+- [#1230](https://github.com/gethyas/doks/pull/1230) [`25f55a3`](https://github.com/gethyas/doks/commit/25f55a37fa4162b7546d6ded9b449434e4965164) Thanks [@h-enk](https://github.com/h-enk)! - Install prettier and vite as devDependencies
+
 ## 1.6.1
 
 ### Patch Changes

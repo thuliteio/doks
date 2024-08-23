@@ -5,7 +5,7 @@
   [en.params]
     languageISO = "EN"
     languageTag = "en-US"
-    footer = 'Brought to you by <a class="text-muted" href="https://gethyas.com/">Hyas</a>'
+    footer = 'Brought to you by <a class="text-muted" href="https://thulite.io/">Thulite</a>'
     alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/example-post/">Doks version 1.0 just shipped!</a>'
 
 [de]
@@ -15,7 +15,7 @@
   [de.params]
     languageISO = "DE"
     languageTag = "de-DE"
-    footer = 'Gebaut mit <a class="text-muted" href="https://gethyas.com/">Hyas</a>'
+    footer = 'Gebaut mit <a class="text-muted" href="https://thulite.io/">Thulite</a>'
     alertText = 'Neue Version ist da! <a class="alert-link stretched-link" href="https://getdoks.org/blog/doks-v0.5/">Doks v0.5</a>'
 
 [nl]

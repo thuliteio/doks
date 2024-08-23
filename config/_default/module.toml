@@ -1,7 +1,7 @@
 # mounts
 ## archetypes
 [[mounts]]
-  source = "node_modules/@hyas/doks-core/archetypes"
+  source = "node_modules/@thulite/doks-core/archetypes"
   target = "archetypes"
 
 [[mounts]]
@@ -10,15 +10,15 @@
 
 ## assets
 [[mounts]]
-  source = "node_modules/@hyas/core/assets"
+  source = "node_modules/@thulite/core/assets"
   target = "assets"
 
 [[mounts]]
-  source = "node_modules/@hyas/images/assets"
+  source = "node_modules/@thulite/images/assets"
   target = "assets"
 
 [[mounts]]
-  source = "node_modules/@hyas/doks-core/assets"
+  source = "node_modules/@thulite/doks-core/assets"
   target = "assets"
 
 [[mounts]]
@@ -36,7 +36,7 @@
 
 ## data
 [[mounts]]
-  source = "node_modules/@hyas/doks-core/data"
+  source = "node_modules/@thulite/doks-core/data"
   target = "data"
 
 [[mounts]]
@@ -45,7 +45,7 @@
 
 ## i18n
 [[mounts]]
-  source = "node_modules/@hyas/doks-core/i18n"
+  source = "node_modules/@thulite/doks-core/i18n"
   target = "i18n"
 
 [[mounts]]
@@ -54,23 +54,23 @@
 
 ## layouts
 [[mounts]]
-  source = "node_modules/@hyas/core/layouts"
+  source = "node_modules/@thulite/core/layouts"
   target = "layouts"
 
 [[mounts]]
-  source = "node_modules/@hyas/seo/layouts"
+  source = "node_modules/@thulite/seo/layouts"
   target = "layouts"
 
 [[mounts]]
-  source = "node_modules/@hyas/images/layouts"
+  source = "node_modules/@thulite/images/layouts"
   target = "layouts"
 
 [[mounts]]
-  source = "node_modules/@hyas/doks-core/layouts"
+  source = "node_modules/@thulite/doks-core/layouts"
   target = "layouts"
 
 [[mounts]]
-  source = "node_modules/@hyas/inline-svg/layouts"
+  source = "node_modules/@thulite/inline-svg/layouts"
   target = "layouts"
 
 [[mounts]]
@@ -79,7 +79,7 @@
 
 ## static
 [[mounts]]
-  source = "node_modules/@hyas/doks-core/static"
+  source = "node_modules/@thulite/doks-core/static"
   target = "static"
 
 [[mounts]]

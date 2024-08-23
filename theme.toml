@@ -1,9 +1,9 @@
 name = "Doks"
 license = "MIT"
-licenselink = "https://github.com/gethyas/doks/blob/master/LICENSE"
+licenselink = "https://github.com/thuliteio/doks/blob/master/LICENSE"
 description = "Build beautiful, high-performance documentation websites with Doks."
 
-homepage = "https://github.com/gethyas/doks"
+homepage = "https://github.com/thuliteio/doks"
 demosite = "https://doks.netlify.app"
 
 tags = ["landing page", "documentation", "blog", "minimal", "modern", "customizable", "search", "dark mode", "bootstrap"]

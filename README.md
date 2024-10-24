@@ -37,4 +37,4 @@ New contributors welcome! Check out our [Contributor Guides](https://getdoks.org
 
 ## Sponsors
 
-Doks is free, open source software made possible by by Netlify, Algolia, and several other amazing organizations and inidviduals. [Sponsor Doks](.github/FUNDING.md) ❤️
+Doks is free, open source software made possible by Netlify, Algolia, and several other amazing organizations and inidviduals. [Sponsor Doks](.github/FUNDING.md) ❤️

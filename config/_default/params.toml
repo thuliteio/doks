@@ -20,9 +20,9 @@ mainSections = ["docs"]
   containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
 
   ## Button
-  navBarButton = false # false (default) or true
-  navBarButtonUrl = "/docs/prologue/introduction/"
-  navBarButtonText = "Get started"
+  navBarButton = true # false (default) or true
+  navBarButtonUrl = "https://www.upwork.com/freelancers/~01569bdba2bb3501ca"
+  navBarButtonText = "Hire Me on Upwork"
 
   # FlexSearch
   flexSearch = true # true (default) or false
@@ -37,7 +37,7 @@ mainSections = ["docs"]
   searchLimit = 99 # 0 (no limit, default) or natural number
 
   # Global alert
-  alert = false # false (default) or true
+  alert = true # false (default) or true
   alertDismissable = true # true (default) or false
 
   # Bootstrap
@@ -45,8 +45,8 @@ mainSections = ["docs"]
 
   # Nav
   sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
-  toTopButton = false # false (default) or true
-  breadcrumbTrail = false # false (default) or true
+  toTopButton = true # false (default) or true
+  breadcrumbTrail = true # false (default) or true
   headlineHash = true # true (default) or false
   scrollSpy = true # true (default) or false
 
@@ -131,7 +131,7 @@ mainSections = ["docs"]
   [seo.schemas]
     type = "Organization" # Organization (default) or Person
     logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
-    name = "Thulite" # Name of Organization or Person
+    name = "Secure Hive Ltd" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/thuliteio/thulite", "https://fosstodon.org/@thulite"]
     images = ["cover.png"] # ["cover.png"] (default)
     article = [] # Article sections

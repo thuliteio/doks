@@ -1,5 +1,5 @@
 ---
-"doks": minor
+"doks": patch
 ---
 
-fix : Fixes the issue of layout breaking due to changes in layout priority in Hugo 0.146.0
+Tiny typo "by by" => "by"

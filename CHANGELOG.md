@@ -1,5 +1,17 @@
 # doks
 
+## 1.8.0
+
+### Minor Changes
+
+- [#1369](https://github.com/thuliteio/doks/pull/1369) [`d03e363`](https://github.com/thuliteio/doks/commit/d03e3634a85f26bcd3c71e99b829d5258fd25c60) Thanks [@h-enk](https://github.com/h-enk)! - Update for new template system in Hugo v0.146.0
+
+- [#1356](https://github.com/thuliteio/doks/pull/1356) [`6f457a6`](https://github.com/thuliteio/doks/commit/6f457a6da7d6254fa0315e39b166423a4c389e90) Thanks [@LemonDouble](https://github.com/LemonDouble)! - fix : Fixes the issue of layout breaking due to changes in layout priority in Hugo 0.146.0
+
+### Patch Changes
+
+- [#1303](https://github.com/thuliteio/doks/pull/1303) [`f13c768`](https://github.com/thuliteio/doks/commit/f13c768d43cca497c77a6e7b4995f2c0cfc6b962) Thanks [@AndiKod](https://github.com/AndiKod)! - Tiny typo "by by" => "by"
+
 ## 1.7.0
 
 ### Minor Changes

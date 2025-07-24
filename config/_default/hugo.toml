@@ -1,6 +1,5 @@
 title = "My Docs"
 baseurl = "http://localhost/"
-canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
 # disableKinds = ["taxonomy", "term"]
@@ -64,7 +63,7 @@ copyRight = "Copyright (c) 2020-2024 Thulite"
   keepWhitespace = false
 
 [pagination]
-pagerSize = 10
+  pagerSize = 10
 
 [related]
   threshold = 80

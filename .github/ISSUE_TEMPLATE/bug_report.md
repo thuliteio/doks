@@ -21,4 +21,4 @@ What happened.
 
 ### Environment
 
-Paste the information here as shown by `npm run info`
+Paste the information here as shown by `hugo version && npm --version`

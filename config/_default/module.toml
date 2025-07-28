@@ -27,6 +27,7 @@
   target = "layouts"
 
 [[mounts]]
+  # Exclude 'home.html' to avoid conflicts with custom home page layouts defined elsewhere in the project.
   excludeFiles = "home.html"
   source = "node_modules/@thulite/doks-core/layouts"
   target = "layouts"

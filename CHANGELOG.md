@@ -1,5 +1,11 @@
 # doks
 
+## 1.8.1
+
+### Patch Changes
+
+- [#1372](https://github.com/thuliteio/doks/pull/1372) [`bb44bf8`](https://github.com/thuliteio/doks/commit/bb44bf84e046d4dbd03ec6ef6b1051db5f6e80b1) Thanks [@h-enk](https://github.com/h-enk)! - Fix layouts mounting order
+
 ## 1.8.0
 
 ### Minor Changes

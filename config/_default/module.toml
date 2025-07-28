@@ -23,6 +23,11 @@
 
 ## layouts
 [[mounts]]
+  source = "layouts"
+  target = "layouts"
+
+[[mounts]]
+  excludeFiles = "home.html"
   source = "node_modules/@thulite/doks-core/layouts"
   target = "layouts"
 
@@ -40,10 +45,6 @@
 
 [[mounts]]
   source = "node_modules/@thulite/inline-svg/layouts"
-  target = "layouts"
-
-[[mounts]]
-  source = "layouts"
   target = "layouts"
 
 ## i18n

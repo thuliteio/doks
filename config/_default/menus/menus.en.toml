@@ -22,11 +22,11 @@ name = "Blog"
 url  = "/blog/"
 weight = 10
 
-[[main]]
-name = "CV"
-url  = "SanahBhimani_CV.pdf"
-weight = 20
-identifier = "cv-pdf"
+#[[main]]
+#name = "CV"
+#url  = "SanahBhimani_CV.pdf"
+#weight = 20
+#identifier = "cv-pdf"
 
 [[main]]
 name = "Contact"

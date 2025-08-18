@@ -24,7 +24,7 @@ weight = 10
 
 [[main]]
 name = "CV"
-url  = "/cv/SanahBhimani_CV.pdf"
+url  = "SanahBhimani_CV.pdf"
 weight = 20
 identifier = "cv-pdf"
 

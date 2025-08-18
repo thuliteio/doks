@@ -1,1 +1,78 @@
-// Put your custom SCSS code here
+/* test: you should see the H1 turn purple */
+/*.home h1 { color: #5b5bd6 !important; }*/
+
+/* Home page tweaks */
+.home .hero .btn,
+.home .hero .buttons {            /* hides the CTA button area */
+  display: none !important;
+}
+
+/* hide built-in hero CTA */
+.home a.btn-cta { display: none !important; }
+
+/* Big purple links under the hero */
+.home .big-links { margin: 3rem 0; }
+.home .big-links .big-link {
+  display: inline-block;
+  margin: .5rem 0;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: clamp(1.5rem, calc(2.5vw + 0.5rem), 2.25rem); /* ← calc() fixes the unit mix */
+  color: #6c4bef;  /* tweak to your favorite purple */
+}
+.home .big-links .big-link:hover { text-decoration: underline; }
+
+
+/* ==== Home cards: bigger, dark-purple headings ==== */
+:root { --brand-purple: #4b2bd6; } /* pick any hex */
+
+.home .home-quick .big-link {
+  font-weight: 800;
+  text-decoration: none;
+  font-size: clamp(2rem, calc(2.2vw + 1rem), 2.75rem); /* bigger */
+  color: var(--brand-purple); /* dark purple */
+  letter-spacing: 0.2px;
+}
+.home .home-quick .big-link:hover { text-decoration: underline; }
+
+/* (optional) keep the caption under each card subtle */
+.home .home-quick .desc {
+  color: var(--bs-secondary-color);
+  font-size: 1rem;
+}
+
+/* === Intro photo under subtitle === */
+.home .intro-photo {
+  display: block;
+  margin: 1.25rem auto;      /* centers it with some space */
+  max-width: 250px;          /* slightly smaller size */
+  border-radius: 1rem;       /* rounded-square look */
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); /* subtle shadow */
+}
+
+
+/* === Intro photos container (flexbox row) === */
+.home .intro-photos {
+  display: flex;
+  justify-content: center;   /* center them horizontally */
+  gap: 1rem;                 /* spacing between photos */
+  flex-wrap: wrap;           /* allow wrapping on small screens */
+  margin: 1.5rem auto;
+}
+
+/* Each photo */
+.home .intro-photo {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+/* Mobile tweak: shrink photos a bit */
+@media (max-width: 767.98px) {
+  .home .intro-photo {
+    max-width: 150px;
+  }
+}
+

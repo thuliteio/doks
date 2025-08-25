@@ -76,3 +76,24 @@
   }
 }
 
+.letter-font {
+  font-family: "Monaco"; /* softer serif, elegant */
+  font-size: 1rem; /* same as default body size */
+  line-height: 1.7; /* nice breathing space */
+  color: inherit;   /* no purple override, just normal text color */
+}
+
+.divider-stars {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+
+/* === Default body font size override === */
+body {
+  font-size: 1.3rem;   /* ~17.6px, just slightly larger */
+  line-height: 1.7;   /* keep it airy and readable */
+}
+

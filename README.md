@@ -6,6 +6,22 @@ Doks is a documentation theme for [Thulite](https://thulite.io/).
 
 - [doks.netlify.app](https://doks.netlify.app/)
 
+## Features
+
+- Minimal, responsive layout for documentation
+- Easy-to-read typography for long-form content
+- Fully configurable search powered by FlexSearch
+- Dark mode and light mode toggle
+- Syntax highlighting for code blocks
+- Built-in blog pages
+- Internationalization (i18n) support
+- Versioning support for managing multiple documentation versions
+
+## Requirements
+
+- Node.js – [latest LTS version](https://nodejs.org/en/download)
+- Hugo – [latest extended version](https://github.com/gohugoio/hugo/releases/latest)
+
 ## Install
 
 The recommended way to install the latest version of Doks is by running the command below:
@@ -37,4 +53,4 @@ New contributors welcome! Check out our [Contributor Guides](https://getdoks.org
 
 ## Sponsors
 
-Doks is free, open source software made possible by Netlify, Algolia, and several other amazing organizations and inidviduals. [Sponsor Doks](.github/FUNDING.md) ❤️
+Thulite is free and open-source, thanks to our amazing sponsors. Help keep Thulite sustainable by supporting maintenance, documentation, and long-term development. [Sponsor Thulite](https://github.com/sponsors/thuliteio) ❤️

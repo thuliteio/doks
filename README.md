@@ -4,7 +4,7 @@ Doks is a documentation theme for [Thulite](https://thulite.io/).
 
 ## Demo
 
-- [doks.netlify.app](https://doks.netlify.app/)
+- [doks.thulite.io](https://doks.thulite.io/)
 
 ## Features
 

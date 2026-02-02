@@ -4,7 +4,7 @@ licenselink = "https://github.com/thuliteio/doks/blob/master/LICENSE"
 description = "Build beautiful, high-performance documentation websites with Doks."
 
 homepage = "https://github.com/thuliteio/doks"
-demosite = "https://doks.netlify.app"
+demosite = "https://doks.thulite.io/"
 
 tags = ["landing page", "documentation", "blog", "minimal", "modern", "customizable", "search", "dark mode", "bootstrap"]
 features = ["secure by design", "fast by default", "search optimized", "full text search", "page layouts", "dark mode"]

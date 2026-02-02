@@ -1,5 +1,11 @@
 # doks
 
+## 1.8.2
+
+### Patch Changes
+
+- [#1392](https://github.com/thuliteio/doks/pull/1392) [`2a2b897`](https://github.com/thuliteio/doks/commit/2a2b897114105f66a7fb493bea2e01ecaa52c8fb) Thanks [@h-enk](https://github.com/h-enk)! - Update for create-thulite v2.0.2
+
 ## 1.8.1
 
 ### Patch Changes

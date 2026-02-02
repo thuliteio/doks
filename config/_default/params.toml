@@ -120,14 +120,11 @@ mainSections = ["docs"]
 # SEO (@thulite/seo)
 [seo]
   [seo.title]
-    separator = " | "
-    suffix = ""
+    separator = "" # "|" (default)
+    suffix = "" # title hugo.toml (default)
   [seo.favicons]
-    sizes = []
     icon = "favicon.png" # favicon.png (default)
     svgIcon = "favicon.svg" # favicon.svg (default)
-    maskIcon = "mask-icon.svg" # mask-icon.svg (default)
-    maskIconColor = "white" # white (default)
   [seo.schemas]
     type = "Organization" # Organization (default) or Person
     logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)

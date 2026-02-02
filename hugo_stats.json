@@ -128,6 +128,8 @@
       "justify-content-end",
       "justify-content-start",
       "lead",
+      "link",
+      "link--text",
       "list",
       "list-inline",
       "list-inline-item",

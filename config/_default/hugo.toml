@@ -21,8 +21,11 @@ copyRight = "Copyright (c) 2020-2026 Thulite"
   enable = true
 
 [outputs]
-  home = ["HTML", "RSS", "searchIndex"]
-  section = ["HTML", "RSS", "SITEMAP"]
+  home = ["html", "rss", "sitemap", "searchIndex"]
+  page = ["html", "markdown"]
+  section = ["html", "rss", "sitemap"]
+  taxonomy = ["html", "rss", "sitemap"]
+  term = ["html", "rss", "sitemap"]
 
 [outputFormats.searchIndex]
   mediaType = "application/json"
@@ -30,8 +33,14 @@ copyRight = "Copyright (c) 2020-2026 Thulite"
   isPlainText = true
   notAlternative = true
 
+[outputFormats.markdown]
+  baseName = "index"
+  isHTML = false
+  isPlainText = true
+  mediaType = "text/markdown"
+
 # Add output format for section sitemap.xml
-[outputFormats.SITEMAP]
+[outputFormats.sitemap]
   mediaType = "application/xml"
   baseName = "sitemap"
   isHTML = false

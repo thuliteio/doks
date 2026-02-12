@@ -21,7 +21,7 @@ copyRight = "Copyright (c) 2020-2026 Thulite"
   enable = true
 
 [outputs]
-  home = ["html", "rss", "sitemap", "searchIndex"]
+  home = ["html", "rss", "sitemap", "searchIndex", "llms"]
   page = ["html", "markdown"]
   section = ["html", "rss", "sitemap"]
   taxonomy = ["html", "rss", "sitemap"]
@@ -38,6 +38,12 @@ copyRight = "Copyright (c) 2020-2026 Thulite"
   isHTML = false
   isPlainText = true
   mediaType = "text/markdown"
+
+[outputFormats.llms]
+  baseName = "llms"
+  isHTML = false
+  isPlainText = true
+  mediaType = "text/plain"
 
 # Add output format for section sitemap.xml
 [outputFormats.sitemap]

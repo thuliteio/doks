@@ -3,6 +3,11 @@ defaultMarkdownHandler = "goldmark"
 [goldmark]
   [goldmark.extensions]
     linkify = false
+    [goldmark.extensions.passthrough]
+      enable = true
+      [goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
   [goldmark.parser]
     autoHeadingID = true
     autoHeadingIDType = "github"

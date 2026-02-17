@@ -3,6 +3,12 @@ title: "Page not found"
 date: 2026-02-17T13:06:19+01:00
 description: "The page you're looking for doesn’t exist or has moved. Check the URL, use the navigation to browse sections, or return to the homepage."
 draft: false
+params:
+  seo:
+    title: "" # custom title (optional)
+    description: "" # custom description (recommended)
+    canonical: "" # custom canonical URL (optional)
+    robots: "" # custom robot tags (optional)
 ---
 
 Sorry, we can’t find the page you’re looking for.

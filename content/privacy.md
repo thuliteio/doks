@@ -1,6 +1,6 @@
 ---
 title: "Privacy Policy"
-description: ""
+description: "Learn how we collect, use, and protect your personal data, what rights you have over your information, and how to contact us with questions."
 summary: ""
 date: 2023-09-07T17:19:07+02:00
 lastmod: 2026-02-16T15:33:59+01:00

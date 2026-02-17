@@ -1,6 +1,6 @@
 ---
 title: "Resources"
-description: ""
+description: "Discover curated links to official docs, tools, templates, and learning materials that help you deepen your knowledge and get more from this project."
 summary: ""
 date: 2024-02-27T09:30:56+01:00
 lastmod: 2024-02-27T09:30:56+01:00

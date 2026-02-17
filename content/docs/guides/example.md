@@ -8,12 +8,12 @@ draft: false
 weight: 810
 toc: true
 params:
-    math: false # enable mathematical rendering
-    seo:
-        title: "" # custom title (optional)
-        description: "" # custom description (recommended)
-        canonical: "" # custom canonical URL (optional)
-        noindex: false # false (default) or true
+  math: false # enable mathematical rendering
+  seo:
+    title: "" # custom title (optional)
+    description: "" # custom description (recommended)
+    canonical: "" # custom canonical URL (optional)
+    noindex: false # false (default) or true
 ---
 
 Guides lead a user through a specific task they want to accomplish, often with a sequence of steps. Writing a good guide requires thinking about what your users are trying to do.

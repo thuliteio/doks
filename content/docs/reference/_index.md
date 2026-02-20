@@ -1,6 +1,6 @@
 ---
 title: "Reference"
-description: ""
+description: "Find detailed, structured reference pages that explain concepts, configuration options, and behavior so you can quickly look up precise information as you work."
 summary: ""
 date: 2023-09-07T16:12:37+02:00
 lastmod: 2023-09-07T16:12:37+02:00
@@ -9,9 +9,10 @@ weight: 900
 toc: true
 sidebar:
   collapsed: true
-seo:
-  title: "" # custom title (optional)
-  description: "" # custom description (recommended)
-  canonical: "" # custom canonical URL (optional)
-  noindex: false # false (default) or true
+params:
+  seo:
+    title: "" # custom title (optional)
+    description: "" # custom description (recommended)
+    canonical: "" # custom canonical URL (optional)
+    robots: "" # custom robot tags (optional)
 ---

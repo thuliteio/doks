@@ -4,9 +4,9 @@
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "24.13.0"
-  NPM_VERSION = "11.6.2"
-  HUGO_VERSION = "0.155.1"
+  NODE_VERSION = "24.13.1"
+  NPM_VERSION = "11.8.0"
+  HUGO_VERSION = "0.156.0"
 
 [dev]
   framework = "#custom"
@@ -17,6 +17,10 @@
   autoLaunch = false
 
 # Redirects and rewrites — https://docs.netlify.com/routing/redirects/#syntax-for-the-netlify-configuration-file
+[[redirects]]
+	from = "/*"
+	to = "/404/"
+	status = 404
 
 # Custom headers — https://docs.netlify.com/routing/headers/#syntax-for-the-netlify-configuration-file
 [[headers]]

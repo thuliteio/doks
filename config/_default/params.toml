@@ -6,6 +6,10 @@ images = ["cover.png"]
 # mainSections
 mainSections = ["docs"]
 
+# Enable mathematical rendering on every page (unless you set the `math` parameter to `false` in front matter)
+math = false # false (default) or true
+mathEngine = "KaTeX" # "KaTeX" (default) or "MathJax"
+
 [social]
   twitter = "getdoks"
 
@@ -17,7 +21,7 @@ mainSections = ["docs"]
 
   # Navbar
   navbarSticky = true # true (default) or false
-  containerBreakpoint = "lg" # "", "sm", "md", "lg" (default), "xl", "xxl", or "fluid"
+  containerBreakpoint = "fluid" # "", "sm", "md", "lg", "xl", "xxl", or "fluid" (default)
 
   ## Button
   navBarButton = false # false (default) or true
@@ -44,6 +48,7 @@ mainSections = ["docs"]
   bootstrapJavascript = false # false (default) or true
 
   # Nav
+  sectionSwitcher = false # true or false (default)
   sectionNav = ["docs"] # ["docs"] (default) or list of sections (e.g. ["docs", "guides"])
   toTopButton = false # false (default) or true
   breadcrumbTrail = false # false (default) or true
@@ -61,6 +66,7 @@ mainSections = ["docs"]
   # UX
   headerBar = false # true (default) or false
   backgroundDots = true # true (default) or false
+  aiButtons = true # true (default) or false
 
   # Homepage
   sectionFooter = false # false (default) or true
@@ -115,13 +121,16 @@ mainSections = ["docs"]
 
 # Inline SVG (@thulite/inline-svg)
 [inline_svg]
-  iconSetDir = "tabler-icons" # "tabler-icons" (default)
+  iconSetDir = "tabler-icons" # tabler-icons (default)
+  iconSetVariant = "outline" # outline (default) or filled
 
 # SEO (@thulite/seo)
 [seo]
   [seo.title]
     separator = "" # "|" (default)
     suffix = "" # title hugo.toml (default)
+  [seo.description]
+    summaryFallback = "" # "" (default)
   [seo.favicons]
     icon = "favicon.png" # favicon.png (default)
     svgIcon = "favicon.svg" # favicon.svg (default)

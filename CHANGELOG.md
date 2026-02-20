@@ -1,5 +1,11 @@
 # doks
 
+## 1.9.0
+
+### Minor Changes
+
+- [#1394](https://github.com/thuliteio/doks/pull/1394) [`0d28299`](https://github.com/thuliteio/doks/commit/0d28299bc6a1c95fd9ecbedfc2c3615ad98ead18) Thanks [@h-enk](https://github.com/h-enk)! - Update for UX 2026
+
 ## 1.8.2
 
 ### Patch Changes

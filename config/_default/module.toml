@@ -9,12 +9,8 @@
 
 ## content
 [[mounts]]
-  disableWatch = false
   source = "content"
   target = "content"
-  [mounts.sites]
-    [mounts.sites.complements]
-    [mounts.sites.matrix]
 
 ## data
 [[mounts]]
@@ -22,21 +18,13 @@
   target = "data"
 
 [[mounts]]
-  disableWatch = false
   source = "data"
   target = "data"
-  [mounts.sites]
-    [mounts.sites.complements]
-    [mounts.sites.matrix]
 
 ## layouts
 [[mounts]]
-  disableWatch = false
   source = "layouts"
   target = "layouts"
-  [mounts.sites]
-    [mounts.sites.complements]
-    [mounts.sites.matrix]
 
 [[mounts]]
   # File filter: '!' prefix excludes files from the mount. Excluding 'home.html' prevents the theme's
@@ -67,12 +55,8 @@
   target = "i18n"
 
 [[mounts]]
-  disableWatch = false
   source = "i18n"
   target = "i18n"
-  [mounts.sites]
-    [mounts.sites.complements]
-    [mounts.sites.matrix]
 
 ## archetypes
 [[mounts]]
@@ -80,12 +64,8 @@
   target = "archetypes"
 
 [[mounts]]
-  disableWatch = false
   source = "archetypes"
   target = "archetypes"
-  [mounts.sites]
-    [mounts.sites.complements]
-    [mounts.sites.matrix]
 
 ## assets
 [[mounts]]
@@ -105,12 +85,8 @@
   target = "assets"
 
 [[mounts]]
-  disableWatch = false
   source = "assets"
   target = "assets"
-  [mounts.sites]
-    [mounts.sites.complements]
-    [mounts.sites.matrix]
 
 ## static
 [[mounts]]
@@ -118,9 +94,5 @@
   target = "static"
 
 [[mounts]]
-  disableWatch = false
   source = "static"
   target = "static"
-  [mounts.sites]
-    [mounts.sites.complements]
-    [mounts.sites.matrix]

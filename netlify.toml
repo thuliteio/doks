@@ -4,8 +4,10 @@
   command = "npm run build"
 
 [build.environment]
-  NODE_VERSION = "24.13.1"
-  NPM_VERSION = "11.8.0"
+  # NODE_VERSION = "24.13.1"
+  # NPM_VERSION = "11.8.0"
+  NODE_VERSION = "22.17.0"
+  NPM_VERSION = "10.9.2"
   HUGO_VERSION = "0.156.0"
 
 [dev]

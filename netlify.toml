@@ -7,8 +7,6 @@
   NODE_VERSION = "24.13.1"
   NPM_VERSION = "11.8.0"
   HUGO_VERSION = "0.156.0"
-  NODE_ENV = "production"
-  HUGO_ENV = "production"
 
 [dev]
   framework = "#custom"

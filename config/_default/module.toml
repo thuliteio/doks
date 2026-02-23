@@ -27,12 +27,12 @@
   target = "layouts"
 
 [[mounts]]
-  files = ['! home.html']
-  source = "node_modules/@thulite/doks-core/layouts"
+  source = "node_modules/@thulite/core/layouts"
   target = "layouts"
 
 [[mounts]]
-  source = "node_modules/@thulite/core/layouts"
+  files = ['! home.html']
+  source = "node_modules/@thulite/doks-core/layouts"
   target = "layouts"
 
 [[mounts]]

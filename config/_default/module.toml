@@ -27,12 +27,14 @@
   target = "layouts"
 
 [[mounts]]
-  source = "node_modules/@thulite/core/layouts"
+  # File filter: '!' prefix excludes files from the mount. Excluding 'home.html' prevents the theme's
+  # default homepage from loading, allowing the custom homepage in local 'layouts/home.html' to take precedence.
+  files = ['! home.html']
+  source = "node_modules/@thulite/doks-core/layouts"
   target = "layouts"
 
 [[mounts]]
-  files = ['! home.html']
-  source = "node_modules/@thulite/doks-core/layouts"
+  source = "node_modules/@thulite/core/layouts"
   target = "layouts"
 
 [[mounts]]

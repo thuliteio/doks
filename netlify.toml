@@ -1,7 +1,7 @@
 [build]
   publish = "public"
   functions = "functions"
-  command = "npm run build"
+  command = "pnpm run build"
 
 [build.environment]
   NODE_VERSION = "24.13.1"
@@ -10,7 +10,7 @@
 
 [dev]
   framework = "#custom"
-  command = "npm run dev"
+  command = "pnpm run dev"
   targetPort = 1313
   port = 8888
   publish = "public"

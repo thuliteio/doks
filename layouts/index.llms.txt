@@ -1,0 +1,46 @@
+{{ with .Site.Title -}}
+    # {{ . }}
+{{- end }}
+
+{{ with .Site.Params.Description -}}
+> {{ . }}
+{{- end }}
+
+{{ range (where (sort ((.Site.GetPage "/").Pages) "Weight" "asc" "Date" "desc" "Lastmod" "desc") "Params.sitemap_exclude" "ne" true) -}}
+    - [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end -}}
+
+{{/* Sections */}}
+{{ range (where (sort ((.Site.GetPage "/").Sections) "Weight" "asc" "Date" "desc" "Lastmod" "desc") "Params.sitemap_exclude" "ne" true) -}}
+{{ with .Title -}}
+    ## {{ . }}
+{{- end }}
+
+{{ with .Description -}}
+    > {{ . }}
+{{- end }}
+
+{{ range (where (sort .Pages "Weight" "asc" "Date" "desc" "Lastmod" "desc") "Params.sitemap_exclude" "ne" true) -}}
+    {{ if .Title -}}
+        - [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . }}{{ end }}
+    {{- end }}
+{{ end -}}
+
+{{/* Sub-Sections */}}
+{{ range (where (sort .Sections "Weight" "asc" "Date" "desc" "Lastmod" "desc") "Params.sitemap_exclude" "ne" true) -}}
+{{ with .Title -}}
+    ### {{ . }}
+{{- end }}
+
+{{ with .Description -}}
+    > {{ . }}
+{{- end }}
+
+{{ range (where (sort .Pages "Weight" "asc" "Date" "desc" "Lastmod" "desc") "Params.sitemap_exclude" "ne" true) -}}
+    {{ if .Title -}}
+        - [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . }}{{ end }}
+    {{- end }}
+{{ end }}
+{{ end -}}
+
+{{ end -}}

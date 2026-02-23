@@ -2,6 +2,21 @@
   publish = "public"
   functions = "functions"
   command = "npm run build"
+  ignore = "git diff --quiet $COMMIT_PARENT $COMMIT_REF -- ."
+
+[build.processing]
+  skip_processing = false
+
+[[build.stages.build.command_override]]
+  command = '''
+  echo "Checking Doks layout directories:"
+  ls -R node_modules/@thulite/doks-core/layouts || echo "⚠️ layouts missing"
+  ls -R node_modules/@thulite/core/layouts || echo "⚠️ layouts missing"
+  ls -R node_modules/@thulite/seo/layouts || echo "⚠️ layouts missing"
+  '''
+
+[build.stages.build]
+  command = "npm run build"
 
 [build.environment]
   NODE_VERSION = "24.13.1"

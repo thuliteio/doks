@@ -1,3 +1,0 @@
-# {{ .Title -}}
-{{ .Params.summary }}
-{{ .RawContent -}}

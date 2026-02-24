@@ -1,5 +1,11 @@
 # doks
 
+## 1.9.1
+
+### Patch Changes
+
+- [#1395](https://github.com/thuliteio/doks/pull/1395) [`f541384`](https://github.com/thuliteio/doks/commit/f5413844bab0b2de1d6b1e704b5496b63db11197) Thanks [@h-enk](https://github.com/h-enk)! - Update for security fix, Netlify fix, Hugo v0.156.0, and update dependencies
+
 ## 1.9.0
 
 ### Minor Changes

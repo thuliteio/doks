@@ -1,5 +1,5 @@
 [en]
-  languageName = "English"
+  label = "English"
   contentDir = "content/en"
   weight = 10
   [en.params]
@@ -9,7 +9,7 @@
     alertText = '<a class="alert-link stretched-link fw-normal" href="/blog/example-post/">Doks version 1.0 just shipped!</a>'
 
 [de]
-  languageName = "German"
+  label = "German"
   contentDir = "content/de"
   weight = 15
   [de.params]
@@ -19,7 +19,7 @@
     alertText = 'Neue Version ist da! <a class="alert-link stretched-link" href="https://getdoks.org/blog/doks-v0.5/">Doks v0.5</a>'
 
 [nl]
-  languageName = "Nederlands"
+  label = "Nederlands"
   contentDir = "content/nl"
   weight = 20
   [nl.params]

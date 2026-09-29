@@ -17,20 +17,21 @@ Doks is a documentation theme for [Thulite](https://thulite.io/).
 - Internationalization (i18n) support
 - Versioning support for managing multiple documentation versions
 
-## Requirements
+## Prerequisites
 
-- Node.js – [latest LTS version](https://nodejs.org/en/download)
-- Hugo – [latest extended version](https://github.com/gohugoio/hugo/releases/latest)
+- [Hugo](https://github.com/gohugoio/hugo/releases/latest) (latest extended or extended/deploy edition)
+- [Dart Sass](https://github.com/sass/dart-sass/releases/latest) (latest version)
+- [Node.js/npm](https://nodejs.org/en/download) (latest LTS version)
 
-## Install
+## Installation
 
-The recommended way to install the latest version of Doks is by running the command below:
+The **recommended** way to install the latest version of Doks is by running the command below:
 
 ```bash
 npm create thulite@latest -- --template doks
 ```
 
-Looking for help? Start with our [Getting Started](https://getdoks.org/docs/start-here/getting-started/) guide.
+Looking for help? Start with our [Installation](https://getdoks.org/docs/start-here/installation/) guide.
 
 ## Documentation
 
@@ -40,10 +41,6 @@ Visit our [official documentation](https://getdoks.org/).
 
 Having trouble? Get help in the official [Doks Discussions](https://github.com/thuliteio/doks/discussions).
 
-## Contributing
-
-New contributors welcome! Check out our [Contributor Guides](https://getdoks.org/contribute/) for help getting started.
-
 ## Links
 
 - [License (MIT)](LICENSE)
@@ -51,6 +48,8 @@ New contributors welcome! Check out our [Contributor Guides](https://getdoks.org
 - [Project Funding](.github/FUNDING.md)
 - [Website](https://getdoks.org/)
 
-## Sponsors
+## Sponsoring
 
-Thulite is free and open-source, thanks to our amazing sponsors. Help keep Thulite sustainable by supporting maintenance, documentation, and long-term development. [Sponsor Thulite](https://github.com/sponsors/thuliteio) ❤️
+Help keep Thulite sustainable by supporting maintenance, documentation, and long-term development.
+
+[Sponsor Thulite](https://github.com/sponsors/thuliteio) ❤️

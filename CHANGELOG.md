@@ -1,5 +1,40 @@
 # doks
 
+## 2.0.0
+
+### Major Changes
+
+- [#1413](https://github.com/thuliteio/doks/pull/1413) [`0b5fb0e`](https://github.com/thuliteio/doks/commit/0b5fb0eca057816027411d3b55d637a9504b1d2d) Thanks [@h-enk](https://github.com/h-enk)! - # Major Changes
+
+  BREAKING CHANGE: LibSass support has been removed. Dart Sass is now required.
+
+  **WHAT changed:**
+
+  - Replaced LibSass with Dart Sass for CSS compilation
+  - All asset build pipelines now follow Hugo's official best practices
+  - JavaScript build aligned with Hugo's esbuild/Babel patterns
+
+  **WHY:**
+
+  - LibSass has been deprecated by the Sass team since 2020
+  - Dart Sass provides modern Sass language features and better maintenance
+  - Hugo's official patterns ensure future compatibility and reliability
+
+  **HOW to upgrade:**
+  Install Dart Sass in your environment:
+
+  - macOS (Homebrew): `brew install sass/sass/sass`
+  - Linux (Snap): `sudo snap install dart-sass`
+  - Windows (Scoop): `scoop install sass`
+  - Or: npm install -g sass
+
+  Other improvements:
+
+  - Enhanced Prettier, ESLint, and VS Code configuration
+  - Expanded Dependabot automation and dependency management
+  - Improved error handling and performance in JavaScript modules
+  - Modern CSS reset and better cross-browser consistency
+
 ## 1.9.1
 
 ### Patch Changes

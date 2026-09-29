@@ -17,6 +17,10 @@
   source = "node_modules/@thulite/doks-core/data"
   target = "data"
 
+# [[mounts]]
+# source = "../doks-core/data"
+# target = "data"
+
 [[mounts]]
   source = "data"
   target = "data"
@@ -30,6 +34,11 @@
   files = ['! home.html']
   source = "node_modules/@thulite/doks-core/layouts"
   target = "layouts"
+
+# [[mounts]]
+# files = ['! home.html']
+# source = "../doks-core/layouts"
+# target = "layouts"
 
 [[mounts]]
   source = "node_modules/@thulite/core/layouts"
@@ -52,6 +61,10 @@
   source = "node_modules/@thulite/doks-core/i18n"
   target = "i18n"
 
+# [[mounts]]
+# source = "../doks-core/i18n"
+# target = "i18n"
+
 [[mounts]]
   source = "i18n"
   target = "i18n"
@@ -60,6 +73,10 @@
 [[mounts]]
   source = "node_modules/@thulite/doks-core/archetypes"
   target = "archetypes"
+
+# [[mounts]]
+# source = "../doks-core/archetypes"
+# target = "archetypes"
 
 [[mounts]]
   source = "archetypes"
@@ -73,6 +90,10 @@
 [[mounts]]
   source = "node_modules/@thulite/doks-core/assets"
   target = "assets"
+
+# [[mounts]]
+# source = "../doks-core/assets"
+# target = "assets"
 
 [[mounts]]
   source = "node_modules/@tabler/icons/icons"
@@ -94,6 +115,10 @@
 [[mounts]]
   source = "node_modules/@thulite/doks-core/static"
   target = "static"
+
+# [[mounts]]
+# source = "../doks-core/static"
+# target = "static"
 
 [[mounts]]
   source = "static"

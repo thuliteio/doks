@@ -22,7 +22,7 @@
     "@thulite/images": "^3.3.4",
     "@thulite/inline-svg": "^1.2.2",
     "@thulite/seo": "^2.4.4",
-    "thulite": "^3.0.2"
+    "thulite": "^3.0.3"
   },
   "overrides": {
     "minimatch": "^10.2.2",
@@ -31,9 +31,9 @@
   "devDependencies": {
     "@changesets/changelog-github": "^1.0.1",
     "@changesets/cli": "^3.0.3",
-    "portless": "^0.15.6",
+    "portless": "^0.15.7",
     "prettier": "^3.9.9",
-    "vite": "^8.3.1"
+    "vite": "^8.3.2"
   },
   "engines": {
     "node": ">=24.13.0"

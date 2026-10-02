@@ -1,5 +1,11 @@
 # doks
 
+## 2.0.1
+
+### Patch Changes
+
+- [#1414](https://github.com/thuliteio/doks/pull/1414) [`48d53e6`](https://github.com/thuliteio/doks/commit/48d53e6f08b2ee6b3ae0673f1778c2c0afb92df3) Thanks [@h-enk](https://github.com/h-enk)! - chore: update dependencies and bump thulite version to 3.0.3
+
 ## 2.0.0
 
 ### Major Changes

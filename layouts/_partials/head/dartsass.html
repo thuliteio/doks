@@ -12,7 +12,8 @@
     {{ if hugo.IsDevelopment -}}
       <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{ else -}}
-      {{ with . | postCSS (dict "config" "config/postcss.config.js") | fingerprint -}}
+      {{/* PostProcess defers PostCSS until hugo_stats.json is complete. */ -}}
+      {{ with . | postCSS (dict "config" "config/postcss.config.js") | fingerprint | resources.PostProcess -}}
         <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
       {{ end -}}
     {{ end -}}

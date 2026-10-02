@@ -1,5 +1,11 @@
 # doks
 
+## 2.0.2
+
+### Patch Changes
+
+- [#1415](https://github.com/thuliteio/doks/pull/1415) [`22e6879`](https://github.com/thuliteio/doks/commit/22e68793464566c758e7b61959aafa51ff72c8f2) Thanks [@h-enk](https://github.com/h-enk)! - fix: clarify PostProcess comment for PostCSS integration
+
 ## 2.0.1
 
 ### Patch Changes

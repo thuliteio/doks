@@ -33,7 +33,7 @@
     "@changesets/cli": "^3.0.3",
     "portless": "^0.15.7",
     "prettier": "^3.9.9",
-    "vite": "^8.3.2"
+    "vite": "^8.3.3"
   },
   "engines": {
     "node": ">=24.13.0"
